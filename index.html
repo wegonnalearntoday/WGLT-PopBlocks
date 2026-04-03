@@ -887,9 +887,11 @@
     </div>
   </div>
 
-
 <script src="js/config/pack-manifest.js"></script>
 <script src="js/content/all-pack-01.js"></script>
+<script src="js/content/all-pack-02.js"></script>
+<script src="js/content/all-facts-pack-01.js"></script>
+<script src="js/content/all-facts-pack-02.js"></script>
 
 <script>
 (() => {
@@ -1241,6 +1243,7 @@
   let levelObjectives = {};
   let movesLeft = 0;
   let quizMisses = 0;
+  let recentQuizMemory = {};
   let levelObjectivesStart = {};
   let swapSpecialArmed = null;
   let hammerSpecialArmed = null;
@@ -1632,10 +1635,10 @@
   }
 
   function nextFactForCategory(categoryIndex){
-    const packFacts = getCategoryFactPool(categoryIndex);
-    const pool = packFacts.length ? packFacts : (currentMode().factsByCategory?.[categoryIndex] || currentMode().facts);
+    const packedFacts = getPackedFactsForCategory(categoryIndex);
+    const pool = packedFacts.length ? packedFacts : (currentMode().factsByCategory?.[categoryIndex] || currentMode().facts);
     const idx = Math.floor(Math.random() * pool.length);
-    showFact(pool[idx]);
+    showFact(typeof pool[idx] === "string" ? pool[idx] : (pool[idx]?.text || ""));
     pendingKnowledgeCategory = categoryIndex;
     setKnowledgeGlow(true);
     const label = currentColors()[categoryIndex]?.label || "this category";
@@ -2369,52 +2372,6 @@ function getCellCenter(r, c){
 
   function currentMode(){ return MODES[modeKey]; }
 
-  function getPackManifest(){
-    return window.POPBLOCKS_MANIFEST || { subjects: {} };
-  }
-
-  function getPackStore(){
-    return window.POPBLOCKS_PACKS || {};
-  }
-
-  function getCategoryKeyByIndex(categoryIndex){
-    const info = currentColors()[categoryIndex];
-    return info?.key || null;
-  }
-
-  function getManifestCategory(subjectKey, categoryKey){
-    return getPackManifest()?.subjects?.[subjectKey]?.categories?.[categoryKey] || null;
-  }
-
-  function getPackItems(subjectKey, categoryKey, type){
-    const manifestCategory = getManifestCategory(subjectKey, categoryKey);
-    if(!manifestCategory) return [];
-    const listName = type === "quiz" ? "quizPacks" : "factPacks";
-    const packIds = manifestCategory[listName] || [];
-    const store = getPackStore();
-    let items = [];
-    packIds.forEach(packId => {
-      const pack = store[packId];
-      if(!pack || pack.active === false) return;
-      if(type === "quiz" && Array.isArray(pack.questions)) items = items.concat(pack.questions);
-      if(type === "fact" && Array.isArray(pack.facts)) items = items.concat(pack.facts.map(f => typeof f === "string" ? f : f.text).filter(Boolean));
-    });
-    return items;
-  }
-
-  function getCategoryQuizPool(categoryIndex){
-    const categoryKey = getCategoryKeyByIndex(categoryIndex);
-    if(!categoryKey) return [];
-    return getPackItems(modeKey, categoryKey, "quiz");
-  }
-
-  function getCategoryFactPool(categoryIndex){
-    const categoryKey = getCategoryKeyByIndex(categoryIndex);
-    if(!categoryKey) return [];
-    return getPackItems(modeKey, categoryKey, "fact");
-  }
-
-
   function stageIndexForSize(currentSize){
     const sizes = [4,5,6,7,8,9,10];
     return Math.max(0, sizes.indexOf(currentSize));
@@ -2440,6 +2397,126 @@ function getCellCenter(r, c){
     return [...mode.quizzes, ...extras];
   }
 
+  const PACK_CATEGORY_MAP = {
+    blackHistory: ["civilRights","inventors","artists","militaryTrailblazers","sports","superheroes","entertainers","comedians","musicians","professions","hbcus"],
+    finance: ["income","savings","bills","debtCredit","retirement","interestRates","goodBadDebt","ira401k"],
+    civics: ["executive","legislative","judicial","rightsResponsibilities","redlining","governor","mayor","amendments13_14_15"]
+  };
+
+  function getPackSubjectKey(){
+    return modeKey;
+  }
+
+  function getPackCategoryKey(categoryIndex){
+    const arr = PACK_CATEGORY_MAP[getPackSubjectKey()] || [];
+    return arr[categoryIndex] || null;
+  }
+
+  function getPackCategoryInfo(categoryIndex){
+    const subjectKey = getPackSubjectKey();
+    const categoryKey = getPackCategoryKey(categoryIndex);
+    const subject = window.POPBLOCKS_MANIFEST?.subjects?.[subjectKey];
+    if(!subject || !categoryKey) return null;
+    return subject.categories?.[categoryKey] || null;
+  }
+
+  function normalizeQuizItem(item, fallbackIdPrefix="quiz"){
+    return {
+      id: item.id || `${fallbackIdPrefix}-${Math.random().toString(36).slice(2)}`,
+      q: item.q || item.prompt || "Question",
+      choices: Array.isArray(item.choices) ? item.choices.slice() : [],
+      a: Number.isInteger(item.a) ? item.a : (Number.isInteger(item.answerIndex) ? item.answerIndex : 0),
+      explanation: item.explanation || "",
+    };
+  }
+
+  function getPackedQuizPoolForCategory(categoryIndex){
+    const info = getPackCategoryInfo(categoryIndex);
+    if(!info || !Array.isArray(info.quizPacks)) return [];
+    let out = [];
+    info.quizPacks.forEach(packId => {
+      const pack = window.POPBLOCKS_PACKS?.[packId];
+      if(pack && pack.active && Array.isArray(pack.questions)) {
+        out = out.concat(pack.questions.map((q, idx) => normalizeQuizItem(q, `${packId}-${idx}`)));
+      }
+    });
+    return out;
+  }
+
+  function getPackedFactsForCategory(categoryIndex){
+    const info = getPackCategoryInfo(categoryIndex);
+    if(!info || !Array.isArray(info.factPacks)) return [];
+    let out = [];
+    info.factPacks.forEach(packId => {
+      const pack = window.POPBLOCKS_PACKS?.[packId];
+      if(pack && pack.active && Array.isArray(pack.facts)) {
+        out = out.concat(pack.facts.map(f => typeof f === "string" ? f : (f.text || "")));
+      }
+    });
+    return out.filter(Boolean);
+  }
+
+  function getRecentQuizIds(subjectKey, categoryKey){
+    const memKey = `wglt_recent_quiz_${subjectKey}_${categoryKey}`;
+    if(Array.isArray(recentQuizMemory[memKey])) return recentQuizMemory[memKey].slice();
+    try {
+      const saved = JSON.parse(localStorage.getItem(memKey) || '[]');
+      recentQuizMemory[memKey] = Array.isArray(saved) ? saved : [];
+    } catch(e){
+      recentQuizMemory[memKey] = [];
+    }
+    return recentQuizMemory[memKey].slice();
+  }
+
+  function setRecentQuizIds(subjectKey, categoryKey, ids){
+    const memKey = `wglt_recent_quiz_${subjectKey}_${categoryKey}`;
+    const trimmed = ids.slice(-12);
+    recentQuizMemory[memKey] = trimmed;
+    try { localStorage.setItem(memKey, JSON.stringify(trimmed)); } catch(e){}
+  }
+
+  function shuffleQuizChoices(choiceList, correctIndex){
+    const indexed = choiceList.map((choice, idx) => ({ choice, idx }));
+    for(let i=indexed.length-1;i>0;i--){
+      const j = Math.floor(Math.random() * (i+1));
+      [indexed[i], indexed[j]] = [indexed[j], indexed[i]];
+    }
+    return {
+      choiceList: indexed.map(x => x.choice),
+      correctIndex: indexed.findIndex(x => x.idx === correctIndex)
+    };
+  }
+
+  function getQuizForCategory(categoryIndex){
+    const subjectKey = getPackSubjectKey();
+    const categoryKey = getPackCategoryKey(categoryIndex);
+    const packed = getPackedQuizPoolForCategory(categoryIndex);
+    let pool = packed.length ? packed : currentQuizPool().map((q, idx) => normalizeQuizItem(q, `fallback-${idx}`));
+    if(!pool.length) return null;
+    if(!categoryKey) {
+      const idx = randIndexAvoid(pool.length, lastQuizIndex);
+      lastQuizIndex = idx;
+      return pool[idx];
+    }
+    let recentIds = getRecentQuizIds(subjectKey, categoryKey);
+    let available = pool.filter(q => !recentIds.includes(q.id));
+    if(!available.length){
+      recentIds = [];
+      setRecentQuizIds(subjectKey, categoryKey, []);
+      available = pool.slice();
+    }
+    const idx = Math.floor(Math.random() * available.length);
+    return available[idx];
+  }
+
+  function markQuizUsed(categoryIndex, quizId){
+    const subjectKey = getPackSubjectKey();
+    const categoryKey = getPackCategoryKey(categoryIndex);
+    if(!categoryKey || !quizId) return;
+    const recentIds = getRecentQuizIds(subjectKey, categoryKey);
+    recentIds.push(quizId);
+    setRecentQuizIds(subjectKey, categoryKey, recentIds);
+  }
 
   function randomColorIndex() {
     return Math.floor(Math.random() * currentColors().length);
@@ -2768,11 +2845,13 @@ function getCellCenter(r, c){
   }
 
   function nextFact(){
-    const categoryFacts = typeof pendingKnowledgeCategory === "number" ? getCategoryFactPool(pendingKnowledgeCategory) : [];
-    const facts = categoryFacts.length ? categoryFacts : currentMode().facts;
-    const idx = randIndexAvoid(facts.length, lastFactIndex);
+    const categoryIndex = Number.isInteger(pendingKnowledgeCategory) ? pendingKnowledgeCategory : lastRewardCategory;
+    const packedFacts = getPackedFactsForCategory(categoryIndex);
+    const pool = packedFacts.length ? packedFacts : currentMode().facts;
+    const idx = randIndexAvoid(pool.length, lastFactIndex);
     lastFactIndex = idx;
-    showFact(facts[idx]);
+    const item = pool[idx];
+    showFact(typeof item === "string" ? item : (item?.text || ""));
     setKnowledgeGlow(true);
   }
 
@@ -2781,34 +2860,33 @@ function getCellCenter(r, c){
     isQuizActive = true;
     setQuizGlow(true);
 
-    const categoryQuizzes = typeof lastRewardCategory === "number" ? getCategoryQuizPool(lastRewardCategory) : [];
-    const quizzes = categoryQuizzes.length ? categoryQuizzes : currentQuizPool();
-    let idx = randIndexAvoid(quizzes.length, lastQuizIndex);
-    if(quizzes.length > 1 && idx === lastQuizIndex){
-      idx = (idx + 1) % quizzes.length;
+    const categoryIndex = Number.isInteger(lastRewardCategory) ? lastRewardCategory : 0;
+    const quiz = getQuizForCategory(categoryIndex);
+    if(!quiz){
+      quizTextEl.textContent = "No quiz available right now.";
+      choicesEl.innerHTML = "";
+      isQuizActive = false;
+      setQuizGlow(false);
+      return;
     }
-    lastQuizIndex = idx;
-    const quiz = quizzes[idx];
 
-    quizTextEl.textContent = quiz.q || quiz.prompt || "";
+    quizTextEl.textContent = quiz.q;
     choicesEl.innerHTML = "";
 
     let choiceList = quiz.choices.slice();
-    let correctIndex = typeof quiz.a === "number" ? quiz.a : quiz.answerIndex;
+    let correctIndex = quiz.a;
 
     if(quizMisses >= 2 && choiceList.length >= 3){
-      const answerIdx = typeof quiz.a === "number" ? quiz.a : quiz.answerIndex;
-      const keepWrongIndices = choiceList.map((_, i) => i).filter(i => i !== answerIdx);
+      const keepWrongIndices = choiceList.map((_, i) => i).filter(i => i !== quiz.a);
       const keptWrong = keepWrongIndices[Math.floor(Math.random() * keepWrongIndices.length)];
-      const newChoices = [choiceList[answerIdx], choiceList[keptWrong]];
-      for(let i=newChoices.length-1;i>0;i--){
-        const j = Math.floor(Math.random() * (i+1));
-        [newChoices[i], newChoices[j]] = [newChoices[j], newChoices[i]];
-      }
-      correctIndex = newChoices.indexOf(choiceList[answerIdx]);
-      choiceList = newChoices;
+      choiceList = [choiceList[quiz.a], choiceList[keptWrong]];
+      correctIndex = 0;
       factTextEl.textContent = "Hint active: two choices left. Use the fact box and your best clue-finding powers.";
     }
+
+    const shuffled = shuffleQuizChoices(choiceList, correctIndex);
+    choiceList = shuffled.choiceList;
+    correctIndex = shuffled.correctIndex;
 
     choiceList.forEach((choice, i) => {
       const btn = document.createElement("button");
@@ -2827,8 +2905,9 @@ function getCellCenter(r, c){
           benchmarkProgress["Quiz Mastery"] = (benchmarkProgress["Quiz Mastery"] || 0) + 1;
           maybeAwardBoosterForCategory(lastRewardCategory, 1);
           quizMisses = 0;
+          markQuizUsed(categoryIndex, quiz.id);
           showToast("Correct! Bonus clear activated");
-          factTextEl.textContent = "Quiz Boost unlocked. Green blocks show exactly what is about to explode.";
+          factTextEl.textContent = quiz.explanation || "Quiz Boost unlocked. Green blocks show exactly what is about to explode.";
           progress = 0;
           isQuizActive = false;
           setQuizGlow(false);

@@ -1,259 +1,313 @@
-window.POPBLOCKS_MANIFEST = {
+window.POPBLOCKS_PACKS = window.POPBLOCKS_PACKS || {}; window.POPBLOCKS_MANIFEST = {
   "subjects": {
     "blackHistory": {
-      "label": "blackHistory",
+      "label": "Black History",
       "categories": {
-        "red": {
+        "civilRights": {
           "label": "Civil Rights Leaders",
           "quizPacks": [
-            "bh_red_quiz_pack_01"
+            "blackHistory_civilRights_quiz_pack_01",
+            "blackHistory_civilRights_quiz_pack_02"
           ],
           "factPacks": [
-            "bh_red_fact_pack_01"
+            "blackHistory_civilRights_fact_pack_01",
+            "blackHistory_civilRights_fact_pack_02"
           ]
         },
-        "green": {
+        "inventors": {
           "label": "Inventors",
           "quizPacks": [
-            "bh_green_quiz_pack_01"
+            "blackHistory_inventors_quiz_pack_01",
+            "blackHistory_inventors_quiz_pack_02"
           ],
           "factPacks": [
-            "bh_green_fact_pack_01"
+            "blackHistory_inventors_fact_pack_01",
+            "blackHistory_inventors_fact_pack_02"
           ]
         },
-        "yellow": {
+        "artists": {
           "label": "Artists",
           "quizPacks": [
-            "bh_yellow_quiz_pack_01"
+            "blackHistory_artists_quiz_pack_01",
+            "blackHistory_artists_quiz_pack_02"
           ],
           "factPacks": [
-            "bh_yellow_fact_pack_01"
+            "blackHistory_artists_fact_pack_01",
+            "blackHistory_artists_fact_pack_02"
           ]
         },
-        "black": {
+        "militaryTrailblazers": {
           "label": "Military & Trailblazers",
           "quizPacks": [
-            "bh_black_quiz_pack_01"
+            "blackHistory_militaryTrailblazers_quiz_pack_01",
+            "blackHistory_militaryTrailblazers_quiz_pack_02"
           ],
           "factPacks": [
-            "bh_black_fact_pack_01"
+            "blackHistory_militaryTrailblazers_fact_pack_01",
+            "blackHistory_militaryTrailblazers_fact_pack_02"
           ]
         },
         "sports": {
           "label": "Sports",
           "quizPacks": [
-            "bh_sports_quiz_pack_01"
+            "blackHistory_sports_quiz_pack_01",
+            "blackHistory_sports_quiz_pack_02"
           ],
           "factPacks": [
-            "bh_sports_fact_pack_01"
+            "blackHistory_sports_fact_pack_01",
+            "blackHistory_sports_fact_pack_02"
           ]
         },
         "superheroes": {
           "label": "Black Superheroes",
           "quizPacks": [
-            "bh_superheroes_quiz_pack_01"
+            "blackHistory_superheroes_quiz_pack_01",
+            "blackHistory_superheroes_quiz_pack_02"
           ],
           "factPacks": [
-            "bh_superheroes_fact_pack_01"
+            "blackHistory_superheroes_fact_pack_01",
+            "blackHistory_superheroes_fact_pack_02"
           ]
         },
         "entertainers": {
           "label": "Entertainers",
           "quizPacks": [
-            "bh_entertainers_quiz_pack_01"
+            "blackHistory_entertainers_quiz_pack_01",
+            "blackHistory_entertainers_quiz_pack_02"
           ],
           "factPacks": [
-            "bh_entertainers_fact_pack_01"
+            "blackHistory_entertainers_fact_pack_01",
+            "blackHistory_entertainers_fact_pack_02"
           ]
         },
         "comedians": {
           "label": "Comedians",
           "quizPacks": [
-            "bh_comedians_quiz_pack_01"
+            "blackHistory_comedians_quiz_pack_01",
+            "blackHistory_comedians_quiz_pack_02"
           ],
           "factPacks": [
-            "bh_comedians_fact_pack_01"
+            "blackHistory_comedians_fact_pack_01",
+            "blackHistory_comedians_fact_pack_02"
           ]
         },
         "musicians": {
           "label": "Musicians",
           "quizPacks": [
-            "bh_musicians_quiz_pack_01"
+            "blackHistory_musicians_quiz_pack_01",
+            "blackHistory_musicians_quiz_pack_02"
           ],
           "factPacks": [
-            "bh_musicians_fact_pack_01"
+            "blackHistory_musicians_fact_pack_01",
+            "blackHistory_musicians_fact_pack_02"
           ]
         },
         "professions": {
           "label": "Professions",
           "quizPacks": [
-            "bh_professions_quiz_pack_01"
+            "blackHistory_professions_quiz_pack_01",
+            "blackHistory_professions_quiz_pack_02"
           ],
           "factPacks": [
-            "bh_professions_fact_pack_01"
+            "blackHistory_professions_fact_pack_01",
+            "blackHistory_professions_fact_pack_02"
           ]
         },
         "hbcus": {
           "label": "HBCUs",
           "quizPacks": [
-            "bh_hbcus_quiz_pack_01"
+            "blackHistory_hbcus_quiz_pack_01",
+            "blackHistory_hbcus_quiz_pack_02"
           ],
           "factPacks": [
-            "bh_hbcus_fact_pack_01"
+            "blackHistory_hbcus_fact_pack_01",
+            "blackHistory_hbcus_fact_pack_02"
           ]
         }
       }
     },
     "finance": {
-      "label": "finance",
+      "label": "Financial Literacy",
       "categories": {
-        "green": {
+        "income": {
           "label": "Income",
           "quizPacks": [
-            "fin_green_quiz_pack_01"
+            "finance_income_quiz_pack_01",
+            "finance_income_quiz_pack_02"
           ],
           "factPacks": [
-            "fin_green_fact_pack_01"
+            "finance_income_fact_pack_01",
+            "finance_income_fact_pack_02"
           ]
         },
-        "yellow": {
+        "savings": {
           "label": "Savings",
           "quizPacks": [
-            "fin_yellow_quiz_pack_01"
+            "finance_savings_quiz_pack_01",
+            "finance_savings_quiz_pack_02"
           ],
           "factPacks": [
-            "fin_yellow_fact_pack_01"
+            "finance_savings_fact_pack_01",
+            "finance_savings_fact_pack_02"
           ]
         },
-        "red": {
+        "bills": {
           "label": "Bills",
           "quizPacks": [
-            "fin_red_quiz_pack_01"
+            "finance_bills_quiz_pack_01",
+            "finance_bills_quiz_pack_02"
           ],
           "factPacks": [
-            "fin_red_fact_pack_01"
+            "finance_bills_fact_pack_01",
+            "finance_bills_fact_pack_02"
           ]
         },
-        "blue": {
+        "debtCredit": {
           "label": "Debt & Credit",
           "quizPacks": [
-            "fin_blue_quiz_pack_01"
+            "finance_debtCredit_quiz_pack_01",
+            "finance_debtCredit_quiz_pack_02"
           ],
           "factPacks": [
-            "fin_blue_fact_pack_01"
+            "finance_debtCredit_fact_pack_01",
+            "finance_debtCredit_fact_pack_02"
           ]
         },
         "retirement": {
           "label": "Retirement",
           "quizPacks": [
-            "fin_retirement_quiz_pack_01"
+            "finance_retirement_quiz_pack_01",
+            "finance_retirement_quiz_pack_02"
           ],
           "factPacks": [
-            "fin_retirement_fact_pack_01"
+            "finance_retirement_fact_pack_01",
+            "finance_retirement_fact_pack_02"
           ]
         },
-        "rates": {
+        "interestRates": {
           "label": "Interest Rates",
           "quizPacks": [
-            "fin_rates_quiz_pack_01"
+            "finance_interestRates_quiz_pack_01",
+            "finance_interestRates_quiz_pack_02"
           ],
           "factPacks": [
-            "fin_rates_fact_pack_01"
+            "finance_interestRates_fact_pack_01",
+            "finance_interestRates_fact_pack_02"
           ]
         },
-        "goodbad": {
+        "goodBadDebt": {
           "label": "Good vs Bad Debt",
           "quizPacks": [
-            "fin_goodbad_quiz_pack_01"
+            "finance_goodBadDebt_quiz_pack_01",
+            "finance_goodBadDebt_quiz_pack_02"
           ],
           "factPacks": [
-            "fin_goodbad_fact_pack_01"
+            "finance_goodBadDebt_fact_pack_01",
+            "finance_goodBadDebt_fact_pack_02"
           ]
         },
         "ira401k": {
           "label": "IRA & 401(k)",
           "quizPacks": [
-            "fin_ira401k_quiz_pack_01"
+            "finance_ira401k_quiz_pack_01",
+            "finance_ira401k_quiz_pack_02"
           ],
           "factPacks": [
-            "fin_ira401k_fact_pack_01"
+            "finance_ira401k_fact_pack_01",
+            "finance_ira401k_fact_pack_02"
           ]
         }
       }
     },
     "civics": {
-      "label": "civics",
+      "label": "Civics",
       "categories": {
-        "blue": {
+        "executive": {
           "label": "Executive",
           "quizPacks": [
-            "civ_blue_quiz_pack_01"
+            "civics_executive_quiz_pack_01",
+            "civics_executive_quiz_pack_02"
           ],
           "factPacks": [
-            "civ_blue_fact_pack_01"
+            "civics_executive_fact_pack_01",
+            "civics_executive_fact_pack_02"
           ]
         },
-        "red": {
+        "legislative": {
           "label": "Legislative",
           "quizPacks": [
-            "civ_red_quiz_pack_01"
+            "civics_legislative_quiz_pack_01",
+            "civics_legislative_quiz_pack_02"
           ],
           "factPacks": [
-            "civ_red_fact_pack_01"
+            "civics_legislative_fact_pack_01",
+            "civics_legislative_fact_pack_02"
           ]
         },
-        "yellow": {
+        "judicial": {
           "label": "Judicial",
           "quizPacks": [
-            "civ_yellow_quiz_pack_01"
+            "civics_judicial_quiz_pack_01",
+            "civics_judicial_quiz_pack_02"
           ],
           "factPacks": [
-            "civ_yellow_fact_pack_01"
+            "civics_judicial_fact_pack_01",
+            "civics_judicial_fact_pack_02"
           ]
         },
-        "green": {
+        "rightsResponsibilities": {
           "label": "Rights & Responsibilities",
           "quizPacks": [
-            "civ_green_quiz_pack_01"
+            "civics_rightsResponsibilities_quiz_pack_01",
+            "civics_rightsResponsibilities_quiz_pack_02"
           ],
           "factPacks": [
-            "civ_green_fact_pack_01"
+            "civics_rightsResponsibilities_fact_pack_01",
+            "civics_rightsResponsibilities_fact_pack_02"
           ]
         },
         "redlining": {
           "label": "Redlining",
           "quizPacks": [
-            "civ_redlining_quiz_pack_01"
+            "civics_redlining_quiz_pack_01",
+            "civics_redlining_quiz_pack_02"
           ],
           "factPacks": [
-            "civ_redlining_fact_pack_01"
+            "civics_redlining_fact_pack_01",
+            "civics_redlining_fact_pack_02"
           ]
         },
         "governor": {
           "label": "Governor",
           "quizPacks": [
-            "civ_governor_quiz_pack_01"
+            "civics_governor_quiz_pack_01",
+            "civics_governor_quiz_pack_02"
           ],
           "factPacks": [
-            "civ_governor_fact_pack_01"
+            "civics_governor_fact_pack_01",
+            "civics_governor_fact_pack_02"
           ]
         },
         "mayor": {
           "label": "Mayor",
           "quizPacks": [
-            "civ_mayor_quiz_pack_01"
+            "civics_mayor_quiz_pack_01",
+            "civics_mayor_quiz_pack_02"
           ],
           "factPacks": [
-            "civ_mayor_fact_pack_01"
+            "civics_mayor_fact_pack_01",
+            "civics_mayor_fact_pack_02"
           ]
         },
-        "amendments": {
+        "amendments13_14_15": {
           "label": "13th, 14th & 15th Amendments",
           "quizPacks": [
-            "civ_amendments_quiz_pack_01"
+            "civics_amendments13_14_15_quiz_pack_01",
+            "civics_amendments13_14_15_quiz_pack_02"
           ],
           "factPacks": [
-            "civ_amendments_fact_pack_01"
+            "civics_amendments13_14_15_fact_pack_01",
+            "civics_amendments13_14_15_fact_pack_02"
           ]
         }
       }
