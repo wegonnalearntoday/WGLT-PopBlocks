@@ -790,7 +790,7 @@
             <div class="boardTitle">Game Board</div>
             <div class="hint" id="boardHint">Tap connected blocks to pop them.</div>
           </div>
-          <div class="guidance" id="guidanceText">Pop 4+ blocks to unlock knowledge!</div>
+          <div class="guidance" id="guidanceText">Fill the meter to trigger Quiz Boost!</div>
           <div class="timerWrap" id="timerWrap">
             <div class="timerTop">
               <span>⏱️ Level Timer</span>
@@ -835,9 +835,9 @@
 
         <aside class="sidePanel">
           <div class="factCard">
-            <h3>Knowledge Pop</h3>
+            <h3>Quiz Boost</h3>
             <div class="factText" id="factText">
-              Make a match to begin. Big combos wake up the fact engine.
+              Make a match to begin. Fill the meter to wake up Quiz Boost.
             </div>
           </div>
 
@@ -856,8 +856,8 @@
             <h3>Tips</h3>
             <div class="muted">
               • Bigger groups = better score<br>
-              • 4+ blocks = knowledge pop<br>
-              • 7+ blocks = bonus knowledge pop<br>
+              • 4+ blocks = quiz boost<br>
+              • 7+ blocks = bonus quiz boost<br>
               • 10+ blocks = random video pop<br>
               • Correct quiz answers clear extra blocks
             </div>
@@ -886,12 +886,6 @@
       </div>
     </div>
   </div>
-
-<script src="js/config/pack-manifest.js"></script>
-<script src="js/content/all-pack-01.js"></script>
-<script src="js/content/all-pack-02.js"></script>
-<script src="js/content/all-facts-pack-01.js"></script>
-<script src="js/content/all-facts-pack-02.js"></script>
 
 <script>
 (() => {
@@ -1243,7 +1237,6 @@
   let levelObjectives = {};
   let movesLeft = 0;
   let quizMisses = 0;
-  let recentQuizMemory = {};
   let levelObjectivesStart = {};
   let swapSpecialArmed = null;
   let hammerSpecialArmed = null;
@@ -1254,6 +1247,9 @@
   let timerIntervalId = null;
   let isResolvingEndLevelBombs = false;
   let isAdvancingLevel = false;
+  let activeColorsForLevel = [];
+  let lastActiveColorKeys = [];
+  let recentQuizIdsByMode = { blackHistory: [], finance: [], civics: [] };
 
   bestValueEl.textContent = best;
 
@@ -1525,8 +1521,9 @@
     setQuizGlow(false);
     choicesEl.innerHTML = "";
     quizTextEl.textContent = "Fill the learning meter to trigger a bonus question.";
-    if (guidanceTextEl) guidanceTextEl.textContent = "Pop 4+ blocks to unlock knowledge!";
+    if (guidanceTextEl) guidanceTextEl.textContent = "Fill the meter to trigger Quiz Boost!";
     syncBoardSizeToLevel();
+    setupActiveColorsForLevel();
     ensureBenchmarkShape();
     generateObjectivesForLevel();
     saveLevelObjectivesStart();
@@ -1635,10 +1632,9 @@
   }
 
   function nextFactForCategory(categoryIndex){
-    const packedFacts = getPackedFactsForCategory(categoryIndex);
-    const pool = packedFacts.length ? packedFacts : (currentMode().factsByCategory?.[categoryIndex] || currentMode().facts);
+    const pool = currentMode().factsByCategory?.[categoryIndex] || currentMode().facts;
     const idx = Math.floor(Math.random() * pool.length);
-    showFact(typeof pool[idx] === "string" ? pool[idx] : (pool[idx]?.text || ""));
+    showFact(pool[idx]);
     pendingKnowledgeCategory = categoryIndex;
     setKnowledgeGlow(true);
     const label = currentColors()[categoryIndex]?.label || "this category";
@@ -1838,12 +1834,12 @@
       return false;
     }
     movesLeft = Math.max(0, movesLeft - 1);
-    const cleared = clearArea3x3(r,c);
     selectedBooster = null;
+    explodeBombArea(r, c, 1, true);
     updateBest();
     saveProgress();
     renderBoard([]);
-    showToast(`💣 Bomb cleared ${cleared}`);
+    showToast("💣 Booster bomb triggered");
     if(progress >= 100){
       triggerQuiz();
       if (guidanceTextEl) guidanceTextEl.textContent = "Quiz ready. Answer the green glowing Quiz Boost to keep going!";
@@ -2385,138 +2381,60 @@ function getCellCenter(r, c){
     return Math.min(stage, extrasTotal);
   }
 
-  function currentColors(){
+  function allUnlockedColors(){
     const mode = currentMode();
     const extras = (mode.extraColors || []).slice(0, unlockedExtraCountForMode(mode));
     return [...mode.colors, ...extras];
   }
 
+  function chooseWeightedColorsForLevel(pool, targetCount){
+    if(pool.length <= targetCount) return pool.slice();
+    const selected = [];
+    const used = new Set();
+    const previous = new Set(lastActiveColorKeys || []);
+
+    while(selected.length < targetCount){
+      const candidates = pool.filter(item => !used.has(item.key));
+      const weighted = [];
+      candidates.forEach(item => {
+        let weight = 1;
+        const isBase = currentMode().colors.some(base => base.key === item.key);
+        if(isBase) weight += 2.2;
+        else weight += 0.6;
+        if(!previous.has(item.key)) weight += 1.2;
+        for(let i=0;i<Math.max(1, Math.round(weight * 10));i++) weighted.push(item);
+      });
+      const pick = weighted[Math.floor(Math.random() * weighted.length)];
+      if(!pick) break;
+      used.add(pick.key);
+      selected.push(pick);
+    }
+    return selected;
+  }
+
+  function setupActiveColorsForLevel(){
+    const unlocked = allUnlockedColors();
+    if(size >= 7 && unlocked.length > 6){
+      activeColorsForLevel = chooseWeightedColorsForLevel(unlocked, 6);
+    } else if(size >= 6 && unlocked.length > 6){
+      activeColorsForLevel = chooseWeightedColorsForLevel(unlocked, 6);
+    } else {
+      activeColorsForLevel = unlocked.slice();
+    }
+    lastActiveColorKeys = activeColorsForLevel.map(item => item.key);
+  }
+
+  function currentColors(){
+    if(activeColorsForLevel && activeColorsForLevel.length) return activeColorsForLevel;
+    return allUnlockedColors();
+  }
+
   function currentQuizPool(){
     const mode = currentMode();
     const extras = (mode.extraQuizzes || []).slice(0, unlockedExtraCountForMode(mode));
-    return [...mode.quizzes, ...extras];
+    return [...mode.quizzes, ...extras].map((quiz, idx) => ({ ...quiz, _id: quiz._id || `${modeKey}_quiz_${idx}` }));
   }
 
-  const PACK_CATEGORY_MAP = {
-    blackHistory: ["civilRights","inventors","artists","militaryTrailblazers","sports","superheroes","entertainers","comedians","musicians","professions","hbcus"],
-    finance: ["income","savings","bills","debtCredit","retirement","interestRates","goodBadDebt","ira401k"],
-    civics: ["executive","legislative","judicial","rightsResponsibilities","redlining","governor","mayor","amendments13_14_15"]
-  };
-
-  function getPackSubjectKey(){
-    return modeKey;
-  }
-
-  function getPackCategoryKey(categoryIndex){
-    const arr = PACK_CATEGORY_MAP[getPackSubjectKey()] || [];
-    return arr[categoryIndex] || null;
-  }
-
-  function getPackCategoryInfo(categoryIndex){
-    const subjectKey = getPackSubjectKey();
-    const categoryKey = getPackCategoryKey(categoryIndex);
-    const subject = window.POPBLOCKS_MANIFEST?.subjects?.[subjectKey];
-    if(!subject || !categoryKey) return null;
-    return subject.categories?.[categoryKey] || null;
-  }
-
-  function normalizeQuizItem(item, fallbackIdPrefix="quiz"){
-    return {
-      id: item.id || `${fallbackIdPrefix}-${Math.random().toString(36).slice(2)}`,
-      q: item.q || item.prompt || "Question",
-      choices: Array.isArray(item.choices) ? item.choices.slice() : [],
-      a: Number.isInteger(item.a) ? item.a : (Number.isInteger(item.answerIndex) ? item.answerIndex : 0),
-      explanation: item.explanation || "",
-    };
-  }
-
-  function getPackedQuizPoolForCategory(categoryIndex){
-    const info = getPackCategoryInfo(categoryIndex);
-    if(!info || !Array.isArray(info.quizPacks)) return [];
-    let out = [];
-    info.quizPacks.forEach(packId => {
-      const pack = window.POPBLOCKS_PACKS?.[packId];
-      if(pack && pack.active && Array.isArray(pack.questions)) {
-        out = out.concat(pack.questions.map((q, idx) => normalizeQuizItem(q, `${packId}-${idx}`)));
-      }
-    });
-    return out;
-  }
-
-  function getPackedFactsForCategory(categoryIndex){
-    const info = getPackCategoryInfo(categoryIndex);
-    if(!info || !Array.isArray(info.factPacks)) return [];
-    let out = [];
-    info.factPacks.forEach(packId => {
-      const pack = window.POPBLOCKS_PACKS?.[packId];
-      if(pack && pack.active && Array.isArray(pack.facts)) {
-        out = out.concat(pack.facts.map(f => typeof f === "string" ? f : (f.text || "")));
-      }
-    });
-    return out.filter(Boolean);
-  }
-
-  function getRecentQuizIds(subjectKey, categoryKey){
-    const memKey = `wglt_recent_quiz_${subjectKey}_${categoryKey}`;
-    if(Array.isArray(recentQuizMemory[memKey])) return recentQuizMemory[memKey].slice();
-    try {
-      const saved = JSON.parse(localStorage.getItem(memKey) || '[]');
-      recentQuizMemory[memKey] = Array.isArray(saved) ? saved : [];
-    } catch(e){
-      recentQuizMemory[memKey] = [];
-    }
-    return recentQuizMemory[memKey].slice();
-  }
-
-  function setRecentQuizIds(subjectKey, categoryKey, ids){
-    const memKey = `wglt_recent_quiz_${subjectKey}_${categoryKey}`;
-    const trimmed = ids.slice(-12);
-    recentQuizMemory[memKey] = trimmed;
-    try { localStorage.setItem(memKey, JSON.stringify(trimmed)); } catch(e){}
-  }
-
-  function shuffleQuizChoices(choiceList, correctIndex){
-    const indexed = choiceList.map((choice, idx) => ({ choice, idx }));
-    for(let i=indexed.length-1;i>0;i--){
-      const j = Math.floor(Math.random() * (i+1));
-      [indexed[i], indexed[j]] = [indexed[j], indexed[i]];
-    }
-    return {
-      choiceList: indexed.map(x => x.choice),
-      correctIndex: indexed.findIndex(x => x.idx === correctIndex)
-    };
-  }
-
-  function getQuizForCategory(categoryIndex){
-    const subjectKey = getPackSubjectKey();
-    const categoryKey = getPackCategoryKey(categoryIndex);
-    const packed = getPackedQuizPoolForCategory(categoryIndex);
-    let pool = packed.length ? packed : currentQuizPool().map((q, idx) => normalizeQuizItem(q, `fallback-${idx}`));
-    if(!pool.length) return null;
-    if(!categoryKey) {
-      const idx = randIndexAvoid(pool.length, lastQuizIndex);
-      lastQuizIndex = idx;
-      return pool[idx];
-    }
-    let recentIds = getRecentQuizIds(subjectKey, categoryKey);
-    let available = pool.filter(q => !recentIds.includes(q.id));
-    if(!available.length){
-      recentIds = [];
-      setRecentQuizIds(subjectKey, categoryKey, []);
-      available = pool.slice();
-    }
-    const idx = Math.floor(Math.random() * available.length);
-    return available[idx];
-  }
-
-  function markQuizUsed(categoryIndex, quizId){
-    const subjectKey = getPackSubjectKey();
-    const categoryKey = getPackCategoryKey(categoryIndex);
-    if(!categoryKey || !quizId) return;
-    const recentIds = getRecentQuizIds(subjectKey, categoryKey);
-    recentIds.push(quizId);
-    setRecentQuizIds(subjectKey, categoryKey, recentIds);
-  }
 
   function randomColorIndex() {
     return Math.floor(Math.random() * currentColors().length);
@@ -2680,7 +2598,7 @@ function getCellCenter(r, c){
             } else if(group.length >= 7) {
               boardHintEl.textContent = `Bonus Pop ready: ${group.length} blocks`;
             } else if(group.length >= 4) {
-              boardHintEl.textContent = `Knowledge Pop ready: ${group.length} blocks`;
+              boardHintEl.textContent = `Quiz Boost ready: ${group.length} blocks`;
             } else {
               boardHintEl.textContent = group.length >= 2 ? `Ready to pop ${group.length} blocks` : "Need 2 or more connected blocks";
             }
@@ -2844,54 +2762,60 @@ function getCellCenter(r, c){
     factTextEl.textContent = text;
   }
 
+  function scrollQuizIntoView(){
+    try {
+      quizCardEl.scrollIntoView({ behavior: "smooth", block: "center" });
+    } catch(e){}
+  }
+
   function nextFact(){
-    const categoryIndex = Number.isInteger(pendingKnowledgeCategory) ? pendingKnowledgeCategory : lastRewardCategory;
-    const packedFacts = getPackedFactsForCategory(categoryIndex);
-    const pool = packedFacts.length ? packedFacts : currentMode().facts;
-    const idx = randIndexAvoid(pool.length, lastFactIndex);
-    lastFactIndex = idx;
-    const item = pool[idx];
-    showFact(typeof item === "string" ? item : (item?.text || ""));
-    setKnowledgeGlow(true);
+    triggerQuiz();
   }
 
   function triggerQuiz(){
     if(isQuizActive) return;
     isQuizActive = true;
     setQuizGlow(true);
+    scrollQuizIntoView();
 
-    const categoryIndex = Number.isInteger(lastRewardCategory) ? lastRewardCategory : 0;
-    const quiz = getQuizForCategory(categoryIndex);
+    const quizzes = currentQuizPool();
+    let recent = recentQuizIdsByMode[modeKey] || [];
+    let available = quizzes.filter(q => !recent.includes(q._id));
+    if(!available.length){
+      recent = [];
+      available = quizzes.slice();
+    }
+    const quiz = available[Math.floor(Math.random() * available.length)];
     if(!quiz){
-      quizTextEl.textContent = "No quiz available right now.";
-      choicesEl.innerHTML = "";
       isQuizActive = false;
-      setQuizGlow(false);
       return;
     }
+    recentQuizIdsByMode[modeKey] = [...recent, quiz._id].slice(-12);
 
     quizTextEl.textContent = quiz.q;
     choicesEl.innerHTML = "";
 
-    let choiceList = quiz.choices.slice();
-    let correctIndex = quiz.a;
+    let indexedChoices = quiz.choices.map((choice, idx) => ({ choice, idx }));
 
-    if(quizMisses >= 2 && choiceList.length >= 3){
-      const keepWrongIndices = choiceList.map((_, i) => i).filter(i => i !== quiz.a);
-      const keptWrong = keepWrongIndices[Math.floor(Math.random() * keepWrongIndices.length)];
-      choiceList = [choiceList[quiz.a], choiceList[keptWrong]];
-      correctIndex = 0;
-      factTextEl.textContent = "Hint active: two choices left. Use the fact box and your best clue-finding powers.";
+    if(quizMisses >= 2 && indexedChoices.length >= 3){
+      const wrongChoices = indexedChoices.filter(item => item.idx !== quiz.a);
+      const keptWrong = wrongChoices[Math.floor(Math.random() * wrongChoices.length)];
+      indexedChoices = [indexedChoices[quiz.a], keptWrong];
+      factTextEl.textContent = "Hint active: two choices left. Use your best clue-finding powers.";
+    } else {
+      factTextEl.textContent = "Quiz Boost active. Questions can come from any category in this subject.";
     }
 
-    const shuffled = shuffleQuizChoices(choiceList, correctIndex);
-    choiceList = shuffled.choiceList;
-    correctIndex = shuffled.correctIndex;
+    for(let i=indexedChoices.length-1;i>0;i--){
+      const j = Math.floor(Math.random() * (i+1));
+      [indexedChoices[i], indexedChoices[j]] = [indexedChoices[j], indexedChoices[i]];
+    }
+    const correctIndex = indexedChoices.findIndex(item => item.idx === quiz.a);
 
-    choiceList.forEach((choice, i) => {
+    indexedChoices.forEach((item, i) => {
       const btn = document.createElement("button");
       btn.className = "choice";
-      btn.textContent = choice;
+      btn.textContent = item.choice;
       btn.addEventListener("click", () => {
         const correct = i === correctIndex;
         Array.from(choicesEl.children).forEach((el, idx2) => {
@@ -2905,9 +2829,8 @@ function getCellCenter(r, c){
           benchmarkProgress["Quiz Mastery"] = (benchmarkProgress["Quiz Mastery"] || 0) + 1;
           maybeAwardBoosterForCategory(lastRewardCategory, 1);
           quizMisses = 0;
-          markQuizUsed(categoryIndex, quiz.id);
           showToast("Correct! Bonus clear activated");
-          factTextEl.textContent = quiz.explanation || "Quiz Boost unlocked. Green blocks show exactly what is about to explode.";
+          factTextEl.textContent = "Quiz Boost cleared. Green blocks show exactly what is about to explode.";
           progress = 0;
           isQuizActive = false;
           setQuizGlow(false);
@@ -3112,17 +3035,27 @@ function getCellCenter(r, c){
 
   
   
-  function explodeBomb(r,c){
+  function collectBombArea(r, c, radius){
     const affected = [];
-    for(let dr=-1; dr<=1; dr++){
-      for(let dc=-1; dc<=1; dc++){
+    for(let dr=-radius; dr<=radius; dr++){
+      for(let dc=-radius; dc<=radius; dc++){
         const rr = r + dr, cc = c + dc;
         if(rr >= 0 && rr < size && cc >= 0 && cc < size && board[rr][cc] !== null){
           const cell = board[rr][cc];
           const cat = typeof cell === "object" ? cell.color : cell;
-          affected.push([rr,cc,cat]);
+          affected.push([rr,cc,cat,cell]);
         }
       }
+    }
+    return affected;
+  }
+
+  function explodeBombArea(r, c, baseRadius=1, allowMega=true){
+    let affected = collectBombArea(r, c, baseRadius);
+    const touchingBomb = allowMega && affected.some(([rr,cc,cat,cell]) => (rr !== r || cc !== c) && isBomb(cell));
+    if(touchingBomb && baseRadius < 2){
+      affected = collectBombArea(r, c, 2);
+      showToast("💥 Bomb combo! 5x5 blast");
     }
 
     if(!affected.length) return;
@@ -3149,6 +3082,10 @@ function getCellCenter(r, c){
     }, 0, 0);
   }
 
+  function explodeBomb(r,c){
+    explodeBombArea(r, c, 1, true);
+  }
+
 function popGroup(r,c){
     setPreview([]);
 
@@ -3156,7 +3093,7 @@ function popGroup(r,c){
       setKnowledgeGlow(false);
       pendingKnowledge = false;
       pendingKnowledgeCategory = null;
-      if (guidanceTextEl) guidanceTextEl.textContent = "Pop 4+ blocks to unlock knowledge!";
+      if (guidanceTextEl) guidanceTextEl.textContent = "Fill the meter to trigger Quiz Boost!";
     }
 
     if(isQuizActive) {
@@ -3280,28 +3217,16 @@ function popGroup(r,c){
         endRoundIfNeeded();
       };
 
-      if(groupSize >= 10){
-        nextFactForCategory(categoryIndex);
-        score += 150;
+      if(groupSize >= 7){
+        score += groupSize >= 10 ? 150 : 100;
         benchmarkProgress[categoryLabel] = (benchmarkProgress[categoryLabel] || 0) + 2;
-        showToast(`🎬 Video Pop! ${groupSize} blocks`);
-        updateBest();
-        saveProgress();
-        renderBoard([]);
-        playVideoPopup(afterReward);
-        return;
-      } else if(groupSize >= 7){
-        nextFactForCategory(categoryIndex);
-        score += 100;
-        benchmarkProgress[categoryLabel] = (benchmarkProgress[categoryLabel] || 0) + 2;
-        showToast(`⚡ Bonus Knowledge Pop! ${groupSize} blocks`);
+        showToast(`🧠 Mega Quiz Boost meter gain! ${groupSize} blocks`);
       } else if(groupSize >= 4){
-        nextFactForCategory(categoryIndex);
         benchmarkProgress[categoryLabel] = (benchmarkProgress[categoryLabel] || 0) + 1;
-        showToast(`💡 Knowledge Pop! ${groupSize} blocks`);
+        showToast(`🧠 Quiz Boost charge! ${groupSize} blocks`);
       } else {
         showFact(`Nice pop. You cleared ${groupSize} blocks and earned ${gained} points.`);
-        if (guidanceTextEl) guidanceTextEl.textContent = "Pop 4+ blocks to unlock knowledge!";
+        if (guidanceTextEl) guidanceTextEl.textContent = "Fill the meter to trigger Quiz Boost.";
         showToast(`Popped ${groupSize}`);
       }
 
@@ -3322,8 +3247,8 @@ function popGroup(r,c){
     choicesEl.innerHTML = "";
     quizMisses = 0;
     quizTextEl.textContent = "Fill the learning meter to trigger a bonus question.";
-    factTextEl.textContent = "Make a match to begin. Big combos wake up the fact engine.";
-    if (guidanceTextEl) guidanceTextEl.textContent = "Pop 4+ blocks to unlock knowledge!";
+    factTextEl.textContent = "Make a match to begin. Fill the meter to wake up Quiz Boost.";
+    if (guidanceTextEl) guidanceTextEl.textContent = "Fill the meter to trigger Quiz Boost!";
     setKnowledgeGlow(false);
     setQuizGlow(false);
 
@@ -3347,6 +3272,7 @@ function popGroup(r,c){
     }
 
     syncBoardSizeToLevel();
+    setupActiveColorsForLevel();
     ensureBenchmarkShape();
     if(resetProgress){
       generateObjectivesForLevel();
@@ -3415,10 +3341,11 @@ function popGroup(r,c){
     quizMisses = 0;
     choicesEl.innerHTML = "";
     quizTextEl.textContent = "Fill the learning meter to trigger a bonus question.";
-    if (guidanceTextEl) guidanceTextEl.textContent = "Pop 4+ blocks to unlock knowledge!";
+    if (guidanceTextEl) guidanceTextEl.textContent = "Fill the meter to trigger Quiz Boost!";
     setKnowledgeGlow(false);
     setQuizGlow(false);
     syncBoardSizeToLevel();
+    setupActiveColorsForLevel();
     ensureBenchmarkShape();
     generateObjectivesForLevel();
     saveLevelObjectivesStart();
@@ -3460,8 +3387,8 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
     quizMisses = 0;
     choicesEl.innerHTML = "";
     quizTextEl.textContent = "Fill the learning meter to trigger a bonus question.";
-    factTextEl.textContent = "Make a match to begin. Big combos wake up the fact engine.";
-    if (guidanceTextEl) guidanceTextEl.textContent = "Pop 4+ blocks to unlock knowledge!";
+    factTextEl.textContent = "Make a match to begin. Fill the meter to wake up Quiz Boost.";
+    if (guidanceTextEl) guidanceTextEl.textContent = "Fill the meter to trigger Quiz Boost!";
     setKnowledgeGlow(false);
     setQuizGlow(false);
     renderObjectives();
