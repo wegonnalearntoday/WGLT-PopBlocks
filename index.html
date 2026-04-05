@@ -784,7 +784,7 @@
             <div class="legendGuideRow"><div class="legendGuideIcon">💣</div><div class="legendGuideText"><b>Knowledge Bomb</b><br>Earn: exact 8-block pop<br>Effect: clears a 3x3 blast. If it touches a board bomb, it upgrades to 5x5.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">⏱️</div><div class="legendGuideText"><b>Time Bonus</b><br>Earn: exact 9-block pop<br>Effect: adds +30 seconds on timer levels.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🔁</div><div class="legendGuideText"><b>Swap Special</b><br>Earn: pop a plus-sign cluster<br>Effect: creates a swap special.</div></div>
-            <div class="legendGuideRow"><div class="legendGuideIcon">🔨</div><div class="legendGuideText"><b>Hammer Special</b><br>Earn: pop a T-shaped cluster<br>Effect: creates a hammer special.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">🔨</div><div class="legendGuideText"><b>Hammer Special</b><br>Earn: pop a regular L or backwards L cluster<br>Effect: creates a hammer special.</div></div>
           </div>
           <div class="legendSection">
             <div class="legendSectionTitle">🧩 Shape Specials</div>
@@ -792,7 +792,8 @@
             <div class="legendGuideRow"><div class="legendGuideIcon">⚡</div><div class="legendGuideText"><b>5 in a Line</b><br>Earn: pop 5 connected blocks in a straight line<br>Effect: creates a line blaster.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🔄</div><div class="legendGuideText"><b>Shuffle Smart</b><br>Earn: exact 7-block pop<br>Effect: reshuffles the board.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">⚡</div><div class="legendGuideText"><b>Knowledge Multiplier</b><br>Earn: exact 10-block pop<br>Effect: doubles your next pop score and meter.</div></div>
-            <div class="legendGuideRow"><div class="legendGuideIcon">↔️</div><div class="legendGuideText"><b>Upside-down T</b><br>Earn: pop an upside-down T cluster<br>Effect: creates an arrow line clear.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">↕️</div><div class="legendGuideText"><b>Vertical Arrow Line Clear</b><br>Earn: pop a T-shaped cluster<br>Effect: creates a vertical arrow line clear.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">↔️</div><div class="legendGuideText"><b>Horizontal Arrow Line Clear</b><br>Earn: pop an upside-down T cluster<br>Effect: creates a horizontal arrow line clear.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🎬</div><div class="legendGuideText"><b>10+ Blocks</b><br>Earn: pop 10 or more connected blocks<br>Effect: triggers the video pop.</div></div>
           </div>
         </div>
@@ -860,17 +861,17 @@
               <button class="boosterBtn locked" id="boosterShuffle" data-booster="shuffle">
                 <span class="count" id="countShuffle">0</span>
                 <span class="emoji">🔄</span>
-                <span>Shuffle Smart</span>
+                <span>Swap Special</span>
                 <span class="boosterUnlockHint" id="hintShuffle"></span>
               </button>
               <button class="boosterBtn locked" id="boosterMultiplier" data-booster="multiplier">
                 <span class="count" id="countMultiplier">0</span>
                 <span class="emoji">⚡</span>
-                <span>Knowledge Multiplier</span>
+                <span>Hammer Special</span>
                 <span class="boosterUnlockHint" id="hintMultiplier"></span>
               </button>
             </div>
-            <div class="boosterHelp" id="boosterHelp">Exact match rewards: 7 blocks = Shuffle, 8 = Bomb, 9 = Time Bonus, 10 = Knowledge Multiplier.</div>
+            <div class="boosterHelp" id="boosterHelp">Exact match rewards: 7 blocks = Swap Special, 8 = Bomb, 9 = Time Bonus, 10 = Hammer Special.</div>
           </div>
         </section>
 
@@ -1710,8 +1711,8 @@
   const BOOSTER_INFO = {
     bomb: { label: "Knowledge Bomb", text: "Use on the board to clear a 3x3 area and get a fact." },
     target: { label: "Time Bonus", text: "Only works on timer levels. Tap it to instantly add +30 seconds." },
-    shuffle: { label: "Shuffle Smart", text: "Tap to reshuffle the board and keep the game moving." },
-    multiplier: { label: "Knowledge Multiplier", text: "Tap to arm it. Your next pop gets double points and double meter." }
+    shuffle: { label: "Swap Special", text: "Tap the booster, then pick two neighboring blocks to swap them." },
+    multiplier: { label: "Hammer Special", text: "Tap the booster, then tap one block to bust it." }
   };
 
   function defaultBoosterInventory(){
@@ -1750,13 +1751,10 @@
     Object.values(boosterButtons).forEach(btn => btn && btn.classList.remove("activeMode"));
     Object.values(boosterButtons).forEach(btn => btn && btn.classList.add("activeMode"));
 
-    if(multiplierArmed){
-      boosterButtons.multiplier && boosterButtons.multiplier.classList.add("selected");
-      if (boosterHelpEl) boosterHelpEl.textContent = "⚡ Multiplier armed. Your next block pop gets double points and double meter.";
-    } else if(selectedBooster){
+    if(selectedBooster){
       if (boosterHelpEl) boosterHelpEl.textContent = BOOSTER_INFO[selectedBooster].text;
     } else {
-      if (boosterHelpEl) boosterHelpEl.textContent = "Exact match rewards: 7 blocks = Shuffle, 8 = Bomb, 9 = Time Bonus, 10 = Knowledge Multiplier.";
+      if (boosterHelpEl) boosterHelpEl.textContent = "Exact match rewards: 7 blocks = Swap Special, 8 = Bomb, 9 = Time Bonus, 10 = Hammer Special.";
     }
   }
 
@@ -1799,14 +1797,6 @@
       showToast("Booster locked");
       return;
     }
-    if(type === "shuffle"){
-      useShuffleBooster();
-      return;
-    }
-    if(type === "multiplier"){
-      useMultiplierBooster();
-      return;
-    }
     if(type === "target"){
       useTargetBooster();
       return;
@@ -1825,33 +1815,13 @@
   }
 
   function useShuffleBooster(){
-    if(!spendBooster("shuffle")){
-      showToast("No Shuffle Smart boosters yet");
-      return;
-    }
-    movesLeft = Math.max(0, movesLeft - 1);
-    reshuffleBoard();
-    nextFact();
-    renderBoard([]);
-    showToast("🔄 Shuffle Smart used");
+    selectedBooster = (selectedBooster === "shuffle") ? null : "shuffle";
+    renderBoosters();
   }
 
   function useMultiplierBooster(){
-    if(multiplierArmed){
-      multiplierArmed = false;
-      boosterInventory["multiplier"] = Math.min(10, (boosterInventory["multiplier"] || 0) + 1);
-      saveProgress();
-      renderBoosters();
-      showToast("⚡ Multiplier unselected");
-      return;
-    }
-    if(!spendBooster("multiplier")){
-      showToast("No Knowledge Multiplier boosters yet");
-      return;
-    }
-    multiplierArmed = true;
+    selectedBooster = (selectedBooster === "multiplier") ? null : "multiplier";
     renderBoosters();
-    showToast("⚡ Multiplier armed");
   }
 
   function clearArea3x3(centerR, centerC){
@@ -2238,6 +2208,21 @@
         set.has(`${r+1},${c}`) &&
         set.has(`${r},${c-1}`) &&
         set.has(`${r},${c+1}`)
+      ){
+        return [r,c];
+      }
+    }
+    return null;
+  }
+
+  function detectLShape(group){
+    const set = new Set(group.map(([r,c]) => `${r},${c}`));
+    for(const [r,c] of group){
+      if(
+        (set.has(`${r},${c}`) && set.has(`${r+1},${c}`) && set.has(`${r+2},${c}`) && set.has(`${r+2},${c+1}`) && set.has(`${r+2},${c+2}`)) ||
+        (set.has(`${r},${c}`) && set.has(`${r+1},${c}`) && set.has(`${r+2},${c}`) && set.has(`${r+2},${c-1}`) && set.has(`${r+2},${c-2}`)) ||
+        (set.has(`${r},${c}`) && set.has(`${r-1},${c}`) && set.has(`${r-2},${c}`) && set.has(`${r-2},${c+1}`) && set.has(`${r-2},${c+2}`)) ||
+        (set.has(`${r},${c}`) && set.has(`${r-1},${c}`) && set.has(`${r-2},${c}`) && set.has(`${r-2},${c-1}`) && set.has(`${r-2},${c-2}`))
       ){
         return [r,c];
       }
@@ -2726,6 +2711,23 @@ function getCellCenter(r, c){
             if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; boardHintEl.textContent = "↔️ Tap a line target to clear that row or column."; showToast("Arrow armed"); return; }
             if(selectedBooster === "bomb"){ useBombBooster(r,c); return; }
             if(selectedBooster === "target"){ useTargetBooster(r,c); return; }
+            if(selectedBooster === "shuffle"){
+              if(!spendBooster("shuffle")){ showToast("No Swap Special boosters yet"); return; }
+              selectedBooster = null;
+              renderBoosters();
+              swapSpecialArmed = { r, c };
+              boardHintEl.textContent = "🔁 Tap a neighboring block to swap.";
+              showToast("Swap armed");
+              return;
+            }
+            if(selectedBooster === "multiplier"){
+              if(!spendBooster("multiplier")){ showToast("No Hammer Special boosters yet"); return; }
+              selectedBooster = null;
+              renderBoosters();
+              hammerSpecialArmed = { r, c };
+              resolveHammerSpecial(r,c);
+              return;
+            }
             popGroup(r,c);
           });
 
@@ -2751,6 +2753,23 @@ function getCellCenter(r, c){
             if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; boardHintEl.textContent = "↔️ Tap a line target to clear that row or column."; showToast("Arrow armed"); return; }
             if(selectedBooster === "bomb"){ useBombBooster(r,c); return; }
             if(selectedBooster === "target"){ useTargetBooster(r,c); return; }
+            if(selectedBooster === "shuffle"){
+              if(!spendBooster("shuffle")){ showToast("No Swap Special boosters yet"); return; }
+              selectedBooster = null;
+              renderBoosters();
+              swapSpecialArmed = { r, c };
+              boardHintEl.textContent = "🔁 Tap a neighboring block to swap.";
+              showToast("Swap armed");
+              return;
+            }
+            if(selectedBooster === "multiplier"){
+              if(!spendBooster("multiplier")){ showToast("No Hammer Special boosters yet"); return; }
+              selectedBooster = null;
+              renderBoosters();
+              hammerSpecialArmed = { r, c };
+              resolveHammerSpecial(r,c);
+              return;
+            }
             popGroup(r,c);
           }, {passive:false});
         }
@@ -3161,8 +3180,9 @@ function popGroup(r,c){
     const lineInfo = !bombAnchor ? detectStraightLine(group) : null;
     const timeAnchor = (!bombAnchor && !lineInfo) ? detectTargetBlock(group) : null;
     const crossAnchor = (!bombAnchor && !lineInfo && !timeAnchor) ? detectCross3(group) : null;
-    const capitalTAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor) ? detectCapitalT(group) : null;
-    const upsideDownTAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor && !capitalTAnchor) ? detectUpsideDownT(group) : null;
+    const hammerAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor) ? detectLShape(group) : null;
+    const capitalTAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor && !hammerAnchor) ? detectCapitalT(group) : null;
+    const upsideDownTAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor && !hammerAnchor && !capitalTAnchor) ? detectUpsideDownT(group) : null;
 
     const nextCombo = combo + 1;
     const multiplierValue = multiplierArmed ? 2 : 1;
@@ -3175,7 +3195,7 @@ function popGroup(r,c){
         board[rr][cc] = null;
       });
 
-      if(bombAnchor || lineInfo || timeAnchor || crossAnchor || capitalTAnchor || upsideDownTAnchor){
+      if(bombAnchor || lineInfo || timeAnchor || crossAnchor || hammerAnchor || capitalTAnchor || upsideDownTAnchor){
         consumeObjectivesForCategory(categoryIndex, Math.max(0, groupSize - 1));
       } else {
         consumeObjectivesForCategory(categoryIndex, groupSize);
@@ -3184,8 +3204,8 @@ function popGroup(r,c){
       applyGravity();
       refillBoard();
 
-      if(bombAnchor || lineInfo || timeAnchor || crossAnchor || capitalTAnchor || upsideDownTAnchor){
-        const desired = bombAnchor ? bombAnchor : (lineInfo ? lineInfo.anchor : (timeAnchor ? timeAnchor : (crossAnchor ? crossAnchor : (capitalTAnchor ? capitalTAnchor : upsideDownTAnchor))));
+      if(bombAnchor || lineInfo || timeAnchor || crossAnchor || hammerAnchor || capitalTAnchor || upsideDownTAnchor){
+        const desired = bombAnchor ? bombAnchor : (lineInfo ? lineInfo.anchor : (timeAnchor ? timeAnchor : (crossAnchor ? crossAnchor : (hammerAnchor ? hammerAnchor : (capitalTAnchor ? capitalTAnchor : upsideDownTAnchor)))));
         const [dr, dc] = desired;
         let placed = false;
 
@@ -3197,9 +3217,11 @@ function popGroup(r,c){
               ? { type: "time", color: categoryIndex }
               : crossAnchor
                 ? { type: "swap", color: categoryIndex }
-                : capitalTAnchor
+                : hammerAnchor
                   ? { type: "hammer", color: categoryIndex }
-                  : { type: "arrow", color: categoryIndex, orientation: "row" };
+                  : capitalTAnchor
+                    ? { type: "arrow", color: categoryIndex, orientation: "col" }
+                    : { type: "arrow", color: categoryIndex, orientation: "row" };
 
         const tryPlace = (rr, cc) => {
           if(rr >= 0 && rr < size && cc >= 0 && cc < size && board[rr][cc] !== null && typeof board[rr][cc] !== "object"){
@@ -3252,10 +3274,12 @@ function popGroup(r,c){
           showToast("⏱️ 30-second bonus created!");
         } else if(crossAnchor){
           showToast("🔁 Swap Special created!");
-        } else if(capitalTAnchor){
+        } else if(hammerAnchor){
           showToast("🔨 Hammer created!");
+        } else if(capitalTAnchor){
+          showToast("↕️ Vertical Arrow created!");
         } else if(upsideDownTAnchor){
-          showToast("↔️ Arrow created!");
+          showToast("↔️ Horizontal Arrow created!");
         }
         endRoundIfNeeded();
       };
