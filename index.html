@@ -572,6 +572,28 @@
     animation:arrowPulse 0.8s ease-in-out infinite alternate;
   }
   .cell.arrow-special::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    line-height:1;
+    pointer-events:none;
+  }
+  .cell.arrow-special.arrow-vertical::after{
+    content:"↕️";
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    line-height:1;
+    pointer-events:none;
+  }
+  .cell.arrow-special.arrow-horizontal::after{
     content:"↔️";
     position:absolute;
     inset:0;
@@ -2637,6 +2659,9 @@ function getCellCenter(r, c){
         const colorIndex = typeof cellData === "object" ? cellData.color : cellData;
         const cell = document.createElement("button");
         cell.className = "cell" + specialBlockClass(cellData);
+        if(typeof cellData === "object" && cellData && cellData.type === "arrow"){
+          cell.classList.add(cellData.orientation === "col" ? "arrow-vertical" : "arrow-horizontal");
+        }
         cell.dataset.r = r;
         cell.dataset.c = c;
 
@@ -2733,7 +2758,7 @@ function getCellCenter(r, c){
 
           cell.addEventListener("touchstart", (e) => {
             e.preventDefault();
-            if(isBomb(board[r][c]) || isLineBlaster(board[r][c]) || isTargetBlock(board[r][c])){
+            if(isBomb(board[r][c]) || isLineBlaster(board[r][c]) || isTargetBlock(board[r][c]) || (typeof board[r][c] === "object" && (board[r][c].type === "arrow" || board[r][c].type === "swap" || board[r][c].type === "hammer"))){
               return;
             }
             const group = getGroup(r,c);
@@ -3205,44 +3230,52 @@ function popGroup(r,c){
       refillBoard();
 
       if(bombAnchor || lineInfo || timeAnchor || crossAnchor || hammerAnchor || capitalTAnchor || upsideDownTAnchor){
-        const desired = bombAnchor ? bombAnchor : (lineInfo ? lineInfo.anchor : (timeAnchor ? timeAnchor : (crossAnchor ? crossAnchor : (hammerAnchor ? hammerAnchor : (capitalTAnchor ? capitalTAnchor : upsideDownTAnchor)))));
-        const [dr, dc] = desired;
-        let placed = false;
+        if(crossAnchor){
+          awardBooster("shuffle", 1);
+          showToast("🔁 Swap Special added to boosters");
+        }
+        if(hammerAnchor){
+          awardBooster("multiplier", 1);
+          showToast("🔨 Hammer Special added to boosters");
+        }
 
-        const specialObj = bombAnchor
-          ? { type: "bomb", color: categoryIndex }
-          : lineInfo
-            ? { type: "line", color: categoryIndex, orientation: lineInfo.orientation }
-            : timeAnchor
-              ? { type: "time", color: categoryIndex }
-              : crossAnchor
-                ? { type: "swap", color: categoryIndex }
-                : hammerAnchor
-                  ? { type: "hammer", color: categoryIndex }
-                  : capitalTAnchor
-                    ? { type: "arrow", color: categoryIndex, orientation: "col" }
-                    : { type: "arrow", color: categoryIndex, orientation: "row" };
+        const shouldPlaceBoardSpecial = bombAnchor || lineInfo || timeAnchor || capitalTAnchor || upsideDownTAnchor;
+        if(shouldPlaceBoardSpecial){
+          const desired = bombAnchor ? bombAnchor : (lineInfo ? lineInfo.anchor : (timeAnchor ? timeAnchor : (capitalTAnchor ? capitalTAnchor : upsideDownTAnchor)));
+          const [dr, dc] = desired;
+          let placed = false;
 
-        const tryPlace = (rr, cc) => {
-          if(rr >= 0 && rr < size && cc >= 0 && cc < size && board[rr][cc] !== null && typeof board[rr][cc] !== "object"){
-            board[rr][cc] = specialObj;
-            return true;
-          }
-          return false;
-        };
+          const specialObj = bombAnchor
+            ? { type: "bomb", color: categoryIndex }
+            : lineInfo
+              ? { type: "line", color: categoryIndex, orientation: lineInfo.orientation }
+              : timeAnchor
+                ? { type: "time", color: categoryIndex }
+                : capitalTAnchor
+                  ? { type: "arrow", color: categoryIndex, orientation: "col" }
+                  : { type: "arrow", color: categoryIndex, orientation: "row" };
 
-        placed = tryPlace(dr, dc)
-          || tryPlace(Math.min(size-1, dr+1), dc)
-          || tryPlace(dr, Math.min(size-1, dc+1))
-          || tryPlace(Math.max(0, dr-1), dc)
-          || tryPlace(dr, Math.max(0, dc-1));
+          const tryPlace = (rr, cc) => {
+            if(rr >= 0 && rr < size && cc >= 0 && cc < size && board[rr][cc] !== null && typeof board[rr][cc] !== "object"){
+              board[rr][cc] = specialObj;
+              return true;
+            }
+            return false;
+          };
 
-        if(!placed){
-          for(let rr=size-1; rr>=0 && !placed; rr--){
-            for(let cc=0; cc<size; cc++){
-              if(tryPlace(rr, cc)){
-                placed = true;
-                break;
+          placed = tryPlace(dr, dc)
+            || tryPlace(Math.min(size-1, dr+1), dc)
+            || tryPlace(dr, Math.min(size-1, dc+1))
+            || tryPlace(Math.max(0, dr-1), dc)
+            || tryPlace(dr, Math.max(0, dc-1));
+
+          if(!placed){
+            for(let rr=size-1; rr>=0 && !placed; rr--){
+              for(let cc=0; cc<size; cc++){
+                if(tryPlace(rr, cc)){
+                  placed = true;
+                  break;
+                }
               }
             }
           }
