@@ -621,6 +621,16 @@
     line-height:1;
     pointer-events:none;
   }
+  .cell.swap-selected{
+    transform:scale(1.04);
+    box-shadow:0 0 0 3px rgba(255,255,255,.42), 0 0 0 6px rgba(134,239,172,.22), 0 0 22px rgba(134,239,172,.65);
+    animation:swapSelectedPulse .65s ease-in-out infinite alternate;
+    z-index:2;
+  }
+  @keyframes swapSelectedPulse{
+    0%{ transform:scale(1.02); }
+    100%{ transform:scale(1.1); box-shadow:0 0 0 3px rgba(255,255,255,.55), 0 0 0 7px rgba(134,239,172,.28), 0 0 26px rgba(134,239,172,.72); }
+  }
   @keyframes hammerPulse{
     0%{ transform:scale(1); }
     100%{ transform:scale(1.06); box-shadow:0 0 0 2px rgba(255,184,107,.22), 0 0 22px rgba(255,184,107,.62); }
@@ -700,7 +710,18 @@
     100%{ box-shadow:0 0 0 3px rgba(255,107,107,.22), 0 0 18px rgba(255,107,107,.34); }
   }
 
-  
+  .tutorialBtn{ width:100%; margin-top:10px; }
+  .tutorialGrid{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px; margin-top:12px; }
+  .tutorialCard{ background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.09); border-radius:14px; padding:12px; }
+  .tutorialCard h4{ margin:0 0 8px; font-size:14px; }
+  .tutorialMiniBoard{ display:grid; grid-template-columns:repeat(5, 26px); gap:4px; justify-content:center; margin:8px 0 10px; }
+  .tutorialMiniCell{ width:26px; height:26px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:900; color:#111; background:#243041; border:1px solid rgba(255,255,255,.08); }
+  .tutorialMiniCell.hot{ background:#ffd54a; }
+  .tutorialMiniCell.hot2{ background:#86efac; }
+  .tutorialMiniCell.hot3{ background:#ffb86b; }
+  .tutorialMiniCell.hot4{ background:#7dd3fc; }
+  .tutorialMiniCell.hot5{ background:#fda4af; }
+  .tutorialCard p{ margin:0; font-size:13px; color:#d7deea; line-height:1.35; }
 
   .collapsibleCard .collapsibleHeader{
     width:100%; display:flex; align-items:center; justify-content:space-between;
@@ -793,6 +814,7 @@
           <button id="clearDataBtn" class="dark">🗑️ Clear Player Data</button>
           <button id="howToBtn" class="dark">How to Play</button>
         </div>
+        <button id="specialsTutorialBtn" class="secondary tutorialBtn">Tutorial: See Specials In Action</button>
       </div>
 
       <div class="card collapsibleCard" id="specialsLegendCard">
@@ -2662,6 +2684,9 @@ function getCellCenter(r, c){
         if(typeof cellData === "object" && cellData && cellData.type === "arrow"){
           cell.classList.add(cellData.orientation === "col" ? "arrow-vertical" : "arrow-horizontal");
         }
+        if(swapSpecialArmed && swapSpecialArmed.r === r && swapSpecialArmed.c === c){
+          cell.classList.add("swap-selected");
+        }
         cell.dataset.r = r;
         cell.dataset.c = c;
 
@@ -3514,6 +3539,14 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
 
     document.getElementById("howToBtn").addEventListener("click", () => overlay.classList.add("show"));
   document.getElementById("closeOverlayBtn").addEventListener("click", () => overlay.classList.remove("show"));
+  const specialsTutorialBtn = document.getElementById("specialsTutorialBtn");
+  const closeTutorialBtn = document.getElementById("closeTutorialBtn");
+  if(specialsTutorialBtn && tutorialOverlay){
+    specialsTutorialBtn.addEventListener("click", () => tutorialOverlay.classList.add("show"));
+  }
+  if(closeTutorialBtn && tutorialOverlay){
+    closeTutorialBtn.addEventListener("click", () => tutorialOverlay.classList.remove("show"));
+  }
   if(specialsLegendToggleEl && specialsLegendCardEl){
     specialsLegendToggleEl.addEventListener("click", () => {
       specialsLegendCardEl.classList.toggle("open");
@@ -3523,10 +3556,71 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
   overlay.addEventListener("click", (e) => {
     if(e.target === overlay) overlay.classList.remove("show");
   });
+  if(tutorialOverlay){
+    tutorialOverlay.addEventListener("click", (e) => {
+      if(e.target === tutorialOverlay) tutorialOverlay.classList.remove("show");
+    });
+  }
 
   newGame();
 })();
 </script>
+
+<div class="overlay" id="tutorialOverlay">
+  <div class="modal">
+    <h2>⭐ Specials Tutorial</h2>
+    <p class="sub">Here is the quick field guide so players can spot each special without any guesswork.</p>
+    <div class="tutorialGrid">
+      <div class="tutorialCard">
+        <h4>🔁 Plus-sign / Cross</h4>
+        <div class="tutorialMiniBoard">
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell hot2">★</div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+        </div>
+        <p><b>Reward:</b> 🔁 Swap Special</p>
+      </div>
+      <div class="tutorialCard">
+        <h4>🔨 L / Backwards L</h4>
+        <div class="tutorialMiniBoard">
+          <div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+        </div>
+        <p><b>Reward:</b> 🔨 Hammer Special</p>
+      </div>
+      <div class="tutorialCard">
+        <h4>↕️ Capital T</h4>
+        <div class="tutorialMiniBoard">
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+        </div>
+        <p><b>Reward:</b> ↕️ Vertical Arrow Line Clear</p>
+      </div>
+      <div class="tutorialCard">
+        <h4>↔️ Upside-down T</h4>
+        <div class="tutorialMiniBoard">
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+        </div>
+        <p><b>Reward:</b> ↔️ Horizontal Arrow Line Clear</p>
+      </div>
+    </div>
+    <div class="actions" style="margin-top:14px; justify-content:flex-end;">
+      <button id="closeTutorialBtn">Got It</button>
+    </div>
+  </div>
+</div>
 
 <div class="overlay" id="videoOverlay">
   <div class="modal" style="padding:0; overflow:hidden;">
