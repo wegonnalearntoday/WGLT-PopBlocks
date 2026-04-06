@@ -825,8 +825,8 @@
         <div class="collapsibleBody" id="specialsLegendBody">
           <div class="legendSection">
             <div class="legendSectionTitle">🎁 Booster Rewards</div>
-            <div class="legendGuideRow"><div class="legendGuideIcon">💣</div><div class="legendGuideText"><b>Knowledge Bomb</b><br>Earn: exact 8-block pop<br>Effect: clears a 3x3 blast. If it touches a board bomb, it upgrades to 5x5.</div></div>
-            <div class="legendGuideRow"><div class="legendGuideIcon">⏱️</div><div class="legendGuideText"><b>Time Bonus</b><br>Earn: exact 9-block pop<br>Effect: adds +30 seconds on timer levels.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">💣</div><div class="legendGuideText"><b>Knowledge Bomb</b><br>Earn: exact 6-block pop<br>Effect: clears a 3x3 blast. If it touches a board bomb, it upgrades to 5x5.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">⏱️</div><div class="legendGuideText"><b>Time Bonus</b><br>Earn: exact 7-block pop<br>Effect: adds +30 seconds on timer levels.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🔁</div><div class="legendGuideText"><b>Swap Special</b><br>Earn: pop a plus-sign cluster<br>Effect: creates a swap special.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🔨</div><div class="legendGuideText"><b>Hammer Special</b><br>Earn: pop a regular L or backwards L cluster<br>Effect: creates a hammer special.</div></div>
           </div>
@@ -834,7 +834,7 @@
             <div class="legendSectionTitle">🧩 Shape Specials</div>
             <div class="legendGuideRow"><div class="legendGuideIcon">💣</div><div class="legendGuideText"><b>2x2 Square</b><br>Earn: pop a 2x2 same-color square<br>Effect: creates a board bomb.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">⚡</div><div class="legendGuideText"><b>5 in a Line</b><br>Earn: pop 5 connected blocks in a straight line<br>Effect: creates a line blaster.</div></div>
-            <div class="legendGuideRow"><div class="legendGuideIcon">🔄</div><div class="legendGuideText"><b>Shuffle Smart</b><br>Earn: exact 7-block pop<br>Effect: reshuffles the board.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">🔄</div><div class="legendGuideText"><b>Shuffle Smart</b><br>Earn: not active in this build<br>Effect: reshuffles the board.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🧠</div><div class="legendGuideText"><b>Knowledge Multiplier</b><br>Earn: exact 10-block pop<br>Effect: doubles your next pop score and meter.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">↕️</div><div class="legendGuideText"><b>Vertical Arrow Line Clear</b><br>Earn: pop a T-shaped cluster<br>Effect: creates a vertical arrow line clear.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">↔️</div><div class="legendGuideText"><b>Horizontal Arrow Line Clear</b><br>Earn: pop an upside-down T cluster<br>Effect: creates a horizontal arrow line clear.</div></div>
@@ -915,7 +915,7 @@
                 <span class="boosterUnlockHint" id="hintMultiplier"></span>
               </button>
             </div>
-            <div class="boosterHelp" id="boosterHelp">Booster rewards: 8 = Knowledge Bomb, 9 = Time Bonus, plus-sign = Swap Special, L / backwards L = Hammer Special.</div>
+            <div class="boosterHelp" id="boosterHelp">Booster rewards: 6 = Knowledge Bomb, 7 = Time Bonus, plus-sign = Swap Special, L / backwards L = Hammer Special.</div>
           </div>
         </section>
 
@@ -943,7 +943,7 @@
             <div class="muted">
               • Bigger groups = better score<br>
               • 4+ blocks = stronger quiz meter charge<br>
-              • 7 exact = Shuffle, 8 exact = Bomb, 9 exact = Time, 10 exact = Multiplier<br>
+              • 6 exact = Knowledge Bomb, 7 exact = Time Bonus<br>
               • 10+ blocks = video pop<br>
               • Correct quiz answers clear extra blocks
             </div>
@@ -1773,8 +1773,8 @@
   function renderBoosters(){
     ensureBoosterShape();
     const unlockText = {
-      bomb: "Earn: exact 8-block pop • creates a bomb",
-      target: "Earn: exact 9-block pop • adds time",
+      bomb: "Earn: exact 6-block pop • creates a bomb",
+      target: "Earn: exact 7-block pop • adds time",
       shuffle: "Earn: pop a plus-sign cluster • creates a swap special",
       multiplier: "Earn: pop a regular L or backwards L cluster • creates a hammer special"
     };
@@ -1798,7 +1798,7 @@
     if(selectedBooster){
       if (boosterHelpEl) boosterHelpEl.textContent = BOOSTER_INFO[selectedBooster].text;
     } else {
-      if (boosterHelpEl) boosterHelpEl.textContent = "Booster rewards: 8 = Knowledge Bomb, 9 = Time Bonus, plus-sign = Swap Special, L / backwards L = Hammer Special.";
+      if (boosterHelpEl) boosterHelpEl.textContent = "Booster rewards: 6 = Knowledge Bomb, 7 = Time Bonus, plus-sign = Swap Special, L / backwards L = Hammer Special.";
     }
   }
 
@@ -1819,11 +1819,9 @@
   }
 
   function maybeAwardBoosterForPopSize(groupSize){
-    if(groupSize === 7){
-      awardBooster("shuffle", 1);
-    } else if(groupSize === 8){
+    if(groupSize === 6){
       awardBooster("bomb", 1);
-    } else if(groupSize === 9){
+    } else if(groupSize === 7){
       awardBooster("target", 1);
     } else if(groupSize === 10){
       awardBooster("multiplier", 1);
