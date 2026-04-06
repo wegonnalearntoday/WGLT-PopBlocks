@@ -521,14 +521,31 @@
     line-height:1;
     pointer-events:none;
   }
-  .cell.target-block{
-    background:#35125a !important;
-    border:2px solid #c084fc !important;
-    box-shadow:0 0 0 2px rgba(192,132,252,.18), 0 0 16px rgba(192,132,252,.45);
+  .cell.shuffle-board{
+    background:#103f3a !important;
+    border:2px solid #5eead4 !important;
+    box-shadow:0 0 0 2px rgba(94,234,212,.18), 0 0 16px rgba(94,234,212,.45);
     animation:targetPulse 0.8s ease-in-out infinite alternate;
   }
-  .cell.target-block::after{
-    content:"⏱️";
+  .cell.shuffle-board::after{
+    content:"🔄";
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    line-height:1;
+    pointer-events:none;
+  }
+  .cell.rainbow-special{
+    background:#4d2166 !important;
+    border:2px solid #f9a8d4 !important;
+    box-shadow:0 0 0 2px rgba(249,168,212,.18), 0 0 16px rgba(249,168,212,.45);
+    animation:targetPulse 0.8s ease-in-out infinite alternate;
+  }
+  .cell.rainbow-special::after{
+    content:"🌈";
     position:absolute;
     inset:0;
     display:flex;
@@ -622,9 +639,9 @@
     pointer-events:none;
   }
   .cell.swap-selected{
-    transform:scale(1.04);
-    box-shadow:0 0 0 3px rgba(255,255,255,.42), 0 0 0 6px rgba(134,239,172,.22), 0 0 22px rgba(134,239,172,.65);
-    animation:swapSelectedPulse .65s ease-in-out infinite alternate;
+    transform:scale(1.08);
+    box-shadow:0 0 0 3px rgba(255,255,255,.52), 0 0 0 7px rgba(134,239,172,.30), 0 0 30px rgba(134,239,172,.82);
+    animation:swapSelectedPulse .55s ease-in-out infinite alternate;
     z-index:2;
   }
   @keyframes swapSelectedPulse{
@@ -825,16 +842,17 @@
         <div class="collapsibleBody" id="specialsLegendBody">
           <div class="legendSection">
             <div class="legendSectionTitle">🎁 Booster Rewards</div>
-            <div class="legendGuideRow"><div class="legendGuideIcon">💣</div><div class="legendGuideText"><b>Knowledge Bomb</b><br>Earn: exact 6-block pop<br>Effect: clears a 3x3 blast. If it touches a board bomb, it upgrades to 5x5.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">💣</div><div class="legendGuideText"><b>Knowledge Bomb</b><br>Earn: exact 6-block pop<br>Effect: adds a Knowledge Bomb booster.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">⏱️</div><div class="legendGuideText"><b>Time Bonus</b><br>Earn: exact 7-block pop<br>Effect: adds +30 seconds on timer levels.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🔁</div><div class="legendGuideText"><b>Swap Special</b><br>Earn: pop a plus-sign cluster<br>Effect: creates a swap special.</div></div>
-            <div class="legendGuideRow"><div class="legendGuideIcon">🔨</div><div class="legendGuideText"><b>Hammer Special</b><br>Earn: pop a regular L or backwards L cluster<br>Effect: creates a hammer special.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">🔨</div><div class="legendGuideText"><b>Hammer Special</b><br>Earn: pop any 5-block L cluster<br>Effect: creates a hammer special.</div></div>
           </div>
           <div class="legendSection">
             <div class="legendSectionTitle">🧩 Shape Specials</div>
             <div class="legendGuideRow"><div class="legendGuideIcon">💣</div><div class="legendGuideText"><b>2x2 Square</b><br>Earn: pop a 2x2 same-color square<br>Effect: creates a board bomb.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">⚡</div><div class="legendGuideText"><b>5 in a Line</b><br>Earn: pop 5 connected blocks in a straight line<br>Effect: creates a line blaster.</div></div>
-            <div class="legendGuideRow"><div class="legendGuideIcon">🔄</div><div class="legendGuideText"><b>Shuffle Smart</b><br>Earn: not active in this build<br>Effect: reshuffles the board.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">🔄</div><div class="legendGuideText"><b>Shuffle Smart</b><br>Earn: exact 6-block pop<br>Effect: reshuffles the board when tapped.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">🌈</div><div class="legendGuideText"><b>Rainbow</b><br>Earn: exact 7-block pop<br>Effect: clears all items of a specific color.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🧠</div><div class="legendGuideText"><b>Knowledge Multiplier</b><br>Earn: exact 10-block pop<br>Effect: doubles your next pop score and meter.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">↕️</div><div class="legendGuideText"><b>Vertical Arrow Line Clear</b><br>Earn: pop a T-shaped cluster<br>Effect: creates a vertical arrow line clear.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">↔️</div><div class="legendGuideText"><b>Horizontal Arrow Line Clear</b><br>Earn: pop an upside-down T cluster<br>Effect: creates a horizontal arrow line clear.</div></div>
@@ -915,7 +933,7 @@
                 <span class="boosterUnlockHint" id="hintMultiplier"></span>
               </button>
             </div>
-            <div class="boosterHelp" id="boosterHelp">Booster rewards: 6 = Knowledge Bomb, 7 = Time Bonus, plus-sign = Swap Special, L / backwards L = Hammer Special.</div>
+            <div class="boosterHelp" id="boosterHelp">Booster rewards: 6 = Knowledge Bomb, 7 = Time Bonus, plus-sign = Swap Special, any 5-block L = Hammer Special.</div>
           </div>
         </section>
 
@@ -943,7 +961,7 @@
             <div class="muted">
               • Bigger groups = better score<br>
               • 4+ blocks = stronger quiz meter charge<br>
-              • 6 exact = Knowledge Bomb, 7 exact = Time Bonus<br>
+              • 6 exact = Knowledge Bomb + Shuffle Smart, 7 exact = Time Bonus + Rainbow<br>
               • 10+ blocks = video pop<br>
               • Correct quiz answers clear extra blocks
             </div>
@@ -1327,6 +1345,7 @@
   let movesLeft = 0;
   let quizMisses = 0;
   let levelObjectivesStart = {};
+  let targetSpecialArmed = null;
   let swapSpecialArmed = null;
   let hammerSpecialArmed = null;
   let arrowSpecialArmed = null;
@@ -1776,7 +1795,7 @@
       bomb: "Earn: exact 6-block pop • creates a bomb",
       target: "Earn: exact 7-block pop • adds time",
       shuffle: "Earn: pop a plus-sign cluster • creates a swap special",
-      multiplier: "Earn: pop a regular L or backwards L cluster • creates a hammer special"
+      multiplier: "Earn: pop any 5-block L cluster • creates a hammer special"
     };
 
     Object.keys(boosterButtons).forEach(key => {
@@ -1798,7 +1817,7 @@
     if(selectedBooster){
       if (boosterHelpEl) boosterHelpEl.textContent = BOOSTER_INFO[selectedBooster].text;
     } else {
-      if (boosterHelpEl) boosterHelpEl.textContent = "Booster rewards: 6 = Knowledge Bomb, 7 = Time Bonus, plus-sign = Swap Special, L / backwards L = Hammer Special.";
+      if (boosterHelpEl) boosterHelpEl.textContent = "Booster rewards: 6 = Knowledge Bomb, 7 = Time Bonus, plus-sign = Swap Special, any 5-block L = Hammer Special.";
     }
   }
 
@@ -2155,13 +2174,14 @@
   }
 
   function isTargetBlock(cell){
-    return false;
+    return typeof cell === "object" && (cell.type === "shuffleboard" || cell.type === "rainbow");
   }
 
   function specialBlockClass(cell){
     if(isBomb(cell)) return ' bomb';
     if(isLineBlaster(cell)) return ' line-blaster';
-    if(typeof cell === "object" && cell.type === "time") return ' target-block';
+    if(typeof cell === "object" && cell.type === "shuffleboard") return ' shuffle-board';
+    if(typeof cell === "object" && cell.type === "rainbow") return ' rainbow-special';
     if(typeof cell === "object" && cell.type === "swap") return ' swap-special';
     if(typeof cell === "object" && cell.type === "hammer") return ' hammer-special';
     if(typeof cell === "object" && cell.type === "arrow") return ' arrow-special';
@@ -2220,16 +2240,51 @@
 
   function explodeTargetBlock(r,c){
     const cell = board[r][c];
-    const targetColor = typeof cell === "object" ? cell.color : cell;
-    targetSpecialArmed = { r, c, baseColor: targetColor };
-    boardHintEl.textContent = "🎯 Time Bonus armed. Tap any subject block you want to clear.";
-    showToast("🎯 Now tap the subject blocks you want to clear");
-    renderBoard([]);
+    if(!cell || typeof cell !== "object") return;
+    if(cell.type === "shuffleboard"){
+      board[r][c] = null;
+      reshuffleBoard();
+      refillBoard();
+      updateBest();
+      saveProgress();
+      renderBoard([]);
+      boardHintEl.textContent = "🔄 Shuffle Smart used.";
+      showToast("🔄 Shuffle Smart used");
+      endRoundIfNeeded();
+      return;
+    }
+    if(cell.type === "rainbow"){
+      targetSpecialArmed = { r, c, baseColor: cell.color };
+      boardHintEl.textContent = "🌈 Rainbow armed. Tap any color to clear all matching blocks.";
+      showToast("🌈 Now tap a color to clear every matching block");
+      renderBoard([]);
+    }
   }
 
-
   function resolveTargetSpecialSelection(r,c){
-    return false;
+    if(!targetSpecialArmed) return false;
+    const chosen = board[r]?.[c];
+    if(chosen === null || chosen === undefined) return true;
+    const targetColor = typeof chosen === "object" ? chosen.color : chosen;
+    const affected = [];
+    for(let rr=0; rr<size; rr++){
+      for(let cc=0; cc<size; cc++){
+        const item = board[rr][cc];
+        if(item === null || item === undefined) continue;
+        const cat = typeof item === "object" ? item.color : item;
+        if(cat === targetColor){
+          affected.push([rr,cc,cat]);
+        }
+      }
+    }
+    const origin = targetSpecialArmed;
+    targetSpecialArmed = null;
+    if(origin && board[origin.r] && board[origin.r][origin.c] && typeof board[origin.r][origin.c] === "object" && board[origin.r][origin.c].type === "rainbow"){
+      affected.push([origin.r, origin.c, board[origin.r][origin.c].color]);
+    }
+    boardHintEl.textContent = "Tap connected blocks to pop them.";
+    explodeAffectedCells(affected, "🌈 Rainbow clear!");
+    return true;
   }
 
 
@@ -2419,8 +2474,11 @@
   }
 
   function detectTargetBlock(group){
-    if(group.length >= 6){
-      return group[Math.floor(group.length/2)];
+    if(group.length === 6){
+      return { type: "shuffleboard", anchor: group[Math.floor(group.length/2)] };
+    }
+    if(group.length === 7){
+      return { type: "rainbow", anchor: group[Math.floor(group.length/2)] };
     }
     return null;
   }
@@ -2716,7 +2774,7 @@ function getCellCenter(r, c){
               boardHintEl.textContent = "Line Blaster ready. Tap to clear a full line.";
               return;
             }
-            if(typeof board[r][c] === "object" && board[r][c].type === "time"){ boardHintEl.textContent = timerEnabled ? "Time bonus ready. Tap for +30 seconds." : "Time bonus only works on timer levels."; return; }
+            if(typeof board[r][c] === "object" && (board[r][c].type === "shuffleboard" || board[r][c].type === "rainbow")){ explodeTargetBlock(r,c); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "swap"){
               boardHintEl.textContent = "Swap special ready. Tap it, then pick two neighboring blocks.";
               return;
@@ -2748,12 +2806,13 @@ function getCellCenter(r, c){
           });
 
           cell.addEventListener("click", () => {
+            if(targetSpecialArmed){ resolveTargetSpecialSelection(r,c); return; }
             if(swapSpecialArmed){ resolveSwapSpecial(r,c); return; }
             if(hammerSpecialArmed){ resolveHammerSpecial(r,c); return; }
             if(arrowSpecialArmed){ resolveArrowSpecial(r,c); return; }
             if(isBomb(board[r][c])){ explodeBomb(r,c); return; }
             if(isLineBlaster(board[r][c])){ explodeLineBlaster(r,c); return; }
-            if(typeof board[r][c] === "object" && board[r][c].type === "time"){ boardHintEl.textContent = timerEnabled ? "Time bonus ready. Tap for +30 seconds." : "Time bonus only works on timer levels."; return; }
+            if(typeof board[r][c] === "object" && (board[r][c].type === "shuffleboard" || board[r][c].type === "rainbow")){ explodeTargetBlock(r,c); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "swap"){ swapSpecialArmed = { r, c }; renderBoard([]); boardHintEl.textContent = "🔁 Tap a neighboring block to swap."; showToast("Swap armed"); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "hammer"){ hammerSpecialArmed = { r, c }; boardHintEl.textContent = "🔨 Tap one block to break it."; showToast("Hammer armed"); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; boardHintEl.textContent = "↔️ Tap a line target to clear that row or column."; showToast("Arrow armed"); return; }
@@ -2791,12 +2850,14 @@ function getCellCenter(r, c){
 
           cell.addEventListener("touchend", (e) => {
             e.preventDefault();
+            if(targetSpecialArmed){ resolveTargetSpecialSelection(r,c); return; }
             if(swapSpecialArmed){ resolveSwapSpecial(r,c); return; }
             if(hammerSpecialArmed){ resolveHammerSpecial(r,c); return; }
             if(arrowSpecialArmed){ resolveArrowSpecial(r,c); return; }
             if(isBomb(board[r][c])){ explodeBomb(r,c); return; }
             if(isLineBlaster(board[r][c])){ explodeLineBlaster(r,c); return; }
-            if(typeof board[r][c] === "object" && board[r][c].type === "time"){ boardHintEl.textContent = timerEnabled ? "Time bonus ready. Tap for +30 seconds." : "Time bonus only works on timer levels."; return; }
+            if(typeof board[r][c] === "object" && board[r][c].type === "shuffleboard"){ boardHintEl.textContent = "Shuffle Smart ready. Tap to reshuffle the board."; return; }
+            if(typeof board[r][c] === "object" && board[r][c].type === "rainbow"){ boardHintEl.textContent = "Rainbow ready. Tap it, then tap any color to clear all matching blocks."; return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "swap"){ swapSpecialArmed = { r, c }; renderBoard([]); boardHintEl.textContent = "🔁 Tap a neighboring block to swap."; showToast("Swap armed"); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "hammer"){ hammerSpecialArmed = { r, c }; boardHintEl.textContent = "🔨 Tap one block to break it."; showToast("Hammer armed"); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; boardHintEl.textContent = "↔️ Tap a line target to clear that row or column."; showToast("Arrow armed"); return; }
@@ -3266,7 +3327,7 @@ function popGroup(r,c){
 
         const shouldPlaceBoardSpecial = bombAnchor || lineInfo || timeAnchor || capitalTAnchor || upsideDownTAnchor;
         if(shouldPlaceBoardSpecial){
-          const desired = bombAnchor ? bombAnchor : (lineInfo ? lineInfo.anchor : (timeAnchor ? timeAnchor : (capitalTAnchor ? capitalTAnchor : upsideDownTAnchor)));
+          const desired = bombAnchor ? bombAnchor : (lineInfo ? lineInfo.anchor : (timeAnchor ? timeAnchor.anchor : (capitalTAnchor ? capitalTAnchor : upsideDownTAnchor)));
           const [dr, dc] = desired;
           let placed = false;
 
@@ -3275,7 +3336,7 @@ function popGroup(r,c){
             : lineInfo
               ? { type: "line", color: categoryIndex, orientation: lineInfo.orientation }
               : timeAnchor
-                ? { type: "time", color: categoryIndex }
+                ? { type: timeAnchor.type, color: categoryIndex }
                 : capitalTAnchor
                   ? { type: "arrow", color: categoryIndex, orientation: "col" }
                   : { type: "arrow", color: categoryIndex, orientation: "row" };
@@ -3328,8 +3389,10 @@ function popGroup(r,c){
           showToast("💣 Bomb created! Tap it anytime.");
         } else if(lineInfo){
           showToast("⚡ Line Blaster created!");
-        } else if(timeAnchor){
-          showToast("⏱️ 30-second bonus created!");
+        } else if(timeAnchor && timeAnchor.type === "shuffleboard"){
+          showToast("🔄 Shuffle Smart created!");
+        } else if(timeAnchor && timeAnchor.type === "rainbow"){
+          showToast("🌈 Rainbow created!");
         } else if(crossAnchor){
           showToast("🔁 Swap Special created!");
         } else if(hammerAnchor){
@@ -3572,7 +3635,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
 <div class="overlay" id="tutorialOverlay">
   <div class="modal">
     <h3>Specials Tutorial</h3>
-    <p>All shape specials use <b>5 matching blocks</b>. Here is what each shape should look like.</p>
+    <p>All shape specials use <b>5 matching blocks</b>. Exact <b>6</b> creates <b>🔄 Shuffle Smart</b> on the board. Exact <b>7</b> creates <b>🌈 Rainbow</b> on the board.</p>
     <div class="tutorialGrid">
       <div class="tutorialCard">
         <h4>🔁 Swap Special</h4>
@@ -3583,7 +3646,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
         </div>
-        <p><b>Reward:</b> 🔁 Swap Special<br><b>Shape:</b> plus-sign / cross with 3 in the middle line and 1 above + 1 below the center block.</p>
+        <p><b>Reward:</b> 🔁 Swap Special<br><b>Shape:</b> plus-sign / cross with 3 in the middle row and 1 above + 1 below center.</p>
       </div>
       <div class="tutorialCard">
         <h4>🔨 Hammer Special</h4>
@@ -3594,7 +3657,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
           <div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
         </div>
-        <p><b>Reward:</b> 🔨 Hammer Special<br><b>Shape:</b> regular L or backwards L with 3 in the stem and 2 across the bottom.</p>
+        <p><b>Reward:</b> 🔨 Hammer Special<br><b>Shape:</b> any 5-block L or backwards L.</p>
       </div>
       <div class="tutorialCard">
         <h4>↕️ Vertical Arrow Line Clear</h4>
@@ -3618,59 +3681,29 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
         </div>
         <p><b>Reward:</b> ↔️ Horizontal Arrow Line Clear<br><b>Shape:</b> upside-down T.</p>
       </div>
+      <div class="tutorialCard">
+        <h4>🔄 Shuffle Smart</h4>
+        <div class="tutorialMiniBoard">
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+        </div>
+        <p><b>Reward:</b> 🔄 Shuffle Smart<br><b>Earn:</b> exact 6-block pop.<br><b>Effect:</b> tap it to reshuffle the board.</p>
+      </div>
+      <div class="tutorialCard">
+        <h4>🌈 Rainbow</h4>
+        <div class="tutorialMiniBoard">
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+        </div>
+        <p><b>Reward:</b> 🌈 Rainbow<br><b>Earn:</b> exact 7-block pop.<br><b>Effect:</b> tap it, then tap any color to clear all matching items.</p>
+      </div>
     </div>
     <div class="row" style="margin-top:14px"><button class="secondary" id="closeTutorialBtn">Close</button></div>
   </div>
 </div>
-<p><b>Reward:</b> 🔁 Swap Special</p>
-      </div>
-      <div class="tutorialCard">
-        <h4>🔨 L / Backwards L</h4>
-        <div class="tutorialMiniBoard">
-          <div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-        </div>
-        <p><b>Reward:</b> 🔨 Hammer Special</p>
-      </div>
-      <div class="tutorialCard">
-        <h4>↕️ Capital T</h4>
-        <div class="tutorialMiniBoard">
-          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-        </div>
-        <p><b>Reward:</b> ↕️ Vertical Arrow Line Clear</p>
-      </div>
-      <div class="tutorialCard">
-        <h4>↔️ Upside-down T</h4>
-        <div class="tutorialMiniBoard">
-          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-        </div>
-        <p><b>Reward:</b> ↔️ Horizontal Arrow Line Clear</p>
-      </div>
-    </div>
-    <div class="actions" style="margin-top:14px; justify-content:flex-end;">
-      <button id="closeTutorialBtn">Got It</button>
-    </div>
-  </div>
-</div>
-
-<div class="overlay" id="videoOverlay">
-  <div class="modal" style="padding:0; overflow:hidden;">
-    <video id="popupVideo" controls playsinline webkit-playsinline style="width:100%; height:auto;">
-      <source src="https://video.wixstatic.com/video/80a41b_b483fcea43a54f5983df6f0ba78403ac/480p/mp4/file.mp4" type="video/mp4">
-    </video>
-  </div>
-</div>
-
-</body>
-</html>
