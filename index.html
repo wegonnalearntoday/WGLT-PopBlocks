@@ -915,7 +915,7 @@
                 <span class="boosterUnlockHint" id="hintMultiplier"></span>
               </button>
             </div>
-            <div class="boosterHelp" id="boosterHelp">Booster rewards: 7 = Swap Special, 8 = Knowledge Bomb, 9 = Time Bonus, 10 = Hammer Special.</div>
+            <div class="boosterHelp" id="boosterHelp">Booster rewards: 8 = Knowledge Bomb, 9 = Time Bonus, plus-sign = Swap Special, L / backwards L = Hammer Special.</div>
           </div>
         </section>
 
@@ -1773,10 +1773,10 @@
   function renderBoosters(){
     ensureBoosterShape();
     const unlockText = {
-      bomb: "Earn: exact 8-block pop • 3x3 blast",
+      bomb: "Earn: exact 8-block pop • creates a bomb",
       target: "Earn: exact 9-block pop • adds time",
-      shuffle: "Earn: exact 7-block pop • swap 2 neighbors",
-      multiplier: "Earn: exact 10-block pop • bust 1 block"
+      shuffle: "Earn: pop a plus-sign cluster • creates a swap special",
+      multiplier: "Earn: pop a regular L or backwards L cluster • creates a hammer special"
     };
 
     Object.keys(boosterButtons).forEach(key => {
@@ -1798,7 +1798,7 @@
     if(selectedBooster){
       if (boosterHelpEl) boosterHelpEl.textContent = BOOSTER_INFO[selectedBooster].text;
     } else {
-      if (boosterHelpEl) boosterHelpEl.textContent = "Booster rewards: 7 = Swap Special, 8 = Knowledge Bomb, 9 = Time Bonus, 10 = Hammer Special.";
+      if (boosterHelpEl) boosterHelpEl.textContent = "Booster rewards: 8 = Knowledge Bomb, 9 = Time Bonus, plus-sign = Swap Special, L / backwards L = Hammer Special.";
     }
   }
 
@@ -2756,7 +2756,7 @@ function getCellCenter(r, c){
             if(isBomb(board[r][c])){ explodeBomb(r,c); return; }
             if(isLineBlaster(board[r][c])){ explodeLineBlaster(r,c); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "time"){ boardHintEl.textContent = timerEnabled ? "Time bonus ready. Tap for +30 seconds." : "Time bonus only works on timer levels."; return; }
-            if(typeof board[r][c] === "object" && board[r][c].type === "swap"){ swapSpecialArmed = { r, c }; boardHintEl.textContent = "🔁 Tap a neighboring block to swap."; showToast("Swap armed"); return; }
+            if(typeof board[r][c] === "object" && board[r][c].type === "swap"){ swapSpecialArmed = { r, c }; renderBoard([]); boardHintEl.textContent = "🔁 Tap a neighboring block to swap."; showToast("Swap armed"); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "hammer"){ hammerSpecialArmed = { r, c }; boardHintEl.textContent = "🔨 Tap one block to break it."; showToast("Hammer armed"); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; boardHintEl.textContent = "↔️ Tap a line target to clear that row or column."; showToast("Arrow armed"); return; }
             if(selectedBooster === "bomb"){ useBombBooster(r,c); return; }
@@ -2766,6 +2766,7 @@ function getCellCenter(r, c){
               selectedBooster = null;
               renderBoosters();
               swapSpecialArmed = { r, c };
+              renderBoard([]);
               boardHintEl.textContent = "🔁 Tap a neighboring block to swap.";
               showToast("Swap armed");
               return;
@@ -2798,7 +2799,7 @@ function getCellCenter(r, c){
             if(isBomb(board[r][c])){ explodeBomb(r,c); return; }
             if(isLineBlaster(board[r][c])){ explodeLineBlaster(r,c); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "time"){ boardHintEl.textContent = timerEnabled ? "Time bonus ready. Tap for +30 seconds." : "Time bonus only works on timer levels."; return; }
-            if(typeof board[r][c] === "object" && board[r][c].type === "swap"){ swapSpecialArmed = { r, c }; boardHintEl.textContent = "🔁 Tap a neighboring block to swap."; showToast("Swap armed"); return; }
+            if(typeof board[r][c] === "object" && board[r][c].type === "swap"){ swapSpecialArmed = { r, c }; renderBoard([]); boardHintEl.textContent = "🔁 Tap a neighboring block to swap."; showToast("Swap armed"); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "hammer"){ hammerSpecialArmed = { r, c }; boardHintEl.textContent = "🔨 Tap one block to break it."; showToast("Hammer armed"); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; boardHintEl.textContent = "↔️ Tap a line target to clear that row or column."; showToast("Arrow armed"); return; }
             if(selectedBooster === "bomb"){ useBombBooster(r,c); return; }
@@ -2808,6 +2809,7 @@ function getCellCenter(r, c){
               selectedBooster = null;
               renderBoosters();
               swapSpecialArmed = { r, c };
+              renderBoard([]);
               boardHintEl.textContent = "🔁 Tap a neighboring block to swap.";
               showToast("Swap armed");
               return;
@@ -3571,19 +3573,58 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
 
 <div class="overlay" id="tutorialOverlay">
   <div class="modal">
-    <h2>⭐ Specials Tutorial</h2>
-    <p class="sub">Here is the quick field guide so players can spot each special without any guesswork.</p>
+    <h3>Specials Tutorial</h3>
+    <p>All shape specials use <b>5 matching blocks</b>. Here is what each shape should look like.</p>
     <div class="tutorialGrid">
       <div class="tutorialCard">
-        <h4>🔁 Plus-sign / Cross</h4>
+        <h4>🔁 Swap Special</h4>
         <div class="tutorialMiniBoard">
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell"></div>
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell hot2">★</div>
-          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
-          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot2">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
         </div>
-        <p><b>Reward:</b> 🔁 Swap Special</p>
+        <p><b>Reward:</b> 🔁 Swap Special<br><b>Shape:</b> plus-sign / cross with 3 in the middle line and 1 above + 1 below the center block.</p>
+      </div>
+      <div class="tutorialCard">
+        <h4>🔨 Hammer Special</h4>
+        <div class="tutorialMiniBoard">
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell hot3">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+        </div>
+        <p><b>Reward:</b> 🔨 Hammer Special<br><b>Shape:</b> regular L or backwards L with 3 in the stem and 2 across the bottom.</p>
+      </div>
+      <div class="tutorialCard">
+        <h4>↕️ Vertical Arrow Line Clear</h4>
+        <div class="tutorialMiniBoard">
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+        </div>
+        <p><b>Reward:</b> ↕️ Vertical Arrow Line Clear<br><b>Shape:</b> capital T.</p>
+      </div>
+      <div class="tutorialCard">
+        <h4>↔️ Horizontal Arrow Line Clear</h4>
+        <div class="tutorialMiniBoard">
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+        </div>
+        <p><b>Reward:</b> ↔️ Horizontal Arrow Line Clear<br><b>Shape:</b> upside-down T.</p>
+      </div>
+    </div>
+    <div class="row" style="margin-top:14px"><button class="secondary" id="closeTutorialBtn">Close</button></div>
+  </div>
+</div>
+<p><b>Reward:</b> 🔁 Swap Special</p>
       </div>
       <div class="tutorialCard">
         <h4>🔨 L / Backwards L</h4>
