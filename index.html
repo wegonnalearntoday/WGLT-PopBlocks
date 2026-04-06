@@ -326,7 +326,6 @@
     100%{ transform:translateY(110vh) rotate(720deg); opacity:.2; }
   }
   @media (max-width: 700px){
-    .tutorialGrid{grid-template-columns:1fr;}
     .boosterGrid{ grid-template-columns:repeat(2, minmax(0,1fr)); }
     .boosterBtn{ min-height:68px; font-size:12px; }
   }
@@ -573,7 +572,7 @@
     animation:arrowPulse 0.8s ease-in-out infinite alternate;
   }
   .cell.arrow-special::after{
-    content:"↔️";
+    content:"↕️";
     position:absolute;
     inset:0;
     display:flex;
@@ -614,6 +613,16 @@
   }
 
   
+
+  .cell.swap-armed{
+    animation:swapArmedPulse .7s ease-in-out infinite alternate;
+    box-shadow:0 0 0 3px rgba(255,213,74,.35), 0 0 18px rgba(255,213,74,.42);
+  }
+  @keyframes swapArmedPulse{
+    0%{ transform:scale(1); filter:brightness(1); }
+    100%{ transform:scale(1.09); filter:brightness(1.16); }
+  }
+
   .timerBadge{
     background:#fff;
     color:#111;
@@ -677,39 +686,6 @@
   @keyframes timerPulse{
     0%{ box-shadow:0 0 0 2px rgba(255,107,107,.10), 0 0 10px rgba(255,107,107,.20); }
     100%{ box-shadow:0 0 0 3px rgba(255,107,107,.22), 0 0 18px rgba(255,107,107,.34); }
-  }
-
-  
-  .cell.swap-armed{
-    animation:swapArmedPulse .7s ease-in-out infinite alternate;
-    box-shadow:0 0 0 3px rgba(255,213,74,.35), 0 0 18px rgba(255,213,74,.42);
-  }
-  @keyframes swapArmedPulse{
-    0%{ transform:scale(1); filter:brightness(1); }
-    100%{ transform:scale(1.08); filter:brightness(1.16); }
-  }
-  .tutorialGrid{
-    display:grid;
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:12px;
-    margin-top:12px;
-  }
-  .tutorialCard{
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:16px;
-    padding:12px;
-  }
-  .tutorialCard h4{ margin:0 0 6px; font-size:16px; }
-  .tutorialMini{
-    margin-top:8px;
-    font-family:monospace;
-    white-space:pre;
-    line-height:1.1;
-    background:#0f1219;
-    border-radius:12px;
-    padding:8px;
-    border:1px solid rgba(255,255,255,.08);
   }
 
   @media (max-width: 980px){
@@ -788,7 +764,34 @@
           <button id="skipLevelBtn" class="secondary">⏭️ Skip Level</button>
           <button id="clearDataBtn" class="dark">🗑️ Clear Player Data</button>
           <button id="howToBtn" class="dark">How to Play</button>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="label">Specials Legend</div>
+        <div class="sub" style="margin-top:8px">Every reward and unlock in one place.</div>
+        <div class="footerRow">
+          <button id="toggleSpecialsBtn" class="dark">⭐ Show / Hide Specials</button>
           <button id="tutorialBtn" class="dark">▶ Tutorial: See Specials In Action</button>
+        </div>
+        <div id="specialsLegendContent" style="display:none; margin-top:10px; font-size:14px; line-height:1.5">
+          <b>Booster rewards from exact pop size</b><br>
+          7 exactly → 🔁 Swap Special<br>
+          8 exactly → 💣 Knowledge Bomb<br>
+          9 exactly → ⏱️ Time Bonus<br>
+          10 exactly → 🔨 Hammer Special<br><br>
+          <b>Board specials from shape matches</b><br>
+          2x2 square → 💣 Board Bomb<br>
+          5 in a straight line → ⚡ Line Blaster<br>
+          plus-sign / cross shape → 🔁 Swap Special board tile<br>
+          L / backwards L → 🔨 Hammer Special<br>
+          capital T shape → ↕️ Vertical Arrow Line Clear<br>
+          upside-down T shape → ↔️ Horizontal Arrow Line Clear<br><br>
+          <b>Big combo rewards</b><br>
+          4+ → Knowledge Pop<br>
+          7+ → Bonus Knowledge Pop<br>
+          10+ → 🎬 Video Pop
         </div>
       </div>
 
@@ -797,28 +800,6 @@
         <div class="sub" style="margin-top:8px">
           This starter build is ready for Wix iframe embedding. You can later add:
           teacher mode, benchmark tracking, timed mode, grade bands, and custom subject packs.
-        </div>
-      </div>
-      <div class="card">
-        <div class="label">Specials Legend</div>
-        <button id="toggleSpecialsLegendBtn" class="dark small" style="margin-top:10px;">Show / Hide Full Reward List</button>
-        <div id="specialsLegendPanel" style="display:none; margin-top:10px;">
-          <div class="sub"><b>Booster Rewards from exact pop size</b></div>
-          <div class="legend">
-            <div class="legendItem"><span>🔄</span><span><b>Shuffle Smart</b><br><small>Earn: exact 7-block pop • Effect: reshuffles the board</small></span></div>
-            <div class="legendItem"><span>💣</span><span><b>Knowledge Bomb</b><br><small>Earn: exact 8-block pop • Effect: clears a 3x3 area</small></span></div>
-            <div class="legendItem"><span>⏱️</span><span><b>Time Bonus</b><br><small>Earn: exact 9-block pop • Effect: adds time on timer levels</small></span></div>
-            <div class="legendItem"><span>🧠</span><span><b>Knowledge Multiplier</b><br><small>Earn: exact 10-block pop • Effect: doubles your next pop score and meter</small></span></div>
-          </div>
-          <div class="sub" style="margin-top:12px;"><b>Board Specials from shape matches</b></div>
-          <div class="legend">
-            <div class="legendItem"><span>💣</span><span><b>Board Bomb</b><br><small>Earn: 2x2 square • Effect: creates a board bomb</small></span></div>
-            <div class="legendItem"><span>⚡</span><span><b>Line Blaster</b><br><small>Earn: 5 in a straight line • Effect: clears a row or column</small></span></div>
-            <div class="legendItem"><span>🔁</span><span><b>Swap Special</b><br><small>Earn: plus-sign / cross shape • Effect: swap 2 neighboring tiles</small></span></div>
-            <div class="legendItem"><span>🔨</span><span><b>Hammer Special</b><br><small>Earn: L or backwards L • Effect: bust 1 block</small></span></div>
-            <div class="legendItem"><span>↕️</span><span><b>Vertical Arrow Line Clear</b><br><small>Earn: capital T shape • Effect: clears a vertical line on touch</small></span></div>
-            <div class="legendItem"><span>↔️</span><span><b>Horizontal Arrow Line Clear</b><br><small>Earn: upside-down T shape • Effect: clears a horizontal line on touch</small></span></div>
-          </div>
         </div>
       </div>
     </aside>
@@ -875,18 +856,18 @@
               </button>
               <button class="boosterBtn locked" id="boosterShuffle" data-booster="shuffle">
                 <span class="count" id="countShuffle">0</span>
-                <span class="emoji">🔄</span>
-                <span>Shuffle Smart</span>
+                <span class="emoji">🔁</span>
+                <span>Swap Special</span>
                 <span class="boosterUnlockHint" id="hintShuffle"></span>
               </button>
               <button class="boosterBtn locked" id="boosterMultiplier" data-booster="multiplier">
                 <span class="count" id="countMultiplier">0</span>
-                <span class="emoji">⚡</span>
-                <span>Knowledge Multiplier</span>
+                <span class="emoji">🔨</span>
+                <span>Hammer Special</span>
                 <span class="boosterUnlockHint" id="hintMultiplier"></span>
               </button>
             </div>
-            <div class="boosterHelp" id="boosterHelp">Exact match rewards: 7 blocks = Shuffle, 8 = Bomb, 9 = Time Bonus, 10 = Knowledge Multiplier.</div>
+            <div class="boosterHelp" id="boosterHelp">Exact match rewards: 7 blocks = Swap Special, 8 = Bomb, 9 = Time Bonus, 10 = Hammer Special.</div>
           </div>
         </section>
 
@@ -931,37 +912,12 @@
   <div class="overlay" id="tutorialOverlay">
     <div class="modal">
       <h2>Specials Tutorial</h2>
-      <p>Here is the full reward list and a simple mini-board demo for each special.</p>
-      <div class="tutorialGrid">
-        <div class="tutorialCard"><h4>🔄 Shuffle Smart</h4><div>Earn: exact 7-block pop</div><div>Effect: reshuffles the board.</div><div class="tutorialMini">🟨🟨🟨
-🟨🟨🟨
-🟨</div></div>
-        <div class="tutorialCard"><h4>💣 Knowledge Bomb</h4><div>Earn: exact 8-block pop</div><div>Effect: clears a 3x3 area.</div><div class="tutorialMini">🟥🟥🟥
-🟥🟥🟥
-🟥🟥</div></div>
-        <div class="tutorialCard"><h4>⏱️ Time Bonus</h4><div>Earn: exact 9-block pop</div><div>Effect: adds time on timer levels.</div><div class="tutorialMini">🟩🟩🟩
-🟩🟩🟩
-🟩🟩🟩</div></div>
-        <div class="tutorialCard"><h4>🧠 Knowledge Multiplier</h4><div>Earn: exact 10-block pop</div><div>Effect: doubles your next pop score and meter.</div><div class="tutorialMini">🟦🟦🟦🟦
-🟦🟦🟦
-🟦🟦🟦</div></div>
-        <div class="tutorialCard"><h4>💣 Board Bomb</h4><div>Earn: 2x2 square</div><div>Effect: creates a board bomb.</div><div class="tutorialMini">🟥🟥
-🟥🟥</div></div>
-        <div class="tutorialCard"><h4>⚡ Line Blaster</h4><div>Earn: 5 in a straight line</div><div>Effect: clears a row or column.</div><div class="tutorialMini">🟨🟨🟨🟨🟨</div></div>
-        <div class="tutorialCard"><h4>🔁 Swap Special</h4><div>Earn: plus-sign / cross shape</div><div>Effect: swap 2 neighboring tiles.</div><div class="tutorialMini">  🟩
-🟩🟩🟩
-  🟩</div></div>
-        <div class="tutorialCard"><h4>🔨 Hammer Special</h4><div>Earn: L or backwards L</div><div>Effect: bust 1 block.</div><div class="tutorialMini">🟪
-🟪
-🟪🟪</div></div>
-        <div class="tutorialCard"><h4>↕️ Vertical Arrow Line Clear</h4><div>Earn: capital T shape</div><div>Effect: clears a vertical line on touch.</div><div class="tutorialMini">🟧🟧🟧
-  🟧
-  🟧</div></div>
-        <div class="tutorialCard"><h4>↔️ Horizontal Arrow Line Clear</h4><div>Earn: upside-down T shape</div><div>Effect: clears a horizontal line on touch.</div><div class="tutorialMini">  🟦
-  🟦
-🟦🟦🟦</div></div>
+      <p>Here is what creates each reward and special.</p>
+      <p><b>Exact pops:</b> 7 = 🔁 Swap, 8 = 💣 Bomb, 9 = ⏱️ Time Bonus, 10 = 🔨 Hammer.</p>
+      <p><b>Shapes:</b> 2x2 = 💣 Board Bomb, line of 5 = ⚡ Line Blaster, plus-sign = 🔁 Swap, L / backwards L = 🔨 Hammer, capital T = ↕️ Vertical Arrow, upside-down T = ↔️ Horizontal Arrow.</p>
+      <div class="footerRow">
+        <button id="closeTutorialBtn">Got It</button>
       </div>
-      <div class="footerRow"><button id="closeTutorialBtn">Got It</button></div>
     </div>
   </div>
 
@@ -1282,6 +1238,7 @@
   const boardHintEl = document.getElementById("boardHint");
   const overlay = document.getElementById("overlay");
   const tutorialOverlay = document.getElementById("tutorialOverlay");
+  const specialsLegendContent = document.getElementById("specialsLegendContent");
   const factCardEl = document.querySelector(".factCard");
   const quizCardEl = document.getElementById("quizCard");
   const benchmarkListEl = document.getElementById("benchmarkList");
@@ -1750,8 +1707,8 @@
   const BOOSTER_INFO = {
     bomb: { label: "Knowledge Bomb", text: "Use on the board to clear a 3x3 area and get a fact." },
     target: { label: "Time Bonus", text: "Only works on timer levels. Tap it to instantly add +30 seconds." },
-    shuffle: { label: "Shuffle Smart", text: "Tap to reshuffle the board and keep the game moving." },
-    multiplier: { label: "Knowledge Multiplier", text: "Tap to arm it. Your next pop gets double points and double meter." }
+    shuffle: { label: "Swap Special", text: "Tap to arm it. Then tap one board tile and a neighboring tile to swap them." },
+    multiplier: { label: "Hammer Special", text: "Tap to arm it. Then tap one board tile to bust that block." }
   };
 
   function defaultBoosterInventory(){
@@ -1791,12 +1748,11 @@
     Object.values(boosterButtons).forEach(btn => btn && btn.classList.add("activeMode"));
 
     if(multiplierArmed){
-      boosterButtons.multiplier && boosterButtons.multiplier.classList.add("selected");
-      if (boosterHelpEl) boosterHelpEl.textContent = "⚡ Multiplier armed. Your next block pop gets double points and double meter.";
+      if (selectedBooster === "multiplier") boosterButtons.multiplier && boosterButtons.multiplier.classList.add("selected");
     } else if(selectedBooster){
       if (boosterHelpEl) boosterHelpEl.textContent = BOOSTER_INFO[selectedBooster].text;
     } else {
-      if (boosterHelpEl) boosterHelpEl.textContent = "Exact match rewards: 7 blocks = Shuffle, 8 = Bomb, 9 = Time Bonus, 10 = Knowledge Multiplier.";
+      if (boosterHelpEl) boosterHelpEl.textContent = "Exact match rewards: 7 blocks = Swap Special, 8 = Bomb, 9 = Time Bonus, 10 = Hammer Special.";
     }
   }
 
@@ -1840,11 +1796,11 @@
       return;
     }
     if(type === "shuffle"){
-      useShuffleBooster();
+      useSwapBooster();
       return;
     }
     if(type === "multiplier"){
-      useMultiplierBooster();
+      useHammerBooster();
       return;
     }
     if(type === "target"){
@@ -1864,35 +1820,47 @@
     return true;
   }
 
-  function useShuffleBooster(){
-    if(!spendBooster("shuffle")){
-      showToast("No Shuffle Smart boosters yet");
-      return;
-    }
-    movesLeft = Math.max(0, movesLeft - 1);
-    reshuffleBoard();
-    nextFact();
-    renderBoard([]);
-    showToast("🔄 Shuffle Smart used");
+  
+function useShuffleBooster(){
+    return useSwapBooster();
   }
 
   function useMultiplierBooster(){
-    if(multiplierArmed){
-      multiplierArmed = false;
-      boosterInventory["multiplier"] = Math.min(10, (boosterInventory["multiplier"] || 0) + 1);
-      saveProgress();
-      renderBoosters();
-      showToast("⚡ Multiplier unselected");
-      return;
-    }
-    if(!spendBooster("multiplier")){
-      showToast("No Knowledge Multiplier boosters yet");
-      return;
-    }
-    multiplierArmed = true;
-    renderBoosters();
-    showToast("⚡ Multiplier armed");
+    return useHammerBooster();
   }
+
+  function useSwapBooster(){
+    if(selectedBooster === "shuffle"){
+      selectedBooster = null;
+      renderBoosters();
+      showToast("🔁 Swap Special unselected");
+      return;
+    }
+    if((boosterInventory["shuffle"] || 0) <= 0){
+      showToast("No Swap Special boosters yet");
+      return;
+    }
+    selectedBooster = "shuffle";
+    renderBoosters();
+    showToast("🔁 Swap Special armed");
+  }
+
+  function useHammerBooster(){
+    if(selectedBooster === "multiplier"){
+      selectedBooster = null;
+      renderBoosters();
+      showToast("🔨 Hammer Special unselected");
+      return;
+    }
+    if((boosterInventory["multiplier"] || 0) <= 0){
+      showToast("No Hammer Special boosters yet");
+      return;
+    }
+    selectedBooster = "multiplier";
+    renderBoosters();
+    showToast("🔨 Hammer Special armed");
+  }
+
 
   function clearArea3x3(centerR, centerC){
     const touched = [];
@@ -2284,6 +2252,46 @@
     return null;
   }
 
+  
+  function detectLShape(group){
+    const set = new Set(group.map(([r,c]) => `${r},${c}`));
+    for(const [r,c] of group){
+      if(
+        set.has(`${r},${c}`) &&
+        set.has(`${r+1},${c}`) &&
+        set.has(`${r+2},${c}`) &&
+        set.has(`${r+2},${c+1}`)
+      ){
+        return [r+1, c];
+      }
+      if(
+        set.has(`${r},${c}`) &&
+        set.has(`${r+1},${c}`) &&
+        set.has(`${r+2},${c}`) &&
+        set.has(`${r+2},${c-1}`)
+      ){
+        return [r+1, c];
+      }
+      if(
+        set.has(`${r},${c}`) &&
+        set.has(`${r-1},${c}`) &&
+        set.has(`${r-2},${c}`) &&
+        set.has(`${r-2},${c+1}`)
+      ){
+        return [r-1, c];
+      }
+      if(
+        set.has(`${r},${c}`) &&
+        set.has(`${r-1},${c}`) &&
+        set.has(`${r-2},${c}`) &&
+        set.has(`${r-2},${c-1}`)
+      ){
+        return [r-1, c];
+      }
+    }
+    return null;
+  }
+
   function detectCapitalT(group){
     const set = new Set(group.map(([r,c]) => `${r},${c}`));
     for(const [r,c] of group){
@@ -2359,7 +2367,7 @@
       }
     }
     arrowSpecialArmed = null;
-    explodeAffectedCells(affected, "↔️ Arrow Line Clear!");
+    explodeAffectedCells(affected, arrowSpecialArmed && arrowSpecialArmed.orientation === "col" ? "↕️ Vertical Arrow Line Clear!" : "↔️ Horizontal Arrow Line Clear!");
     boardHintEl.textContent = "Tap connected blocks to pop them.";
     return true;
   }
@@ -2672,6 +2680,26 @@ function getCellCenter(r, c){
             if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; boardHintEl.textContent = "↔️ Tap a line target to clear that row or column."; showToast("Arrow armed"); return; }
             if(selectedBooster === "bomb"){ useBombBooster(r,c); return; }
             if(selectedBooster === "target"){ useTargetBooster(r,c); return; }
+            if(selectedBooster === "shuffle"){
+              if(!spendBooster("shuffle")){ showToast("No Swap Special boosters yet"); return; }
+              selectedBooster = null;
+              swapSpecialArmed = { r, c };
+              renderBoosters();
+              renderBoard([]);
+              boardHintEl.textContent = "🔁 Tap a neighboring block to swap.";
+              showToast("Swap armed");
+              return;
+            }
+            if(selectedBooster === "multiplier"){
+              if(!spendBooster("multiplier")){ showToast("No Hammer Special boosters yet"); return; }
+              selectedBooster = null;
+              hammerSpecialArmed = { r, c };
+              renderBoosters();
+              renderBoard([]);
+              boardHintEl.textContent = "🔨 Tap one block to break it.";
+              showToast("Hammer armed");
+              return;
+            }
             popGroup(r,c);
           });
 
@@ -2697,6 +2725,26 @@ function getCellCenter(r, c){
             if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; boardHintEl.textContent = "↔️ Tap a line target to clear that row or column."; showToast("Arrow armed"); return; }
             if(selectedBooster === "bomb"){ useBombBooster(r,c); return; }
             if(selectedBooster === "target"){ useTargetBooster(r,c); return; }
+            if(selectedBooster === "shuffle"){
+              if(!spendBooster("shuffle")){ showToast("No Swap Special boosters yet"); return; }
+              selectedBooster = null;
+              swapSpecialArmed = { r, c };
+              renderBoosters();
+              renderBoard([]);
+              boardHintEl.textContent = "🔁 Tap a neighboring block to swap.";
+              showToast("Swap armed");
+              return;
+            }
+            if(selectedBooster === "multiplier"){
+              if(!spendBooster("multiplier")){ showToast("No Hammer Special boosters yet"); return; }
+              selectedBooster = null;
+              hammerSpecialArmed = { r, c };
+              renderBoosters();
+              renderBoard([]);
+              boardHintEl.textContent = "🔨 Tap one block to break it.";
+              showToast("Hammer armed");
+              return;
+            }
             popGroup(r,c);
           }, {passive:false});
         }
@@ -3235,11 +3283,15 @@ function popGroup(r,c){
         } else if(timeAnchor){
           showToast("⏱️ 30-second bonus created!");
         } else if(crossAnchor){
-          showToast("🔁 Swap Special created!");
+          awardBooster("shuffle", 1);
+          showToast("🔁 Swap Special added!");
+        } else if(lShapeAnchor){
+          awardBooster("multiplier", 1);
+          showToast("🔨 Hammer Special added!");
         } else if(capitalTAnchor){
-          showToast("🔨 Hammer created!");
+          showToast("↕️ Vertical Arrow created!");
         } else if(upsideDownTAnchor){
-          showToast("↔️ Arrow created!");
+          showToast("↔️ Horizontal Arrow created!");
         }
         endRoundIfNeeded();
       };
@@ -3334,7 +3386,18 @@ function popGroup(r,c){
 
   function setMode(nextMode){
     modeKey = nextMode;
-    document.querySelectorAll(".mode").forEach(btn => {
+  
+  document.getElementById("howToBtn").addEventListener("click", () => overlay.classList.add("show"));
+  document.getElementById("closeOverlayBtn").addEventListener("click", () => overlay.classList.remove("show"));
+  document.getElementById("toggleSpecialsBtn").addEventListener("click", () => {
+    if(!specialsLegendContent) return;
+    specialsLegendContent.style.display = specialsLegendContent.style.display === "none" ? "block" : "none";
+  });
+  document.getElementById("tutorialBtn").addEventListener("click", () => tutorialOverlay.classList.add("show"));
+  document.getElementById("closeTutorialBtn").addEventListener("click", () => tutorialOverlay.classList.remove("show"));
+
+
+  document.querySelectorAll(".mode").forEach(btn => {
       const active = btn.dataset.mode === nextMode;
       btn.classList.toggle("active", active);
       btn.classList.toggle("dark", !active);
@@ -3440,17 +3503,6 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
   document.getElementById("closeOverlayBtn").addEventListener("click", () => overlay.classList.remove("show"));
   overlay.addEventListener("click", (e) => {
     if(e.target === overlay) overlay.classList.remove("show");
-  });
-
-
-  document.getElementById("tutorialBtn").addEventListener("click", () => tutorialOverlay.classList.add("show"));
-  document.getElementById("closeTutorialBtn").addEventListener("click", () => tutorialOverlay.classList.remove("show"));
-  tutorialOverlay.addEventListener("click", (e) => {
-    if(e.target === tutorialOverlay) tutorialOverlay.classList.remove("show");
-  });
-  document.getElementById("toggleSpecialsLegendBtn").addEventListener("click", () => {
-    const panel = document.getElementById("specialsLegendPanel");
-    panel.style.display = panel.style.display === "none" ? "block" : "none";
   });
 
   newGame();
