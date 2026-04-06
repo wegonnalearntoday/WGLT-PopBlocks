@@ -850,7 +850,7 @@
           <div class="legendSection">
             <div class="legendSectionTitle">🧩 Shape Specials</div>
             <div class="legendGuideRow"><div class="legendGuideIcon">💣</div><div class="legendGuideText"><b>2x2 Square</b><br>Earn: pop a 2x2 same-color square<br>Effect: creates a board bomb.</div></div>
-            <div class="legendGuideRow"><div class="legendGuideIcon">⚡</div><div class="legendGuideText"><b>5 in a Line</b><br>Earn: pop 5 connected blocks in a straight line<br>Effect: creates a line blaster.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">⚡</div><div class="legendGuideText"><b>5 in a Line</b><br>Earn: pop 5 connected blocks in a straight line<br>Effect: changes the category of a large cluster of bubbles to match the one you just popped.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🔄</div><div class="legendGuideText"><b>Shuffle Smart</b><br>Earn: exact 6-block pop<br>Effect: reshuffles the board when tapped.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🌈</div><div class="legendGuideText"><b>Rainbow</b><br>Earn: exact 7-block pop<br>Effect: clears all items of a specific color.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🧠</div><div class="legendGuideText"><b>Knowledge Multiplier</b><br>Earn: exact 10-block pop<br>Effect: doubles your next pop score and meter.</div></div>
@@ -3287,9 +3287,12 @@ function popGroup(r,c){
     lastRewardCategory = categoryIndex;
     movesLeft = Math.max(0, movesLeft - 1);
 
-    const bombAnchor = detectSquareBomb(group);
+    const rawBombAnchor = detectSquareBomb(group);
+    const rawTimeAnchor = detectTargetBlock(group);
+    const preferPopRewardSpecial = !!(rawBombAnchor && rawTimeAnchor && Math.random() < 0.95);
+    const bombAnchor = preferPopRewardSpecial ? null : rawBombAnchor;
     const lineInfo = !bombAnchor ? detectStraightLine(group) : null;
-    const timeAnchor = (!bombAnchor && !lineInfo) ? detectTargetBlock(group) : null;
+    const timeAnchor = (!bombAnchor && !lineInfo) ? rawTimeAnchor : null;
     const crossAnchor = (!bombAnchor && !lineInfo && !timeAnchor) ? detectCross3(group) : null;
     const hammerAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor) ? detectLShape(group) : null;
     const capitalTAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor && !hammerAnchor) ? detectCapitalT(group) : null;
