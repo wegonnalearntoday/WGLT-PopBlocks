@@ -3539,14 +3539,16 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
 
     document.getElementById("howToBtn").addEventListener("click", () => overlay.classList.add("show"));
   document.getElementById("closeOverlayBtn").addEventListener("click", () => overlay.classList.remove("show"));
-  const specialsTutorialBtn = document.getElementById("specialsTutorialBtn");
-  const closeTutorialBtn = document.getElementById("closeTutorialBtn");
-  if(specialsTutorialBtn && tutorialOverlay){
-    specialsTutorialBtn.addEventListener("click", () => tutorialOverlay.classList.add("show"));
-  }
-  if(closeTutorialBtn && tutorialOverlay){
-    closeTutorialBtn.addEventListener("click", () => tutorialOverlay.classList.remove("show"));
-  }
+  document.addEventListener("click", (e) => {
+    if(e.target && e.target.id === "specialsTutorialBtn"){
+      const tutorialOverlay = document.getElementById("tutorialOverlay");
+      if(tutorialOverlay) tutorialOverlay.classList.add("show");
+    }
+    if(e.target && e.target.id === "closeTutorialBtn"){
+      const tutorialOverlay = document.getElementById("tutorialOverlay");
+      if(tutorialOverlay) tutorialOverlay.classList.remove("show");
+    }
+  });
   if(specialsLegendToggleEl && specialsLegendCardEl){
     specialsLegendToggleEl.addEventListener("click", () => {
       specialsLegendCardEl.classList.toggle("open");
@@ -3556,11 +3558,12 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
   overlay.addEventListener("click", (e) => {
     if(e.target === overlay) overlay.classList.remove("show");
   });
-  if(tutorialOverlay){
-    tutorialOverlay.addEventListener("click", (e) => {
-      if(e.target === tutorialOverlay) tutorialOverlay.classList.remove("show");
-    });
-  }
+  document.addEventListener("click", (e) => {
+    const tutorialOverlay = document.getElementById("tutorialOverlay");
+    if(tutorialOverlay && e.target === tutorialOverlay){
+      tutorialOverlay.classList.remove("show");
+    }
+  });
 
   newGame();
 })();
