@@ -850,9 +850,9 @@
           <div class="legendSection">
             <div class="legendSectionTitle">🧩 Shape Specials</div>
             <div class="legendGuideRow"><div class="legendGuideIcon">💣</div><div class="legendGuideText"><b>2x2 Square</b><br>Earn: pop a 2x2 same-color square<br>Effect: creates a board bomb.</div></div>
-            <div class="legendGuideRow"><div class="legendGuideIcon">⚡</div><div class="legendGuideText"><b>5 in a Line</b><br>Earn: pop 5 connected blocks in a straight line<br>Effect: changes the category of a large cluster of bubbles to match the one you just popped.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">⚡</div><div class="legendGuideText"><b>5 in a Line</b><br>Earn: pop 5 connected blocks in a straight line<br>Effect: tap it, then tap a category to change a large cluster to that category.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🔄</div><div class="legendGuideText"><b>Shuffle Smart</b><br>Earn: exact 6-block pop<br>Effect: reshuffles the board when tapped.</div></div>
-            <div class="legendGuideRow"><div class="legendGuideIcon">🌈</div><div class="legendGuideText"><b>Rainbow</b><br>Earn: exact 7-block pop<br>Effect: clears all items of a specific color.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">🌈</div><div class="legendGuideText"><b>Rainbow</b><br>Earn: exact 7-block pop<br>Effect: tap it, then tap any color to clear all matching items.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🧠</div><div class="legendGuideText"><b>Knowledge Multiplier</b><br>Earn: exact 10-block pop<br>Effect: doubles your next pop score and meter.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">↕️</div><div class="legendGuideText"><b>Vertical Arrow Line Clear</b><br>Earn: pop a T-shaped cluster<br>Effect: creates a vertical arrow line clear.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">↔️</div><div class="legendGuideText"><b>Horizontal Arrow Line Clear</b><br>Earn: pop an upside-down T cluster<br>Effect: creates a horizontal arrow line clear.</div></div>
@@ -932,8 +932,14 @@
                 <span>Hammer Special</span>
                 <span class="boosterUnlockHint" id="hintMultiplier"></span>
               </button>
+              <button class="boosterBtn locked" id="boosterMoves" data-booster="moves">
+                <span class="count" id="countMoves">0</span>
+                <span class="emoji">❤️</span>
+                <span>Move Heart</span>
+                <span class="boosterUnlockHint" id="hintMoves"></span>
+              </button>
             </div>
-            <div class="boosterHelp" id="boosterHelp">Booster rewards: 6 = Knowledge Bomb, 7 = Time Bonus, plus-sign = Swap Special, any 5-block L = Hammer Special.</div>
+            <div class="boosterHelp" id="boosterHelp">Booster rewards: 6 = Knowledge Bomb, 7 = Time Bonus, 9 = Move Heart, plus-sign = Swap Special, any 5-block L = Hammer Special.</div>
           </div>
         </section>
 
@@ -961,7 +967,7 @@
             <div class="muted">
               • Bigger groups = better score<br>
               • 4+ blocks = stronger quiz meter charge<br>
-              • 6 exact = Knowledge Bomb + Shuffle Smart, 7 exact = Time Bonus + Rainbow<br>
+              • 6 exact = Knowledge Bomb + Shuffle Smart, 7 exact = Time Bonus + Rainbow, 9 exact = Move Heart<br>
               • 10+ blocks = video pop<br>
               • Correct quiz answers clear extra blocks
             </div>
@@ -1299,19 +1305,22 @@
     bomb: document.getElementById("boosterBomb"),
     target: document.getElementById("boosterTarget"),
     shuffle: document.getElementById("boosterShuffle"),
-    multiplier: document.getElementById("boosterMultiplier")
+    multiplier: document.getElementById("boosterMultiplier"),
+    moves: document.getElementById("boosterMoves")
   };
   const boosterCountsEls = {
     bomb: document.getElementById("countBomb"),
     target: document.getElementById("countTarget"),
     shuffle: document.getElementById("countShuffle"),
-    multiplier: document.getElementById("countMultiplier")
+    multiplier: document.getElementById("countMultiplier"),
+    moves: document.getElementById("countMoves")
   };
   const boosterHintEls = {
     bomb: document.getElementById("hintBomb"),
     target: document.getElementById("hintTarget"),
     shuffle: document.getElementById("hintShuffle"),
-    multiplier: document.getElementById("hintMultiplier")
+    multiplier: document.getElementById("hintMultiplier"),
+    moves: document.getElementById("hintMoves")
   };
   const specialsLegendCardEl = document.getElementById("specialsLegendCard");
   const specialsLegendToggleEl = document.getElementById("specialsLegendToggle");
@@ -1349,6 +1358,7 @@
   let swapSpecialArmed = null;
   let hammerSpecialArmed = null;
   let arrowSpecialArmed = null;
+  let lineTransformArmed = null;
   let timerEnabled = false;
   let timerSecondsLeft = 0;
   let timerMaxSeconds = 0;
@@ -1456,6 +1466,11 @@
   }
 
   function generateMovesForLevel(){
+    const objectiveCount = Object.keys(levelObjectives || {}).length;
+    if(objectiveCount >= 3){
+      movesLeft = randInt(20, 35);
+      return;
+    }
     const cfg = moveRangeForLevel(level);
     movesLeft = randInt(cfg.min, cfg.max);
   }
@@ -1622,6 +1637,7 @@
     swapSpecialArmed = null;
     hammerSpecialArmed = null;
     arrowSpecialArmed = null;
+    lineTransformArmed = null;
     isQuizActive = false;
     quizMisses = 0;
     setKnowledgeGlow(false);
@@ -1775,11 +1791,12 @@
     bomb: { label: "Knowledge Bomb", text: "Use on the board to clear a 3x3 area and get a fact." },
     target: { label: "Time Bonus", text: "Only works on timer levels. Tap it to instantly add +30 seconds." },
     shuffle: { label: "Swap Special", text: "Tap the booster, then pick two neighboring blocks to swap them." },
-    multiplier: { label: "Hammer Special", text: "Tap the booster, then tap one block to bust it." }
+    multiplier: { label: "Hammer Special", text: "Tap the booster, then tap one block to bust it." },
+    moves: { label: "Move Heart", text: "Only works on move levels. Tap it to instantly add +5 moves." }
   };
 
   function defaultBoosterInventory(){
-    return { bomb: 0, target: 0, shuffle: 0, multiplier: 0 };
+    return { bomb: 0, target: 0, shuffle: 0, multiplier: 0, moves: 0 };
   }
 
   function ensureBoosterShape(){
@@ -1795,7 +1812,8 @@
       bomb: "Earn: exact 6-block pop • creates a bomb",
       target: "Earn: exact 7-block pop • adds time",
       shuffle: "Earn: pop a plus-sign cluster • creates a swap special",
-      multiplier: "Earn: pop any 5-block L cluster • creates a hammer special"
+      multiplier: "Earn: pop any 5-block L cluster • creates a hammer special",
+      moves: "Earn: exact 9-block pop • adds +5 moves"
     };
 
     Object.keys(boosterButtons).forEach(key => {
@@ -1817,7 +1835,7 @@
     if(selectedBooster){
       if (boosterHelpEl) boosterHelpEl.textContent = BOOSTER_INFO[selectedBooster].text;
     } else {
-      if (boosterHelpEl) boosterHelpEl.textContent = "Booster rewards: 6 = Knowledge Bomb, 7 = Time Bonus, plus-sign = Swap Special, any 5-block L = Hammer Special.";
+      if (boosterHelpEl) boosterHelpEl.textContent = "Booster rewards: 6 = Knowledge Bomb, 7 = Time Bonus, 9 = Move Heart, plus-sign = Swap Special, any 5-block L = Hammer Special.";
     }
   }
 
@@ -1842,8 +1860,8 @@
       awardBooster("bomb", 1);
     } else if(groupSize === 7){
       awardBooster("target", 1);
-    } else if(groupSize === 10){
-      awardBooster("multiplier", 1);
+    } else if(groupSize === 9){
+      awardBooster("moves", 1);
     }
   }
 
@@ -1860,6 +1878,10 @@
     }
     if(type === "target"){
       useTargetBooster();
+      return;
+    }
+    if(type === "moves"){
+      useMovesBooster();
       return;
     }
     selectedBooster = (selectedBooster === type) ? null : type;
@@ -1945,6 +1967,24 @@
     updateBest();
     saveProgress();
     renderBoard([]);
+    return true;
+  }
+
+  function useMovesBooster(){
+    if(!levelUsesMoves(level)){
+      showToast("❤️ Move Heart only works on move levels");
+      return false;
+    }
+    if(!spendBooster("moves")){
+      showToast("No Move Heart boosters yet");
+      return false;
+    }
+    movesLeft = Math.min(999, movesLeft + 5);
+    updateHUD();
+    updateBest();
+    saveProgress();
+    renderBoard([]);
+    showToast("❤️ +5 moves");
     return true;
   }
 
@@ -2216,26 +2256,53 @@
 
   function explodeLineBlaster(r,c){
     const cell = board[r][c];
-    const orientation = (typeof cell === "object" && cell.orientation) ? cell.orientation : "row";
-    const affected = [];
-    if(orientation === "row"){
+    if(!cell || typeof cell !== "object") return;
+    lineTransformArmed = { r, c, baseColor: cell.color };
+    boardHintEl.textContent = "⚡ Line Blaster armed. Tap a category to repaint a large cluster.";
+    showToast("⚡ Now tap a category to repaint a large cluster");
+    renderBoard([]);
+  }
+
+  function resolveLineTransformSelection(r,c){
+    if(!lineTransformArmed) return false;
+    const chosen = board[r]?.[c];
+    if(chosen === null || chosen === undefined) return true;
+    const targetColor = typeof chosen === "object" ? chosen.color : chosen;
+    const clusters = [];
+    const seen = new Set();
+    for(let rr=0; rr<size; rr++){
       for(let cc=0; cc<size; cc++){
-        if(board[r][cc] !== null){
-          const item = board[r][cc];
-          const cat = typeof item === "object" ? item.color : item;
-          affected.push([r,cc,cat]);
-        }
-      }
-    } else {
-      for(let rr=0; rr<size; rr++){
-        if(board[rr][c] !== null){
-          const item = board[rr][c];
-          const cat = typeof item === "object" ? item.color : item;
-          affected.push([rr,c,cat]);
-        }
+        const item = board[rr][cc];
+        if(item === null || item === undefined || typeof item === "object") continue;
+        const key = `${rr},${cc}`;
+        if(seen.has(key)) continue;
+        const group = getGroup(rr,cc);
+        group.forEach(([gr,gc]) => seen.add(`${gr},${gc}`));
+        clusters.push(group);
       }
     }
-    explodeAffectedCells(affected, "⚡ Line Blaster!");
+    clusters.sort((a,b)=> b.length - a.length);
+    const chosenCluster = clusters.find(g => g.length >= 5) || clusters[0] || [];
+    const origin = lineTransformArmed;
+    lineTransformArmed = null;
+    if(origin && board[origin.r] && board[origin.r][origin.c] && typeof board[origin.r][origin.c] === "object" && board[origin.r][origin.c].type === "line"){
+      board[origin.r][origin.c] = targetColor;
+    }
+    chosenCluster.forEach(([gr,gc]) => {
+      if(board[gr][gc] !== null && typeof board[gr][gc] !== "object"){
+        board[gr][gc] = targetColor;
+      }
+    });
+    applyGravity();
+    refillBoard();
+    if(!hasAnyMoves(board)) reshuffleBoard();
+    updateBest();
+    saveProgress();
+    renderBoard([]);
+    boardHintEl.textContent = "Tap connected blocks to pop them.";
+    showToast(`⚡ Cluster changed to ${currentColors()[targetColor]?.label || 'that category'}!`);
+    endRoundIfNeeded();
+    return true;
   }
 
   function explodeTargetBlock(r,c){
@@ -2314,14 +2381,23 @@
 
   function detectLShape(group){
     const set = new Set(group.map(([r,c]) => `${r},${c}`));
+    const dirs = [[1,0],[-1,0],[0,1],[0,-1]];
     for(const [r,c] of group){
-      if(
-        (set.has(`${r},${c}`) && set.has(`${r+1},${c}`) && set.has(`${r+2},${c}`) && set.has(`${r+2},${c+1}`) && set.has(`${r+2},${c+2}`)) ||
-        (set.has(`${r},${c}`) && set.has(`${r+1},${c}`) && set.has(`${r+2},${c}`) && set.has(`${r+2},${c-1}`) && set.has(`${r+2},${c-2}`)) ||
-        (set.has(`${r},${c}`) && set.has(`${r-1},${c}`) && set.has(`${r-2},${c}`) && set.has(`${r-2},${c+1}`) && set.has(`${r-2},${c+2}`)) ||
-        (set.has(`${r},${c}`) && set.has(`${r-1},${c}`) && set.has(`${r-2},${c}`) && set.has(`${r-2},${c-1}`) && set.has(`${r-2},${c-2}`))
-      ){
-        return [r,c];
+      for(const [dr1,dc1] of dirs){
+        for(const [dr2,dc2] of dirs){
+          if(dr1 === -dr2 && dc1 === -dc2) continue;
+          if(dr1 === dr2 && dc1 === dc2) continue;
+          const cells = [
+            `${r},${c}`,
+            `${r+dr1},${c+dc1}`,
+            `${r+dr1*2},${c+dc1*2}`,
+            `${r+dr2},${c+dc2}`,
+            `${r+dr2*2},${c+dc2*2}`
+          ];
+          if(cells.every(key => set.has(key))){
+            return [r,c];
+          }
+        }
       }
     }
     return null;
@@ -2771,10 +2847,11 @@ function getCellCenter(r, c){
               return;
             }
             if(isLineBlaster(board[r][c])){
-              boardHintEl.textContent = "Line Blaster ready. Tap to clear a full line.";
+              boardHintEl.textContent = "Line Blaster ready. Tap it, then tap a category to repaint a large cluster.";
               return;
             }
-            if(typeof board[r][c] === "object" && (board[r][c].type === "shuffleboard" || board[r][c].type === "rainbow")){ explodeTargetBlock(r,c); return; }
+            if(typeof board[r][c] === "object" && board[r][c].type === "shuffleboard"){ boardHintEl.textContent = "Shuffle Smart ready. Tap to reshuffle the board."; return; }
+            if(typeof board[r][c] === "object" && board[r][c].type === "rainbow"){ boardHintEl.textContent = "Rainbow ready. Tap it, then tap any color to clear all matching blocks."; return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "swap"){
               boardHintEl.textContent = "Swap special ready. Tap it, then pick two neighboring blocks.";
               return;
@@ -2807,6 +2884,7 @@ function getCellCenter(r, c){
 
           cell.addEventListener("click", () => {
             if(targetSpecialArmed){ resolveTargetSpecialSelection(r,c); return; }
+            if(lineTransformArmed){ resolveLineTransformSelection(r,c); return; }
             if(swapSpecialArmed){ resolveSwapSpecial(r,c); return; }
             if(hammerSpecialArmed){ resolveHammerSpecial(r,c); return; }
             if(arrowSpecialArmed){ resolveArrowSpecial(r,c); return; }
@@ -2818,6 +2896,7 @@ function getCellCenter(r, c){
             if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; boardHintEl.textContent = "↔️ Tap a line target to clear that row or column."; showToast("Arrow armed"); return; }
             if(selectedBooster === "bomb"){ useBombBooster(r,c); return; }
             if(selectedBooster === "target"){ useTargetBooster(r,c); return; }
+            if(selectedBooster === "moves"){ useMovesBooster(); return; }
             if(selectedBooster === "shuffle"){
               if(!spendBooster("shuffle")){ showToast("No Swap Special boosters yet"); return; }
               selectedBooster = null;
@@ -2851,18 +2930,20 @@ function getCellCenter(r, c){
           cell.addEventListener("touchend", (e) => {
             e.preventDefault();
             if(targetSpecialArmed){ resolveTargetSpecialSelection(r,c); return; }
+            if(lineTransformArmed){ resolveLineTransformSelection(r,c); return; }
             if(swapSpecialArmed){ resolveSwapSpecial(r,c); return; }
             if(hammerSpecialArmed){ resolveHammerSpecial(r,c); return; }
             if(arrowSpecialArmed){ resolveArrowSpecial(r,c); return; }
             if(isBomb(board[r][c])){ explodeBomb(r,c); return; }
             if(isLineBlaster(board[r][c])){ explodeLineBlaster(r,c); return; }
-            if(typeof board[r][c] === "object" && board[r][c].type === "shuffleboard"){ boardHintEl.textContent = "Shuffle Smart ready. Tap to reshuffle the board."; return; }
-            if(typeof board[r][c] === "object" && board[r][c].type === "rainbow"){ boardHintEl.textContent = "Rainbow ready. Tap it, then tap any color to clear all matching blocks."; return; }
+            if(typeof board[r][c] === "object" && board[r][c].type === "shuffleboard"){ explodeTargetBlock(r,c); return; }
+            if(typeof board[r][c] === "object" && board[r][c].type === "rainbow"){ explodeTargetBlock(r,c); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "swap"){ swapSpecialArmed = { r, c }; renderBoard([]); boardHintEl.textContent = "🔁 Tap a neighboring block to swap."; showToast("Swap armed"); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "hammer"){ hammerSpecialArmed = { r, c }; boardHintEl.textContent = "🔨 Tap one block to break it."; showToast("Hammer armed"); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; boardHintEl.textContent = "↔️ Tap a line target to clear that row or column."; showToast("Arrow armed"); return; }
             if(selectedBooster === "bomb"){ useBombBooster(r,c); return; }
             if(selectedBooster === "target"){ useTargetBooster(r,c); return; }
+            if(selectedBooster === "moves"){ useMovesBooster(); return; }
             if(selectedBooster === "shuffle"){
               if(!spendBooster("shuffle")){ showToast("No Swap Special boosters yet"); return; }
               selectedBooster = null;
@@ -3221,6 +3302,7 @@ function getCellCenter(r, c){
       swapSpecialArmed = null;
       hammerSpecialArmed = null;
       arrowSpecialArmed = null;
+    lineTransformArmed = null;
       pendingKnowledge = false;
       pendingKnowledgeCategory = null;
       isQuizActive = false;
@@ -3337,7 +3419,7 @@ function popGroup(r,c){
           const specialObj = bombAnchor
             ? { type: "bomb", color: categoryIndex }
             : lineInfo
-              ? { type: "line", color: categoryIndex, orientation: lineInfo.orientation }
+              ? { type: "line", color: categoryIndex }
               : timeAnchor
                 ? { type: timeAnchor.type, color: categoryIndex }
                 : capitalTAnchor
@@ -3391,7 +3473,7 @@ function popGroup(r,c){
         if(bombAnchor){
           showToast("💣 Bomb created! Tap it anytime.");
         } else if(lineInfo){
-          showToast("⚡ Line Blaster created!");
+          showToast("⚡ Line Blaster created! Tap it, then tap a category.");
         } else if(timeAnchor && timeAnchor.type === "shuffleboard"){
           showToast("🔄 Shuffle Smart created!");
         } else if(timeAnchor && timeAnchor.type === "rainbow"){
@@ -3447,6 +3529,7 @@ function popGroup(r,c){
     swapSpecialArmed = null;
     hammerSpecialArmed = null;
     arrowSpecialArmed = null;
+    lineTransformArmed = null;
     choicesEl.innerHTML = "";
     quizMisses = 0;
     quizTextEl.textContent = "Fill the learning meter to trigger Quiz Boost.";
@@ -3540,6 +3623,7 @@ function popGroup(r,c){
     swapSpecialArmed = null;
     hammerSpecialArmed = null;
     arrowSpecialArmed = null;
+    lineTransformArmed = null;
     isQuizActive = false;
     quizMisses = 0;
     choicesEl.innerHTML = "";
@@ -3638,7 +3722,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
 <div class="overlay" id="tutorialOverlay">
   <div class="modal">
     <h3>Specials Tutorial</h3>
-    <p>All shape specials use <b>5 matching blocks</b>. Exact <b>6</b> creates <b>🔄 Shuffle Smart</b> on the board. Exact <b>7</b> creates <b>🌈 Rainbow</b> on the board.</p>
+    <p>All shape specials use <b>5 matching blocks</b>. Exact <b>6</b> creates <b>🔄 Shuffle Smart</b> on the board. Exact <b>7</b> creates <b>🌈 Rainbow</b> on the board. Exact <b>9</b> adds a <b>❤️ Move Heart</b> booster.</p>
     <div class="tutorialGrid">
       <div class="tutorialCard">
         <h4>🔁 Swap Special</h4>
@@ -3694,6 +3778,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
         </div>
         <p><b>Reward:</b> 🔄 Shuffle Smart<br><b>Earn:</b> exact 6-block pop.<br><b>Effect:</b> tap it to reshuffle the board.</p>
+        <div class="patternBoard"><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div></div>
       </div>
       <div class="tutorialCard">
         <h4>🌈 Rainbow</h4>
@@ -3705,6 +3790,9 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
         </div>
         <p><b>Reward:</b> 🌈 Rainbow<br><b>Earn:</b> exact 7-block pop.<br><b>Effect:</b> tap it, then tap any color to clear all matching items.</p>
+        <div class="patternBoard"><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div></div>
+        <h4>❤️ Move Heart</h4>
+        <p><b>Reward:</b> ❤️ Move Heart<br><b>Earn:</b> exact 9-block pop.<br><b>Effect:</b> tap the booster to gain +5 moves on move levels.</p>
       </div>
     </div>
     <div class="row" style="margin-top:14px"><button class="secondary" id="closeTutorialBtn">Close</button></div>
