@@ -61,6 +61,12 @@
   }
   .label{font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.6px}
   .value{font-size:24px; font-weight:800; margin-top:4px}
+  .comboTimeoutWrap{margin-top:6px;}
+  .comboTimeoutText{font-size:11px; color:var(--muted); font-weight:800; letter-spacing:.2px;}
+  .comboTimeoutBar{margin-top:5px; height:6px; border-radius:999px; overflow:hidden; background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.08);}
+  .comboTimeoutFill{height:100%; width:0%; background:linear-gradient(90deg,#ffd54a,#ff8a3d); transition:width .08s linear, opacity .15s ease; box-shadow:0 0 10px rgba(255,213,74,.45);}
+  .comboTimeoutWrap.warning .comboTimeoutFill{animation:comboPulse .45s linear infinite alternate;}
+  @keyframes comboPulse{from{opacity:.65;}to{opacity:1;}}
   .modeButtons{
     display:grid; grid-template-columns:1fr; gap:10px; margin-top:10px;
   }
@@ -809,6 +815,10 @@
           <div class="stat">
             <div class="label">Combo</div>
             <div class="value" id="comboValue">0x</div>
+            <div class="comboTimeoutWrap" id="comboTimeoutWrap">
+              <div class="comboTimeoutText" id="comboTimeoutText">⏳ Ready</div>
+              <div class="comboTimeoutBar"><div class="comboTimeoutFill" id="comboTimeoutFill"></div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -1294,6 +1304,9 @@
   const boardSizeValueEl = document.getElementById("boardSizeValue");
   const bestValueEl = document.getElementById("bestValue");
   const comboValueEl = document.getElementById("comboValue");
+  const comboTimeoutWrapEl = document.getElementById("comboTimeoutWrap");
+  const comboTimeoutTextEl = document.getElementById("comboTimeoutText");
+  const comboTimeoutFillEl = document.getElementById("comboTimeoutFill");
   const factTextEl = document.getElementById("factText");
   const quizTextEl = document.getElementById("quizText");
   const choicesEl = document.getElementById("choices");
@@ -1371,6 +1384,9 @@
   let isAdvancingLevel = false;
   let activeLevelColorIndices = null;
   let recentQuizIds = [];
+  let comboTimeoutRemaining = 0;
+  let comboTimeoutMax = 0;
+  let comboTimeoutIntervalId = null;
 
   bestValueEl.textContent = best;
 
@@ -1445,6 +1461,49 @@
       clearInterval(timerIntervalId);
       timerIntervalId = null;
     }
+  }
+
+  function stopComboTimeout(){
+    if(comboTimeoutIntervalId){
+      clearInterval(comboTimeoutIntervalId);
+      comboTimeoutIntervalId = null;
+    }
+  }
+
+  function resetComboTimeout(){
+    stopComboTimeout();
+    comboTimeoutRemaining = 0;
+    comboTimeoutMax = 0;
+  }
+
+  function comboTimeoutFor(comboCount){
+    if(comboCount >= 5) return 2.0;
+    if(comboCount >= 3) return 2.5;
+    return 3.0;
+  }
+
+  function armComboTimeout(){
+    stopComboTimeout();
+    if(combo <= 0){
+      resetComboTimeout();
+      updateHUD();
+      return;
+    }
+    comboTimeoutMax = comboTimeoutFor(combo);
+    comboTimeoutRemaining = comboTimeoutMax;
+    updateHUD();
+    comboTimeoutIntervalId = setInterval(() => {
+      comboTimeoutRemaining = Math.max(0, comboTimeoutRemaining - 0.1);
+      if(comboTimeoutRemaining <= 0){
+        combo = 0;
+        resetComboTimeout();
+        updateHUD();
+        saveProgress();
+        showToast("Combo reset");
+        return;
+      }
+      updateHUD();
+    }, 100);
   }
 
   function startLevelTimer(){
@@ -1662,6 +1721,7 @@
     renderObjectives();
     renderBoard([]);
     saveProgress();
+    resetComboTimeout();
     updateHUD();
     startLevelTimer();
 
@@ -1690,7 +1750,7 @@
   function saveProgress(){
     localStorage.setItem("wglt_popblocks_best_global", String(best));
     localStorage.setItem(modeSaveKey(), JSON.stringify({
-      score, level, combo, progress, size, best, benchmarkProgress, boosterInventory, levelObjectives, levelObjectivesStart, movesLeft, timerEnabled, timerSecondsLeft, timerMaxSeconds, activeLevelColorIndices, recentQuizIds
+      score, level, combo, progress, size, best, benchmarkProgress, boosterInventory, levelObjectives, levelObjectivesStart, movesLeft, timerEnabled, timerSecondsLeft, timerMaxSeconds, activeLevelColorIndices, recentQuizIds, comboTimeoutRemaining, comboTimeoutMax
     }));
   }
 
@@ -1703,6 +1763,7 @@
       multiplierArmed = false;
       activeLevelColorIndices = null;
       recentQuizIds = [];
+      resetComboTimeout();
       return false;
     }
     try {
@@ -1723,6 +1784,8 @@
       timerMaxSeconds = Number(parsed.timerMaxSeconds || timerSecondsLeft || 0);
       activeLevelColorIndices = Array.isArray(parsed.activeLevelColorIndices) ? parsed.activeLevelColorIndices : null;
       recentQuizIds = Array.isArray(parsed.recentQuizIds) ? parsed.recentQuizIds : [];
+      comboTimeoutRemaining = Number(parsed.comboTimeoutRemaining || 0);
+      comboTimeoutMax = Number(parsed.comboTimeoutMax || 0);
       ensureBenchmarkShape();
       ensureBoosterShape();
       return true;
@@ -1733,6 +1796,7 @@
       multiplierArmed = false;
       activeLevelColorIndices = null;
       recentQuizIds = [];
+      resetComboTimeout();
       return false;
     }
   }
@@ -3053,6 +3117,14 @@ function getCellCenter(r, c){
     levelValueEl.textContent = level;
     if (boardSizeValueEl) boardSizeValueEl.textContent = `${size}x${size}`;
     comboValueEl.textContent = combo + "x";
+    if(comboTimeoutWrapEl && comboTimeoutTextEl && comboTimeoutFillEl){
+      const activeCombo = combo > 0 && comboTimeoutMax > 0 && comboTimeoutRemaining > 0;
+      const pct = activeCombo ? Math.max(0, Math.min(100, (comboTimeoutRemaining / comboTimeoutMax) * 100)) : 0;
+      comboTimeoutTextEl.textContent = activeCombo ? `⏳ ${comboTimeoutRemaining.toFixed(1)}s` : "⏳ Ready";
+      comboTimeoutFillEl.style.width = `${pct}%`;
+      comboTimeoutWrapEl.classList.toggle("warning", activeCombo && comboTimeoutRemaining <= 1);
+      comboTimeoutWrapEl.style.opacity = activeCombo ? "1" : ".7";
+    }
     bestValueEl.textContent = best;
     progressFillEl.style.width = `${Math.min(100, progress)}%`;
     modeBadgeEl.textContent = currentMode().badge;
@@ -3286,6 +3358,7 @@ function getCellCenter(r, c){
 
     if(areObjectivesComplete()){
       stopLevelTimer();
+      resetComboTimeout();
       score += 300 + level * 100;
       setKnowledgeGlow(false);
       setQuizGlow(false);
@@ -3314,6 +3387,7 @@ function getCellCenter(r, c){
     if((levelUsesMoves(level) && movesLeft <= 0) || (timerEnabled && timerSecondsLeft <= 0)){
       stopLevelTimer();
       combo = 0;
+      resetComboTimeout();
       progress = 0;
       selectedBooster = null;
       multiplierArmed = false;
@@ -3472,6 +3546,7 @@ function popGroup(r,c){
       }
 
       combo = nextCombo;
+      armComboTimeout();
       score += gained;
       progress += Math.min(56, (10 + groupSize * 2) * multiplierValue);
 
@@ -3560,6 +3635,7 @@ function popGroup(r,c){
       score = 0;
       level = 1;
       combo = 0;
+      resetComboTimeout();
       progress = 0;
       benchmarkProgress = defaultBenchmarks();
       boosterInventory = defaultBoosterInventory();
@@ -3571,6 +3647,7 @@ function popGroup(r,c){
       score = 0;
       level = 1;
       combo = 0;
+      resetComboTimeout();
       progress = 0;
       loadProgressForMode();
     }
@@ -3594,6 +3671,23 @@ function popGroup(r,c){
     renderObjectives();
     renderBoard([]);
     saveProgress();
+    if(combo > 0 && comboTimeoutRemaining > 0){
+      stopComboTimeout();
+      comboTimeoutIntervalId = setInterval(() => {
+        comboTimeoutRemaining = Math.max(0, comboTimeoutRemaining - 0.1);
+        if(comboTimeoutRemaining <= 0){
+          combo = 0;
+          resetComboTimeout();
+          updateHUD();
+          saveProgress();
+          showToast("Combo reset");
+          return;
+        }
+        updateHUD();
+      }, 100);
+    } else {
+      resetComboTimeout();
+    }
     updateHUD();
     startLevelTimer();
   }
