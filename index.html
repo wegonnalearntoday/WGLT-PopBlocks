@@ -326,6 +326,7 @@
     100%{ transform:translateY(110vh) rotate(720deg); opacity:.2; }
   }
   @media (max-width: 700px){
+    .tutorialGrid{grid-template-columns:1fr;}
     .boosterGrid{ grid-template-columns:repeat(2, minmax(0,1fr)); }
     .boosterBtn{ min-height:68px; font-size:12px; }
   }
@@ -710,10 +711,6 @@
     padding:8px;
     border:1px solid rgba(255,255,255,.08);
   }
-  @media (max-width: 700px){
-    .tutorialGrid{ grid-template-columns:1fr; }
-  }
-
 
   @media (max-width: 980px){
     .app{grid-template-columns:1fr}
@@ -800,6 +797,28 @@
         <div class="sub" style="margin-top:8px">
           This starter build is ready for Wix iframe embedding. You can later add:
           teacher mode, benchmark tracking, timed mode, grade bands, and custom subject packs.
+        </div>
+      </div>
+      <div class="card">
+        <div class="label">Specials Legend</div>
+        <button id="toggleSpecialsLegendBtn" class="dark small" style="margin-top:10px;">Show / Hide Full Reward List</button>
+        <div id="specialsLegendPanel" style="display:none; margin-top:10px;">
+          <div class="sub"><b>Booster Rewards from exact pop size</b></div>
+          <div class="legend">
+            <div class="legendItem"><span>🔄</span><span><b>Shuffle Smart</b><br><small>Earn: exact 7-block pop • Effect: reshuffles the board</small></span></div>
+            <div class="legendItem"><span>💣</span><span><b>Knowledge Bomb</b><br><small>Earn: exact 8-block pop • Effect: clears a 3x3 area</small></span></div>
+            <div class="legendItem"><span>⏱️</span><span><b>Time Bonus</b><br><small>Earn: exact 9-block pop • Effect: adds time on timer levels</small></span></div>
+            <div class="legendItem"><span>🧠</span><span><b>Knowledge Multiplier</b><br><small>Earn: exact 10-block pop • Effect: doubles your next pop score and meter</small></span></div>
+          </div>
+          <div class="sub" style="margin-top:12px;"><b>Board Specials from shape matches</b></div>
+          <div class="legend">
+            <div class="legendItem"><span>💣</span><span><b>Board Bomb</b><br><small>Earn: 2x2 square • Effect: creates a board bomb</small></span></div>
+            <div class="legendItem"><span>⚡</span><span><b>Line Blaster</b><br><small>Earn: 5 in a straight line • Effect: clears a row or column</small></span></div>
+            <div class="legendItem"><span>🔁</span><span><b>Swap Special</b><br><small>Earn: plus-sign / cross shape • Effect: swap 2 neighboring tiles</small></span></div>
+            <div class="legendItem"><span>🔨</span><span><b>Hammer Special</b><br><small>Earn: L or backwards L • Effect: bust 1 block</small></span></div>
+            <div class="legendItem"><span>↕️</span><span><b>Vertical Arrow Line Clear</b><br><small>Earn: capital T shape • Effect: clears a vertical line on touch</small></span></div>
+            <div class="legendItem"><span>↔️</span><span><b>Horizontal Arrow Line Clear</b><br><small>Earn: upside-down T shape • Effect: clears a horizontal line on touch</small></span></div>
+          </div>
         </div>
       </div>
     </aside>
@@ -912,89 +931,37 @@
   <div class="overlay" id="tutorialOverlay">
     <div class="modal">
       <h2>Specials Tutorial</h2>
-      <p>Here is the full reward list so players can see every unlock in one place.</p>
+      <p>Here is the full reward list and a simple mini-board demo for each special.</p>
       <div class="tutorialGrid">
-        <div class="tutorialCard">
-          <h4>🔄 Shuffle Smart</h4>
-          <div>Earn: exact 7-block pop</div>
-          <div>Effect: reshuffles the board.</div>
-          <div class="tutorialMini">🟨🟨🟨
+        <div class="tutorialCard"><h4>🔄 Shuffle Smart</h4><div>Earn: exact 7-block pop</div><div>Effect: reshuffles the board.</div><div class="tutorialMini">🟨🟨🟨
 🟨🟨🟨
-🟨      </div>
-        </div>
-        <div class="tutorialCard">
-          <h4>💣 Knowledge Bomb</h4>
-          <div>Earn: exact 8-block pop</div>
-          <div>Effect: clears a 3x3 area.</div>
-          <div class="tutorialMini">🟥🟥🟥
+🟨</div></div>
+        <div class="tutorialCard"><h4>💣 Knowledge Bomb</h4><div>Earn: exact 8-block pop</div><div>Effect: clears a 3x3 area.</div><div class="tutorialMini">🟥🟥🟥
 🟥🟥🟥
-🟥🟥  </div>
-        </div>
-        <div class="tutorialCard">
-          <h4>⏱️ Time Bonus</h4>
-          <div>Earn: exact 9-block pop</div>
-          <div>Effect: adds time on timer levels.</div>
-          <div class="tutorialMini">🟩🟩🟩
+🟥🟥</div></div>
+        <div class="tutorialCard"><h4>⏱️ Time Bonus</h4><div>Earn: exact 9-block pop</div><div>Effect: adds time on timer levels.</div><div class="tutorialMini">🟩🟩🟩
 🟩🟩🟩
-🟩🟩🟩</div>
-        </div>
-        <div class="tutorialCard">
-          <h4>🧠 Knowledge Multiplier</h4>
-          <div>Earn: exact 10-block pop</div>
-          <div>Effect: doubles your next pop score and meter.</div>
-          <div class="tutorialMini">🟦🟦🟦🟦
+🟩🟩🟩</div></div>
+        <div class="tutorialCard"><h4>🧠 Knowledge Multiplier</h4><div>Earn: exact 10-block pop</div><div>Effect: doubles your next pop score and meter.</div><div class="tutorialMini">🟦🟦🟦🟦
 🟦🟦🟦
-🟦🟦🟦</div>
-        </div>
-        <div class="tutorialCard">
-          <h4>💣 Board Bomb</h4>
-          <div>Earn: 2x2 square match</div>
-          <div>Effect: creates a bomb on the board.</div>
-          <div class="tutorialMini">🟥🟥
-🟥🟥</div>
-        </div>
-        <div class="tutorialCard">
-          <h4>⚡ Line Blaster</h4>
-          <div>Earn: 5 in a straight line</div>
-          <div>Effect: clears a row or column.</div>
-          <div class="tutorialMini">🟨🟨🟨🟨🟨</div>
-        </div>
-        <div class="tutorialCard">
-          <h4>🔁 Swap Special</h4>
-          <div>Earn: plus-sign / cross shape</div>
-          <div>Effect: lets you swap 2 neighboring tiles.</div>
-          <div class="tutorialMini">  🟩
+🟦🟦🟦</div></div>
+        <div class="tutorialCard"><h4>💣 Board Bomb</h4><div>Earn: 2x2 square</div><div>Effect: creates a board bomb.</div><div class="tutorialMini">🟥🟥
+🟥🟥</div></div>
+        <div class="tutorialCard"><h4>⚡ Line Blaster</h4><div>Earn: 5 in a straight line</div><div>Effect: clears a row or column.</div><div class="tutorialMini">🟨🟨🟨🟨🟨</div></div>
+        <div class="tutorialCard"><h4>🔁 Swap Special</h4><div>Earn: plus-sign / cross shape</div><div>Effect: swap 2 neighboring tiles.</div><div class="tutorialMini">  🟩
 🟩🟩🟩
-  🟩</div>
-        </div>
-        <div class="tutorialCard">
-          <h4>🔨 Hammer Special</h4>
-          <div>Earn: L or backwards L shape</div>
-          <div>Effect: busts 1 block.</div>
-          <div class="tutorialMini">🟪  
-🟪  
-🟪🟪</div>
-        </div>
-        <div class="tutorialCard">
-          <h4>↕️ Vertical Arrow Line Clear</h4>
-          <div>Earn: capital T shape</div>
-          <div>Effect: clears a vertical line on touch.</div>
-          <div class="tutorialMini">🟧🟧🟧
+  🟩</div></div>
+        <div class="tutorialCard"><h4>🔨 Hammer Special</h4><div>Earn: L or backwards L</div><div>Effect: bust 1 block.</div><div class="tutorialMini">🟪
+🟪
+🟪🟪</div></div>
+        <div class="tutorialCard"><h4>↕️ Vertical Arrow Line Clear</h4><div>Earn: capital T shape</div><div>Effect: clears a vertical line on touch.</div><div class="tutorialMini">🟧🟧🟧
   🟧
-  🟧</div>
-        </div>
-        <div class="tutorialCard">
-          <h4>↔️ Horizontal Arrow Line Clear</h4>
-          <div>Earn: upside-down T shape</div>
-          <div>Effect: clears a horizontal line on touch.</div>
-          <div class="tutorialMini">  🟦
+  🟧</div></div>
+        <div class="tutorialCard"><h4>↔️ Horizontal Arrow Line Clear</h4><div>Earn: upside-down T shape</div><div>Effect: clears a horizontal line on touch.</div><div class="tutorialMini">  🟦
   🟦
-🟦🟦🟦</div>
-        </div>
+🟦🟦🟦</div></div>
       </div>
-      <div class="footerRow">
-        <button id="closeTutorialBtn">Got It</button>
-      </div>
+      <div class="footerRow"><button id="closeTutorialBtn">Got It</button></div>
     </div>
   </div>
 
@@ -3367,21 +3334,7 @@ function popGroup(r,c){
 
   function setMode(nextMode){
     modeKey = nextMode;
-  
-  document.getElementById("howToBtn").addEventListener("click", () => {
-    overlay.classList.add("show");
-  });
-  document.getElementById("closeOverlayBtn").addEventListener("click", () => {
-    overlay.classList.remove("show");
-  });
-  document.getElementById("tutorialBtn").addEventListener("click", () => {
-    tutorialOverlay.classList.add("show");
-  });
-  document.getElementById("closeTutorialBtn").addEventListener("click", () => {
-    tutorialOverlay.classList.remove("show");
-  });
-
-  document.querySelectorAll(".mode").forEach(btn => {
+    document.querySelectorAll(".mode").forEach(btn => {
       const active = btn.dataset.mode === nextMode;
       btn.classList.toggle("active", active);
       btn.classList.toggle("dark", !active);
@@ -3487,6 +3440,17 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
   document.getElementById("closeOverlayBtn").addEventListener("click", () => overlay.classList.remove("show"));
   overlay.addEventListener("click", (e) => {
     if(e.target === overlay) overlay.classList.remove("show");
+  });
+
+
+  document.getElementById("tutorialBtn").addEventListener("click", () => tutorialOverlay.classList.add("show"));
+  document.getElementById("closeTutorialBtn").addEventListener("click", () => tutorialOverlay.classList.remove("show"));
+  tutorialOverlay.addEventListener("click", (e) => {
+    if(e.target === tutorialOverlay) tutorialOverlay.classList.remove("show");
+  });
+  document.getElementById("toggleSpecialsLegendBtn").addEventListener("click", () => {
+    const panel = document.getElementById("specialsLegendPanel");
+    panel.style.display = panel.style.display === "none" ? "block" : "none";
   });
 
   newGame();
