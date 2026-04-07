@@ -154,6 +154,34 @@
     filter:brightness(1.2);
     outline:3px solid rgba(255,255,255,.25);
   }
+  .cell.preview-shape{
+    animation:shapePreviewPulse .75s ease-in-out infinite alternate;
+    outline:3px solid rgba(255,214,102,.72) !important;
+    box-shadow:0 0 0 3px rgba(255,214,102,.18), 0 0 20px rgba(255,214,102,.34);
+  }
+  .cell.preview-shape-t{
+    outline-color:rgba(125,211,252,.9) !important;
+    box-shadow:0 0 0 3px rgba(125,211,252,.18), 0 0 20px rgba(125,211,252,.38);
+  }
+  .cell.preview-shape-square{
+    outline-color:rgba(255,132,132,.9) !important;
+    box-shadow:0 0 0 3px rgba(255,132,132,.18), 0 0 20px rgba(255,132,132,.38);
+  }
+  .cell.preview-shape-line{
+    outline-color:rgba(255,231,122,.9) !important;
+    box-shadow:0 0 0 3px rgba(255,231,122,.18), 0 0 20px rgba(255,231,122,.38);
+  }
+  @keyframes shapePreviewPulse{
+    0%{ transform:scale(1); filter:brightness(1.03); }
+    100%{ transform:scale(1.06); filter:brightness(1.18); }
+  }
+  .slowmo-board{
+    animation:slowmoBoardPulse .28s ease-in-out 3 alternate;
+  }
+  @keyframes slowmoBoardPulse{
+    0%{ transform:scale(1); filter:brightness(1); }
+    100%{ transform:scale(1.015); filter:brightness(1.08); }
+  }
   .cell.removing{
     transform:scale(.78);
     opacity:.08;
@@ -1385,6 +1413,7 @@
   let lastQuizIndex = -1;
   let isQuizActive = false;
   let previewCells = [];
+  let previewSpecialType = null;
   let pendingKnowledge = false;
   let pendingKnowledgeCategory = null;
   let benchmarkProgress = {};
@@ -2240,6 +2269,15 @@
 
     const pointArray = Array.isArray(pointsPerBlock) ? pointsPerBlock : Array(group.length).fill(pointsPerBlock || 0);
     const shownTotal = pointArray.reduce((a,b)=>a+b,0);
+    const isSlowMo = group.length >= 10;
+    const startDelay = isSlowMo ? 360 : 180;
+    const perBlockDelay = isSlowMo ? 95 : 65;
+    const endDelay = isSlowMo ? 260 : 160;
+
+    if(isSlowMo){
+      boardEl.classList.add("slowmo-board");
+      setTimeout(() => boardEl.classList.remove("slowmo-board"), 850);
+    }
 
     group.forEach(([r,c]) => {
       const cellEl = boardEl.querySelector(`.cell[data-r="${r}"][data-c="${c}"]`);
@@ -2260,7 +2298,7 @@
             showScoreBubble(center.x, center.y, `+${pts}`);
           }
           spawnSparkBurstFromCell(r,c);
-        }, index * 65);
+        }, index * perBlockDelay);
       });
 
       setTimeout(() => {
@@ -2273,8 +2311,8 @@
           }
         }
         if(typeof onDone === "function") onDone();
-      }, group.length * 65 + 160);
-    }, 180);
+      }, group.length * perBlockDelay + endDelay);
+    }, startDelay);
   }
 
 
@@ -2579,6 +2617,43 @@
         return [r,c];
       }
     }
+    return null;
+  }
+
+  function detectSidewaysT(group){
+    const set = new Set(group.map(([r,c]) => `${r},${c}`));
+    for(const [r,c] of group){
+      // vertical stem 3 + arm to right 2
+      if(
+        set.has(`${r-1},${c}`) &&
+        set.has(`${r},${c}`) &&
+        set.has(`${r+1},${c}`) &&
+        set.has(`${r},${c+1}`) &&
+        set.has(`${r},${c+2}`)
+      ){
+        return [r,c];
+      }
+      // vertical stem 3 + arm to left 2
+      if(
+        set.has(`${r-1},${c}`) &&
+        set.has(`${r},${c}`) &&
+        set.has(`${r+1},${c}`) &&
+        set.has(`${r},${c-1}`) &&
+        set.has(`${r},${c-2}`)
+      ){
+        return [r,c];
+      }
+    }
+    return null;
+  }
+
+  function analyzePreviewSpecial(group){
+    if(!group || group.length < 2) return null;
+    if(detectSquareBomb(group)) return { type: "square", label: "💣 2x2 bomb ready!" };
+    if(detectStraightLine(group)) return { type: "line", label: "⚡ 5 in a line ready!" };
+    if(detectCapitalT(group) || detectUpsideDownT(group) || detectSidewaysT(group)) return { type: "t", label: "↕️/↔️ T special ready!" };
+    if(detectCross3(group)) return { type: "cross", label: "🔁 Swap special ready!" };
+    if(detectLShape(group)) return { type: "l", label: "🔨 Hammer special ready!" };
     return null;
   }
 
@@ -3048,6 +3123,12 @@ function getCellCenter(r, c){
           if(isOn && glowClass === "glow-fact") cell.classList.add("glow-fact");
           if(isOn && glowClass === "glow-bonus") cell.classList.add("glow-bonus");
           if(isOn && glowClass === "glow-video") cell.classList.add("glow-video");
+          if(isOn && previewSpecialType){
+            cell.classList.add("preview-shape");
+            if(previewSpecialType === "t") cell.classList.add("preview-shape-t");
+            if(previewSpecialType === "square") cell.classList.add("preview-shape-square");
+            if(previewSpecialType === "line") cell.classList.add("preview-shape-line");
+          }
 
           cell.addEventListener("mouseenter", () => {
             if(isBomb(board[r][c])){
@@ -3074,8 +3155,11 @@ function getCellCenter(r, c){
               return;
             }
             const group = getGroup(r,c);
-            setPreview(group.length >= 2 ? group : []);
-            if(group.length >= 10) {
+            const previewSpecial = analyzePreviewSpecial(group);
+            setPreview(group.length >= 2 ? group : [], previewSpecial ? previewSpecial.type : null);
+            if(previewSpecial){
+              boardHintEl.textContent = `${previewSpecial.label} ${group.length} blocks`;
+            } else if(group.length >= 10) {
               boardHintEl.textContent = `Video Pop ready: ${group.length} blocks`;
             } else if(group.length >= 7) {
               boardHintEl.textContent = `Bonus Pop ready: ${group.length} blocks`;
@@ -3087,7 +3171,7 @@ function getCellCenter(r, c){
           });
 
           cell.addEventListener("mouseleave", () => {
-            setPreview([]);
+            setPreview([], null);
             boardHintEl.textContent = "Tap connected blocks to pop them.";
           });
 
@@ -3182,8 +3266,9 @@ function getCellCenter(r, c){
     updateHUD();
   }
 
-  function setPreview(group){
+  function setPreview(group, specialType=null){
     previewCells = group || [];
+    previewSpecialType = specialType || null;
     const previewSet = new Set(previewCells.map(([r,c]) => `${r},${c}`));
     const glowClass = iconGlowClass(previewCells.length);
     boardEl.querySelectorAll(".cell").forEach(cell => {
@@ -3196,6 +3281,10 @@ function getCellCenter(r, c){
       cell.classList.toggle("glow-fact", on && glowClass === "glow-fact");
       cell.classList.toggle("glow-bonus", on && glowClass === "glow-bonus");
       cell.classList.toggle("glow-video", on && glowClass === "glow-video");
+      cell.classList.toggle("preview-shape", on && !!previewSpecialType);
+      cell.classList.toggle("preview-shape-t", on && previewSpecialType === "t");
+      cell.classList.toggle("preview-shape-square", on && previewSpecialType === "square");
+      cell.classList.toggle("preview-shape-line", on && previewSpecialType === "line");
     });
   }
 
@@ -3436,7 +3525,7 @@ function getCellCenter(r, c){
             showScoreBubble(center.x, center.y, `+${shownPerBlock}`);
           }
           spawnSparkBurstFromCell(r,c);
-        }, index * 65);
+        }, index * perBlockDelay);
       });
 
       setTimeout(() => {
@@ -3616,6 +3705,7 @@ function popGroup(r,c){
     const hammerAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor) ? detectLShape(group) : null;
     const capitalTAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor && !hammerAnchor) ? detectCapitalT(group) : null;
     const upsideDownTAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor && !hammerAnchor && !capitalTAnchor) ? detectUpsideDownT(group) : null;
+    const sidewaysTAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor && !hammerAnchor && !capitalTAnchor && !upsideDownTAnchor) ? detectSidewaysT(group) : null;
 
     const nextCombo = combo + 1;
     const multiplierValue = multiplierArmed ? 2 : 1;
@@ -3628,7 +3718,7 @@ function popGroup(r,c){
         board[rr][cc] = null;
       });
 
-      if(bombAnchor || lineInfo || timeAnchor || crossAnchor || hammerAnchor || capitalTAnchor || upsideDownTAnchor){
+      if(bombAnchor || lineInfo || timeAnchor || crossAnchor || hammerAnchor || capitalTAnchor || upsideDownTAnchor || sidewaysTAnchor){
         consumeObjectivesForCategory(categoryIndex, Math.max(0, groupSize - 1));
       } else {
         consumeObjectivesForCategory(categoryIndex, groupSize);
@@ -3639,7 +3729,7 @@ function popGroup(r,c){
 
       const brainAnchor = (groupSize === 9) ? group[Math.floor(group.length / 2)] : null;
 
-      if(bombAnchor || lineInfo || timeAnchor || crossAnchor || hammerAnchor || capitalTAnchor || upsideDownTAnchor){
+      if(bombAnchor || lineInfo || timeAnchor || crossAnchor || hammerAnchor || capitalTAnchor || upsideDownTAnchor || sidewaysTAnchor){
         if(crossAnchor){
           awardBooster("shuffle", 1);
           showToast("🔁 Swap Special added to boosters");
@@ -3649,9 +3739,9 @@ function popGroup(r,c){
           showToast("🔨 Hammer Special added to boosters");
         }
 
-        const shouldPlaceBoardSpecial = bombAnchor || lineInfo || timeAnchor || capitalTAnchor || upsideDownTAnchor;
+        const shouldPlaceBoardSpecial = bombAnchor || lineInfo || timeAnchor || capitalTAnchor || upsideDownTAnchor || sidewaysTAnchor;
         if(shouldPlaceBoardSpecial){
-          const desired = bombAnchor ? bombAnchor : (lineInfo ? lineInfo.anchor : (timeAnchor ? timeAnchor.anchor : (capitalTAnchor ? capitalTAnchor : upsideDownTAnchor)));
+          const desired = bombAnchor ? bombAnchor : (lineInfo ? lineInfo.anchor : (timeAnchor ? timeAnchor.anchor : (capitalTAnchor ? capitalTAnchor : (upsideDownTAnchor ? upsideDownTAnchor : sidewaysTAnchor))));
           const [dr, dc] = desired;
           let placed = false;
 
@@ -3731,7 +3821,7 @@ function popGroup(r,c){
           showToast("🔨 Hammer created!");
         } else if(capitalTAnchor){
           showToast("↕️ Vertical Arrow created!");
-        } else if(upsideDownTAnchor){
+        } else if(upsideDownTAnchor || sidewaysTAnchor){
           showToast("↔️ Horizontal Arrow created!");
         }
         endRoundIfNeeded();
@@ -4021,7 +4111,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
         </div>
-        <p><b>Reward:</b> ↕️ Vertical Arrow Line Clear<br><b>Shape:</b> T-shaped cluster or upside-down T cluster.</p>
+        <p><b>Reward:</b> ↕️ Vertical Arrow Line Clear<br><b>Earn:</b> pop a T-shaped cluster or an upside-down T cluster<br><b>Effect:</b> creates a vertical arrow line clear.</p>
       </div>
       <div class="tutorialCard">
         <h4>↔️ Horizontal Arrow Line Clear</h4>
@@ -4032,7 +4122,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
         </div>
-        <p><b>Reward:</b> ↔️ Horizontal Arrow Line Clear<br><b>Shape:</b> sideways T either way.</p>
+        <p><b>Reward:</b> ↔️ Horizontal Arrow Line Clear<br><b>Earn:</b> pop a sideways T cluster either way<br><b>Effect:</b> creates a horizontal arrow line clear.</p>
       </div>
       <div class="tutorialCard">
         <h4>🔄 Shuffle Smart</h4>
