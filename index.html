@@ -176,11 +176,15 @@
     100%{ transform:scale(1.06); filter:brightness(1.18); }
   }
   .slowmo-board{
-    animation:slowmoBoardPulse .28s ease-in-out 3 alternate;
+    animation:slowmoBoardPulse .42s ease-in-out 4 alternate;
+    filter:saturate(1.08) brightness(1.08);
+  }
+  .slowmo-board .cell{
+    transition:transform .18s ease, filter .18s ease;
   }
   @keyframes slowmoBoardPulse{
-    0%{ transform:scale(1); filter:brightness(1); }
-    100%{ transform:scale(1.015); filter:brightness(1.08); }
+    0%{ transform:scale(1); filter:brightness(1) saturate(1); }
+    100%{ transform:scale(1.03); filter:brightness(1.18) saturate(1.12); }
   }
   .cell.removing{
     transform:scale(.78);
@@ -888,6 +892,7 @@
           <button id="skipLevelBtn" class="secondary">⏭️ Skip Level</button>
           <button id="clearDataBtn" class="dark">🗑️ Clear Player Data</button>
           <button id="howToBtn" class="dark">How to Play</button>
+          <button id="testSpecialsBtn" class="secondary">🧪 Test Specials</button>
         </div>
         <button id="specialsTutorialBtn" class="secondary tutorialBtn">Tutorial: See Specials In Action</button>
       </div>
@@ -3505,6 +3510,9 @@ function getCellCenter(r, c){
 
     const shownPerBlock = 10;
     const shownTotal = selected.length * shownPerBlock;
+    const perBlockDelay = 95;
+    const startDelay = 260;
+    const endDelay = 240;
     score += shownTotal;
 
     selected.forEach(([r,c]) => {
@@ -3557,8 +3565,8 @@ function getCellCenter(r, c){
         saveProgress();
 
         if(typeof onDone === "function") onDone();
-      }, selected.length * 65 + 170);
-    }, 180);
+      }, selected.length * perBlockDelay + endDelay);
+    }, startDelay);
   }
 
   function reshuffleBoard(){
@@ -3697,15 +3705,34 @@ function popGroup(r,c){
 
     const rawBombAnchor = detectSquareBomb(group);
     const rawTimeAnchor = detectTargetBlock(group);
-    const preferPopRewardSpecial = !!(rawBombAnchor && rawTimeAnchor && Math.random() < 0.95);
-    const bombAnchor = preferPopRewardSpecial ? null : rawBombAnchor;
-    const lineInfo = !bombAnchor ? detectStraightLine(group) : null;
-    const timeAnchor = (!bombAnchor && !lineInfo) ? rawTimeAnchor : null;
-    const crossAnchor = (!bombAnchor && !lineInfo && !timeAnchor) ? detectCross3(group) : null;
-    const hammerAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor) ? detectLShape(group) : null;
-    const capitalTAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor && !hammerAnchor) ? detectCapitalT(group) : null;
-    const upsideDownTAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor && !hammerAnchor && !capitalTAnchor) ? detectUpsideDownT(group) : null;
-    const sidewaysTAnchor = (!bombAnchor && !lineInfo && !timeAnchor && !crossAnchor && !hammerAnchor && !capitalTAnchor && !upsideDownTAnchor) ? detectSidewaysT(group) : null;
+    const rawLineInfo = detectStraightLine(group);
+    const rawCrossAnchor = detectCross3(group);
+    const rawHammerAnchor = detectLShape(group);
+    const rawCapitalTAnchor = detectCapitalT(group);
+    const rawUpsideDownTAnchor = detectUpsideDownT(group);
+    const rawSidewaysTAnchor = detectSidewaysT(group);
+
+    const availableSpecials = [];
+    if(rawBombAnchor) availableSpecials.push({ kind:"bomb", anchor: rawBombAnchor });
+    if(rawLineInfo) availableSpecials.push({ kind:"line", anchor: rawLineInfo.anchor, lineInfo: rawLineInfo });
+    if(rawTimeAnchor) availableSpecials.push({ kind:"time", anchor: rawTimeAnchor.anchor, timeAnchor: rawTimeAnchor });
+    if(rawCrossAnchor) availableSpecials.push({ kind:"cross", anchor: rawCrossAnchor });
+    if(rawHammerAnchor) availableSpecials.push({ kind:"hammer", anchor: rawHammerAnchor });
+    if(rawCapitalTAnchor || rawUpsideDownTAnchor) availableSpecials.push({ kind:"verticalArrow", anchor: rawCapitalTAnchor || rawUpsideDownTAnchor });
+    if(rawSidewaysTAnchor) availableSpecials.push({ kind:"horizontalArrow", anchor: rawSidewaysTAnchor });
+
+    const chosenSpecial = availableSpecials.length
+      ? availableSpecials[Math.floor(Math.random() * availableSpecials.length)]
+      : null;
+
+    const bombAnchor = chosenSpecial && chosenSpecial.kind === "bomb" ? chosenSpecial.anchor : null;
+    const lineInfo = chosenSpecial && chosenSpecial.kind === "line" ? chosenSpecial.lineInfo : null;
+    const timeAnchor = chosenSpecial && chosenSpecial.kind === "time" ? chosenSpecial.timeAnchor : null;
+    const crossAnchor = chosenSpecial && chosenSpecial.kind === "cross" ? chosenSpecial.anchor : null;
+    const hammerAnchor = chosenSpecial && chosenSpecial.kind === "hammer" ? chosenSpecial.anchor : null;
+    const capitalTAnchor = chosenSpecial && chosenSpecial.kind === "verticalArrow" ? chosenSpecial.anchor : null;
+    const upsideDownTAnchor = null;
+    const sidewaysTAnchor = chosenSpecial && chosenSpecial.kind === "horizontalArrow" ? chosenSpecial.anchor : null;
 
     const nextCombo = combo + 1;
     const multiplierValue = multiplierArmed ? 2 : 1;
@@ -4071,6 +4098,48 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
     }
   });
 
+
+  function buildTestSpecialsBoard(){
+    const cats = currentColors();
+    for(let r=0;r<size;r++){
+      board[r] = [];
+      for(let c=0;c<size;c++){
+        board[r][c] = (r + c) % Math.max(1, cats.length);
+      }
+    }
+
+    if(size >= 8){
+      board[1][1] = { type:"bomb", color:0 };
+      board[1][3] = { type:"line", color:1 };
+      board[1][5] = { type:"shuffleboard", color:2 };
+      board[1][7] = { type:"rainbow", color:3 };
+      board[3][1] = { type:"arrow", color:4, orientation:"col" };
+      board[3][3] = { type:"arrow", color:0, orientation:"row" };
+      board[3][5] = { type:"swap", color:1 };
+      board[3][7] = { type:"hammer", color:2 };
+      board[5][1] = { type:"brain", color:3 };
+
+      // shape preview cluster examples
+      const k = 4;
+      board[5][3]=k; board[5][4]=k; board[5][5]=k; board[4][4]=k; board[3][4]=k; // T
+      const q = 5;
+      board[6][5]=q; board[6][6]=q; board[7][5]=q; board[7][6]=q; // 2x2
+      const p = 2;
+      board[6][0]=p; board[6][1]=p; board[6][2]=p; board[6][3]=p; board[6][4]=p; // 5 line
+    }
+
+    previewCells = [];
+    previewSpecialType = null;
+    renderBoard([]);
+    boardHintEl.textContent = "🧪 Test board loaded. Tap specials or hover the sample shapes.";
+    showToast("🧪 Test Specials board loaded");
+  }
+
+  const testSpecialsBtn = document.getElementById("testSpecialsBtn");
+  if(testSpecialsBtn){
+    testSpecialsBtn.addEventListener("click", buildTestSpecialsBoard);
+  }
+
   newGame();
 })();
 </script>
@@ -4124,7 +4193,30 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
         </div>
         <p><b>Reward:</b> ↔️ Horizontal Arrow Line Clear<br><b>Earn:</b> pop a sideways T cluster either way<br><b>Effect:</b> creates a horizontal arrow line clear.</p>
       </div>
+      
       <div class="tutorialCard">
+        <h4>💣 2x2 Square</h4>
+        <div class="tutorialMiniBoard">
+          <div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+        </div>
+        <p><b>Reward:</b> 💣 2x2 Square<br><b>Earn:</b> pop a 2x2 same-color square<br><b>Effect:</b> creates a board bomb.</p>
+      </div>
+      <div class="tutorialCard">
+        <h4>⚡ 5 in a Line</h4>
+        <div class="tutorialMiniBoard">
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell hot">★</div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+          <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
+        </div>
+        <p><b>Reward:</b> ⚡ 5 in a Line<br><b>Earn:</b> pop 5 connected blocks in a straight line<br><b>Effect:</b> tap it, then tap a category to change a random 6+ cluster to that category after a quick glow.</p>
+      </div>
+<div class="tutorialCard">
         <h4>🔄 Shuffle Smart</h4>
         <div class="tutorialMiniBoard">
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
