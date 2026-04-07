@@ -1011,6 +1011,8 @@
     </div>
   </div>
 
+<script src="./js/questionEngine.js"></script>
+<script src="./js/popblocks-quizbank.js"></script>
 <script>
 (() => {
   const VIDEO_POOL = [
@@ -1477,9 +1479,9 @@
   }
 
   function comboTimeoutFor(comboCount){
-    if(comboCount >= 5) return 2.0;
-    if(comboCount >= 3) return 2.5;
-    return 3.0;
+    if(comboCount >= 5) return 3.0;
+    if(comboCount >= 3) return 4.0;
+    return 5.0;
   }
 
   function armComboTimeout(){
@@ -2728,8 +2730,19 @@ function getCellCenter(r, c){
 
   function currentQuizPool(){
     const mode = currentMode();
-    const all = [...(mode.quizzes || []), ...((mode.extraQuizzes || []).slice(0, unlockedExtraCountForMode(mode)))];
-    return all;
+    const builtin = [...(mode.quizzes || []), ...((mode.extraQuizzes || []).slice(0, unlockedExtraCountForMode(mode)))];
+    const externalApi = window.WGLT_POPBLOCKS_QUIZBANK;
+    if(externalApi && externalApi.engine){
+      try{
+        const external = externalApi.getQuizPool(modeKey, unlockedExtraCountForMode(mode));
+        if(Array.isArray(external) && external.length){
+          return external;
+        }
+      } catch(err){
+        console.warn("WGLT external quiz bank failed, using built-in quizzes.", err);
+      }
+    }
+    return builtin;
   }
 
   function randomColorIndex() {
