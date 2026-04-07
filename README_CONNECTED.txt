@@ -24,9 +24,12 @@ To test:
 2. Open index.html
 3. Fill the meter and trigger Quiz Boost
 4. The quiz card should now use the master WGLT bank
+<<<<<<< HEAD
 
 
 Combo timer updated:
 - x1-x2: 5.0s
 - x3-x4: 4.0s
 - x5+: 3.0s
+=======
+>>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
