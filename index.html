@@ -885,8 +885,8 @@
             <div class="legendGuideRow"><div class="legendGuideIcon">⚡</div><div class="legendGuideText"><b>5 in a Line</b><br>Earn: pop 5 connected blocks in a straight line<br>Effect: tap it, then tap a category to change a random 6+ cluster to that category after a quick glow.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🔄</div><div class="legendGuideText"><b>Shuffle Smart</b><br>Earn: exact 6-block pop<br>Effect: reshuffles the board when tapped.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🌈</div><div class="legendGuideText"><b>Rainbow</b><br>Earn: exact 7-block pop<br>Effect: tap it, then tap any color to clear all matching items.</div></div>
-                        <div class="legendGuideRow"><div class="legendGuideIcon">↕️</div><div class="legendGuideText"><b>Vertical Arrow Line Clear</b><br>Earn: pop a T-shaped cluster<br>Effect: creates a vertical arrow line clear.</div></div>
-            <div class="legendGuideRow"><div class="legendGuideIcon">↔️</div><div class="legendGuideText"><b>Horizontal Arrow Line Clear</b><br>Earn: pop an upside-down T cluster<br>Effect: creates a horizontal arrow line clear.</div></div>
+                        <div class="legendGuideRow"><div class="legendGuideIcon">↕️</div><div class="legendGuideText"><b>Vertical Arrow Line Clear</b><br>Earn: pop a T-shaped cluster or an upside-down T cluster<br>Effect: creates a vertical arrow line clear.</div></div>
+            <div class="legendGuideRow"><div class="legendGuideIcon">↔️</div><div class="legendGuideText"><b>Horizontal Arrow Line Clear</b><br>Earn: pop a sideways T cluster either way<br>Effect: creates a horizontal arrow line clear.</div></div>
             <div class="legendGuideRow"><div class="legendGuideIcon">🎬</div><div class="legendGuideText"><b>10+ Blocks</b><br>Earn: pop 10 or more connected blocks<br>Effect: triggers the video pop.</div></div>
           </div>
         </div>
@@ -1036,10 +1036,7 @@
       <video id="popupVideo" controls playsinline style="width:100%;max-height:70vh;border-radius:16px;background:#000;">
         <source src="" type="video/mp4">
       </video>
-      <div class="footerRow" style="margin-top:12px;">
-        <button id="closeVideoBtn" type="button">Close Video</button>
-      </div>
-    </div>
+</div>
   </div>
 
 <script src="./js/questionEngine.js"></script>
@@ -3239,7 +3236,7 @@ function getCellCenter(r, c){
 
     setTimeout(() => { vid.play().catch(()=>{}); }, 120);
     setTimeout(() => { vid.play().catch(()=>{}); }, 350);
-vid.onended = finish;
+    vid.onended = finish;
     ov.onclick = (e) => { if(e.target === ov){ finish(); } };
   }
 
@@ -4024,7 +4021,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
         </div>
-        <p><b>Reward:</b> ↕️ Vertical Arrow Line Clear<br><b>Shape:</b> capital T.</p>
+        <p><b>Reward:</b> ↕️ Vertical Arrow Line Clear<br><b>Shape:</b> T-shaped cluster or upside-down T cluster.</p>
       </div>
       <div class="tutorialCard">
         <h4>↔️ Horizontal Arrow Line Clear</h4>
@@ -4035,7 +4032,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
         </div>
-        <p><b>Reward:</b> ↔️ Horizontal Arrow Line Clear<br><b>Shape:</b> upside-down T.</p>
+        <p><b>Reward:</b> ↔️ Horizontal Arrow Line Clear<br><b>Shape:</b> sideways T either way.</p>
       </div>
       <div class="tutorialCard">
         <h4>🔄 Shuffle Smart</h4>

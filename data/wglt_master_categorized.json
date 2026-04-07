@@ -102,7 +102,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 2: James Baldwin",
-      "prompt": "In his essay collection \"The Fire Next Time,\" Baldwin argues that what is the \"great force\" that can end racial injustice?",
+      "prompt": "James Baldwin: In his essay collection \"The Fire Next Time,\" Baldwin argues that what is the \"great force\" that can end racial injustice?",
       "answers": [
         "Economic reform",
         "Love",
@@ -198,7 +198,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 3: Langston Hughes",
-      "prompt": "In Hughes' poem \"Harlem,\" what is the central question he asks about a \"dream deferred\"?",
+      "prompt": "Langston Hughes: In Hughes' poem \"Harlem,\" what is the central question he asks about a \"dream deferred\"?",
       "answers": [
         "Where did it go?",
         "Does it dry up like a raisin in the sun?",
@@ -214,7 +214,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 3: Langston Hughes",
-      "prompt": "What was the name of the recurring fictional character Hughes used in his newspaper columns for social commentary?",
+      "prompt": "Langston Hughes: What was the name of the recurring fictional character Hughes used in his newspaper columns for social commentary?",
       "answers": [
         "Uncle Tom",
         "Jesse B. Semple (Simple)",
@@ -358,7 +358,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 5: Amiri Baraka",
-      "prompt": "Which of Baraka's plays won an Obie Award and depicts a symbolic encounter on a NYC subway?",
+      "prompt": "Amiri Baraka: Which of Baraka's plays won an Obie Award and depicts a symbolic encounter on a NYC subway?",
       "answers": [
         "A Raisin in the Sun",
         "Dutchman",
@@ -374,7 +374,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 5: Amiri Baraka",
-      "prompt": "Baraka's seminal work of music criticism is titled:",
+      "prompt": "Amiri Baraka's seminal work of music criticism is titled:",
       "answers": [
         "The Birth of the Cool",
         "Blues People",
@@ -518,7 +518,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 7: Augusta Savage",
-      "prompt": "What tragic fate befell Savage's masterpiece \"The Harp\" after the 1939 World's Fair?",
+      "prompt": "Augusta Savage: What tragic fate befell Savage's masterpiece \"The Harp\" after the 1939 World's Fair?",
       "answers": [
         "It was stolen",
         "It was destroyed/demolished",
@@ -550,7 +550,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 7: Augusta Savage",
-      "prompt": "Savage's early sculpture \"Gamin\" (1929) is a bust of what type of subject?",
+      "prompt": "Augusta Savage's early sculpture \"Gamin\" (1929) is a bust of what type of subject?",
       "answers": [
         "An elderly woman",
         "A street-wise young boy",
@@ -582,7 +582,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 8: Jean-Michel Basquiat",
-      "prompt": "What symbol is Basquiat's most iconic motif, often placed over the heads of his figures?",
+      "prompt": "Jean-Michel Basquiat: What symbol is Basquiat's most iconic motif, often placed over the heads of his figures?",
       "answers": [
         "A halo",
         "A three-pointed crown",
@@ -598,7 +598,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 8: Jean-Michel Basquiat",
-      "prompt": "With which Pop Art icon did Basquiat have a highly publicized collaborative partnership?",
+      "prompt": "Jean-Michel Basquiat: With which Pop Art icon did Basquiat have a highly publicized collaborative partnership?",
       "answers": [
         "Jackson Pollock",
         "Andy Warhol",
@@ -614,7 +614,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 8: Jean-Michel Basquiat",
-      "prompt": "Basquiat's work often focused on \"dichotomies.\" Which was a primary focus?",
+      "prompt": "Jean-Michel Basquiat's work often focused on \"dichotomies.\" Which was a primary focus?",
       "answers": [
         "Wealth vs. Poverty",
         "Rural vs. Urban",
@@ -630,7 +630,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 8: Jean-Michel Basquiat",
-      "prompt": "Which medical textbook influenced Basquiat's \"deconstructed\" anatomical style?",
+      "prompt": "Jean-Michel Basquiat: Which medical textbook influenced Basquiat's \"deconstructed\" anatomical style?",
       "answers": [
         "The Merck Manual",
         "Gray's Anatomy",
@@ -678,7 +678,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 9: Faith Ringgold",
-      "prompt": "During the 1960s/70s, Ringgold was a dedicated activist for what cause?",
+      "prompt": "Faith Ringgold: During the 1960s/70s, Ringgold was a dedicated activist for what cause?",
       "answers": [
         "Environmental protection",
         "Inclusion of Black and female artists in museums",
@@ -694,7 +694,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 9: Faith Ringgold",
-      "prompt": "Ringgold's \"French Collection\" series features a character traveling to which country?",
+      "prompt": "Faith Ringgold's \"French Collection\" series features a character traveling to which country?",
       "answers": [
         "Nigeria",
         "France",
@@ -710,7 +710,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 9: Faith Ringgold",
-      "prompt": "Ringgold's mother, Willi Posey, worked in what field?",
+      "prompt": "Faith Ringgold's mother, Willi Posey, worked in what field?",
       "answers": [
         "A carpenter",
         "A fashion designer/seamstress",
@@ -774,7 +774,7 @@
       "category": "arts_literature",
       "categoryLabel": "Arts & Literature",
       "section": "Part 10: June Jordan",
-      "prompt": "Jordan's \"Poem about My Rights\" is a powerful critique of which issue?",
+      "prompt": "June Jordan's \"Poem about My Rights\" is a powerful critique of which issue?",
       "answers": [
         "Climate change",
         "Violence and infringement on personal sovereignty",
@@ -2582,7 +2582,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 2: Martin Lawrence",
-      "prompt": "What was the name of the radio station where Martin worked on the show?",
+      "prompt": "Martin Lawrence: What was the name of the radio station where Martin worked on the show?",
       "answers": [
         "WZUP",
         "K-ACE",
@@ -2614,7 +2614,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 2: Martin Lawrence",
-      "prompt": "Which character, known for \"You go, boy!\", did Martin play in drag?",
+      "prompt": "Martin Lawrence: Which character, known for \"You go, boy!\", did Martin play in drag?",
       "answers": [
         "Sheneneh Jenkins",
         "Mama Payne",
@@ -2870,7 +2870,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 5: Richard Pryor",
-      "prompt": "What was the title of Pryor's semi-autobiographical 1986 film?",
+      "prompt": "Richard Pryor: What was the title of Pryor's semi-autobiographical 1986 film?",
       "answers": [
         "Jo Jo Dancer, Your Life Is Calling",
         "Live on the Sunset Strip",
@@ -2902,7 +2902,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 6: Wanda Sykes",
-      "prompt": "Sykes has a recurring role as herself in which HBO series?",
+      "prompt": "Wanda Sykes has a recurring role as herself in which HBO series?",
       "answers": [
         "Curb Your Enthusiasm",
         "Sex and the City",
@@ -2966,7 +2966,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 7: Dave Chappelle",
-      "prompt": "\"Chappelle's Show\" aired on which network?",
+      "prompt": "Dave Chappelle: \"Chappelle's Show\" aired on which network?",
       "answers": [
         "Comedy Central",
         "MTV",
@@ -2982,7 +2982,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 7: Dave Chappelle",
-      "prompt": "What was the name of Chappelle’s blind white supremacist character?",
+      "prompt": "Dave Chappelle: What was the name of Chappelle’s blind white supremacist character?",
       "answers": [
         "Clayton Bigsby",
         "Tyrone Biggums",
@@ -2998,7 +2998,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 7: Dave Chappelle",
-      "prompt": "In 2005, Chappelle famously walked away from a contract worth:",
+      "prompt": "Dave Chappelle: In 2005, Chappelle famously walked away from a contract worth:",
       "answers": [
         "$50 million",
         "$100 million",
@@ -3030,7 +3030,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 7: Dave Chappelle",
-      "prompt": "Chappelle's 1998 stoner comedy was titled:",
+      "prompt": "Dave Chappelle's 1998 stoner comedy was titled:",
       "answers": [
         "Half Baked",
         "How High",
@@ -3062,7 +3062,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 8: Whoopi Goldberg",
-      "prompt": "Whoopi received an Oscar nomination for her debut in:",
+      "prompt": "Whoopi Goldberg: Whoopi received an Oscar nomination for her debut in:",
       "answers": [
         "The Color Purple",
         "Ghost",
@@ -3078,7 +3078,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 8: Whoopi Goldberg",
-      "prompt": "Whoopi won her Academy Award for which 1990 film?",
+      "prompt": "Whoopi Goldberg: Whoopi won her Academy Award for which 1990 film?",
       "answers": [
         "Ghost",
         "The Long Walk Home",
@@ -3094,7 +3094,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 8: Whoopi Goldberg",
-      "prompt": "Since 2007, Whoopi has moderated which talk show?",
+      "prompt": "Whoopi Goldberg: Since 2007, Whoopi has moderated which talk show?",
       "answers": [
         "The View",
         "The Talk",
@@ -3158,7 +3158,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 9: Moms Mabley",
-      "prompt": "In 1962, Mabley was the first Black female comic to headline:",
+      "prompt": "Moms Mabley: In 1962, Mabley was the first Black female comic to headline:",
       "answers": [
         "Carnegie Hall",
         "Radio City Music Hall",
@@ -3222,7 +3222,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 10: Sheryl Underwood",
-      "prompt": "Underwood was the International President of which sorority?",
+      "prompt": "Sheryl Underwood was the International President of which sorority?",
       "answers": [
         "Zeta Phi Beta",
         "Alpha Kappa Alpha",
@@ -3238,7 +3238,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 10: Sheryl Underwood",
-      "prompt": "Before entertainment, Underwood served in which military branch?",
+      "prompt": "Sheryl Underwood: Before entertainment, Underwood served in which military branch?",
       "answers": [
         "Air Force",
         "Army",
@@ -3270,7 +3270,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 10: Sheryl Underwood",
-      "prompt": "Underwood has a recurring role on which soap opera?",
+      "prompt": "Sheryl Underwood has a recurring role on which soap opera?",
       "answers": [
         "The Bold and the Beautiful",
         "General Hospital",
@@ -3302,7 +3302,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 11: Eddie Murphy",
-      "prompt": "Which 1984 film made Murphy an international icon?",
+      "prompt": "Eddie Murphy: Which 1984 film made Murphy an international icon?",
       "answers": [
         "Beverly Hills Cop",
         "48 Hrs.",
@@ -3606,7 +3606,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 4: Black Wall Street (Greenwood District)",
-      "prompt": "In which city was the prosperous Greenwood District, known as \"Black Wall Street,\" located?",
+      "prompt": "Black Wall Street (Greenwood District): In which city was the prosperous Greenwood District, known as \"Black Wall Street,\" located?",
       "answers": [
         "Little Rock, Arkansas",
         "Tulsa, Oklahoma",
@@ -3622,7 +3622,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 4: Black Wall Street (Greenwood District)",
-      "prompt": "What tragic 1921 event led to the destruction of the Black Wall Street district?",
+      "prompt": "Black Wall Street (Greenwood District): What tragic 1921 event led to the destruction of the Black Wall Street district?",
       "answers": [
         "The Great Depression",
         "A massive flood",
@@ -3638,7 +3638,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 4: Black Wall Street (Greenwood District)",
-      "prompt": "Greenwood was so wealthy that it reportedly had more of these than any other city of its size in the world:",
+      "prompt": "Black Wall Street (Greenwood District): Greenwood was so wealthy that it reportedly had more of these than any other city of its size in the world:",
       "answers": [
         "Skyscrapers",
         "Public parks",
@@ -3654,7 +3654,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 4: Black Wall Street (Greenwood District)",
-      "prompt": "O.W. Gurley, one of the wealthiest men in Greenwood, is credited with what major contribution?",
+      "prompt": "Black Wall Street (Greenwood District): O.W. Gurley, one of the wealthiest men in Greenwood, is credited with what major contribution?",
       "answers": [
         "Inventing a new drilling technique",
         "Purchasing 40 acres of land to be sold only to Black people",
@@ -3670,7 +3670,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 4: Black Wall Street (Greenwood District)",
-      "prompt": "During the destruction of Black Wall Street, what was used to drop firebombs on the buildings?",
+      "prompt": "Black Wall Street (Greenwood District): During the destruction of Black Wall Street, what was used to drop firebombs on the buildings?",
       "answers": [
         "Military tanks",
         "Private airplanes",
@@ -3686,7 +3686,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 5: Montford Point Marines",
-      "prompt": "Montford Point was the site of the first training camp for Black recruits in which military branch?",
+      "prompt": "Montford Point Marines: Montford Point was the site of the first training camp for Black recruits in which military branch?",
       "answers": [
         "The Army",
         "The Navy",
@@ -3702,7 +3702,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 5: Montford Point Marines",
-      "prompt": "Why were Black recruits trained at Montford Point instead of Parris Island or San Diego?",
+      "prompt": "Montford Point Marines: Why were Black recruits trained at Montford Point instead of Parris Island or San Diego?",
       "answers": [
         "It had better weather",
         "It was a specialized tech school",
@@ -3718,7 +3718,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 5: Montford Point Marines",
-      "prompt": "Approximately how many Black Marines were trained at Montford Point between 1942 and 1949?",
+      "prompt": "Montford Point Marines: Approximately how many Black Marines were trained at Montford Point between 1942 and 1949?",
       "answers": [
         "5,000",
         "10,000",
@@ -3750,7 +3750,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 5: Montford Point Marines",
-      "prompt": "Montford Point was located in which U.S. state?",
+      "prompt": "Montford Point Marines: Montford Point was located in which U.S. state?",
       "answers": [
         "South Carolina",
         "North Carolina",
@@ -3766,7 +3766,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 6: Colored Hockey League (CHL)",
-      "prompt": "In which country was the Colored Hockey League of the Maritimes founded in 1895?",
+      "prompt": "Colored Hockey League (CHL): In which country was the Colored Hockey League of the Maritimes founded in 1895?",
       "answers": [
         "United States",
         "Canada",
@@ -3782,7 +3782,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 6: Colored Hockey League (CHL)",
-      "prompt": "The CHL is credited with inventing which iconic hockey move, later adopted by the NHL?",
+      "prompt": "Colored Hockey League (CHL): The CHL is credited with inventing which iconic hockey move, later adopted by the NHL?",
       "answers": [
         "The Body Check",
         "The Goalie Mask",
@@ -3798,7 +3798,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 6: Colored Hockey League (CHL)",
-      "prompt": "Because of its ties to the Black church, CHL games were primarily played on which day?",
+      "prompt": "Colored Hockey League (CHL): Because of its ties to the Black church, CHL games were primarily played on which day?",
       "answers": [
         "Saturday",
         "Monday (to avoid the Sabbath)",
@@ -3814,7 +3814,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 6: Colored Hockey League (CHL)",
-      "prompt": "Which NHL team recently began honoring the legacy of the CHL to acknowledge hockey’s diverse roots?",
+      "prompt": "Colored Hockey League (CHL): Which NHL team recently began honoring the legacy of the CHL to acknowledge hockey’s diverse roots?",
       "answers": [
         "Toronto Maple Leafs",
         "Montreal Canadiens",
@@ -3830,7 +3830,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 6: Colored Hockey League (CHL)",
-      "prompt": "What was the primary reason the league was formed in the late 19th century?",
+      "prompt": "Colored Hockey League (CHL): What was the primary reason the league was formed in the late 19th century?",
       "answers": [
         "As a marketing stunt for equipment",
         "To recruit players for the Olympics",
@@ -3862,7 +3862,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 7: 761st Tank Battalion",
-      "prompt": "The 761st famously helped liberate several concentration camps in which country?",
+      "prompt": "761st Tank Battalion: The 761st famously helped liberate several concentration camps in which country?",
       "answers": [
         "France",
         "Italy",
@@ -3878,7 +3878,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 7: 761st Tank Battalion",
-      "prompt": "General George S. Patton reportedly told the 761st that he didn't care about their race, as long as they did what?",
+      "prompt": "761st Tank Battalion: General George S. Patton reportedly told the 761st that he didn't care about their race, as long as they did what?",
       "answers": [
         "Followed every command",
         "Killed the enemy",
@@ -3894,7 +3894,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 7: 761st Tank Battalion",
-      "prompt": "In 1997, which member of the 761st was posthumously awarded the Medal of Honor?",
+      "prompt": "761st Tank Battalion: In 1997, which member of the 761st was posthumously awarded the Medal of Honor?",
       "answers": [
         "Jackie Robinson",
         "Staff Sergeant Ruben Rivers",
@@ -4262,7 +4262,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 1: Cicely Tyson",
-      "prompt": "For which 1972 film did Tyson receive an Academy Award nomination for Best Actress?",
+      "prompt": "Cicely Tyson: For which 1972 film did Tyson receive an Academy Award nomination for Best Actress?",
       "answers": [
         "The Help",
         "Fried Green Tomatoes",
@@ -4278,7 +4278,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 1: Cicely Tyson",
-      "prompt": "Tyson won two Emmy Awards for her portrayal of the title character in which 1974 television movie?",
+      "prompt": "Cicely Tyson won two Emmy Awards for her portrayal of the title character in which 1974 television movie?",
       "answers": [
         "The Women of Brewster Place",
         "The Autobiography of Miss Jane Pittman",
@@ -4342,7 +4342,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 2: Sidney Poitier",
-      "prompt": "In which 1967 film did Poitier play Detective Virgil Tibbs?",
+      "prompt": "Sidney Poitier: In which 1967 film did Poitier play Detective Virgil Tibbs?",
       "answers": [
         "To Sir, with Love",
         "In the Heat of the Night",
@@ -4374,7 +4374,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 2: Sidney Poitier",
-      "prompt": "Poitier directed several films, including which 1980 hit comedy starring Richard Pryor and Gene Wilder?",
+      "prompt": "Sidney Poitier directed several films, including which 1980 hit comedy starring Richard Pryor and Gene Wilder?",
       "answers": [
         "Uptown Saturday Night",
         "Stir Crazy",
@@ -4438,7 +4438,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 3: Hattie McDaniel",
-      "prompt": "Before becoming a film star, McDaniel was a pioneer in which other entertainment medium?",
+      "prompt": "Hattie McDaniel: Before becoming a film star, McDaniel was a pioneer in which other entertainment medium?",
       "answers": [
         "Radio",
         "Broadway Opera",
@@ -4454,7 +4454,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 3: Hattie McDaniel",
-      "prompt": "McDaniel famously responded to critics of her roles by saying she would rather play a maid than be one for what reason?",
+      "prompt": "Hattie McDaniel famously responded to critics of her roles by saying she would rather play a maid than be one for what reason?",
       "answers": [
         "She enjoyed the costumes.",
         "She wanted to travel.",
@@ -4502,7 +4502,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 4: Dorothy Dandridge",
-      "prompt": "For which 1954 musical film did Dandridge receive her historic Oscar nomination?",
+      "prompt": "Dorothy Dandridge: For which 1954 musical film did Dandridge receive her historic Oscar nomination?",
       "answers": [
         "Porgy and Bess",
         "Island in the Sun",
@@ -4518,7 +4518,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 4: Dorothy Dandridge",
-      "prompt": "Dandridge often performed as a singer with her sister in an act known as what?",
+      "prompt": "Dorothy Dandridge often performed as a singer with her sister in an act known as what?",
       "answers": [
         "The Dandridge Duet",
         "The Dandridge Sisters",
@@ -4550,7 +4550,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 4: Dorothy Dandridge",
-      "prompt": "Dandridge starred alongside Sidney Poitier in which 1959 film adaptation of a Gershwin opera?",
+      "prompt": "Dorothy Dandridge starred alongside Sidney Poitier in which 1959 film adaptation of a Gershwin opera?",
       "answers": [
         "Carmen Jones",
         "Tamango",
@@ -4582,7 +4582,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 5: John Singleton",
-      "prompt": "Singleton directed the 2003 sequel to which high-octane action franchise?",
+      "prompt": "John Singleton directed the 2003 sequel to which high-octane action franchise?",
       "answers": [
         "Mission: Impossible",
         "Bad Boys",
@@ -4598,7 +4598,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 5: John Singleton",
-      "prompt": "Which 1993 film did Singleton write and direct starring Janet Jackson and Tupac Shakur?",
+      "prompt": "John Singleton: Which 1993 film did Singleton write and direct starring Janet Jackson and Tupac Shakur?",
       "answers": [
         "Baby Boy",
         "Poetic Justice",
@@ -4630,7 +4630,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 5: John Singleton",
-      "prompt": "At what age did Singleton receive his historic Oscar nomination for Best Director?",
+      "prompt": "John Singleton: At what age did Singleton receive his historic Oscar nomination for Best Director?",
       "answers": [
         "19",
         "24",
@@ -4662,7 +4662,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 6: Phylicia Rashad",
-      "prompt": "In 2004, Rashad became the first Black woman to win the Tony Award for Best Actress in a Play for her role in:",
+      "prompt": "Phylicia Rashad: In 2004, Rashad became the first Black woman to win the Tony Award for Best Actress in a Play for her role in:",
       "answers": [
         "Cat on a Hot Tin Roof",
         "A Raisin in the Sun",
@@ -4710,7 +4710,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 6: Phylicia Rashad",
-      "prompt": "Rashad played the mother of Adonis Creed in which boxing film franchise?",
+      "prompt": "Phylicia Rashad played the mother of Adonis Creed in which boxing film franchise?",
       "answers": [
         "Rocky",
         "Creed",
@@ -4758,7 +4758,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 7: Viola Davis",
-      "prompt": "Davis played the formidable Professor Annalise Keating in which TV series?",
+      "prompt": "Viola Davis played the formidable Professor Annalise Keating in which TV series?",
       "answers": [
         "Scandal",
         "How to Get Away with Murder",
@@ -4790,7 +4790,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 7: Viola Davis",
-      "prompt": "In the DC Extended Universe (DCEU), Davis portrays which ruthless government official?",
+      "prompt": "Viola Davis: In the DC Extended Universe (DCEU), Davis portrays which ruthless government official?",
       "answers": [
         "Catwoman",
         "Lois Lane",
@@ -4822,7 +4822,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 8: Spike Lee",
-      "prompt": "Which 1989 film, set on the hottest day of the summer in Brooklyn, is considered Lee's masterpiece?",
+      "prompt": "Spike Lee: Which 1989 film, set on the hottest day of the summer in Brooklyn, is considered Lee's masterpiece?",
       "answers": [
         "She's Gotta Have It",
         "Do the Right Thing",
@@ -4870,7 +4870,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 8: Spike Lee",
-      "prompt": "Lee directed a 1992 epic biographical film about which civil rights leader?",
+      "prompt": "Spike Lee directed a 1992 epic biographical film about which civil rights leader?",
       "answers": [
         "Martin Luther King Jr.",
         "Malcolm X",
@@ -4902,7 +4902,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 9: LeVar Burton",
-      "prompt": "Burton hosted and executive produced which long-running educational PBS series?",
+      "prompt": "LeVar Burton hosted and executive produced which long-running educational PBS series?",
       "answers": [
         "Sesame Street",
         "Reading Rainbow",
@@ -4918,7 +4918,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 9: LeVar Burton",
-      "prompt": "In Star Trek: The Next Generation, Burton played which character known for wearing a specialized visor?",
+      "prompt": "LeVar Burton: In Star Trek: The Next Generation, Burton played which character known for wearing a specialized visor?",
       "answers": [
         "Worf",
         "Data",
@@ -4950,7 +4950,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 9: LeVar Burton",
-      "prompt": "Burton briefly served as a guest host for which game show following the death of Alex Trebek?",
+      "prompt": "LeVar Burton briefly served as a guest host for which game show following the death of Alex Trebek?",
       "answers": [
         "Wheel of Fortune",
         "Jeopardy!",
@@ -4998,7 +4998,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 10: Scott Joplin",
-      "prompt": "Joplin’s music experienced a massive revival in the 1970s after being featured in which film?",
+      "prompt": "Scott Joplin: Joplin’s music experienced a massive revival in the 1970s after being featured in which film?",
       "answers": [
         "Casablanca",
         "The Sting",
@@ -5014,7 +5014,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 10: Scott Joplin",
-      "prompt": "Joplin wrote a pioneering African-American opera titled what?",
+      "prompt": "Scott Joplin wrote a pioneering African-American opera titled what?",
       "answers": [
         "Porgy and Bess",
         "Treemonisha",
@@ -5030,7 +5030,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 10: Scott Joplin",
-      "prompt": "In 1976, nearly 60 years after his death, Joplin was posthumously awarded what honor?",
+      "prompt": "Scott Joplin: In 1976, nearly 60 years after his death, Joplin was posthumously awarded what honor?",
       "answers": [
         "A Grammy",
         "A Pulitzer Prize",
@@ -5126,7 +5126,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 1: Financial Psychology",
-      "prompt": "What is a \"money trigger\"?",
+      "prompt": "Financial Psychology: What is a \"money trigger\"?",
       "answers": [
         "A physical button on an ATM.",
         "An emotional or environmental event that prompts a specific spending habit.",
@@ -5142,7 +5142,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 1: Financial Psychology",
-      "prompt": "Which term describes the tendency to prioritize immediate rewards over long-term financial goals?",
+      "prompt": "Financial Psychology: Which term describes the tendency to prioritize immediate rewards over long-term financial goals?",
       "answers": [
         "Compound interest.",
         "Inflation.",
@@ -5158,7 +5158,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 1: Financial Psychology",
-      "prompt": "\"Keeping up with the Joneses\" is an example of which psychological influence?",
+      "prompt": "Financial Psychology: \"Keeping up with the Joneses\" is an example of which psychological influence?",
       "answers": [
         "Risk tolerance.",
         "Social pressure/Comparison.",
@@ -5174,7 +5174,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 1: Financial Psychology",
-      "prompt": "How does a \"growth mindset\" apply to personal finance?",
+      "prompt": "Financial Psychology: How does a \"growth mindset\" apply to personal finance?",
       "answers": [
         "Believing your income is fixed and cannot change.",
         "Believing financial skills can be learned and improved through effort.",
@@ -5190,7 +5190,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 1: Financial Psychology",
-      "prompt": "What is \"loss aversion\" in financial psychology?",
+      "prompt": "Financial Psychology: What is \"loss aversion\" in financial psychology?",
       "answers": [
         "The desire to lose weight to save on food costs.",
         "A strategy to avoid all taxes.",
@@ -5206,7 +5206,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 1: Financial Psychology",
-      "prompt": "Which of these is a hallmark of a \"disciplined mindset\"?",
+      "prompt": "Financial Psychology: Which of these is a hallmark of a \"disciplined mindset\"?",
       "answers": [
         "Spending until the account is empty.",
         "Automating savings to remove the daily choice of whether to save.",
@@ -5446,7 +5446,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 4: Account Management",
-      "prompt": "Which institution is typically member-owned and non-profit?",
+      "prompt": "Account Management: Which institution is typically member-owned and non-profit?",
       "answers": [
         "Commercial Bank.",
         "Investment Bank.",
@@ -5462,7 +5462,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 4: Account Management",
-      "prompt": "What is \"Overdraft Protection\"?",
+      "prompt": "Account Management: What is \"Overdraft Protection\"?",
       "answers": [
         "A guarantee that you will never spend more than you have.",
         "A service that covers a transaction if your balance is too low, often for a fee or interest.",
@@ -5478,7 +5478,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 4: Account Management",
-      "prompt": "What is the FDIC insurance limit per depositor, per insured bank?",
+      "prompt": "Account Management: What is the FDIC insurance limit per depositor, per insured bank?",
       "answers": [
         "$10,000.",
         "$100,000.",
@@ -5494,7 +5494,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 4: Account Management",
-      "prompt": "Which of the following is a \"liquid\" asset?",
+      "prompt": "Account Management: Which of the following is a \"liquid\" asset?",
       "answers": [
         "A house.",
         "Cash in a checking account.",
@@ -5510,7 +5510,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 4: Account Management",
-      "prompt": "What does it mean to \"reconcile\" an account?",
+      "prompt": "Account Management: What does it mean to \"reconcile\" an account?",
       "answers": [
         "Closing the account permanently.",
         "Comparing your personal records of transactions against your bank statement.",
@@ -5526,7 +5526,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 4: Account Management",
-      "prompt": "What is the primary difference between a Debit card and a Credit card?",
+      "prompt": "Account Management: What is the primary difference between a Debit card and a Credit card?",
       "answers": [
         "Debit cards have higher interest rates.",
         "Debit cards take money directly from your bank account; credit cards are a loan.",
@@ -5542,7 +5542,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 4: Account Management",
-      "prompt": "Why should you use \"Automated Transfers\"?",
+      "prompt": "Account Management: Why should you use \"Automated Transfers\"?",
       "answers": [
         "To ensure savings goals are met without having to remember to move money.",
         "To hide money from the government.",
@@ -5558,7 +5558,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 5: Credit Profile",
-      "prompt": "Which of these factors has the largest impact on your FICO credit score?",
+      "prompt": "Credit Profile: Which of these factors has the largest impact on your FICO credit score?",
       "answers": [
         "Amount of new credit.",
         "Length of credit history.",
@@ -5574,7 +5574,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 5: Credit Profile",
-      "prompt": "What is \"Credit Utilization\"?",
+      "prompt": "Credit Profile: What is \"Credit Utilization\"?",
       "answers": [
         "The total number of credit cards you own.",
         "The percentage of your total available credit that you are currently using.",
@@ -5590,7 +5590,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 5: Credit Profile",
-      "prompt": "Which of the following would likely lower your credit score?",
+      "prompt": "Credit Profile: Which of the following would likely lower your credit score?",
       "answers": [
         "Paying your balance in full every month.",
         "Checking your own credit report.",
@@ -5606,7 +5606,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 5: Credit Profile",
-      "prompt": "How often are you entitled to a free credit report from each of the three major bureaus?",
+      "prompt": "Credit Profile: How often are you entitled to a free credit report from each of the three major bureaus?",
       "answers": [
         "Once a month.",
         "At least once every 12 months (via AnnualCreditReport.com).",
@@ -5622,7 +5622,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 5: Credit Profile",
-      "prompt": "What is a \"Hard Inquiry\"?",
+      "prompt": "Credit Profile: What is a \"Hard Inquiry\"?",
       "answers": [
         "When you check your own score.",
         "When a lender reviews your credit because you applied for a loan.",
@@ -5638,7 +5638,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 5: Credit Profile",
-      "prompt": "What range is considered a \"Good\" to \"Excellent\" FICO score?",
+      "prompt": "Credit Profile: What range is considered a \"Good\" to \"Excellent\" FICO score?",
       "answers": [
         "300–500.",
         "500–600.",
@@ -5654,7 +5654,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 5: Credit Profile",
-      "prompt": "Why is a high credit score beneficial?",
+      "prompt": "Credit Profile: Why is a high credit score beneficial?",
       "answers": [
         "It allows you to skip paying taxes.",
         "It qualifies you for lower interest rates on loans and mortgages.",
@@ -6230,7 +6230,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 11: Retirement Planning",
-      "prompt": "What is a \"401(k)\"?",
+      "prompt": "Retirement Planning: What is a \"401(k)\"?",
       "answers": [
         "A type of sports car.",
         "An employer-sponsored retirement savings plan.",
@@ -6246,7 +6246,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 11: Retirement Planning",
-      "prompt": "What is an \"Employer Match\"?",
+      "prompt": "Retirement Planning: What is an \"Employer Match\"?",
       "answers": [
         "When your boss finds you a partner.",
         "When an employer contributes to your retirement account based on your own contributions.",
@@ -6262,7 +6262,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 11: Retirement Planning",
-      "prompt": "What is the main difference between a Traditional IRA and a Roth IRA?",
+      "prompt": "Retirement Planning: What is the main difference between a Traditional IRA and a Roth IRA?",
       "answers": [
         "Traditional is for young people; Roth is for old people.",
         "Traditional is tax-deferred (pay tax later); Roth is after-tax (withdraw tax-free later).",
@@ -6278,7 +6278,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 11: Retirement Planning",
-      "prompt": "What is \"Vesting\"?",
+      "prompt": "Retirement Planning: What is \"Vesting\"?",
       "answers": [
         "Wearing a safety vest at work.",
         "The process by which an employee earns the right to keep employer-contributed funds in a retirement plan.",
@@ -6294,7 +6294,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 11: Retirement Planning",
-      "prompt": "What is the \"Rule of 72\"?",
+      "prompt": "Retirement Planning: What is the \"Rule of 72\"?",
       "answers": [
         "You must retire at age 72.",
         "A shortcut to estimate the number of years required to double your money at a given interest rate.",
@@ -6310,7 +6310,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 11: Retirement Planning",
-      "prompt": "What is a \"Required Minimum Distribution\" (RMD)?",
+      "prompt": "Retirement Planning: What is a \"Required Minimum Distribution\" (RMD)?",
       "answers": [
         "The minimum amount you must save each month.",
         "The amount the government requires you to withdraw from certain retirement accounts each year after a certain age.",
@@ -6326,7 +6326,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 11: Retirement Planning",
-      "prompt": "Why is starting to save for retirement in your 20s better than in your 40s?",
+      "prompt": "Retirement Planning: Why is starting to save for retirement in your 20s better than in your 40s?",
       "answers": [
         "Younger people get higher interest rates.",
         "Time allows compound interest to work more effectively.",
@@ -6598,7 +6598,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 1: Spelman College",
-      "prompt": "Which famous American family provided the significant funding that led to the school being renamed \"Spelman\" in honor of Laura Spelman?",
+      "prompt": "Spelman College: Which famous American family provided the significant funding that led to the school being renamed \"Spelman\" in honor of Laura Spelman?",
       "answers": [
         "The Carnegies",
         "The Fords",
@@ -6614,7 +6614,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 1: Spelman College",
-      "prompt": "Spelman is part of which collaborative group of schools?",
+      "prompt": "Spelman College: Spelman is part of which collaborative group of schools?",
       "answers": [
         "Ivy League",
         "Atlanta University Center (AUC)",
@@ -6742,7 +6742,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 3: Hampton University",
-      "prompt": "Which legendary educator and founder of Tuskegee University was a graduate of Hampton?",
+      "prompt": "Hampton University: Which legendary educator and founder of Tuskegee University was a graduate of Hampton?",
       "answers": [
         "W.E.B. Du Bois",
         "Booker T. Washington",
@@ -6838,7 +6838,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 4: Morehouse College",
-      "prompt": "Dr. Benjamin Mays, a mentor to MLK Jr., served as the influential president of Morehouse for how many years?",
+      "prompt": "Morehouse College: Dr. Benjamin Mays, a mentor to MLK Jr., served as the influential president of Morehouse for how many years?",
       "answers": [
         "5 years",
         "27 years",
@@ -6854,7 +6854,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 4: Morehouse College",
-      "prompt": "What is the name of the prestigious academic honor society that Morehouse was the first HBCU to host a chapter of?",
+      "prompt": "Morehouse College: What is the name of the prestigious academic honor society that Morehouse was the first HBCU to host a chapter of?",
       "answers": [
         "Cum Laude",
         "Phi Beta Kappa",
@@ -6902,7 +6902,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 5: Tuskegee University",
-      "prompt": "Which famous scientist spent his career at Tuskegee researching the peanut, sweet potato, and soybean?",
+      "prompt": "Tuskegee University: Which famous scientist spent his career at Tuskegee researching the peanut, sweet potato, and soybean?",
       "answers": [
         "Percy Julian",
         "George Washington Carver",
@@ -6918,7 +6918,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 5: Tuskegee University",
-      "prompt": "Tuskegee is famous for training which group of Black pilots during World War II?",
+      "prompt": "Tuskegee University: Tuskegee is famous for training which group of Black pilots during World War II?",
       "answers": [
         "The Buffalo Soldiers",
         "The Tuskegee Airmen",
@@ -6934,7 +6934,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 5: Tuskegee University",
-      "prompt": "Tuskegee is the only HBCU to be designated as what by the U.S. government?",
+      "prompt": "Tuskegee University: Tuskegee is the only HBCU to be designated as what by the U.S. government?",
       "answers": [
         "A State Capital",
         "A National Historic Site",
@@ -6950,7 +6950,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 5: Tuskegee University",
-      "prompt": "Tuskegee was the first HBCU to establish a school of which medical specialty?",
+      "prompt": "Tuskegee University: Tuskegee was the first HBCU to establish a school of which medical specialty?",
       "answers": [
         "Dentistry",
         "Veterinary Medicine",
@@ -6966,7 +6966,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 6: Florida A&M University (FAMU)",
-      "prompt": "What does the \"A&M\" in Florida A&M University stand for?",
+      "prompt": "Florida A&M University (FAMU): What does the \"A&M\" in Florida A&M University stand for?",
       "answers": [
         "Arts and Music",
         "Agricultural and Mechanical",
@@ -6982,7 +6982,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 6: Florida A&M University (FAMU)",
-      "prompt": "What is the name of FAMU's world-famous marching band?",
+      "prompt": "Florida A&M University (FAMU): What is the name of FAMU's world-famous marching band?",
       "answers": [
         "The Sonic Boom of the South",
         "The Marching 100",
@@ -6998,7 +6998,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 6: Florida A&M University (FAMU)",
-      "prompt": "In which Florida city is Florida A&M University located?",
+      "prompt": "Florida A&M University (FAMU): In which Florida city is Florida A&M University located?",
       "answers": [
         "Miami",
         "Tallahassee",
@@ -7014,7 +7014,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 6: Florida A&M University (FAMU)",
-      "prompt": "What is the nickname of FAMU’s athletic teams?",
+      "prompt": "Florida A&M University (FAMU): What is the nickname of FAMU’s athletic teams?",
       "answers": [
         "Gators",
         "Rattlers",
@@ -7030,7 +7030,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 6: Florida A&M University (FAMU)",
-      "prompt": "FAMU is a land-grant university, meaning it was established to receive benefits from which 1890 act?",
+      "prompt": "Florida A&M University (FAMU): FAMU is a land-grant university, meaning it was established to receive benefits from which 1890 act?",
       "answers": [
         "The Civil Rights Act",
         "The Second Morrill Act",
@@ -7062,7 +7062,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 7: Fisk University",
-      "prompt": "What is the name of the choral group that traveled the world in the 1870s to raise money for the university?",
+      "prompt": "Fisk University: What is the name of the choral group that traveled the world in the 1870s to raise money for the university?",
       "answers": [
         "The Fisk Choir",
         "The Fisk Jubilee Singers",
@@ -7110,7 +7110,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 7: Fisk University",
-      "prompt": "The campus features the historic Jubilee Hall, which was built using funds raised by:",
+      "prompt": "Fisk University: The campus features the historic Jubilee Hall, which was built using funds raised by:",
       "answers": [
         "A government grant",
         "Choral performances in Europe and the U.S.",
@@ -7126,7 +7126,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 8: Clark Atlanta University (CAU)",
-      "prompt": "Clark Atlanta University was formed in 1988 by the merger of which two institutions?",
+      "prompt": "Clark Atlanta University (CAU): Clark Atlanta University was formed in 1988 by the merger of which two institutions?",
       "answers": [
         "Morehouse and Spelman",
         "Clark College and Atlanta University",
@@ -7142,7 +7142,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 8: Clark Atlanta University (CAU)",
-      "prompt": "Atlanta University was the first HBCU in the nation to grant which type of degrees?",
+      "prompt": "Clark Atlanta University (CAU): Atlanta University was the first HBCU in the nation to grant which type of degrees?",
       "answers": [
         "High school diplomas",
         "Graduate/Master’s degrees",
@@ -7158,7 +7158,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 8: Clark Atlanta University (CAU)",
-      "prompt": "Which famous sociologist and historian taught at Atlanta University and conducted pioneering studies there?",
+      "prompt": "Clark Atlanta University (CAU): Which famous sociologist and historian taught at Atlanta University and conducted pioneering studies there?",
       "answers": [
         "Carter G. Woodson",
         "W.E.B. Du Bois",
@@ -7174,7 +7174,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 8: Clark Atlanta University (CAU)",
-      "prompt": "What is the motto of Clark Atlanta University?",
+      "prompt": "Clark Atlanta University (CAU): What is the motto of Clark Atlanta University?",
       "answers": [
         "Knowledge is Power",
         "I’ll Find a Way or Make One",
@@ -7190,7 +7190,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 8: Clark Atlanta University (CAU)",
-      "prompt": "CAU's athletic teams are known as the:",
+      "prompt": "Clark Atlanta University (CAU): CAU's athletic teams are known as the:",
       "answers": [
         "Maroon Tigers",
         "Panthers",
@@ -7206,7 +7206,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 9: Jackson State University (JSU)",
-      "prompt": "Jackson State University is located in the capital of which state?",
+      "prompt": "Jackson State University (JSU): Jackson State University is located in the capital of which state?",
       "answers": [
         "Alabama",
         "Mississippi",
@@ -7222,7 +7222,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 9: Jackson State University (JSU)",
-      "prompt": "What is the name of JSU's renowned marching band?",
+      "prompt": "Jackson State University (JSU): What is the name of JSU's renowned marching band?",
       "answers": [
         "The Marching 100",
         "The Sonic Boom of the South",
@@ -7238,7 +7238,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 9: Jackson State University (JSU)",
-      "prompt": "Which NFL legend and Pro Football Hall of Famer is JSU's most famous football alumnus (nicknamed \"Sweetness\")?",
+      "prompt": "Jackson State University (JSU): Which NFL legend and Pro Football Hall of Famer is JSU's most famous football alumnus (nicknamed \"Sweetness\")?",
       "answers": [
         "Jerry Rice",
         "Walter Payton",
@@ -7254,7 +7254,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 9: Jackson State University (JSU)",
-      "prompt": "JSU is designated as \"Mississippi's Urban ______ University.\"",
+      "prompt": "Jackson State University (JSU): JSU is designated as \"Mississippi's Urban ______ University.\"",
       "answers": [
         "Technical",
         "Research",
@@ -7270,7 +7270,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 9: Jackson State University (JSU)",
-      "prompt": "What is the mascot of Jackson State University?",
+      "prompt": "Jackson State University (JSU): What is the mascot of Jackson State University?",
       "answers": [
         "The Rattler",
         "The Tiger",
@@ -7302,7 +7302,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 10: Central State University",
-      "prompt": "Central State was originally part of which other nearby university before becoming independent?",
+      "prompt": "Central State University: Central State was originally part of which other nearby university before becoming independent?",
       "answers": [
         "Ohio State",
         "Wilberforce University",
@@ -7318,7 +7318,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 10: Central State University",
-      "prompt": "In 2014, Central State received what federal designation that helped secure its funding?",
+      "prompt": "Central State University: In 2014, Central State received what federal designation that helped secure its funding?",
       "answers": [
         "Ivy League status",
         "1890 Land-Grant Institution",
@@ -7350,7 +7350,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 10: Central State University",
-      "prompt": "Central State's athletic teams are known as the:",
+      "prompt": "Central State University: Central State's athletic teams are known as the:",
       "answers": [
         "Buckeyes",
         "Marauders",
@@ -7382,7 +7382,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 11: Morgan State University",
-      "prompt": "Morgan State was originally founded in 1867 as the Centenary ______ Institute.",
+      "prompt": "Morgan State University: Morgan State was originally founded in 1867 as the Centenary ______ Institute.",
       "answers": [
         "Baptist",
         "Biblical",
@@ -7398,7 +7398,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 11: Morgan State University",
-      "prompt": "What is the name of the influential Morgan State president who served for 26 years and led the school during the Civil Rights era?",
+      "prompt": "Morgan State University: What is the name of the influential Morgan State president who served for 26 years and led the school during the Civil Rights era?",
       "answers": [
         "Johnetta Cole",
         "Martin David Jenkins",
@@ -7430,7 +7430,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 11: Morgan State University",
-      "prompt": "Morgan State’s campus was designated as a \"National Treasure\" by which organization?",
+      "prompt": "Morgan State University: Morgan State’s campus was designated as a \"National Treasure\" by which organization?",
       "answers": [
         "The NFL",
         "The National Trust for Historic Preservation",
@@ -7462,7 +7462,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 1: Elijah McCoy",
-      "prompt": "McCoy’s inventions were so reliable that engineers would ask for his product by name to avoid cheap imitations, leading to which famous phrase?",
+      "prompt": "Elijah McCoy: McCoy’s inventions were so reliable that engineers would ask for his product by name to avoid cheap imitations, leading to which famous phrase?",
       "answers": [
         "The McCoy Method",
         "The Real McCoy",
@@ -7494,7 +7494,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 1: Elijah McCoy",
-      "prompt": "In addition to engine parts, McCoy also held a patent for which common garden tool?",
+      "prompt": "Elijah McCoy: In addition to engine parts, McCoy also held a patent for which common garden tool?",
       "answers": [
         "The gas-powered lawnmower",
         "The hedge trimmer",
@@ -7558,7 +7558,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 2: Madam C.J. Walker",
-      "prompt": "Walker did not just sell products; she created a massive network of employees known as what?",
+      "prompt": "Madam C.J. Walker did not just sell products; she created a massive network of employees known as what?",
       "answers": [
         "The Walker Warriors",
         "Walker Agents",
@@ -7574,7 +7574,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 2: Madam C.J. Walker",
-      "prompt": "Walker moved her company headquarters to which city, where she built a factory and a laboratory?",
+      "prompt": "Madam C.J. Walker moved her company headquarters to which city, where she built a factory and a laboratory?",
       "answers": [
         "New York City",
         "Atlanta",
@@ -7638,7 +7638,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 3: Lewis Latimer",
-      "prompt": "Latimer was the only Black member of which elite group of scientists and inventors?",
+      "prompt": "Lewis Latimer was the only Black member of which elite group of scientists and inventors?",
       "answers": [
         "The Manhattan Project",
         "The Edison Pioneers",
@@ -7670,7 +7670,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 3: Lewis Latimer",
-      "prompt": "Latimer also patented an early version of what home comfort system?",
+      "prompt": "Lewis Latimer also patented an early version of what home comfort system?",
       "answers": [
         "Central heating",
         "An evaporative air conditioner",
@@ -7702,7 +7702,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 4: Frederick McKinley Jones",
-      "prompt": "What is the name of the company co-founded by Jones that became a world leader in temperature control?",
+      "prompt": "Frederick McKinley Jones: What is the name of the company co-founded by Jones that became a world leader in temperature control?",
       "answers": [
         "Carrier",
         "Thermo King",
@@ -7718,7 +7718,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 4: Frederick McKinley Jones",
-      "prompt": "Jones’s portable cooling units were vital during World War II for transporting what life-saving resource?",
+      "prompt": "Frederick McKinley Jones: Jones’s portable cooling units were vital during World War II for transporting what life-saving resource?",
       "answers": [
         "Penicillin",
         "Blood plasma",
@@ -7750,7 +7750,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 4: Frederick McKinley Jones",
-      "prompt": "Before refrigeration, Jones was an expert in cinema technology and invented a device that did what?",
+      "prompt": "Frederick McKinley Jones: Before refrigeration, Jones was an expert in cinema technology and invented a device that did what?",
       "answers": [
         "Projected 3D images",
         "Synchronized sound with moving pictures",
@@ -7782,7 +7782,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 5: Granville T. Woods",
-      "prompt": "Woods’s most famous invention, the \"Induction Telegraph,\" allowed for communication between what?",
+      "prompt": "Granville T. Woods: Woods’s most famous invention, the \"Induction Telegraph,\" allowed for communication between what?",
       "answers": [
         "Ships at sea",
         "Moving trains and stations",
@@ -7814,7 +7814,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 5: Granville T. Woods",
-      "prompt": "Woods is also credited with inventing the \"power pick-up\" device that is still used by what today?",
+      "prompt": "Granville T. Woods is also credited with inventing the \"power pick-up\" device that is still used by what today?",
       "answers": [
         "Electric cars",
         "Subway Third Rails",
@@ -7862,7 +7862,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 6: Garrett Morgan",
-      "prompt": "Morgan’s 1923 patent for a traffic signal was unique because it added which critical feature?",
+      "prompt": "Garrett Morgan: Morgan’s 1923 patent for a traffic signal was unique because it added which critical feature?",
       "answers": [
         "The Red light",
         "The Green light",
@@ -7894,7 +7894,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 6: Garrett Morgan",
-      "prompt": "To sell his \"Safety Hood\" (gas mask) in the South, Morgan often had to hire a white actor to pose as the inventor while he posed as what?",
+      "prompt": "Garrett Morgan: To sell his \"Safety Hood\" (gas mask) in the South, Morgan often had to hire a white actor to pose as the inventor while he posed as what?",
       "answers": [
         "A security guard",
         "A Native American assistant named \"Big Chief Mason\"",
@@ -7942,7 +7942,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 7: Mary Beatrice Davidson Kenner",
-      "prompt": "Kenner holds the record for the most patents ever awarded to a Black woman by the U.S. government. How many did she have?",
+      "prompt": "Mary Beatrice Davidson Kenner holds the record for the most patents ever awarded to a Black woman by the U.S. government. How many did she have?",
       "answers": [
         "Two",
         "Five",
@@ -7958,7 +7958,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 7: Mary Beatrice Davidson Kenner",
-      "prompt": "Which of these common bathroom accessories was also patented by Kenner?",
+      "prompt": "Mary Beatrice Davidson Kenner: Which of these common bathroom accessories was also patented by Kenner?",
       "answers": [
         "The electric toothbrush",
         "The toilet tissue holder",
@@ -7974,7 +7974,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 7: Mary Beatrice Davidson Kenner",
-      "prompt": "Kenner came from a family of inventors; her father patented a \"clothing presser\" and her grandfather invented what?",
+      "prompt": "Mary Beatrice Davidson Kenner came from a family of inventors; her father patented a \"clothing presser\" and her grandfather invented what?",
       "answers": [
         "A type of lightbulb",
         "A tricolor light signal for trains",
@@ -7990,7 +7990,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 7: Mary Beatrice Davidson Kenner",
-      "prompt": "Kenner also invented a carrier attachment for which type of mobility device?",
+      "prompt": "Mary Beatrice Davidson Kenner also invented a carrier attachment for which type of mobility device?",
       "answers": [
         "A bicycle",
         "A walker or wheelchair",
@@ -8022,7 +8022,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 8: Lisa Gelobter",
-      "prompt": "Gelobter was a member of the senior management team that launched which major streaming service?",
+      "prompt": "Lisa Gelobter was a member of the senior management team that launched which major streaming service?",
       "answers": [
         "Netflix",
         "Hulu",
@@ -8038,7 +8038,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 8: Lisa Gelobter",
-      "prompt": "Gelobter served as the Chief Digital Officer for which U.S. government department under President Obama?",
+      "prompt": "Lisa Gelobter served as the Chief Digital Officer for which U.S. government department under President Obama?",
       "answers": [
         "Department of Defense",
         "Department of Education",
@@ -8070,7 +8070,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 8: Lisa Gelobter",
-      "prompt": "Gelobter’s work in the 1990s was critical to the development of what multimedia software?",
+      "prompt": "Lisa Gelobter: Gelobter’s work in the 1990s was critical to the development of what multimedia software?",
       "answers": [
         "Photoshop",
         "Shockwave",
@@ -8102,7 +8102,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 9: Patricia Bath",
-      "prompt": "Bath invented the Laserphaco Probe, which is used to treat which eye condition?",
+      "prompt": "Patricia Bath invented the Laserphaco Probe, which is used to treat which eye condition?",
       "answers": [
         "Glaucoma",
         "Cataracts",
@@ -8118,7 +8118,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 9: Patricia Bath",
-      "prompt": "Dr. Bath co-founded the American Institute for the Prevention of Blindness based on which principle?",
+      "prompt": "Patricia Bath: Dr. Bath co-founded the American Institute for the Prevention of Blindness based on which principle?",
       "answers": [
         "Eyesight is a luxury",
         "Eyesight is a basic human right",
@@ -8150,7 +8150,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 9: Patricia Bath",
-      "prompt": "Dr. Bath traveled to which country to perform the first laser surgery on a blind person, restoring their sight after 30 years?",
+      "prompt": "Patricia Bath: Dr. Bath traveled to which country to perform the first laser surgery on a blind person, restoring their sight after 30 years?",
       "answers": [
         "France",
         "Germany",
@@ -8182,7 +8182,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 10: Lyda D. Newman",
-      "prompt": "Newman’s hairbrush design was revolutionary because it used what instead of animal hair?",
+      "prompt": "Lyda D. Newman: Newman’s hairbrush design was revolutionary because it used what instead of animal hair?",
       "answers": [
         "Silk threads",
         "Synthetic bristles",
@@ -8198,7 +8198,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 10: Lyda D. Newman",
-      "prompt": "A key feature of Newman’s brush was a \"recessed compartment\" designed to do what?",
+      "prompt": "Lyda D. Newman: A key feature of Newman’s brush was a \"recessed compartment\" designed to do what?",
       "answers": [
         "Hold hair gel",
         "Collect debris and hair for easy cleaning",
@@ -8214,7 +8214,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 10: Lyda D. Newman",
-      "prompt": "Lyda Newman was also a prominent activist in which social movement?",
+      "prompt": "Lyda D. Newman: Lyda Newman was also a prominent activist in which social movement?",
       "answers": [
         "The Abolitionist movement",
         "The Women’s Suffrage movement",
@@ -8230,7 +8230,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 10: Lyda D. Newman",
-      "prompt": "Newman’s brush design included \"ventilation holes\" to allow for what during use?",
+      "prompt": "Lyda D. Newman: Newman’s brush design included \"ventilation holes\" to allow for what during use?",
       "answers": [
         "Water drainage",
         "Air circulation and faster drying",
@@ -8262,7 +8262,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 11: Mark Dean",
-      "prompt": "Dean led the team that created the \"ISA bus,\" which allowed for what?",
+      "prompt": "Mark Dean led the team that created the \"ISA bus,\" which allowed for what?",
       "answers": [
         "Computers to connect to the internet",
         "Plug-in accessories like printers, monitors, and scanners",
@@ -8310,7 +8310,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 11: Mark Dean",
-      "prompt": "Dean famously noted that he helped create the PC, but by 2011, he admitted he had switched to using what as his primary device?",
+      "prompt": "Mark Dean famously noted that he helped create the PC, but by 2011, he admitted he had switched to using what as his primary device?",
       "answers": [
         "A typewriter",
         "A tablet",
@@ -8646,7 +8646,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 5: Daniel \"Chappie\" James Jr.",
-      "prompt": "Daniel 'Chappie' James Jr. was the first African American to reach which rank?",
+      "prompt": "Daniel \"Chappie\" James Jr.: Daniel 'Chappie' James Jr. was the first African American to reach which rank?",
       "answers": [
         "Brigadier General",
         "Four-star General",
@@ -8662,7 +8662,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 5: Daniel \"Chappie\" James Jr.",
-      "prompt": "Like Charles McGee, 'Chappie' James began his career as a member of:",
+      "prompt": "Daniel \"Chappie\" James Jr.: Like Charles McGee, 'Chappie' James began his career as a member of:",
       "answers": [
         "The Blue Angels",
         "The Tuskegee Airmen",
@@ -8678,7 +8678,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 5: Daniel \"Chappie\" James Jr.",
-      "prompt": "During the Vietnam War, his duo with Robin Olds was known as:",
+      "prompt": "Daniel \"Chappie\" James Jr.: During the Vietnam War, his duo with Robin Olds was known as:",
       "answers": [
         "The Dynamic Duo",
         "Blackman and Robin",
@@ -8694,7 +8694,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 5: Daniel \"Chappie\" James Jr.",
-      "prompt": "In his final assignment, General James served as the Commander in Chief of:",
+      "prompt": "Daniel \"Chappie\" James Jr.: In his final assignment, General James served as the Commander in Chief of:",
       "answers": [
         "CENTCOM",
         "NORAD",
@@ -8710,7 +8710,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 5: Daniel \"Chappie\" James Jr.",
-      "prompt": "What was the motto that 'Chappie' James famously lived by?",
+      "prompt": "Daniel \"Chappie\" James Jr.: What was the motto that 'Chappie' James famously lived by?",
       "answers": [
         "First, Always First",
         "The power of excellence",
@@ -8822,7 +8822,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 7: Harriet M. Waddy",
-      "prompt": "During WWII, Harriet Waddy served as an advisor regarding:",
+      "prompt": "Harriet M. Waddy: During WWII, Harriet Waddy served as an advisor regarding:",
       "answers": [
         "Logistics and supply",
         "Racial issues and treatment of Black women in the Army",
@@ -8838,7 +8838,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 7: Harriet M. Waddy",
-      "prompt": "Which famous First Lady did Harriet Waddy work with?",
+      "prompt": "Harriet M. Waddy: Which famous First Lady did Harriet Waddy work with?",
       "answers": [
         "Mamie Eisenhower",
         "Eleanor Roosevelt",
@@ -8854,7 +8854,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 7: Harriet M. Waddy",
-      "prompt": "Harriet Waddy graduated from which university?",
+      "prompt": "Harriet M. Waddy: Harriet Waddy graduated from which university?",
       "answers": [
         "Spelman College",
         "Kansas State University",
@@ -8870,7 +8870,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 7: Harriet M. Waddy",
-      "prompt": "Harriet Waddy was part of an original group of how many Black women in the first WAC officer class?",
+      "prompt": "Harriet M. Waddy: Harriet Waddy was part of an original group of how many Black women in the first WAC officer class?",
       "answers": [
         "10",
         "40",
@@ -8902,7 +8902,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 8: Samuel Lee Gravely Jr.",
-      "prompt": "In 1961, Samuel Gravely became the first Black officer to:",
+      "prompt": "Samuel Lee Gravely Jr.: In 1961, Samuel Gravely became the first Black officer to:",
       "answers": [
         "Fly a jet",
         "Command a U.S. Navy warship",
@@ -8918,7 +8918,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 8: Samuel Lee Gravely Jr.",
-      "prompt": "Samuel Gravely served in which three major conflicts?",
+      "prompt": "Samuel Lee Gravely Jr.: Samuel Gravely served in which three major conflicts?",
       "answers": [
         "WWI, WWII, and Korea",
         "WWII, Korea, and Vietnam",
@@ -8934,7 +8934,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 8: Samuel Lee Gravely Jr.",
-      "prompt": "What is the name of the guided-missile destroyer named in his honor?",
+      "prompt": "Samuel Lee Gravely Jr.: What is the name of the guided-missile destroyer named in his honor?",
       "answers": [
         "USS Gravely",
         "USS Samuel",
@@ -8950,7 +8950,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 8: Samuel Lee Gravely Jr.",
-      "prompt": "Samuel Gravely was a member of which pioneering group?",
+      "prompt": "Samuel Lee Gravely Jr.: Samuel Gravely was a member of which pioneering group?",
       "answers": [
         "The Golden Thirteen",
         "The Navy Nine",
@@ -9174,7 +9174,7 @@
       "category": "military_pioneers",
       "categoryLabel": "Military Pioneers",
       "section": "Part 11: Colin Powell",
-      "prompt": "What was the name of the military doctrine developed by Powell?",
+      "prompt": "Colin Powell: What was the name of the military doctrine developed by Powell?",
       "answers": [
         "The Powell Doctrine",
         "The Surge",
@@ -9334,7 +9334,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 2: Will Smith",
-      "prompt": "Which 1996 film made him a global A-list star?",
+      "prompt": "Will Smith: Which 1996 film made him a global A-list star?",
       "answers": [
         "Independence Day",
         "Bad Boys",
@@ -9350,7 +9350,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 2: Will Smith",
-      "prompt": "'The Fresh Prince of Bel-Air' was based on the life of:",
+      "prompt": "Will Smith: 'The Fresh Prince of Bel-Air' was based on the life of:",
       "answers": [
         "Quincy Jones",
         "Benny Medina",
@@ -9382,7 +9382,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 3: Pearl Bailey",
-      "prompt": "In 1975, Bailey was an ambassador to which organization?",
+      "prompt": "Pearl Bailey: In 1975, Bailey was an ambassador to which organization?",
       "answers": [
         "United Nations",
         "World Bank",
@@ -9398,7 +9398,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 3: Pearl Bailey",
-      "prompt": "Bailey graduated from Georgetown at age 67 with a degree in:",
+      "prompt": "Pearl Bailey graduated from Georgetown at age 67 with a degree in:",
       "answers": [
         "Theology",
         "Music Theory",
@@ -9430,7 +9430,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 3: Pearl Bailey",
-      "prompt": "Which honor did she receive from President Reagan in 1988?",
+      "prompt": "Pearl Bailey: Which honor did she receive from President Reagan in 1988?",
       "answers": [
         "Presidential Medal of Freedom",
         "Congressional Gold Medal",
@@ -9622,7 +9622,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 6: Aretha Franklin",
-      "prompt": "In 1987, she was the first woman to:",
+      "prompt": "Aretha Franklin: In 1987, she was the first woman to:",
       "answers": [
         "Enter the Rock and Roll Hall of Fame",
         "Win a Grammy Lifetime Achievement",
@@ -9862,7 +9862,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 9: Michael Jackson",
-      "prompt": "The best-selling album of all time is:",
+      "prompt": "Michael Jackson: The best-selling album of all time is:",
       "answers": [
         "Thriller",
         "Off the Wall",
@@ -9910,7 +9910,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 9: Michael Jackson",
-      "prompt": "Which video broke the MTV color barrier?",
+      "prompt": "Michael Jackson: Which video broke the MTV color barrier?",
       "answers": [
         "Billie Jean",
         "Beat It",
@@ -10022,7 +10022,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 11: Whitney Houston",
-      "prompt": "Who wrote 'I Will Always Love You'?",
+      "prompt": "Whitney Houston: Who wrote 'I Will Always Love You'?",
       "answers": [
         "Dolly Parton",
         "Celine Dion",
@@ -10166,7 +10166,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 2: W. E. B. Du Bois",
-      "prompt": "Du Bois was the first African American to earn a Ph.D. from which university?",
+      "prompt": "W. E. B. Du Bois: Du Bois was the first African American to earn a Ph.D. from which university?",
       "answers": [
         "Yale",
         "Harvard",
@@ -10182,7 +10182,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 2: W. E. B. Du Bois",
-      "prompt": "Which 1903 book by Du Bois contains the concept of 'double consciousness'?",
+      "prompt": "W. E. B. Du Bois: Which 1903 book by Du Bois contains the concept of 'double consciousness'?",
       "answers": [
         "The Philadelphia Negro",
         "The Souls of Black Folk",
@@ -10198,7 +10198,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 2: W. E. B. Du Bois",
-      "prompt": "Du Bois was a co-founder of which major organization in 1909?",
+      "prompt": "W. E. B. Du Bois: Du Bois was a co-founder of which major organization in 1909?",
       "answers": [
         "SCLC",
         "NAACP",
@@ -10214,7 +10214,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 2: W. E. B. Du Bois",
-      "prompt": "What was the name of the magazine Du Bois edited for the NAACP?",
+      "prompt": "W. E. B. Du Bois: What was the name of the magazine Du Bois edited for the NAACP?",
       "answers": [
         "The North Star",
         "The Crisis",
@@ -10230,7 +10230,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 2: W. E. B. Du Bois",
-      "prompt": "In which African country did Du Bois spend his final years?",
+      "prompt": "W. E. B. Du Bois: In which African country did Du Bois spend his final years?",
       "answers": [
         "Nigeria",
         "Ghana",
@@ -10246,7 +10246,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 3: Alexa Irene Canady",
-      "prompt": "Alexa Canady was the first Black woman in the US to become which type of surgeon?",
+      "prompt": "Alexa Irene Canady: Alexa Canady was the first Black woman in the US to become which type of surgeon?",
       "answers": [
         "Cardiovascular",
         "Neurosurgeon",
@@ -10262,7 +10262,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 3: Alexa Irene Canady",
-      "prompt": "From which university did Alexa Canady earn her degrees?",
+      "prompt": "Alexa Irene Canady: From which university did Alexa Canady earn her degrees?",
       "answers": [
         "University of Michigan",
         "Johns Hopkins",
@@ -10278,7 +10278,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 3: Alexa Irene Canady",
-      "prompt": "In 1987, Canady became the Chief of Neurosurgery at which hospital?",
+      "prompt": "Alexa Irene Canady: In 1987, Canady became the Chief of Neurosurgery at which hospital?",
       "answers": [
         "Mayo Clinic",
         "Children's Hospital of Michigan",
@@ -10294,7 +10294,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 3: Alexa Irene Canady",
-      "prompt": "What led Alexa Canady back to medicine when she considered dropping out?",
+      "prompt": "Alexa Irene Canady: What led Alexa Canady back to medicine when she considered dropping out?",
       "answers": [
         "A summer internship",
         "A job offer",
@@ -10310,7 +10310,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 3: Alexa Irene Canady",
-      "prompt": "Which honor was Canady inducted into in 1989?",
+      "prompt": "Alexa Irene Canady: Which honor was Canady inducted into in 1989?",
       "answers": [
         "Rock Hall of Fame",
         "Michigan Women's Hall of Fame",
@@ -10326,7 +10326,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 4: Carter G. Woodson",
-      "prompt": "Woodson is widely known by which honorary title?",
+      "prompt": "Carter G. Woodson is widely known by which honorary title?",
       "answers": [
         "The Prophet of History",
         "The Father of Black History",
@@ -10342,7 +10342,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 4: Carter G. Woodson",
-      "prompt": "Which celebration did Woodson establish in 1926?",
+      "prompt": "Carter G. Woodson: Which celebration did Woodson establish in 1926?",
       "answers": [
         "Freedom Week",
         "Negro History Week",
@@ -10358,7 +10358,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 4: Carter G. Woodson",
-      "prompt": "What organization did Woodson found in 1915?",
+      "prompt": "Carter G. Woodson: What organization did Woodson found in 1915?",
       "answers": [
         "NAACP",
         "Association for the Study of Negro Life and History",
@@ -10374,7 +10374,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 4: Carter G. Woodson",
-      "prompt": "Which of Woodson's books was published in 1933?",
+      "prompt": "Carter G. Woodson: Which of Woodson's books was published in 1933?",
       "answers": [
         "The Negro in Our History",
         "The Mis-Education of the Negro",
@@ -10390,7 +10390,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 4: Carter G. Woodson",
-      "prompt": "Woodson was the second Black person to earn a Harvard Ph.D. Who was the first?",
+      "prompt": "Carter G. Woodson was the second Black person to earn a Harvard Ph.D. Who was the first?",
       "answers": [
         "W. E. B. Du Bois",
         "Booker T. Washington",
@@ -10422,7 +10422,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 5: Donald Glover",
-      "prompt": "Glover created and starred in which FX television series?",
+      "prompt": "Donald Glover created and starred in which FX television series?",
       "answers": [
         "Insecure",
         "Atlanta",
@@ -10438,7 +10438,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 5: Donald Glover",
-      "prompt": "Glover's career started as a writer for which NBC sitcom?",
+      "prompt": "Donald Glover's career started as a writer for which NBC sitcom?",
       "answers": [
         "The Office",
         "30 Rock",
@@ -10454,7 +10454,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 5: Donald Glover",
-      "prompt": "Which viral music video did Glover release in 2018?",
+      "prompt": "Donald Glover: Which viral music video did Glover release in 2018?",
       "answers": [
         "Redbone",
         "This Is America",
@@ -10470,7 +10470,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 5: Donald Glover",
-      "prompt": "Glover played which 'Star Wars' character in 2018?",
+      "prompt": "Donald Glover played which 'Star Wars' character in 2018?",
       "answers": [
         "Han Solo",
         "Lando Calrissian",
@@ -10502,7 +10502,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 6: James McCune Smith",
-      "prompt": "Smith earned his medical degree in which country?",
+      "prompt": "James McCune Smith earned his medical degree in which country?",
       "answers": [
         "France",
         "Scotland",
@@ -10534,7 +10534,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 6: James McCune Smith",
-      "prompt": "Smith was the first Black person to own/operate what in NYC?",
+      "prompt": "James McCune Smith was the first Black person to own/operate what in NYC?",
       "answers": [
         "Printing press",
         "Pharmacy",
@@ -10550,7 +10550,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 6: James McCune Smith",
-      "prompt": "Smith used science to debunk which pseudo-science?",
+      "prompt": "James McCune Smith used science to debunk which pseudo-science?",
       "answers": [
         "Astrology",
         "Phrenology",
@@ -10582,7 +10582,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 7: Katherine Johnson",
-      "prompt": "Which astronaut asked for her to personally check his orbital path?",
+      "prompt": "Katherine Johnson: Which astronaut asked for her to personally check his orbital path?",
       "answers": [
         "Neil Armstrong",
         "John Glenn",
@@ -10598,7 +10598,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 7: Katherine Johnson",
-      "prompt": "In which movie was her work featured?",
+      "prompt": "Katherine Johnson: In which movie was her work featured?",
       "answers": [
         "Interstellar",
         "Hidden Figures",
@@ -10614,7 +10614,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 7: Katherine Johnson",
-      "prompt": "Johnson calculated the trajectory for which 1969 mission?",
+      "prompt": "Katherine Johnson calculated the trajectory for which 1969 mission?",
       "answers": [
         "Mercury 3",
         "Apollo 11",
@@ -10630,7 +10630,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 7: Katherine Johnson",
-      "prompt": "In 2015, President Obama awarded her which honor?",
+      "prompt": "Katherine Johnson: In 2015, President Obama awarded her which honor?",
       "answers": [
         "Congressional Gold Medal",
         "Presidential Medal of Freedom",
@@ -10646,7 +10646,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 8: Mae Carol Jemison",
-      "prompt": "In 1992, Mae Jemison became the first Black woman to:",
+      "prompt": "Mae Carol Jemison: In 1992, Mae Jemison became the first Black woman to:",
       "answers": [
         "Walk in space",
         "Travel into space",
@@ -10662,7 +10662,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 8: Mae Carol Jemison",
-      "prompt": "Jemison holds which other professional degree?",
+      "prompt": "Mae Carol Jemison holds which other professional degree?",
       "answers": [
         "Law degree",
         "Medical degree (M.D.)",
@@ -10678,7 +10678,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 8: Mae Carol Jemison",
-      "prompt": "Mae Jemison appeared as a character in which TV series?",
+      "prompt": "Mae Carol Jemison: Mae Jemison appeared as a character in which TV series?",
       "answers": [
         "The Twilight Zone",
         "Star Trek: TNG",
@@ -10694,7 +10694,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 8: Mae Carol Jemison",
-      "prompt": "Before NASA, she was a medical officer for which group?",
+      "prompt": "Mae Carol Jemison: Before NASA, she was a medical officer for which group?",
       "answers": [
         "Doctors Without Borders",
         "The Peace Corps",
@@ -10742,7 +10742,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 9: Ida B. Wells",
-      "prompt": "In 1884, Wells was removed from a train for refusing to:",
+      "prompt": "Ida B. Wells: In 1884, Wells was removed from a train for refusing to:",
       "answers": [
         "Pay her fare",
         "Move to the 'colored' car",
@@ -10758,7 +10758,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 9: Ida B. Wells",
-      "prompt": "Which organization did she help co-found in 1909?",
+      "prompt": "Ida B. Wells: Which organization did she help co-found in 1909?",
       "answers": [
         "NAACP",
         "Urban League",
@@ -10774,7 +10774,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 9: Ida B. Wells",
-      "prompt": "In which city was her newspaper office destroyed by a mob?",
+      "prompt": "Ida B. Wells: In which city was her newspaper office destroyed by a mob?",
       "answers": [
         "Atlanta",
         "Memphis",
@@ -10790,7 +10790,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 9: Ida B. Wells",
-      "prompt": "In 2020, she was posthumously awarded which honor?",
+      "prompt": "Ida B. Wells: In 2020, she was posthumously awarded which honor?",
       "answers": [
         "Oscar",
         "Pulitzer Prize Citation",
@@ -10806,7 +10806,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 10: Michael Wilbon",
-      "prompt": "Wilbon is best known for co-hosting which ESPN show?",
+      "prompt": "Michael Wilbon is best known for co-hosting which ESPN show?",
       "answers": [
         "SportsCenter",
         "Pardon the Interruption",
@@ -10822,7 +10822,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 10: Michael Wilbon",
-      "prompt": "Wilbon spent 30 years as a columnist for which paper?",
+      "prompt": "Michael Wilbon spent 30 years as a columnist for which paper?",
       "answers": [
         "New York Times",
         "The Washington Post",
@@ -10854,7 +10854,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 10: Michael Wilbon",
-      "prompt": "Wilbon is known for his friendship with which NBA legend?",
+      "prompt": "Michael Wilbon is known for his friendship with which NBA legend?",
       "answers": [
         "LeBron James",
         "Michael Jordan",
@@ -10870,7 +10870,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 10: Michael Wilbon",
-      "prompt": "In 2020, Wilbon was inducted into which Hall of Fame?",
+      "prompt": "Michael Wilbon: In 2020, Wilbon was inducted into which Hall of Fame?",
       "answers": [
         "Basketball Hall of Fame (Media)",
         "Football Hall of Fame",
@@ -10886,7 +10886,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 11: Ketanji Brown Jackson",
-      "prompt": "Jackson made history in 2022 as the first Black woman on the:",
+      "prompt": "Ketanji Brown Jackson made history in 2022 as the first Black woman on the:",
       "answers": [
         "Cabinet",
         "U.S. Supreme Court",
@@ -10902,7 +10902,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 11: Ketanji Brown Jackson",
-      "prompt": "Before judging, she had experience as a:",
+      "prompt": "Ketanji Brown Jackson: Before judging, she had experience as a",
       "answers": [
         "CEO",
         "Public Defender",
@@ -10934,7 +10934,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 11: Ketanji Brown Jackson",
-      "prompt": "From which university did she earn her degrees?",
+      "prompt": "Ketanji Brown Jackson: From which university did she earn her degrees?",
       "answers": [
         "Yale",
         "Harvard",
@@ -10950,7 +10950,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 11: Ketanji Brown Jackson",
-      "prompt": "What role did she hold on the U.S. Sentencing Commission?",
+      "prompt": "Ketanji Brown Jackson: What role did she hold on the U.S. Sentencing Commission?",
       "answers": [
         "Chief Investigator",
         "Vice Chair",
@@ -11766,7 +11766,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 1: John Stewart (Green Lantern)",
-      "prompt": "Before being chosen by the Guardians of the Universe, what was John Stewart's professional background?",
+      "prompt": "John Stewart (Green Lantern): Before being chosen by the Guardians of the Universe, what was John Stewart's professional background?",
       "answers": [
         "Test Pilot",
         "U.S. Marine and Architect",
@@ -11782,7 +11782,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 1: John Stewart (Green Lantern)",
-      "prompt": "Which tragic event in John Stewart's history involved the destruction of a planet due to his overconfidence?",
+      "prompt": "John Stewart (Green Lantern): Which tragic event in John Stewart's history involved the destruction of a planet due to his overconfidence?",
       "answers": [
         "The Crisis on Infinite Earths",
         "The destruction of Xanshi",
@@ -11798,7 +11798,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 1: John Stewart (Green Lantern)",
-      "prompt": "In the 'Justice League' animated series, John Stewart famously has a romantic relationship with which teammate?",
+      "prompt": "John Stewart (Green Lantern): In the 'Justice League' animated series, John Stewart famously has a romantic relationship with which teammate?",
       "answers": [
         "Wonder Woman",
         "Hawkgirl (Shayera Hol)",
@@ -11814,7 +11814,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 1: John Stewart (Green Lantern)",
-      "prompt": "John Stewart was originally selected by the Guardians to serve as the \"backup\" Green Lantern for which character?",
+      "prompt": "John Stewart (Green Lantern): John Stewart was originally selected by the Guardians to serve as the \"backup\" Green Lantern for which character?",
       "answers": [
         "Hal Jordan",
         "Guy Gardner",
@@ -11830,7 +11830,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 1: John Stewart (Green Lantern)",
-      "prompt": "What is unique about John Stewart's constructs compared to many other Green Lanterns?",
+      "prompt": "John Stewart (Green Lantern): What is unique about John Stewart's constructs compared to many other Green Lanterns?",
       "answers": [
         "They are always solid gold",
         "They are architecturally perfect and hollow inside, with every nut and bolt imagined",
@@ -11926,7 +11926,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 3: Mr. Terrific (Michael Holt)",
-      "prompt": "Michael Holt is often cited as being the ______ smartest man on Earth.",
+      "prompt": "Mr. Terrific (Michael Holt): Michael Holt is often cited as being the ______ smartest man on Earth.",
       "answers": [
         "First",
         "Second",
@@ -11942,7 +11942,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 3: Mr. Terrific (Michael Holt)",
-      "prompt": "What are the names of the floating, multi-functional robotic spheres that Mr. Terrific uses?",
+      "prompt": "Mr. Terrific (Michael Holt): What are the names of the floating, multi-functional robotic spheres that Mr. Terrific uses?",
       "answers": [
         "Terrific-Drones",
         "T-Spheres",
@@ -11958,7 +11958,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 3: Mr. Terrific (Michael Holt)",
-      "prompt": "Michael Holt took the name 'Mr. Terrific' after being inspired by which Golden Age hero?",
+      "prompt": "Mr. Terrific (Michael Holt): Michael Holt took the name 'Mr. Terrific' after being inspired by which Golden Age hero?",
       "answers": [
         "Jay Garrick",
         "Terry Sloane",
@@ -11974,7 +11974,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 3: Mr. Terrific (Michael Holt)",
-      "prompt": "What is the phrase written on the sleeves of Mr. Terrific’s jacket?",
+      "prompt": "Mr. Terrific (Michael Holt): What is the phrase written on the sleeves of Mr. Terrific’s jacket?",
       "answers": [
         "Smartest Man Alive",
         "Fair Play",
@@ -11990,7 +11990,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 3: Mr. Terrific (Michael Holt)",
-      "prompt": "Mr. Terrific served as the chairman of which legendary superhero team?",
+      "prompt": "Mr. Terrific (Michael Holt): Mr. Terrific served as the chairman of which legendary superhero team?",
       "answers": [
         "Justice League of America",
         "Justice Society of America (JSA)",
@@ -12166,7 +12166,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 6: Black Panther (T'Challa)",
-      "prompt": "Black Panther is the king of which technologically advanced African nation?",
+      "prompt": "Black Panther (T'Challa): Black Panther is the king of which technologically advanced African nation?",
       "answers": [
         "Genosha",
         "Wakanda",
@@ -12182,7 +12182,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 6: Black Panther (T'Challa)",
-      "prompt": "The Black Panther gains enhanced strength and senses by consuming which rare substance?",
+      "prompt": "Black Panther (T'Challa): The Black Panther gains enhanced strength and senses by consuming which rare substance?",
       "answers": [
         "Vibranium extract",
         "The Heart-Shaped Herb",
@@ -12198,7 +12198,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 6: Black Panther (T'Challa)",
-      "prompt": "What is the name of T'Challa's brilliant younger sister, a master inventor?",
+      "prompt": "Black Panther (T'Challa): What is the name of T'Challa's brilliant younger sister, a master inventor?",
       "answers": [
         "Okoye",
         "Shuri",
@@ -12214,7 +12214,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 6: Black Panther (T'Challa)",
-      "prompt": "Which metal is the foundation of Wakanda's wealth and technology?",
+      "prompt": "Black Panther (T'Challa): Which metal is the foundation of Wakanda's wealth and technology?",
       "answers": [
         "Adamantium",
         "Vibranium",
@@ -12230,7 +12230,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 6: Black Panther (T'Challa)",
-      "prompt": "Black Panther was the first Black superhero in mainstream American comics, debuting in which year?",
+      "prompt": "Black Panther (T'Challa): Black Panther was the first Black superhero in mainstream American comics, debuting in which year?",
       "answers": [
         "1960",
         "1966",
@@ -12566,7 +12566,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 11: Miles Morales (Spider-Man)",
-      "prompt": "In which Marvel universe did Miles Morales originate before moving to the main Earth-616?",
+      "prompt": "Miles Morales (Spider-Man): In which Marvel universe did Miles Morales originate before moving to the main Earth-616?",
       "answers": [
         "The 2099 Universe",
         "The Ultimate Universe (Earth-1610)",
@@ -12582,7 +12582,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 11: Miles Morales (Spider-Man)",
-      "prompt": "What unique power does Miles have that Peter Parker does not?",
+      "prompt": "Miles Morales (Spider-Man): What unique power does Miles have that Peter Parker does not?",
       "answers": [
         "Web-swinging",
         "Venom Strike (bio-electric shock) and Camouflage (invisibility)",
@@ -12598,7 +12598,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 11: Miles Morales (Spider-Man)",
-      "prompt": "Who is Miles Morales' uncle, who is also the villain known as the Prowler?",
+      "prompt": "Miles Morales (Spider-Man): Who is Miles Morales' uncle, who is also the villain known as the Prowler?",
       "answers": [
         "Jefferson Davis",
         "Aaron Davis",
@@ -12614,7 +12614,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 11: Miles Morales (Spider-Man)",
-      "prompt": "What is the name of Miles’ best friend, who knows his secret identity and provides tech/emotional support?",
+      "prompt": "Miles Morales (Spider-Man): What is the name of Miles’ best friend, who knows his secret identity and provides tech/emotional support?",
       "answers": [
         "Ned Leeds",
         "Ganke Lee",
@@ -12630,7 +12630,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 11: Miles Morales (Spider-Man)",
-      "prompt": "Which Academy Award-winning animated film introduced Miles to a global mainstream audience?",
+      "prompt": "Miles Morales (Spider-Man): Which Academy Award-winning animated film introduced Miles to a global mainstream audience?",
       "answers": [
         "Spider-Man: Homecoming",
         "Spider-Man: Into the Spider-Verse",
@@ -12646,7 +12646,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 1: Alpha Phi Alpha Fraternity, Inc.",
-      "prompt": "In what year was Alpha Phi Alpha, the first intercollegiate Greek-letter fraternity established for African American men, founded?",
+      "prompt": "Alpha Phi Alpha Fraternity, Inc.: In what year was Alpha Phi Alpha, the first intercollegiate Greek-letter fraternity established for African American men, founded?",
       "answers": [
         "1911",
         "1906",
@@ -12662,7 +12662,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 1: Alpha Phi Alpha Fraternity, Inc.",
-      "prompt": "At which Ivy League institution was Alpha Phi Alpha founded?",
+      "prompt": "Alpha Phi Alpha Fraternity, Inc.: At which Ivy League institution was Alpha Phi Alpha founded?",
       "answers": [
         "Harvard University",
         "Yale University",
@@ -12678,7 +12678,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 1: Alpha Phi Alpha Fraternity, Inc.",
-      "prompt": "The founders of Alpha Phi Alpha are affectionately known by what title?",
+      "prompt": "Alpha Phi Alpha Fraternity, Inc.: The founders of Alpha Phi Alpha are affectionately known by what title?",
       "answers": [
         "The Immortal Ten",
         "The Big Seven",
@@ -12694,7 +12694,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 1: Alpha Phi Alpha Fraternity, Inc.",
-      "prompt": "Which of the following civil rights icons was a member of Alpha Phi Alpha?",
+      "prompt": "Alpha Phi Alpha Fraternity, Inc.: Which of the following civil rights icons was a member of Alpha Phi Alpha?",
       "answers": [
         "Malcolm X",
         "Dr. Martin Luther King Jr.",
@@ -12710,7 +12710,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 1: Alpha Phi Alpha Fraternity, Inc.",
-      "prompt": "What are the official colors of Alpha Phi Alpha?",
+      "prompt": "Alpha Phi Alpha Fraternity, Inc.: What are the official colors of Alpha Phi Alpha?",
       "answers": [
         "Crimson and Cream",
         "Black and Old Gold",
@@ -12726,7 +12726,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 2: Alpha Kappa Alpha Sorority, Inc.",
-      "prompt": "Alpha Kappa Alpha is the first Greek-letter sorority established by African American college women. In what year was it founded?",
+      "prompt": "Alpha Kappa Alpha Sorority, Inc.: Alpha Kappa Alpha is the first Greek-letter sorority established by African American college women. In what year was it founded?",
       "answers": [
         "1913",
         "1908",
@@ -12742,7 +12742,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 2: Alpha Kappa Alpha Sorority, Inc.",
-      "prompt": "At which university was Alpha Kappa Alpha founded?",
+      "prompt": "Alpha Kappa Alpha Sorority, Inc.: At which university was Alpha Kappa Alpha founded?",
       "answers": [
         "Spelman College",
         "Howard University",
@@ -12758,7 +12758,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 2: Alpha Kappa Alpha Sorority, Inc.",
-      "prompt": "Who is recognized as the primary visionary and \"guiding light\" for the founding of AKA?",
+      "prompt": "Alpha Kappa Alpha Sorority, Inc.: Who is recognized as the primary visionary and \"guiding light\" for the founding of AKA?",
       "answers": [
         "Ethel Hedgeman Lyle",
         "Mary McLeod Bethune",
@@ -12774,7 +12774,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 2: Alpha Kappa Alpha Sorority, Inc.",
-      "prompt": "What is the official symbol of Alpha Kappa Alpha?",
+      "prompt": "Alpha Kappa Alpha Sorority, Inc.: What is the official symbol of Alpha Kappa Alpha?",
       "answers": [
         "The African Elephant",
         "The Dove",
@@ -12790,7 +12790,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 2: Alpha Kappa Alpha Sorority, Inc.",
-      "prompt": "What are the official colors of Alpha Kappa Alpha?",
+      "prompt": "Alpha Kappa Alpha Sorority, Inc.: What are the official colors of Alpha Kappa Alpha?",
       "answers": [
         "Crimson and Cream",
         "Royal Blue and Pure White",
@@ -12806,7 +12806,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 3: Kappa Alpha Psi Fraternity, Inc.",
-      "prompt": "Kappa Alpha Psi was founded at which Midwestern university in 1911?",
+      "prompt": "Kappa Alpha Psi Fraternity, Inc.: Kappa Alpha Psi was founded at which Midwestern university in 1911?",
       "answers": [
         "Ohio State University",
         "University of Michigan",
@@ -12822,7 +12822,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 3: Kappa Alpha Psi Fraternity, Inc.",
-      "prompt": "The fundamental purpose of Kappa Alpha Psi is summarized in one word. What is it?",
+      "prompt": "Kappa Alpha Psi Fraternity, Inc.: The fundamental purpose of Kappa Alpha Psi is summarized in one word. What is it?",
       "answers": [
         "Brotherhood",
         "Service",
@@ -12838,7 +12838,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 3: Kappa Alpha Psi Fraternity, Inc.",
-      "prompt": "Members of Kappa Alpha Psi are often seen performing with which signature item?",
+      "prompt": "Kappa Alpha Psi Fraternity, Inc.: Members of Kappa Alpha Psi are often seen performing with which signature item?",
       "answers": [
         "A shield",
         "A cane (Kappas Cane)",
@@ -12854,7 +12854,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 3: Kappa Alpha Psi Fraternity, Inc.",
-      "prompt": "What are the official colors of Kappa Alpha Psi?",
+      "prompt": "Kappa Alpha Psi Fraternity, Inc.: What are the official colors of Kappa Alpha Psi?",
       "answers": [
         "Crimson and Cream",
         "Red and White",
@@ -12870,7 +12870,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 3: Kappa Alpha Psi Fraternity, Inc.",
-      "prompt": "What was the original name of the fraternity before it was changed to Kappa Alpha Psi in 1915?",
+      "prompt": "Kappa Alpha Psi Fraternity, Inc.: What was the original name of the fraternity before it was changed to Kappa Alpha Psi in 1915?",
       "answers": [
         "Kappa Alpha Theta",
         "Kappa Alpha Nu",
@@ -12886,7 +12886,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 4: Omega Psi Phi Fraternity, Inc.",
-      "prompt": "Omega Psi Phi was the first Black fraternity founded at a Historically Black College (HBCU). Where was it founded?",
+      "prompt": "Omega Psi Phi Fraternity, Inc.: Omega Psi Phi was the first Black fraternity founded at a Historically Black College (HBCU). Where was it founded?",
       "answers": [
         "Howard University",
         "Morehouse College",
@@ -12902,7 +12902,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 4: Omega Psi Phi Fraternity, Inc.",
-      "prompt": "What is the Greek motto of Omega Psi Phi, which translates to \"Friendship is Essential to the Soul\"?",
+      "prompt": "Omega Psi Phi Fraternity, Inc.: What is the Greek motto of Omega Psi Phi, which translates to \"Friendship is Essential to the Soul\"?",
       "answers": [
         "Philia Ophelema Psukis",
         "Alpha Phi Omega",
@@ -12918,7 +12918,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 4: Omega Psi Phi Fraternity, Inc.",
-      "prompt": "Which famous scientist and Tuskegee professor was one of the first honorary members of Omega Psi Phi?",
+      "prompt": "Omega Psi Phi Fraternity, Inc.: Which famous scientist and Tuskegee professor was one of the first honorary members of Omega Psi Phi?",
       "answers": [
         "Percy Julian",
         "George Washington Carver",
@@ -12934,7 +12934,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 4: Omega Psi Phi Fraternity, Inc.",
-      "prompt": "What are the official colors of Omega Psi Phi?",
+      "prompt": "Omega Psi Phi Fraternity, Inc.: What are the official colors of Omega Psi Phi?",
       "answers": [
         "Black and Gold",
         "Blue and White",
@@ -12950,7 +12950,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 4: Omega Psi Phi Fraternity, Inc.",
-      "prompt": "What is the unofficial mascot often associated with the members of Omega Psi Phi?",
+      "prompt": "Omega Psi Phi Fraternity, Inc.: What is the unofficial mascot often associated with the members of Omega Psi Phi?",
       "answers": [
         "The Tiger",
         "The Que-Dog (Bulldog)",
@@ -12966,7 +12966,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 5: Delta Sigma Theta Sorority, Inc.",
-      "prompt": "In what year did 22 collegiate women at Howard University found Delta Sigma Theta?",
+      "prompt": "Delta Sigma Theta Sorority, Inc.: In what year did 22 collegiate women at Howard University found Delta Sigma Theta?",
       "answers": [
         "1908",
         "1913",
@@ -12982,7 +12982,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 5: Delta Sigma Theta Sorority, Inc.",
-      "prompt": "What was the first public act performed by the founders of Delta Sigma Theta in March 1913?",
+      "prompt": "Delta Sigma Theta Sorority, Inc.: What was the first public act performed by the founders of Delta Sigma Theta in March 1913?",
       "answers": [
         "Founding a library",
         "Participating in the Women's Suffrage March",
@@ -12998,7 +12998,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 5: Delta Sigma Theta Sorority, Inc.",
-      "prompt": "What are the official colors of Delta Sigma Theta?",
+      "prompt": "Delta Sigma Theta Sorority, Inc.: What are the official colors of Delta Sigma Theta?",
       "answers": [
         "Crimson and Cream",
         "Red and White",
@@ -13014,7 +13014,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 5: Delta Sigma Theta Sorority, Inc.",
-      "prompt": "The \"Delta Oath\" and the organization's focus are built upon how many \"Cardinal Virtues\"?",
+      "prompt": "Delta Sigma Theta Sorority, Inc.: The \"Delta Oath\" and the organization's focus are built upon how many \"Cardinal Virtues\"?",
       "answers": [
         "Three",
         "Five",
@@ -13030,7 +13030,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 5: Delta Sigma Theta Sorority, Inc.",
-      "prompt": "Which famous civil rights figure and journalist was an honorary member of Delta Sigma Theta?",
+      "prompt": "Delta Sigma Theta Sorority, Inc.: Which famous civil rights figure and journalist was an honorary member of Delta Sigma Theta?",
       "answers": [
         "Rosa Parks",
         "Mary Church Terrell (Founder) / Ida B. Wells (Honorary)",
@@ -13046,7 +13046,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 6: Phi Beta Sigma Fraternity, Inc.",
-      "prompt": "Phi Beta Sigma was founded at Howard University in 1914. Who were the three founders known as?",
+      "prompt": "Phi Beta Sigma Fraternity, Inc.: Phi Beta Sigma was founded at Howard University in 1914. Who were the three founders known as?",
       "answers": [
         "The Three Jewels",
         "The Three Founders",
@@ -13062,7 +13062,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 6: Phi Beta Sigma Fraternity, Inc.",
-      "prompt": "Phi Beta Sigma has a unique constitutional bond with which sorority, making them the only NPHC brother/sister organizations?",
+      "prompt": "Phi Beta Sigma Fraternity, Inc.: Phi Beta Sigma has a unique constitutional bond with which sorority, making them the only NPHC brother/sister organizations?",
       "answers": [
         "Alpha Kappa Alpha",
         "Delta Sigma Theta",
@@ -13078,7 +13078,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 6: Phi Beta Sigma Fraternity, Inc.",
-      "prompt": "What is the motto of Phi Beta Sigma?",
+      "prompt": "Phi Beta Sigma Fraternity, Inc.: What is the motto of Phi Beta Sigma?",
       "answers": [
         "Achievement in Every Field of Human Endeavor",
         "Culture for Service and Service for Humanity",
@@ -13094,7 +13094,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 6: Phi Beta Sigma Fraternity, Inc.",
-      "prompt": "What are the official colors of Phi Beta Sigma?",
+      "prompt": "Phi Beta Sigma Fraternity, Inc.: What are the official colors of Phi Beta Sigma?",
       "answers": [
         "Black and Gold",
         "Royal Blue and Pure White",
@@ -13110,7 +13110,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 6: Phi Beta Sigma Fraternity, Inc.",
-      "prompt": "What is the symbol/mascot of Phi Beta Sigma?",
+      "prompt": "Phi Beta Sigma Fraternity, Inc.: What is the symbol/mascot of Phi Beta Sigma?",
       "answers": [
         "The Bulldog",
         "The Dove",
@@ -13126,7 +13126,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 7: Zeta Phi Beta Sorority, Inc.",
-      "prompt": "Zeta Phi Beta was founded in 1920 at which institution?",
+      "prompt": "Zeta Phi Beta Sorority, Inc.: Zeta Phi Beta was founded in 1920 at which institution?",
       "answers": [
         "Howard University",
         "Morgan State University",
@@ -13142,7 +13142,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 7: Zeta Phi Beta Sorority, Inc.",
-      "prompt": "Zeta Phi Beta was the first Greek-letter organization to do what in 1948?",
+      "prompt": "Zeta Phi Beta Sorority, Inc.: Zeta Phi Beta was the first Greek-letter organization to do what in 1948?",
       "answers": [
         "Found a chapter in Africa",
         "Charter a chapter in Africa (Monrovia, Liberia)",
@@ -13158,7 +13158,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 7: Zeta Phi Beta Sorority, Inc.",
-      "prompt": "What are the four principles of Zeta Phi Beta?",
+      "prompt": "Zeta Phi Beta Sorority, Inc.: What are the four principles of Zeta Phi Beta?",
       "answers": [
         "Scholarship, Service, Sisterly Love, and Finer Womanhood",
         "Achievement, Service, Love, and Grace",
@@ -13174,7 +13174,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 7: Zeta Phi Beta Sorority, Inc.",
-      "prompt": "What are the official colors of Zeta Phi Beta?",
+      "prompt": "Zeta Phi Beta Sorority, Inc.: What are the official colors of Zeta Phi Beta?",
       "answers": [
         "Royal Blue and White",
         "Sky Blue and Silver",
@@ -13190,7 +13190,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 7: Zeta Phi Beta Sorority, Inc.",
-      "prompt": "The founders of Zeta Phi Beta are referred to as the:",
+      "prompt": "Zeta Phi Beta Sorority, Inc.: The founders of Zeta Phi Beta are referred to as the:",
       "answers": [
         "Five Jewels",
         "Five Pearls",
@@ -13206,7 +13206,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 8: Sigma Gamma Rho Sorority, Inc.",
-      "prompt": "Sigma Gamma Rho was the only NPHC sorority founded at a predominantly white institution (PWI). Which school was it?",
+      "prompt": "Sigma Gamma Rho Sorority, Inc.: Sigma Gamma Rho was the only NPHC sorority founded at a predominantly white institution (PWI). Which school was it?",
       "answers": [
         "Indiana University",
         "Butler University",
@@ -13222,7 +13222,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 8: Sigma Gamma Rho Sorority, Inc.",
-      "prompt": "In what year was Sigma Gamma Rho founded?",
+      "prompt": "Sigma Gamma Rho Sorority, Inc.: In what year was Sigma Gamma Rho founded?",
       "answers": [
         "1913",
         "1920",
@@ -13238,7 +13238,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 8: Sigma Gamma Rho Sorority, Inc.",
-      "prompt": "What is the official slogan/motto of Sigma Gamma Rho?",
+      "prompt": "Sigma Gamma Rho Sorority, Inc.: What is the official slogan/motto of Sigma Gamma Rho?",
       "answers": [
         "Finer Womanhood",
         "Greater Service, Greater Progress",
@@ -13254,7 +13254,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 8: Sigma Gamma Rho Sorority, Inc.",
-      "prompt": "What is the official mascot of Sigma Gamma Rho?",
+      "prompt": "Sigma Gamma Rho Sorority, Inc.: What is the official mascot of Sigma Gamma Rho?",
       "answers": [
         "The Dove",
         "The Ivy Leaf",
@@ -13270,7 +13270,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 8: Sigma Gamma Rho Sorority, Inc.",
-      "prompt": "What are the official colors of Sigma Gamma Rho?",
+      "prompt": "Sigma Gamma Rho Sorority, Inc.: What are the official colors of Sigma Gamma Rho?",
       "answers": [
         "Blue and Gold",
         "Royal Blue and Gold",
@@ -13286,7 +13286,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 9: Iota Phi Theta Fraternity, Inc.",
-      "prompt": "Iota Phi Theta is the youngest member of the Divine Nine. In what year was it founded?",
+      "prompt": "Iota Phi Theta Fraternity, Inc.: Iota Phi Theta is the youngest member of the Divine Nine. In what year was it founded?",
       "answers": [
         "1955",
         "1963",
@@ -13302,7 +13302,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 9: Iota Phi Theta Fraternity, Inc.",
-      "prompt": "At which university in Baltimore, Maryland, was Iota Phi Theta founded?",
+      "prompt": "Iota Phi Theta Fraternity, Inc.: At which university in Baltimore, Maryland, was Iota Phi Theta founded?",
       "answers": [
         "Johns Hopkins University",
         "Coppin State University",
@@ -13318,7 +13318,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 9: Iota Phi Theta Fraternity, Inc.",
-      "prompt": "The founders of Iota Phi Theta were unique because many of them were:",
+      "prompt": "Iota Phi Theta Fraternity, Inc.: The founders of Iota Phi Theta were unique because many of them were:",
       "answers": [
         "Teenagers",
         "Non-traditional \"older\" students and military veterans",
@@ -13334,7 +13334,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 9: Iota Phi Theta Fraternity, Inc.",
-      "prompt": "What are the official colors of Iota Phi Theta?",
+      "prompt": "Iota Phi Theta Fraternity, Inc.: What are the official colors of Iota Phi Theta?",
       "answers": [
         "Charcoal Brown and Gilded Gold",
         "Chocolate and Cream",
@@ -13350,7 +13350,7 @@
       "category": "divine_nine_nphc",
       "categoryLabel": "Divine Nine / NPHC",
       "section": "Part 9: Iota Phi Theta Fraternity, Inc.",
-      "prompt": "What is the official mascot of Iota Phi Theta?",
+      "prompt": "Iota Phi Theta Fraternity, Inc.: What is the official mascot of Iota Phi Theta?",
       "answers": [
         "The Bulldog",
         "The Centaur",
@@ -13414,7 +13414,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 1: Toussaint Louverture",
-      "prompt": "Which world leader famously betrayed Toussaint by inviting him to a parley, only to arrest and imprison him in France?",
+      "prompt": "Toussaint Louverture: Which world leader famously betrayed Toussaint by inviting him to a parley, only to arrest and imprison him in France?",
       "answers": [
         "King George III",
         "Napoleon Bonaparte",
@@ -13430,7 +13430,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 1: Toussaint Louverture",
-      "prompt": "In 1801, Toussaint produced a constitution for Saint-Domingue that did what?",
+      "prompt": "Toussaint Louverture: In 1801, Toussaint produced a constitution for Saint-Domingue that did what?",
       "answers": [
         "Abolished slavery forever",
         "Declared war on England",
@@ -13462,7 +13462,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 2: Jean-Jacques Dessalines",
-      "prompt": "Dessalines is credited with creating the Haitian flag by ripping the white stripe out of which country's flag?",
+      "prompt": "Jean-Jacques Dessalines is credited with creating the Haitian flag by ripping the white stripe out of which country's flag?",
       "answers": [
         "Spain",
         "Great Britain",
@@ -13478,7 +13478,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 2: Jean-Jacques Dessalines",
-      "prompt": "Which decisive 1803 battle, led by Dessalines, forced the final French surrender in Haiti?",
+      "prompt": "Jean-Jacques Dessalines: Which decisive 1803 battle, led by Dessalines, forced the final French surrender in Haiti?",
       "answers": [
         "Battle of Waterloo",
         "Battle of Vertières",
@@ -13494,7 +13494,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 2: Jean-Jacques Dessalines",
-      "prompt": "What is the national motto of Haiti, often attributed to the spirit of Dessalines’ leadership?",
+      "prompt": "Jean-Jacques Dessalines: What is the national motto of Haiti, often attributed to the spirit of Dessalines’ leadership?",
       "answers": [
         "Liberty, Equality, Fraternity",
         "L'Union fait la force (Unity makes strength)",
@@ -13510,7 +13510,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 2: Jean-Jacques Dessalines",
-      "prompt": "In Haiti today, Dessalines is honored as the:",
+      "prompt": "Jean-Jacques Dessalines: In Haiti today, Dessalines is honored as the:",
       "answers": [
         "Great Teacher",
         "Father of the Nation (Père de la Patrie)",
@@ -13526,7 +13526,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 3: King Henri Christophe",
-      "prompt": "Henri Christophe was a leader in the Haitian Revolution who eventually became King of which part of Haiti?",
+      "prompt": "King Henri Christophe: Henri Christophe was a leader in the Haitian Revolution who eventually became King of which part of Haiti?",
       "answers": [
         "The South",
         "The North",
@@ -13542,7 +13542,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 3: King Henri Christophe",
-      "prompt": "Christophe famously built which massive fortress, now a UNESCO World Heritage site, to defend against the French?",
+      "prompt": "King Henri Christophe famously built which massive fortress, now a UNESCO World Heritage site, to defend against the French?",
       "answers": [
         "The Bastille",
         "The Citadelle Laferrière",
@@ -13558,7 +13558,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 3: King Henri Christophe",
-      "prompt": "What was the name of the magnificent palace Henri Christophe built for his royal court?",
+      "prompt": "King Henri Christophe: What was the name of the magnificent palace Henri Christophe built for his royal court?",
       "answers": [
         "Versailles",
         "Sans-Souci Palace",
@@ -13574,7 +13574,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 3: King Henri Christophe",
-      "prompt": "Henri Christophe was known for his efforts to improve Haiti’s economy by promoting:",
+      "prompt": "King Henri Christophe: Henri Christophe was known for his efforts to improve Haiti’s economy by promoting:",
       "answers": [
         "Gold mining",
         "Education and agriculture",
@@ -13590,7 +13590,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 3: King Henri Christophe",
-      "prompt": "Before becoming a revolutionary leader, Christophe is believed to have worked as a:",
+      "prompt": "King Henri Christophe: Before becoming a revolutionary leader, Christophe is believed to have worked as a:",
       "answers": [
         "Blacksmith",
         "Mason and waiter/barkeep",
@@ -13638,7 +13638,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 4: Bob Marley",
-      "prompt": "Marley’s band, formed with Peter Tosh and Bunny Wailer, was known as:",
+      "prompt": "Bob Marley: Marley’s band, formed with Peter Tosh and Bunny Wailer, was known as:",
       "answers": [
         "The Revolutionaries",
         "The Wailers",
@@ -13654,7 +13654,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 4: Bob Marley",
-      "prompt": "What was the name of the 1978 concert where Marley famously joined the hands of two rival Jamaican political leaders?",
+      "prompt": "Bob Marley: What was the name of the 1978 concert where Marley famously joined the hands of two rival Jamaican political leaders?",
       "answers": [
         "Smile Jamaica",
         "One Love Peace Concert",
@@ -13670,7 +13670,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 4: Bob Marley",
-      "prompt": "Marley’s posthumous greatest hits album, released in 1984, is titled:",
+      "prompt": "Bob Marley: Marley’s posthumous greatest hits album, released in 1984, is titled:",
       "answers": [
         "Exodus",
         "Legend",
@@ -13702,7 +13702,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 5: Queen Hatshepsut",
-      "prompt": "Hatshepsut is famous for commissioning a massive trading expedition to which mysterious land?",
+      "prompt": "Queen Hatshepsut is famous for commissioning a massive trading expedition to which mysterious land?",
       "answers": [
         "Rome",
         "The Land of Punt",
@@ -13718,7 +13718,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 5: Queen Hatshepsut",
-      "prompt": "To establish her authority as a Pharaoh, Hatshepsut was often depicted in art wearing:",
+      "prompt": "Queen Hatshepsut: To establish her authority as a Pharaoh, Hatshepsut was often depicted in art wearing:",
       "answers": [
         "A silk veil",
         "A traditional false beard and male royal kilt",
@@ -13734,7 +13734,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 5: Queen Hatshepsut",
-      "prompt": "What is the name of Hatshepsut’s famous mortuary temple, considered a masterpiece of ancient architecture?",
+      "prompt": "Queen Hatshepsut: What is the name of Hatshepsut’s famous mortuary temple, considered a masterpiece of ancient architecture?",
       "answers": [
         "The Great Pyramid",
         "Deir el-Bahari",
@@ -13846,7 +13846,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 7: Queen Makeda (Queen of Sheba)",
-      "prompt": "Queen Makeda is traditionally associated with the kingdom of Sheba, which is linked to which modern nation?",
+      "prompt": "Queen Makeda (Queen of Sheba): Queen Makeda is traditionally associated with the kingdom of Sheba, which is linked to which modern nation?",
       "answers": [
         "South Africa",
         "Ethiopia",
@@ -13862,7 +13862,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 7: Queen Makeda (Queen of Sheba)",
-      "prompt": "According to religious and historical texts, Makeda traveled to Jerusalem to visit which wise King?",
+      "prompt": "Queen Makeda (Queen of Sheba): According to religious and historical texts, Makeda traveled to Jerusalem to visit which wise King?",
       "answers": [
         "David",
         "Solomon",
@@ -13878,7 +13878,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 7: Queen Makeda (Queen of Sheba)",
-      "prompt": "The son of Makeda and King Solomon, Menelik I, is said to have brought which sacred object to Ethiopia?",
+      "prompt": "Queen Makeda (Queen of Sheba): The son of Makeda and King Solomon, Menelik I, is said to have brought which sacred object to Ethiopia?",
       "answers": [
         "The Holy Grail",
         "The Ark of the Covenant",
@@ -13894,7 +13894,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 7: Queen Makeda (Queen of Sheba)",
-      "prompt": "What is the name of the Ethiopian national epic that details the story of Queen Makeda?",
+      "prompt": "Queen Makeda (Queen of Sheba): What is the name of the Ethiopian national epic that details the story of Queen Makeda?",
       "answers": [
         "The Odyssey",
         "The Kebra Nagast",
@@ -13910,7 +13910,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 7: Queen Makeda (Queen of Sheba)",
-      "prompt": "Queen Makeda is celebrated for her:",
+      "prompt": "Queen Makeda (Queen of Sheba): Queen Makeda is celebrated for her:",
       "answers": [
         "Military conquest of Europe",
         "Intelligence, wealth, and diplomatic skill",
@@ -13942,7 +13942,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 8: Shaka Zulu",
-      "prompt": "Shaka revolutionized warfare by replacing long throwing spears with a short, stabbing spear called the:",
+      "prompt": "Shaka Zulu: Shaka revolutionized warfare by replacing long throwing spears with a short, stabbing spear called the:",
       "answers": [
         "Javelin",
         "Iklwa",
@@ -13958,7 +13958,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 8: Shaka Zulu",
-      "prompt": "What was the name of Shaka’s famous military formation that mimicked the head and horns of an animal?",
+      "prompt": "Shaka Zulu: What was the name of Shaka’s famous military formation that mimicked the head and horns of an animal?",
       "answers": [
         "The Eagle Wing",
         "The Buffalo Horns",
@@ -13990,7 +13990,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 8: Shaka Zulu",
-      "prompt": "Shaka is often credited with fostering a sense of national identity through the integration of:",
+      "prompt": "Shaka Zulu: Shaka is often credited with fostering a sense of national identity through the integration of:",
       "answers": [
         "European laws",
         "Conquered tribes into a single Zulu culture",
@@ -14022,7 +14022,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 9: Marcus Garvey",
-      "prompt": "What was the name of the shipping line Garvey established to promote trade and transport among the African diaspora?",
+      "prompt": "Marcus Garvey: What was the name of the shipping line Garvey established to promote trade and transport among the African diaspora?",
       "answers": [
         "The White Star Line",
         "The Black Star Line",
@@ -14054,7 +14054,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 9: Marcus Garvey",
-      "prompt": "Garvey was a leading proponent of which ideology?",
+      "prompt": "Marcus Garvey was a leading proponent of which ideology?",
       "answers": [
         "Marxism",
         "Pan-Africanism",
@@ -14070,7 +14070,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 9: Marcus Garvey",
-      "prompt": "What colors did Garvey choose for the Pan-African flag, which are still used by many nations today?",
+      "prompt": "Marcus Garvey: What colors did Garvey choose for the Pan-African flag, which are still used by many nations today?",
       "answers": [
         "Blue, White, and Gold",
         "Red, Black, and Green",
@@ -14102,7 +14102,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 10: Idris Elba",
-      "prompt": "Elba plays the title character, a brilliant but self-destructive detective, in which BBC series?",
+      "prompt": "Idris Elba plays the title character, a brilliant but self-destructive detective, in which BBC series?",
       "answers": [
         "Sherlock",
         "Luther",
@@ -14214,7 +14214,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 11: Trevor Noah",
-      "prompt": "The title of his book refers to the fact that his birth was illegal under which South African system?",
+      "prompt": "Trevor Noah: The title of his book refers to the fact that his birth was illegal under which South African system?",
       "answers": [
         "Colonialism",
         "Apartheid",
