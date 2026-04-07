@@ -564,6 +564,23 @@
     line-height:1;
     pointer-events:none;
   }
+  .cell.brain-special{
+    background:transparent !important;
+    border:2px solid rgba(249,168,212,.85) !important;
+    box-shadow:0 0 0 2px rgba(249,168,212,.22), 0 0 16px rgba(249,168,212,.48);
+    animation:targetPulse 0.8s ease-in-out infinite alternate;
+  }
+  .cell.brain-special::after{
+    content:"🧠";
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    line-height:1;
+    pointer-events:none;
+  }
   @keyframes linePulse{
     0%{ transform:scale(1); filter:brightness(1); }
     100%{ transform:scale(1.06); filter:brightness(1.12); box-shadow:0 0 0 2px rgba(94,200,255,.22), 0 0 22px rgba(94,200,255,.62); }
@@ -1019,7 +1036,10 @@
       <video id="popupVideo" controls playsinline style="width:100%;max-height:70vh;border-radius:16px;background:#000;">
         <source src="" type="video/mp4">
       </video>
-</div>
+      <div class="footerRow" style="margin-top:12px;">
+        <button id="closeVideoBtn" type="button">Close Video</button>
+      </div>
+    </div>
   </div>
 
 <script src="./js/questionEngine.js"></script>
@@ -2317,6 +2337,11 @@
   function explodeAffectedCells(affected, totalBubbleText=null){
     if(!affected.length) return;
 
+    const clearedCount = affected.length;
+    const multiplierValue = multiplierArmed ? 2 : 1;
+    const gained = (clearedCount * 10) * multiplierValue;
+    const pointsPerBlock = Array.from({ length: clearedCount }, () => 10 * multiplierValue);
+
     flashAndExplodeGroup(affected.map(([rr,cc]) => [rr,cc]), () => {
       const counts = {};
       affected.forEach(([rr,cc,cat]) => {
@@ -2330,14 +2355,40 @@
 
       applyGravity();
       refillBoard();
-      updateBest();
-      saveProgress();
-      renderBoard([]);
-      if(totalBubbleText){
-        showToast(totalBubbleText);
+
+      score += gained;
+      progress += Math.min(56, (10 + clearedCount * 2) * multiplierValue);
+
+      maybeAwardBoosterForPopSize(clearedCount);
+
+      const afterReward = () => {
+        if(multiplierArmed){
+          multiplierArmed = false;
+        }
+        if(progress >= 100){
+          triggerQuiz();
+          if (guidanceTextEl) guidanceTextEl.textContent = "Quiz ready. Answer the green glowing Quiz Boost to keep going!";
+        }
+        updateBest();
+        saveProgress();
+        renderBoard([]);
+        if(totalBubbleText){
+          showToast(totalBubbleText);
+        }
+        endRoundIfNeeded();
+      };
+
+      if(clearedCount >= 10){
+        showToast(`🎬 Video Pop! ${clearedCount} blocks`);
+        updateBest();
+        saveProgress();
+        renderBoard([]);
+        playVideoPopup(afterReward);
+        return;
       }
-      endRoundIfNeeded();
-    }, 0, 0);
+
+      afterReward();
+    }, pointsPerBlock, gained);
   }
 
   function explodeLineBlaster(r,c){
@@ -2852,18 +2903,6 @@ function getCellCenter(r, c){
     }
   }
 
-
-  function awardSpecialClearRewardFromAffected(affected){
-    if(!Array.isArray(affected) || !affected.length){
-      return { pointsPerBlock: [], totalGained: 0 };
-    }
-    const pointsPerBlock = Array.from({length: affected.length}, () => 10);
-    const totalGained = pointsPerBlock.reduce((a,b)=>a+b,0);
-    score += totalGained;
-    progress += Math.min(24, affected.length * 2);
-    return { pointsPerBlock, totalGained };
-  }
-
   function clearAreaRadius(centerR, centerC, radius){
     const affected = [];
     for(let dr=-radius; dr<=radius; dr++){
@@ -2888,7 +2927,6 @@ function getCellCenter(r, c){
         board[rr][cc] = null;
       });
       Object.entries(counts).forEach(([cat, amt]) => consumeObjectivesForCategory(Number(cat), amt));
-      maybeAwardBoosterForPopSize(affected.length);
       applyGravity();
       refillBoard();
       score += totalGained;
