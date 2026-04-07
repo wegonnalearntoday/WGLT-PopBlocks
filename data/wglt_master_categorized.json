@@ -2982,27 +2982,7 @@
       "category": "comedy",
       "categoryLabel": "Comedy",
       "section": "Part 7: Dave Chappelle",
-<<<<<<< HEAD
       "prompt": "What was the name of Chappelle’s blind white supremacist character?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was the name of Chappelle’s blind white supremacist character?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was the name of Chappelle’s blind white supremacist character?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was the name of Chappelle’s blind white supremacist character?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was the name of Chappelle’s blind white supremacist character?",
-=======
-      "prompt": "What was the name of Chappelle\u2019s blind white supremacist character?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Clayton Bigsby",
         "Tyrone Biggums",
@@ -3422,33 +3402,8 @@
       "answers": [
         "Legion of Honor",
         "Croix de Guerre",
-<<<<<<< HEAD
         "Médaille Militaire",
         "Ordre National du Mérite"
-=======
-<<<<<<< HEAD
-        "Médaille Militaire",
-        "Ordre National du Mérite"
-=======
-<<<<<<< HEAD
-        "Médaille Militaire",
-        "Ordre National du Mérite"
-=======
-<<<<<<< HEAD
-        "Médaille Militaire",
-        "Ordre National du Mérite"
-=======
-<<<<<<< HEAD
-        "Médaille Militaire",
-        "Ordre National du Mérite"
-=======
-        "M\u00e9daille Militaire",
-        "Ordre National du M\u00e9rite"
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       ],
       "correctIndex": 1,
       "noRepeat": true,
@@ -3859,43 +3814,11 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 6: Colored Hockey League (CHL)",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "prompt": "Which NHL team recently began honoring the legacy of the CHL to acknowledge hockey’s diverse roots?",
       "answers": [
         "Toronto Maple Leafs",
         "Montreal Canadiens",
         "Halifax Mooseheads (and the NHL’s Seattle Kraken)",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-      "prompt": "Which NHL team recently began honoring the legacy of the CHL to acknowledge hockey\u2019s diverse roots?",
-      "answers": [
-        "Toronto Maple Leafs",
-        "Montreal Canadiens",
-        "Halifax Mooseheads (and the NHL\u2019s Seattle Kraken)",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "Boston Bruins"
       ],
       "correctIndex": 2,
@@ -4227,27 +4150,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 10: The Golden Thirteen",
-<<<<<<< HEAD
       "prompt": "Who was the member of the Golden Thirteen who eventually became the Navy’s first Black Admiral?",
-=======
-<<<<<<< HEAD
-      "prompt": "Who was the member of the Golden Thirteen who eventually became the Navy’s first Black Admiral?",
-=======
-<<<<<<< HEAD
-      "prompt": "Who was the member of the Golden Thirteen who eventually became the Navy’s first Black Admiral?",
-=======
-<<<<<<< HEAD
-      "prompt": "Who was the member of the Golden Thirteen who eventually became the Navy’s first Black Admiral?",
-=======
-<<<<<<< HEAD
-      "prompt": "Who was the member of the Golden Thirteen who eventually became the Navy’s first Black Admiral?",
-=======
-      "prompt": "Who was the member of the Golden Thirteen who eventually became the Navy\u2019s first Black Admiral?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Samuel L. Gravely Jr. (Note: He was not G13, but inspired by them)",
         "None (Samuel L. Gravely was the first Black Admiral, but not G13; G13 paved the way)",
@@ -4295,27 +4198,7 @@
       "category": "black_history_stories",
       "categoryLabel": "Black History Stories",
       "section": "Part 11: The 6888th Central Postal Directory Battalion",
-<<<<<<< HEAD
       "prompt": "What was the 6888th’s official unit motto?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was the 6888th’s official unit motto?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was the 6888th’s official unit motto?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was the 6888th’s official unit motto?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was the 6888th’s official unit motto?",
-=======
-      "prompt": "What was the 6888th\u2019s official unit motto?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Speed and Accuracy",
         "No mail, low morale",
@@ -4811,52 +4694,12 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 6: Phylicia Rashad",
-<<<<<<< HEAD
       "prompt": "Which famous choreographer and actress is Phylicia Rashad’s sister?",
-=======
-<<<<<<< HEAD
-      "prompt": "Which famous choreographer and actress is Phylicia Rashad’s sister?",
-=======
-<<<<<<< HEAD
-      "prompt": "Which famous choreographer and actress is Phylicia Rashad’s sister?",
-=======
-<<<<<<< HEAD
-      "prompt": "Which famous choreographer and actress is Phylicia Rashad’s sister?",
-=======
-<<<<<<< HEAD
-      "prompt": "Which famous choreographer and actress is Phylicia Rashad’s sister?",
-=======
-      "prompt": "Which famous choreographer and actress is Phylicia Rashad\u2019s sister?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Judith Jamison",
         "Debbie Allen",
         "Eartha Kitt",
-<<<<<<< HEAD
         "Raven-Symoné"
-=======
-<<<<<<< HEAD
-        "Raven-Symoné"
-=======
-<<<<<<< HEAD
-        "Raven-Symoné"
-=======
-<<<<<<< HEAD
-        "Raven-Symoné"
-=======
-<<<<<<< HEAD
-        "Raven-Symoné"
-=======
-        "Raven-Symon\u00e9"
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       ],
       "correctIndex": 1,
       "noRepeat": true,
@@ -5043,27 +4886,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 9: LeVar Burton",
-<<<<<<< HEAD
       "prompt": "LeVar Burton’s breakthrough role was playing the young Kunta Kinte in which 1977 miniseries?",
-=======
-<<<<<<< HEAD
-      "prompt": "LeVar Burton’s breakthrough role was playing the young Kunta Kinte in which 1977 miniseries?",
-=======
-<<<<<<< HEAD
-      "prompt": "LeVar Burton’s breakthrough role was playing the young Kunta Kinte in which 1977 miniseries?",
-=======
-<<<<<<< HEAD
-      "prompt": "LeVar Burton’s breakthrough role was playing the young Kunta Kinte in which 1977 miniseries?",
-=======
-<<<<<<< HEAD
-      "prompt": "LeVar Burton’s breakthrough role was playing the young Kunta Kinte in which 1977 miniseries?",
-=======
-      "prompt": "LeVar Burton\u2019s breakthrough role was playing the young Kunta Kinte in which 1977 miniseries?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Color Purple",
         "Roots",
@@ -5159,27 +4982,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 10: Scott Joplin",
-<<<<<<< HEAD
       "prompt": "What is Scott Joplin’s most famous composition, published in 1899?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is Scott Joplin’s most famous composition, published in 1899?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is Scott Joplin’s most famous composition, published in 1899?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is Scott Joplin’s most famous composition, published in 1899?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is Scott Joplin’s most famous composition, published in 1899?",
-=======
-      "prompt": "What is Scott Joplin\u2019s most famous composition, published in 1899?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Entertainer",
         "Maple Leaf Rag",
@@ -5195,27 +4998,7 @@
       "category": "entertainers_film_tv",
       "categoryLabel": "Entertainers / Film & TV",
       "section": "Part 10: Scott Joplin",
-<<<<<<< HEAD
       "prompt": "Joplin’s music experienced a massive revival in the 1970s after being featured in which film?",
-=======
-<<<<<<< HEAD
-      "prompt": "Joplin’s music experienced a massive revival in the 1970s after being featured in which film?",
-=======
-<<<<<<< HEAD
-      "prompt": "Joplin’s music experienced a massive revival in the 1970s after being featured in which film?",
-=======
-<<<<<<< HEAD
-      "prompt": "Joplin’s music experienced a massive revival in the 1970s after being featured in which film?",
-=======
-<<<<<<< HEAD
-      "prompt": "Joplin’s music experienced a massive revival in the 1970s after being featured in which film?",
-=======
-      "prompt": "Joplin\u2019s music experienced a massive revival in the 1970s after being featured in which film?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Casablanca",
         "The Sting",
@@ -5586,27 +5369,7 @@
       "prompt": "Which is a \"Short-Term\" financial goal?",
       "answers": [
         "Saving for a new laptop in six months.",
-<<<<<<< HEAD
         "Saving for a child’s college education.",
-=======
-<<<<<<< HEAD
-        "Saving for a child’s college education.",
-=======
-<<<<<<< HEAD
-        "Saving for a child’s college education.",
-=======
-<<<<<<< HEAD
-        "Saving for a child’s college education.",
-=======
-<<<<<<< HEAD
-        "Saving for a child’s college education.",
-=======
-        "Saving for a child\u2019s college education.",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "Planning for retirement in 30 years.",
         "Paying off a 30-year mortgage."
       ],
@@ -5784,27 +5547,7 @@
         "To ensure savings goals are met without having to remember to move money.",
         "To hide money from the government.",
         "To increase the interest rate on a checking account.",
-<<<<<<< HEAD
         "To bypass the bank’s security measures."
-=======
-<<<<<<< HEAD
-        "To bypass the bank’s security measures."
-=======
-<<<<<<< HEAD
-        "To bypass the bank’s security measures."
-=======
-<<<<<<< HEAD
-        "To bypass the bank’s security measures."
-=======
-<<<<<<< HEAD
-        "To bypass the bank’s security measures."
-=======
-        "To bypass the bank\u2019s security measures."
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       ],
       "correctIndex": 0,
       "noRepeat": true,
@@ -5897,41 +5640,10 @@
       "section": "Benchmark 5: Credit Profile",
       "prompt": "What range is considered a \"Good\" to \"Excellent\" FICO score?",
       "answers": [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "300–500.",
         "500–600.",
         "670–850.",
         "850–1000."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-        "300\u2013500.",
-        "500\u2013600.",
-        "670\u2013850.",
-        "850\u20131000."
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       ],
       "correctIndex": 2,
       "noRepeat": true,
@@ -6314,27 +6026,7 @@
       "answers": [
         "A tax-deductible expense.",
         "The amount you must pay out-of-pocket before the insurance company pays its share.",
-<<<<<<< HEAD
         "The cost of the insurance agent’s commission.",
-=======
-<<<<<<< HEAD
-        "The cost of the insurance agent’s commission.",
-=======
-<<<<<<< HEAD
-        "The cost of the insurance agent’s commission.",
-=======
-<<<<<<< HEAD
-        "The cost of the insurance agent’s commission.",
-=======
-<<<<<<< HEAD
-        "The cost of the insurance agent’s commission.",
-=======
-        "The cost of the insurance agent\u2019s commission.",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "A discount for having no accidents."
       ],
       "correctIndex": 1,
@@ -6810,27 +6502,7 @@
       "category": "financial_literacy",
       "categoryLabel": "Financial Literacy",
       "section": "Benchmark 13: Professional Services and Ethics",
-<<<<<<< HEAD
       "prompt": "Why is it important to check an advisor’s \"ADV Form\" or \"BrokerCheck\"?",
-=======
-<<<<<<< HEAD
-      "prompt": "Why is it important to check an advisor’s \"ADV Form\" or \"BrokerCheck\"?",
-=======
-<<<<<<< HEAD
-      "prompt": "Why is it important to check an advisor’s \"ADV Form\" or \"BrokerCheck\"?",
-=======
-<<<<<<< HEAD
-      "prompt": "Why is it important to check an advisor’s \"ADV Form\" or \"BrokerCheck\"?",
-=======
-<<<<<<< HEAD
-      "prompt": "Why is it important to check an advisor’s \"ADV Form\" or \"BrokerCheck\"?",
-=======
-      "prompt": "Why is it important to check an advisor\u2019s \"ADV Form\" or \"BrokerCheck\"?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "To see their personal bank balance.",
         "To verify their credentials, experience, and any history of disciplinary actions.",
@@ -6912,27 +6584,7 @@
       "section": "Part 1: Spelman College",
       "prompt": "What was Spelman College originally named when it was founded in 1881?",
       "answers": [
-<<<<<<< HEAD
         "Atlanta Women’s College",
-=======
-<<<<<<< HEAD
-        "Atlanta Women’s College",
-=======
-<<<<<<< HEAD
-        "Atlanta Women’s College",
-=======
-<<<<<<< HEAD
-        "Atlanta Women’s College",
-=======
-<<<<<<< HEAD
-        "Atlanta Women’s College",
-=======
-        "Atlanta Women\u2019s College",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "Atlanta Baptist Female Seminary",
         "Sisterhood University",
         "The Rockefeller Institute"
@@ -7122,27 +6774,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 3: Hampton University",
-<<<<<<< HEAD
       "prompt": "What is the nickname of Hampton University’s athletic teams?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the nickname of Hampton University’s athletic teams?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the nickname of Hampton University’s athletic teams?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the nickname of Hampton University’s athletic teams?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the nickname of Hampton University’s athletic teams?",
-=======
-      "prompt": "What is the nickname of Hampton University\u2019s athletic teams?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Tigers",
         "Pirates",
@@ -7238,27 +6870,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 4: Morehouse College",
-<<<<<<< HEAD
       "prompt": "Morehouse College’s athletic teams are known as the:",
-=======
-<<<<<<< HEAD
-      "prompt": "Morehouse College’s athletic teams are known as the:",
-=======
-<<<<<<< HEAD
-      "prompt": "Morehouse College’s athletic teams are known as the:",
-=======
-<<<<<<< HEAD
-      "prompt": "Morehouse College’s athletic teams are known as the:",
-=======
-<<<<<<< HEAD
-      "prompt": "Morehouse College’s athletic teams are known as the:",
-=======
-      "prompt": "Morehouse College\u2019s athletic teams are known as the:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Tigers",
         "Maroon Tigers",
@@ -7402,27 +7014,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 6: Florida A&M University (FAMU)",
-<<<<<<< HEAD
       "prompt": "What is the nickname of FAMU’s athletic teams?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the nickname of FAMU’s athletic teams?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the nickname of FAMU’s athletic teams?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the nickname of FAMU’s athletic teams?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the nickname of FAMU’s athletic teams?",
-=======
-      "prompt": "What is the nickname of FAMU\u2019s athletic teams?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Gators",
         "Rattlers",
@@ -7553,27 +7145,7 @@
       "prompt": "Atlanta University was the first HBCU in the nation to grant which type of degrees?",
       "answers": [
         "High school diplomas",
-<<<<<<< HEAD
         "Graduate/Master’s degrees",
-=======
-<<<<<<< HEAD
-        "Graduate/Master’s degrees",
-=======
-<<<<<<< HEAD
-        "Graduate/Master’s degrees",
-=======
-<<<<<<< HEAD
-        "Graduate/Master’s degrees",
-=======
-<<<<<<< HEAD
-        "Graduate/Master’s degrees",
-=======
-        "Graduate/Master\u2019s degrees",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "Medical degrees",
         "Law degrees"
       ],
@@ -7605,27 +7177,7 @@
       "prompt": "What is the motto of Clark Atlanta University?",
       "answers": [
         "Knowledge is Power",
-<<<<<<< HEAD
         "I’ll Find a Way or Make One",
-=======
-<<<<<<< HEAD
-        "I’ll Find a Way or Make One",
-=======
-<<<<<<< HEAD
-        "I’ll Find a Way or Make One",
-=======
-<<<<<<< HEAD
-        "I’ll Find a Way or Make One",
-=======
-<<<<<<< HEAD
-        "I’ll Find a Way or Make One",
-=======
-        "I\u2019ll Find a Way or Make One",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "Truth and Service",
         "Deeds not Words"
       ],
@@ -7878,27 +7430,7 @@
       "category": "hbcu_legacy",
       "categoryLabel": "HBCU Legacy",
       "section": "Part 11: Morgan State University",
-<<<<<<< HEAD
       "prompt": "Morgan State’s campus was designated as a \"National Treasure\" by which organization?",
-=======
-<<<<<<< HEAD
-      "prompt": "Morgan State’s campus was designated as a \"National Treasure\" by which organization?",
-=======
-<<<<<<< HEAD
-      "prompt": "Morgan State’s campus was designated as a \"National Treasure\" by which organization?",
-=======
-<<<<<<< HEAD
-      "prompt": "Morgan State’s campus was designated as a \"National Treasure\" by which organization?",
-=======
-<<<<<<< HEAD
-      "prompt": "Morgan State’s campus was designated as a \"National Treasure\" by which organization?",
-=======
-      "prompt": "Morgan State\u2019s campus was designated as a \"National Treasure\" by which organization?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The NFL",
         "The National Trust for Historic Preservation",
@@ -7930,43 +7462,11 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 1: Elijah McCoy",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "prompt": "McCoy’s inventions were so reliable that engineers would ask for his product by name to avoid cheap imitations, leading to which famous phrase?",
       "answers": [
         "The McCoy Method",
         "The Real McCoy",
         "McCoy’s Gold Standard",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-      "prompt": "McCoy\u2019s inventions were so reliable that engineers would ask for his product by name to avoid cheap imitations, leading to which famous phrase?",
-      "answers": [
-        "The McCoy Method",
-        "The Real McCoy",
-        "McCoy\u2019s Gold Standard",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "Purely McCoy"
       ],
       "correctIndex": 1,
@@ -8010,27 +7510,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 1: Elijah McCoy",
-<<<<<<< HEAD
       "prompt": "Elijah McCoy’s parents were formerly enslaved people who escaped to freedom via what?",
-=======
-<<<<<<< HEAD
-      "prompt": "Elijah McCoy’s parents were formerly enslaved people who escaped to freedom via what?",
-=======
-<<<<<<< HEAD
-      "prompt": "Elijah McCoy’s parents were formerly enslaved people who escaped to freedom via what?",
-=======
-<<<<<<< HEAD
-      "prompt": "Elijah McCoy’s parents were formerly enslaved people who escaped to freedom via what?",
-=======
-<<<<<<< HEAD
-      "prompt": "Elijah McCoy’s parents were formerly enslaved people who escaped to freedom via what?",
-=======
-      "prompt": "Elijah McCoy\u2019s parents were formerly enslaved people who escaped to freedom via what?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Mason-Dixon Line",
         "The Underground Railroad",
@@ -8062,27 +7542,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 2: Madam C.J. Walker",
-<<<<<<< HEAD
       "prompt": "What was Madam C.J. Walker’s birth name before she adopted her professional moniker?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was Madam C.J. Walker’s birth name before she adopted her professional moniker?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was Madam C.J. Walker’s birth name before she adopted her professional moniker?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was Madam C.J. Walker’s birth name before she adopted her professional moniker?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was Madam C.J. Walker’s birth name before she adopted her professional moniker?",
-=======
-      "prompt": "What was Madam C.J. Walker\u2019s birth name before she adopted her professional moniker?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Mary McLeod Bethune",
         "Maggie Lena Walker",
@@ -8258,27 +7718,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 4: Frederick McKinley Jones",
-<<<<<<< HEAD
       "prompt": "Jones’s portable cooling units were vital during World War II for transporting what life-saving resource?",
-=======
-<<<<<<< HEAD
-      "prompt": "Jones’s portable cooling units were vital during World War II for transporting what life-saving resource?",
-=======
-<<<<<<< HEAD
-      "prompt": "Jones’s portable cooling units were vital during World War II for transporting what life-saving resource?",
-=======
-<<<<<<< HEAD
-      "prompt": "Jones’s portable cooling units were vital during World War II for transporting what life-saving resource?",
-=======
-<<<<<<< HEAD
-      "prompt": "Jones’s portable cooling units were vital during World War II for transporting what life-saving resource?",
-=======
-      "prompt": "Jones\u2019s portable cooling units were vital during World War II for transporting what life-saving resource?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Penicillin",
         "Blood plasma",
@@ -8342,27 +7782,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 5: Granville T. Woods",
-<<<<<<< HEAD
       "prompt": "Woods’s most famous invention, the \"Induction Telegraph,\" allowed for communication between what?",
-=======
-<<<<<<< HEAD
-      "prompt": "Woods’s most famous invention, the \"Induction Telegraph,\" allowed for communication between what?",
-=======
-<<<<<<< HEAD
-      "prompt": "Woods’s most famous invention, the \"Induction Telegraph,\" allowed for communication between what?",
-=======
-<<<<<<< HEAD
-      "prompt": "Woods’s most famous invention, the \"Induction Telegraph,\" allowed for communication between what?",
-=======
-<<<<<<< HEAD
-      "prompt": "Woods’s most famous invention, the \"Induction Telegraph,\" allowed for communication between what?",
-=======
-      "prompt": "Woods\u2019s most famous invention, the \"Induction Telegraph,\" allowed for communication between what?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Ships at sea",
         "Moving trains and stations",
@@ -8378,27 +7798,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 5: Granville T. Woods",
-<<<<<<< HEAD
       "prompt": "Which famous inventor twice sued Granville T. Woods, claiming he had invented Woods’s devices first, only to lose both times?",
-=======
-<<<<<<< HEAD
-      "prompt": "Which famous inventor twice sued Granville T. Woods, claiming he had invented Woods’s devices first, only to lose both times?",
-=======
-<<<<<<< HEAD
-      "prompt": "Which famous inventor twice sued Granville T. Woods, claiming he had invented Woods’s devices first, only to lose both times?",
-=======
-<<<<<<< HEAD
-      "prompt": "Which famous inventor twice sued Granville T. Woods, claiming he had invented Woods’s devices first, only to lose both times?",
-=======
-<<<<<<< HEAD
-      "prompt": "Which famous inventor twice sued Granville T. Woods, claiming he had invented Woods’s devices first, only to lose both times?",
-=======
-      "prompt": "Which famous inventor twice sued Granville T. Woods, claiming he had invented Woods\u2019s devices first, only to lose both times?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Alexander Graham Bell",
         "Thomas Edison",
@@ -8462,27 +7862,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 6: Garrett Morgan",
-<<<<<<< HEAD
       "prompt": "Morgan’s 1923 patent for a traffic signal was unique because it added which critical feature?",
-=======
-<<<<<<< HEAD
-      "prompt": "Morgan’s 1923 patent for a traffic signal was unique because it added which critical feature?",
-=======
-<<<<<<< HEAD
-      "prompt": "Morgan’s 1923 patent for a traffic signal was unique because it added which critical feature?",
-=======
-<<<<<<< HEAD
-      "prompt": "Morgan’s 1923 patent for a traffic signal was unique because it added which critical feature?",
-=======
-<<<<<<< HEAD
-      "prompt": "Morgan’s 1923 patent for a traffic signal was unique because it added which critical feature?",
-=======
-      "prompt": "Morgan\u2019s 1923 patent for a traffic signal was unique because it added which critical feature?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Red light",
         "The Green light",
@@ -8674,27 +8054,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 8: Lisa Gelobter",
-<<<<<<< HEAD
       "prompt": "Lisa Gelobter is the founder and CEO of tEQuitable, a platform that uses technology to address what in the workplace?",
-=======
-<<<<<<< HEAD
-      "prompt": "Lisa Gelobter is the founder and CEO of tEQuitable, a platform that uses technology to address what in the workplace?",
-=======
-<<<<<<< HEAD
-      "prompt": "Lisa Gelobter is the founder and CEO of tEQuitable, a platform that uses technology to address what in the workplace?",
-=======
-<<<<<<< HEAD
-      "prompt": "Lisa Gelobter is the founder and CEO of tEQuitable, a platform that uses technology to address what in the workplace?",
-=======
-<<<<<<< HEAD
-      "prompt": "Lisa Gelobter is the founder and CEO of tEQuitable, a platform that uses technology to address what in the workplace?",
-=======
-      "prompt": "She is the founder and CEO of tEQuitable, a platform that uses technology to address what in the workplace?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Payroll errors",
         "Bias, discrimination, and harassment",
@@ -8710,27 +8070,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 8: Lisa Gelobter",
-<<<<<<< HEAD
       "prompt": "Gelobter’s work in the 1990s was critical to the development of what multimedia software?",
-=======
-<<<<<<< HEAD
-      "prompt": "Gelobter’s work in the 1990s was critical to the development of what multimedia software?",
-=======
-<<<<<<< HEAD
-      "prompt": "Gelobter’s work in the 1990s was critical to the development of what multimedia software?",
-=======
-<<<<<<< HEAD
-      "prompt": "Gelobter’s work in the 1990s was critical to the development of what multimedia software?",
-=======
-<<<<<<< HEAD
-      "prompt": "Gelobter’s work in the 1990s was critical to the development of what multimedia software?",
-=======
-      "prompt": "Gelobter\u2019s work in the 1990s was critical to the development of what multimedia software?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Photoshop",
         "Shockwave",
@@ -8794,27 +8134,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 9: Patricia Bath",
-<<<<<<< HEAD
       "prompt": "Patricia Bath was the first woman to lead a post-graduate training program in ophthalmology at which institution?",
-=======
-<<<<<<< HEAD
-      "prompt": "Patricia Bath was the first woman to lead a post-graduate training program in ophthalmology at which institution?",
-=======
-<<<<<<< HEAD
-      "prompt": "Patricia Bath was the first woman to lead a post-graduate training program in ophthalmology at which institution?",
-=======
-<<<<<<< HEAD
-      "prompt": "Patricia Bath was the first woman to lead a post-graduate training program in ophthalmology at which institution?",
-=======
-<<<<<<< HEAD
-      "prompt": "Patricia Bath was the first woman to lead a post-graduate training program in ophthalmology at which institution?",
-=======
-      "prompt": "She was the first woman to lead a post-graduate training program in ophthalmology at which institution?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Harvard",
         "UCLA/Drew University",
@@ -8862,27 +8182,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 10: Lyda D. Newman",
-<<<<<<< HEAD
       "prompt": "Newman’s hairbrush design was revolutionary because it used what instead of animal hair?",
-=======
-<<<<<<< HEAD
-      "prompt": "Newman’s hairbrush design was revolutionary because it used what instead of animal hair?",
-=======
-<<<<<<< HEAD
-      "prompt": "Newman’s hairbrush design was revolutionary because it used what instead of animal hair?",
-=======
-<<<<<<< HEAD
-      "prompt": "Newman’s hairbrush design was revolutionary because it used what instead of animal hair?",
-=======
-<<<<<<< HEAD
-      "prompt": "Newman’s hairbrush design was revolutionary because it used what instead of animal hair?",
-=======
-      "prompt": "Newman\u2019s hairbrush design was revolutionary because it used what instead of animal hair?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Silk threads",
         "Synthetic bristles",
@@ -8898,27 +8198,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 10: Lyda D. Newman",
-<<<<<<< HEAD
       "prompt": "A key feature of Newman’s brush was a \"recessed compartment\" designed to do what?",
-=======
-<<<<<<< HEAD
-      "prompt": "A key feature of Newman’s brush was a \"recessed compartment\" designed to do what?",
-=======
-<<<<<<< HEAD
-      "prompt": "A key feature of Newman’s brush was a \"recessed compartment\" designed to do what?",
-=======
-<<<<<<< HEAD
-      "prompt": "A key feature of Newman’s brush was a \"recessed compartment\" designed to do what?",
-=======
-<<<<<<< HEAD
-      "prompt": "A key feature of Newman’s brush was a \"recessed compartment\" designed to do what?",
-=======
-      "prompt": "A key feature of Newman\u2019s brush was a \"recessed compartment\" designed to do what?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Hold hair gel",
         "Collect debris and hair for easy cleaning",
@@ -8937,27 +8217,7 @@
       "prompt": "Lyda Newman was also a prominent activist in which social movement?",
       "answers": [
         "The Abolitionist movement",
-<<<<<<< HEAD
         "The Women’s Suffrage movement",
-=======
-<<<<<<< HEAD
-        "The Women’s Suffrage movement",
-=======
-<<<<<<< HEAD
-        "The Women’s Suffrage movement",
-=======
-<<<<<<< HEAD
-        "The Women’s Suffrage movement",
-=======
-<<<<<<< HEAD
-        "The Women’s Suffrage movement",
-=======
-        "The Women\u2019s Suffrage movement",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "The Temperance movement",
         "The Labor Union movement"
       ],
@@ -8970,27 +8230,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 10: Lyda D. Newman",
-<<<<<<< HEAD
       "prompt": "Newman’s brush design included \"ventilation holes\" to allow for what during use?",
-=======
-<<<<<<< HEAD
-      "prompt": "Newman’s brush design included \"ventilation holes\" to allow for what during use?",
-=======
-<<<<<<< HEAD
-      "prompt": "Newman’s brush design included \"ventilation holes\" to allow for what during use?",
-=======
-<<<<<<< HEAD
-      "prompt": "Newman’s brush design included \"ventilation holes\" to allow for what during use?",
-=======
-<<<<<<< HEAD
-      "prompt": "Newman’s brush design included \"ventilation holes\" to allow for what during use?",
-=======
-      "prompt": "Newman\u2019s brush design included \"ventilation holes\" to allow for what during use?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Water drainage",
         "Air circulation and faster drying",
@@ -9006,27 +8246,7 @@
       "category": "inventors",
       "categoryLabel": "Inventors",
       "section": "Part 11: Mark Dean",
-<<<<<<< HEAD
       "prompt": "Mark Dean holds three of the original nine patents for which company’s first personal computer?",
-=======
-<<<<<<< HEAD
-      "prompt": "Mark Dean holds three of the original nine patents for which company’s first personal computer?",
-=======
-<<<<<<< HEAD
-      "prompt": "Mark Dean holds three of the original nine patents for which company’s first personal computer?",
-=======
-<<<<<<< HEAD
-      "prompt": "Mark Dean holds three of the original nine patents for which company’s first personal computer?",
-=======
-<<<<<<< HEAD
-      "prompt": "Mark Dean holds three of the original nine patents for which company’s first personal computer?",
-=======
-      "prompt": "Mark Dean holds three of the original nine patents for which company\u2019s first personal computer?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Apple",
         "IBM",
@@ -9301,27 +8521,7 @@
       "prompt": "In 2021, Josephine Baker was the first Black woman inducted into which French monument?",
       "answers": [
         "The Eiffel Tower",
-<<<<<<< HEAD
         "The Panthéon",
-=======
-<<<<<<< HEAD
-        "The Panthéon",
-=======
-<<<<<<< HEAD
-        "The Panthéon",
-=======
-<<<<<<< HEAD
-        "The Panthéon",
-=======
-<<<<<<< HEAD
-        "The Panthéon",
-=======
-        "The Panth\u00e9on",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "Notre-Dame Cathedral",
         "The Louvre"
       ],
@@ -10214,27 +9414,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 3: Pearl Bailey",
-<<<<<<< HEAD
       "prompt": "Pearl Bailey made her film debut in 1954 in:",
-=======
-<<<<<<< HEAD
-      "prompt": "Pearl Bailey made her film debut in 1954 in:",
-=======
-<<<<<<< HEAD
-      "prompt": "Pearl Bailey made her film debut in 1954 in:",
-=======
-<<<<<<< HEAD
-      "prompt": "Pearl Bailey made her film debut in 1954 in:",
-=======
-<<<<<<< HEAD
-      "prompt": "Pearl Bailey made her film debut in 1954 in:",
-=======
-      "prompt": "She made her film debut in 1954 in:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Carmen Jones",
         "Island in the Sun",
@@ -10282,27 +9462,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 4: Ice Cube",
-<<<<<<< HEAD
       "prompt": "Ice Cube made his acting debut in which 1991 film?",
-=======
-<<<<<<< HEAD
-      "prompt": "Ice Cube made his acting debut in which 1991 film?",
-=======
-<<<<<<< HEAD
-      "prompt": "Ice Cube made his acting debut in which 1991 film?",
-=======
-<<<<<<< HEAD
-      "prompt": "Ice Cube made his acting debut in which 1991 film?",
-=======
-<<<<<<< HEAD
-      "prompt": "Ice Cube made his acting debut in which 1991 film?",
-=======
-      "prompt": "He made his acting debut in which 1991 film?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Boyz n the Hood",
         "Friday",
@@ -10318,27 +9478,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 4: Ice Cube",
-<<<<<<< HEAD
       "prompt": "Ice Cube co-wrote and starred in which 1995 cult classic?",
-=======
-<<<<<<< HEAD
-      "prompt": "Ice Cube co-wrote and starred in which 1995 cult classic?",
-=======
-<<<<<<< HEAD
-      "prompt": "Ice Cube co-wrote and starred in which 1995 cult classic?",
-=======
-<<<<<<< HEAD
-      "prompt": "Ice Cube co-wrote and starred in which 1995 cult classic?",
-=======
-<<<<<<< HEAD
-      "prompt": "Ice Cube co-wrote and starred in which 1995 cult classic?",
-=======
-      "prompt": "He co-wrote and starred in which 1995 cult classic?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Friday",
         "Barbershop",
@@ -10434,27 +9574,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 5: NAS",
-<<<<<<< HEAD
       "prompt": "NAS won his first Grammy in 2021 for:",
-=======
-<<<<<<< HEAD
-      "prompt": "NAS won his first Grammy in 2021 for:",
-=======
-<<<<<<< HEAD
-      "prompt": "NAS won his first Grammy in 2021 for:",
-=======
-<<<<<<< HEAD
-      "prompt": "NAS won his first Grammy in 2021 for:",
-=======
-<<<<<<< HEAD
-      "prompt": "NAS won his first Grammy in 2021 for:",
-=======
-      "prompt": "He won his first Grammy in 2021 for:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "King's Disease",
         "Life is Good",
@@ -10470,27 +9590,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 5: NAS",
-<<<<<<< HEAD
       "prompt": "NAS's father, Olu Dara, played what instrument on his debut?",
-=======
-<<<<<<< HEAD
-      "prompt": "NAS's father, Olu Dara, played what instrument on his debut?",
-=======
-<<<<<<< HEAD
-      "prompt": "NAS's father, Olu Dara, played what instrument on his debut?",
-=======
-<<<<<<< HEAD
-      "prompt": "NAS's father, Olu Dara, played what instrument on his debut?",
-=======
-<<<<<<< HEAD
-      "prompt": "NAS's father, Olu Dara, played what instrument on his debut?",
-=======
-      "prompt": "His father, Olu Dara, played what instrument on his debut?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Trumpet/Cornet",
         "Saxophone",
@@ -10538,27 +9638,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 6: Aretha Franklin",
-<<<<<<< HEAD
       "prompt": "Aretha Franklin's 1967 anthem was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Aretha Franklin's 1967 anthem was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Aretha Franklin's 1967 anthem was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Aretha Franklin's 1967 anthem was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Aretha Franklin's 1967 anthem was:",
-=======
-      "prompt": "Her 1967 anthem was:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Respect",
         "Chain of Fools",
@@ -10574,27 +9654,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 6: Aretha Franklin",
-<<<<<<< HEAD
       "prompt": "Aretha Franklin started singing in:",
-=======
-<<<<<<< HEAD
-      "prompt": "Aretha Franklin started singing in:",
-=======
-<<<<<<< HEAD
-      "prompt": "Aretha Franklin started singing in:",
-=======
-<<<<<<< HEAD
-      "prompt": "Aretha Franklin started singing in:",
-=======
-<<<<<<< HEAD
-      "prompt": "Aretha Franklin started singing in:",
-=======
-      "prompt": "She started singing in:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Her father's church",
         "Broadway",
@@ -10610,27 +9670,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 6: Aretha Franklin",
-<<<<<<< HEAD
       "prompt": "Aretha Franklin sang at the inaugurations of:",
-=======
-<<<<<<< HEAD
-      "prompt": "Aretha Franklin sang at the inaugurations of:",
-=======
-<<<<<<< HEAD
-      "prompt": "Aretha Franklin sang at the inaugurations of:",
-=======
-<<<<<<< HEAD
-      "prompt": "Aretha Franklin sang at the inaugurations of:",
-=======
-<<<<<<< HEAD
-      "prompt": "Aretha Franklin sang at the inaugurations of:",
-=======
-      "prompt": "She sang at the inaugurations of:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Carter, Clinton, and Obama",
         "JFK, LBJ, and Nixon",
@@ -10645,33 +9685,8 @@
       "id": "music_entertainment_031",
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
-<<<<<<< HEAD
       "section": "Part 7: Beyoncé",
       "prompt": "Beyoncé rose to fame in which group?",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé rose to fame in which group?",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé rose to fame in which group?",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé rose to fame in which group?",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé rose to fame in which group?",
-=======
-      "section": "Part 7: Beyonc\u00e9",
-      "prompt": "She rose to fame in which group?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Destiny's Child",
         "TLC",
@@ -10686,33 +9701,8 @@
       "id": "music_entertainment_032",
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
-<<<<<<< HEAD
       "section": "Part 7: Beyoncé",
       "prompt": "Beyoncé holds the record for most wins in the history of:",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé holds the record for most wins in the history of:",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé holds the record for most wins in the history of:",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé holds the record for most wins in the history of:",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé holds the record for most wins in the history of:",
-=======
-      "section": "Part 7: Beyonc\u00e9",
-      "prompt": "She holds the record for most wins in the history of:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Grammys",
         "The Oscars",
@@ -10727,43 +9717,11 @@
       "id": "music_entertainment_033",
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "section": "Part 7: Beyoncé",
       "prompt": "Beyoncé's 2016 'visual album' was:",
       "answers": [
         "Lemonade",
         "Beyoncé",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-      "section": "Part 7: Beyonc\u00e9",
-      "prompt": "Her 2016 'visual album' was:",
-      "answers": [
-        "Lemonade",
-        "Beyonc\u00e9",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "Renaissance",
         "Dangerously in Love"
       ],
@@ -10775,33 +9733,8 @@
       "id": "music_entertainment_034",
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
-<<<<<<< HEAD
       "section": "Part 7: Beyoncé",
       "prompt": "Beyoncé's historic 2018 festival set was at:",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé's historic 2018 festival set was at:",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé's historic 2018 festival set was at:",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé's historic 2018 festival set was at:",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé's historic 2018 festival set was at:",
-=======
-      "section": "Part 7: Beyonc\u00e9",
-      "prompt": "Her historic 2018 festival set was at:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Coachella",
         "Glastonbury",
@@ -10816,33 +9749,8 @@
       "id": "music_entertainment_035",
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
-<<<<<<< HEAD
       "section": "Part 7: Beyoncé",
       "prompt": "Beyoncé voiced Nala in which film?",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé voiced Nala in which film?",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé voiced Nala in which film?",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé voiced Nala in which film?",
-=======
-<<<<<<< HEAD
-      "section": "Part 7: Beyoncé",
-      "prompt": "Beyoncé voiced Nala in which film?",
-=======
-      "section": "Part 7: Beyonc\u00e9",
-      "prompt": "She voiced Nala in which film?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Lion King",
         "Aladdin",
@@ -10858,27 +9766,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 8: Nina Simone",
-<<<<<<< HEAD
       "prompt": "Nina Simone was originally trained to be a:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone was originally trained to be a:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone was originally trained to be a:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone was originally trained to be a:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone was originally trained to be a:",
-=======
-      "prompt": "She was originally trained to be a:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Classical concert pianist",
         "Opera singer",
@@ -10894,27 +9782,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 8: Nina Simone",
-<<<<<<< HEAD
       "prompt": "Nina Simone changed her name to hide from:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone changed her name to hide from:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone changed her name to hide from:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone changed her name to hide from:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone changed her name to hide from:",
-=======
-      "prompt": "She changed her name to hide from:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Her religious parents",
         "Her teachers",
@@ -10930,27 +9798,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 8: Nina Simone",
-<<<<<<< HEAD
       "prompt": "Nina Simone's 1964 protest song was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone's 1964 protest song was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone's 1964 protest song was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone's 1964 protest song was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone's 1964 protest song was:",
-=======
-      "prompt": "Her 1964 protest song was:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Mississippi Goddam",
         "Four Women",
@@ -10966,27 +9814,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 8: Nina Simone",
-<<<<<<< HEAD
       "prompt": "Nina Simone's honorary title is:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone's honorary title is:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone's honorary title is:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone's honorary title is:",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone's honorary title is:",
-=======
-      "prompt": "Her honorary title is:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "High Priestess of Soul",
         "Lady Day",
@@ -11002,27 +9830,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 8: Nina Simone",
-<<<<<<< HEAD
       "prompt": "Nina Simone lived for years in which African country?",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone lived for years in which African country?",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone lived for years in which African country?",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone lived for years in which African country?",
-=======
-<<<<<<< HEAD
-      "prompt": "Nina Simone lived for years in which African country?",
-=======
-      "prompt": "She lived for years in which African country?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Liberia",
         "Ghana",
@@ -11038,27 +9846,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 9: Michael Jackson",
-<<<<<<< HEAD
       "prompt": "Michael Jackson is known as:",
-=======
-<<<<<<< HEAD
-      "prompt": "Michael Jackson is known as:",
-=======
-<<<<<<< HEAD
-      "prompt": "Michael Jackson is known as:",
-=======
-<<<<<<< HEAD
-      "prompt": "Michael Jackson is known as:",
-=======
-<<<<<<< HEAD
-      "prompt": "Michael Jackson is known as:",
-=======
-      "prompt": "He is known as:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The King of Pop",
         "Godfather of Soul",
@@ -11090,27 +9878,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 9: Michael Jackson",
-<<<<<<< HEAD
       "prompt": "Michael Jackson debuted the moonwalk on:",
-=======
-<<<<<<< HEAD
-      "prompt": "Michael Jackson debuted the moonwalk on:",
-=======
-<<<<<<< HEAD
-      "prompt": "Michael Jackson debuted the moonwalk on:",
-=======
-<<<<<<< HEAD
-      "prompt": "Michael Jackson debuted the moonwalk on:",
-=======
-<<<<<<< HEAD
-      "prompt": "Michael Jackson debuted the moonwalk on:",
-=======
-      "prompt": "He debuted the moonwalk on:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Motown 25",
         "Ed Sullivan",
@@ -11126,27 +9894,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 9: Michael Jackson",
-<<<<<<< HEAD
       "prompt": "Michael Jackson's family group was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Michael Jackson's family group was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Michael Jackson's family group was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Michael Jackson's family group was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Michael Jackson's family group was:",
-=======
-      "prompt": "His family group was:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Jackson 5",
         "Isley Brothers",
@@ -11178,27 +9926,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 10: Miles Davis",
-<<<<<<< HEAD
       "prompt": "Miles Davis pioneered which genre on 'Kind of Blue'?",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis pioneered which genre on 'Kind of Blue'?",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis pioneered which genre on 'Kind of Blue'?",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis pioneered which genre on 'Kind of Blue'?",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis pioneered which genre on 'Kind of Blue'?",
-=======
-      "prompt": "He pioneered which genre on 'Kind of Blue'?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Modal Jazz",
         "Bebop",
@@ -11214,27 +9942,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 10: Miles Davis",
-<<<<<<< HEAD
       "prompt": "Miles Davis played what instrument?",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis played what instrument?",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis played what instrument?",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis played what instrument?",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis played what instrument?",
-=======
-      "prompt": "He played what instrument?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Trumpet",
         "Saxophone",
@@ -11266,27 +9974,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 10: Miles Davis",
-<<<<<<< HEAD
       "prompt": "Miles Davis famously said:",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis famously said:",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis famously said:",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis famously said:",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis famously said:",
-=======
-      "prompt": "He famously said:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "I have to change.",
         "I'll play it and say it later.",
@@ -11302,27 +9990,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 10: Miles Davis",
-<<<<<<< HEAD
       "prompt": "Miles Davis attended which school in NYC?",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis attended which school in NYC?",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis attended which school in NYC?",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis attended which school in NYC?",
-=======
-<<<<<<< HEAD
-      "prompt": "Miles Davis attended which school in NYC?",
-=======
-      "prompt": "He attended which school in NYC?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Juilliard",
         "Manhattan School of Music",
@@ -11338,27 +10006,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 11: Whitney Houston",
-<<<<<<< HEAD
       "prompt": "Whitney Houston's nickname is:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's nickname is:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's nickname is:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's nickname is:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's nickname is:",
-=======
-      "prompt": "Her nickname is:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Voice",
         "The Songbird",
@@ -11390,27 +10038,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 11: Whitney Houston",
-<<<<<<< HEAD
       "prompt": "Whitney Houston's film debut was in:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's film debut was in:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's film debut was in:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's film debut was in:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's film debut was in:",
-=======
-      "prompt": "Her film debut was in:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Bodyguard",
         "Waiting to Exhale",
@@ -11426,27 +10054,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 11: Whitney Houston",
-<<<<<<< HEAD
       "prompt": "Whitney Houston's 1991 chart-topping anthem was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's 1991 chart-topping anthem was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's 1991 chart-topping anthem was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's 1991 chart-topping anthem was:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's 1991 chart-topping anthem was:",
-=======
-      "prompt": "Her 1991 chart-topping anthem was:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Star-Spangled Banner",
         "America the Beautiful",
@@ -11462,27 +10070,7 @@
       "category": "music_entertainment",
       "categoryLabel": "Music & Entertainment",
       "section": "Part 11: Whitney Houston",
-<<<<<<< HEAD
       "prompt": "Whitney Houston's mother was gospel singer:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's mother was gospel singer:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's mother was gospel singer:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's mother was gospel singer:",
-=======
-<<<<<<< HEAD
-      "prompt": "Whitney Houston's mother was gospel singer:",
-=======
-      "prompt": "Her mother was gospel singer:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Cissy Houston",
         "Dionne Warwick",
@@ -12122,27 +10710,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 8: Mae Carol Jemison",
-<<<<<<< HEAD
       "prompt": "Mae Carol Jemison leads a project called '100 Year Starship' aimed at:",
-=======
-<<<<<<< HEAD
-      "prompt": "Mae Carol Jemison leads a project called '100 Year Starship' aimed at:",
-=======
-<<<<<<< HEAD
-      "prompt": "Mae Carol Jemison leads a project called '100 Year Starship' aimed at:",
-=======
-<<<<<<< HEAD
-      "prompt": "Mae Carol Jemison leads a project called '100 Year Starship' aimed at:",
-=======
-<<<<<<< HEAD
-      "prompt": "Mae Carol Jemison leads a project called '100 Year Starship' aimed at:",
-=======
-      "prompt": "She leads a project called '100 Year Starship' aimed at:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Time travel",
         "Interstellar travel",
@@ -12350,27 +10918,7 @@
       "category": "trailblazers_professions",
       "categoryLabel": "Trailblazers of History",
       "section": "Part 11: Ketanji Brown Jackson",
-<<<<<<< HEAD
       "prompt": "Ketanji Brown Jackson clerked for which Justice whom she eventually replaced?",
-=======
-<<<<<<< HEAD
-      "prompt": "Ketanji Brown Jackson clerked for which Justice whom she eventually replaced?",
-=======
-<<<<<<< HEAD
-      "prompt": "Ketanji Brown Jackson clerked for which Justice whom she eventually replaced?",
-=======
-<<<<<<< HEAD
-      "prompt": "Ketanji Brown Jackson clerked for which Justice whom she eventually replaced?",
-=======
-<<<<<<< HEAD
-      "prompt": "Ketanji Brown Jackson clerked for which Justice whom she eventually replaced?",
-=======
-      "prompt": "She clerked for which Justice whom she eventually replaced?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Ruth Bader Ginsburg",
         "Stephen Breyer",
@@ -12661,27 +11209,7 @@
       "prompt": "LeBron James was drafted #1 overall in 2003 directly out of high school. Which high school did he attend?",
       "answers": [
         "Oak Hill Academy",
-<<<<<<< HEAD
         "St. Vincent–St. Mary High School",
-=======
-<<<<<<< HEAD
-        "St. Vincent–St. Mary High School",
-=======
-<<<<<<< HEAD
-        "St. Vincent–St. Mary High School",
-=======
-<<<<<<< HEAD
-        "St. Vincent–St. Mary High School",
-=======
-<<<<<<< HEAD
-        "St. Vincent–St. Mary High School",
-=======
-        "St. Vincent\u2013St. Mary High School",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "Sierra Canyon School",
         "Lower Merion High School"
       ],
@@ -13339,27 +11867,7 @@
         "LexCorp",
         "A Mother Box from Apokolips",
         "S.T.A.R. Labs experimental nanites",
-<<<<<<< HEAD
         "Brainiac’s ship"
-=======
-<<<<<<< HEAD
-        "Brainiac’s ship"
-=======
-<<<<<<< HEAD
-        "Brainiac’s ship"
-=======
-<<<<<<< HEAD
-        "Brainiac’s ship"
-=======
-<<<<<<< HEAD
-        "Brainiac’s ship"
-=======
-        "Brainiac\u2019s ship"
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       ],
       "correctIndex": 1,
       "noRepeat": true,
@@ -13402,27 +11910,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 2: Cyborg (Victor Stone)",
-<<<<<<< HEAD
       "prompt": "What is Cyborg’s primary sonic weapon often called?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is Cyborg’s primary sonic weapon often called?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is Cyborg’s primary sonic weapon often called?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is Cyborg’s primary sonic weapon often called?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is Cyborg’s primary sonic weapon often called?",
-=======
-      "prompt": "What is Cyborg\u2019s primary sonic weapon often called?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Sonic Boom",
         "The White Noise Cannon",
@@ -13486,27 +11974,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 3: Mr. Terrific (Michael Holt)",
-<<<<<<< HEAD
       "prompt": "What is the phrase written on the sleeves of Mr. Terrific’s jacket?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the phrase written on the sleeves of Mr. Terrific’s jacket?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the phrase written on the sleeves of Mr. Terrific’s jacket?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the phrase written on the sleeves of Mr. Terrific’s jacket?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the phrase written on the sleeves of Mr. Terrific’s jacket?",
-=======
-      "prompt": "What is the phrase written on the sleeves of Mr. Terrific\u2019s jacket?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Smartest Man Alive",
         "Fair Play",
@@ -13682,27 +12150,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 5: Firestorm (Jason Rusch)",
-<<<<<<< HEAD
       "prompt": "In the 'Blackest Night' event, Jason’s partner Gehenna was killed by a Black Lantern version of which former Firestorm?",
-=======
-<<<<<<< HEAD
-      "prompt": "In the 'Blackest Night' event, Jason’s partner Gehenna was killed by a Black Lantern version of which former Firestorm?",
-=======
-<<<<<<< HEAD
-      "prompt": "In the 'Blackest Night' event, Jason’s partner Gehenna was killed by a Black Lantern version of which former Firestorm?",
-=======
-<<<<<<< HEAD
-      "prompt": "In the 'Blackest Night' event, Jason’s partner Gehenna was killed by a Black Lantern version of which former Firestorm?",
-=======
-<<<<<<< HEAD
-      "prompt": "In the 'Blackest Night' event, Jason’s partner Gehenna was killed by a Black Lantern version of which former Firestorm?",
-=======
-      "prompt": "In the 'Blackest Night' event, Jason\u2019s partner Gehenna was killed by a Black Lantern version of which former Firestorm?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Martin Stein",
         "Ronnie Raymond",
@@ -13814,27 +12262,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 7: Storm (Ororo Munroe)",
-<<<<<<< HEAD
       "prompt": "What is Storm’s severe phobia, resulting from being trapped under rubble as a child?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is Storm’s severe phobia, resulting from being trapped under rubble as a child?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is Storm’s severe phobia, resulting from being trapped under rubble as a child?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is Storm’s severe phobia, resulting from being trapped under rubble as a child?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is Storm’s severe phobia, resulting from being trapped under rubble as a child?",
-=======
-      "prompt": "What is Storm\u2019s severe phobia, resulting from being trapped under rubble as a child?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Heights",
         "Claustrophobia (Enclosed spaces)",
@@ -14074,27 +12502,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 10: Rocket (Raquel Ervin)",
-<<<<<<< HEAD
       "prompt": "What is the source of Rocket’s powers?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the source of Rocket’s powers?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the source of Rocket’s powers?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the source of Rocket’s powers?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the source of Rocket’s powers?",
-=======
-      "prompt": "What is the source of Rocket\u2019s powers?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Natural mutation",
         "An Inertia Winder belt that manipulates kinetic energy",
@@ -14206,27 +12614,7 @@
       "category": "superheroes",
       "categoryLabel": "Superheroes",
       "section": "Part 11: Miles Morales (Spider-Man)",
-<<<<<<< HEAD
       "prompt": "What is the name of Miles’ best friend, who knows his secret identity and provides tech/emotional support?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the name of Miles’ best friend, who knows his secret identity and provides tech/emotional support?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the name of Miles’ best friend, who knows his secret identity and provides tech/emotional support?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the name of Miles’ best friend, who knows his secret identity and provides tech/emotional support?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the name of Miles’ best friend, who knows his secret identity and provides tech/emotional support?",
-=======
-      "prompt": "What is the name of Miles\u2019 best friend, who knows his secret identity and provides tech/emotional support?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Ned Leeds",
         "Ganke Lee",
@@ -14994,27 +13382,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 1: Toussaint Louverture",
-<<<<<<< HEAD
       "prompt": "What was Toussaint Louverture’s nickname, referring to his ability to find openings in enemy lines?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was Toussaint Louverture’s nickname, referring to his ability to find openings in enemy lines?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was Toussaint Louverture’s nickname, referring to his ability to find openings in enemy lines?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was Toussaint Louverture’s nickname, referring to his ability to find openings in enemy lines?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was Toussaint Louverture’s nickname, referring to his ability to find openings in enemy lines?",
-=======
-      "prompt": "What was Toussaint Louverture\u2019s nickname, referring to his ability to find openings in enemy lines?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Liberator",
         "L'Ouverture (The Opening)",
@@ -15113,27 +13481,7 @@
       "prompt": "Which decisive 1803 battle, led by Dessalines, forced the final French surrender in Haiti?",
       "answers": [
         "Battle of Waterloo",
-<<<<<<< HEAD
         "Battle of Vertières",
-=======
-<<<<<<< HEAD
-        "Battle of Vertières",
-=======
-<<<<<<< HEAD
-        "Battle of Vertières",
-=======
-<<<<<<< HEAD
-        "Battle of Vertières",
-=======
-<<<<<<< HEAD
-        "Battle of Vertières",
-=======
-        "Battle of Verti\u00e8res",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "Battle of Bunker Hill",
         "Battle of Hastings"
       ],
@@ -15146,27 +13494,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 2: Jean-Jacques Dessalines",
-<<<<<<< HEAD
       "prompt": "What is the national motto of Haiti, often attributed to the spirit of Dessalines’ leadership?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the national motto of Haiti, often attributed to the spirit of Dessalines’ leadership?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the national motto of Haiti, often attributed to the spirit of Dessalines’ leadership?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the national motto of Haiti, often attributed to the spirit of Dessalines’ leadership?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the national motto of Haiti, often attributed to the spirit of Dessalines’ leadership?",
-=======
-      "prompt": "What is the national motto of Haiti, often attributed to the spirit of Dessalines\u2019 leadership?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Liberty, Equality, Fraternity",
         "L'Union fait la force (Unity makes strength)",
@@ -15185,27 +13513,7 @@
       "prompt": "In Haiti today, Dessalines is honored as the:",
       "answers": [
         "Great Teacher",
-<<<<<<< HEAD
         "Father of the Nation (Père de la Patrie)",
-=======
-<<<<<<< HEAD
-        "Father of the Nation (Père de la Patrie)",
-=======
-<<<<<<< HEAD
-        "Father of the Nation (Père de la Patrie)",
-=======
-<<<<<<< HEAD
-        "Father of the Nation (Père de la Patrie)",
-=======
-<<<<<<< HEAD
-        "Father of the Nation (Père de la Patrie)",
-=======
-        "Father of the Nation (P\u00e8re de la Patrie)",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "Prince of Peace",
         "Protector of the Seas"
       ],
@@ -15237,27 +13545,7 @@
       "prompt": "Christophe famously built which massive fortress, now a UNESCO World Heritage site, to defend against the French?",
       "answers": [
         "The Bastille",
-<<<<<<< HEAD
         "The Citadelle Laferrière",
-=======
-<<<<<<< HEAD
-        "The Citadelle Laferrière",
-=======
-<<<<<<< HEAD
-        "The Citadelle Laferrière",
-=======
-<<<<<<< HEAD
-        "The Citadelle Laferrière",
-=======
-<<<<<<< HEAD
-        "The Citadelle Laferrière",
-=======
-        "The Citadelle Laferri\u00e8re",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "Elmina Castle",
         "Fort Sumter"
       ],
@@ -15286,27 +13574,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 3: King Henri Christophe",
-<<<<<<< HEAD
       "prompt": "Henri Christophe was known for his efforts to improve Haiti’s economy by promoting:",
-=======
-<<<<<<< HEAD
-      "prompt": "Henri Christophe was known for his efforts to improve Haiti’s economy by promoting:",
-=======
-<<<<<<< HEAD
-      "prompt": "Henri Christophe was known for his efforts to improve Haiti’s economy by promoting:",
-=======
-<<<<<<< HEAD
-      "prompt": "Henri Christophe was known for his efforts to improve Haiti’s economy by promoting:",
-=======
-<<<<<<< HEAD
-      "prompt": "Henri Christophe was known for his efforts to improve Haiti’s economy by promoting:",
-=======
-      "prompt": "Henri Christophe was known for his efforts to improve Haiti\u2019s economy by promoting:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Gold mining",
         "Education and agriculture",
@@ -15358,27 +13626,7 @@
       "answers": [
         "Methodism",
         "Rastafarianism",
-<<<<<<< HEAD
         "Santería",
-=======
-<<<<<<< HEAD
-        "Santería",
-=======
-<<<<<<< HEAD
-        "Santería",
-=======
-<<<<<<< HEAD
-        "Santería",
-=======
-<<<<<<< HEAD
-        "Santería",
-=======
-        "Santer\u00eda",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
         "Islam"
       ],
       "correctIndex": 1,
@@ -15390,27 +13638,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 4: Bob Marley",
-<<<<<<< HEAD
       "prompt": "Marley’s band, formed with Peter Tosh and Bunny Wailer, was known as:",
-=======
-<<<<<<< HEAD
-      "prompt": "Marley’s band, formed with Peter Tosh and Bunny Wailer, was known as:",
-=======
-<<<<<<< HEAD
-      "prompt": "Marley’s band, formed with Peter Tosh and Bunny Wailer, was known as:",
-=======
-<<<<<<< HEAD
-      "prompt": "Marley’s band, formed with Peter Tosh and Bunny Wailer, was known as:",
-=======
-<<<<<<< HEAD
-      "prompt": "Marley’s band, formed with Peter Tosh and Bunny Wailer, was known as:",
-=======
-      "prompt": "Marley\u2019s band, formed with Peter Tosh and Bunny Wailer, was known as:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Revolutionaries",
         "The Wailers",
@@ -15442,27 +13670,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 4: Bob Marley",
-<<<<<<< HEAD
       "prompt": "Marley’s posthumous greatest hits album, released in 1984, is titled:",
-=======
-<<<<<<< HEAD
-      "prompt": "Marley’s posthumous greatest hits album, released in 1984, is titled:",
-=======
-<<<<<<< HEAD
-      "prompt": "Marley’s posthumous greatest hits album, released in 1984, is titled:",
-=======
-<<<<<<< HEAD
-      "prompt": "Marley’s posthumous greatest hits album, released in 1984, is titled:",
-=======
-<<<<<<< HEAD
-      "prompt": "Marley’s posthumous greatest hits album, released in 1984, is titled:",
-=======
-      "prompt": "Marley\u2019s posthumous greatest hits album, released in 1984, is titled:",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Exodus",
         "Legend",
@@ -15526,27 +13734,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 5: Queen Hatshepsut",
-<<<<<<< HEAD
       "prompt": "What is the name of Hatshepsut’s famous mortuary temple, considered a masterpiece of ancient architecture?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the name of Hatshepsut’s famous mortuary temple, considered a masterpiece of ancient architecture?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the name of Hatshepsut’s famous mortuary temple, considered a masterpiece of ancient architecture?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the name of Hatshepsut’s famous mortuary temple, considered a masterpiece of ancient architecture?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the name of Hatshepsut’s famous mortuary temple, considered a masterpiece of ancient architecture?",
-=======
-      "prompt": "What is the name of Hatshepsut\u2019s famous mortuary temple, considered a masterpiece of ancient architecture?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Great Pyramid",
         "Deir el-Bahari",
@@ -15626,27 +13814,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 6: Amina, Queen of Zazzau",
-<<<<<<< HEAD
       "prompt": "Queen Amina’s reign occurred during which century?",
-=======
-<<<<<<< HEAD
-      "prompt": "Queen Amina’s reign occurred during which century?",
-=======
-<<<<<<< HEAD
-      "prompt": "Queen Amina’s reign occurred during which century?",
-=======
-<<<<<<< HEAD
-      "prompt": "Queen Amina’s reign occurred during which century?",
-=======
-<<<<<<< HEAD
-      "prompt": "Queen Amina’s reign occurred during which century?",
-=======
-      "prompt": "Queen Amina\u2019s reign occurred during which century?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "10th Century",
         "16th Century",
@@ -15662,52 +13830,12 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 6: Amina, Queen of Zazzau",
-<<<<<<< HEAD
       "prompt": "What was Amina’s primary motivation for her constant military campaigns?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was Amina’s primary motivation for her constant military campaigns?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was Amina’s primary motivation for her constant military campaigns?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was Amina’s primary motivation for her constant military campaigns?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was Amina’s primary motivation for her constant military campaigns?",
-=======
-      "prompt": "What was Amina\u2019s primary motivation for her constant military campaigns?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Religious conversion",
         "Expanding trade routes and territory",
         "Searching for gold",
-<<<<<<< HEAD
         "Revenge for her father’s death"
-=======
-<<<<<<< HEAD
-        "Revenge for her father’s death"
-=======
-<<<<<<< HEAD
-        "Revenge for her father’s death"
-=======
-<<<<<<< HEAD
-        "Revenge for her father’s death"
-=======
-<<<<<<< HEAD
-        "Revenge for her father’s death"
-=======
-        "Revenge for her father\u2019s death"
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       ],
       "correctIndex": 1,
       "noRepeat": true,
@@ -15830,27 +13958,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 8: Shaka Zulu",
-<<<<<<< HEAD
       "prompt": "What was the name of Shaka’s famous military formation that mimicked the head and horns of an animal?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was the name of Shaka’s famous military formation that mimicked the head and horns of an animal?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was the name of Shaka’s famous military formation that mimicked the head and horns of an animal?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was the name of Shaka’s famous military formation that mimicked the head and horns of an animal?",
-=======
-<<<<<<< HEAD
-      "prompt": "What was the name of Shaka’s famous military formation that mimicked the head and horns of an animal?",
-=======
-      "prompt": "What was the name of Shaka\u2019s famous military formation that mimicked the head and horns of an animal?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "The Eagle Wing",
         "The Buffalo Horns",
@@ -16090,27 +14198,7 @@
       "category": "global_icons_african_royalty",
       "categoryLabel": "Global Icons & African Royalty",
       "section": "Part 11: Trevor Noah",
-<<<<<<< HEAD
       "prompt": "What is the title of Trevor Noah’s bestselling 2016 autobiographical book?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the title of Trevor Noah’s bestselling 2016 autobiographical book?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the title of Trevor Noah’s bestselling 2016 autobiographical book?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the title of Trevor Noah’s bestselling 2016 autobiographical book?",
-=======
-<<<<<<< HEAD
-      "prompt": "What is the title of Trevor Noah’s bestselling 2016 autobiographical book?",
-=======
-      "prompt": "What is the title of Trevor Noah\u2019s bestselling 2016 autobiographical book?",
->>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
->>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
->>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
->>>>>>> caef301421db99bc56884961a99cc2bd10161542
->>>>>>> 90ebe6ff1e4c0dc5a3b4dbc0fee0aa2b6dc3141e
       "answers": [
         "Daily Musings",
         "Born a Crime",
