@@ -916,7 +916,7 @@
           <button id="skipLevelBtn" class="secondary">⏭️ Skip Level</button>
           <button id="clearDataBtn" class="dark">🗑️ Clear Player Data</button>
           <button id="howToBtn" class="dark">How to Play</button>
-          <button id="testSpecialsBtn" class="secondary">🧪 Test Specials</button>
+          <button id="testSpecialsBtn" class="secondary" onclick="window.WGLT_loadMixedTestBoard && window.WGLT_loadMixedTestBoard()">🧪 Test Specials</button>
         </div>
         <button id="specialsTutorialBtn" class="secondary tutorialBtn">Tutorial: See Specials In Action</button>
       </div>
@@ -4242,16 +4242,19 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
     loadSpecialDemo(card.dataset.special);
   });
 
+  window.WGLT_loadSpecialDemo = loadSpecialDemo;
+  window.WGLT_loadMixedTestBoard = buildTestSpecialsBoard;
+
   newGame();
 })();
 </script>
 
 <div class="overlay" id="tutorialOverlay">
   <div class="modal">
-    <h3>Specials Tutorial</h3><p style="font-size:12px;color:#ffd54a;font-weight:700;">Tip: this panel scrolls now. Tap any special card to load a demo board for it.</p>
+    <h3>Specials Tutorial</h3><p style="font-size:12px;color:#ffd54a;font-weight:700;">Tip: this panel scrolls now. Tap any special card to load a demo board for it.</p><p style="font-size:11px;color:#b7c0d8;">If a card does not react immediately, tap it once more. Each card now also uses a direct inline launcher for reliability.</p>
     <p>All shape specials use <b>5 matching blocks</b>. Exact <b>6</b> creates <b>🔄 Shuffle Smart</b> on the board. Exact <b>7</b> creates <b>🌈 Rainbow</b> on the board. Exact <b>8</b> adds a <b>❤️ Move Heart</b> booster. Exact <b>9</b> arms a <b>🧠 Knowledge Multiplier</b> for your next pop. <b>10+</b> triggers the video pop.</p>
     <div class="tutorialGrid">
-      <div class="tutorialCard" data-special="swap">
+      <div class="tutorialCard" data-special="swap" onclick="window.WGLT_loadSpecialDemo && window.WGLT_loadSpecialDemo('swap')">
         <h4>🔁 Swap Special</h4>
         <div class="tutorialMiniBoard">
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
@@ -4262,7 +4265,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
         </div>
         <p><b>Reward:</b> 🔁 Swap Special<br><b>Shape:</b> plus-sign / cross with 3 in the middle row and 1 above + 1 below center.</p>
       </div>
-      <div class="tutorialCard" data-special="hammer">
+      <div class="tutorialCard" data-special="hammer" onclick="window.WGLT_loadSpecialDemo && window.WGLT_loadSpecialDemo('hammer')">
         <h4>🔨 Hammer Special</h4>
         <div class="tutorialMiniBoard">
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
@@ -4273,7 +4276,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
         </div>
         <p><b>Reward:</b> 🔨 Hammer Special<br><b>Shape:</b> any 5-block L or backwards L.</p>
       </div>
-      <div class="tutorialCard" data-special="verticalT">
+      <div class="tutorialCard" data-special="verticalT" onclick="window.WGLT_loadSpecialDemo && window.WGLT_loadSpecialDemo('verticalT')">
         <h4>↕️ Vertical Arrow Line Clear</h4>
         <div class="tutorialMiniBoard">
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell hot4">★</div><div class="tutorialMiniCell"></div>
@@ -4284,7 +4287,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
         </div>
         <p><b>Reward:</b> ↕️ Vertical Arrow Line Clear<br><b>Earn:</b> pop a T-shaped cluster or an upside-down T cluster<br><b>Effect:</b> creates a vertical arrow line clear.</p>
       </div>
-      <div class="tutorialCard" data-special="horizontalT">
+      <div class="tutorialCard" data-special="horizontalT" onclick="window.WGLT_loadSpecialDemo && window.WGLT_loadSpecialDemo('horizontalT')">
         <h4>↔️ Horizontal Arrow Line Clear</h4>
         <div class="tutorialMiniBoard">
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
@@ -4296,7 +4299,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
         <p><b>Reward:</b> ↔️ Horizontal Arrow Line Clear<br><b>Earn:</b> pop a sideways T cluster either way<br><b>Effect:</b> creates a horizontal arrow line clear.</p>
       </div>
       
-      <div class="tutorialCard" data-special="square">
+      <div class="tutorialCard" data-special="square" onclick="window.WGLT_loadSpecialDemo && window.WGLT_loadSpecialDemo('square')">
         <h4>💣 2x2 Square</h4>
         <div class="tutorialMiniBoard">
           <div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
@@ -4307,7 +4310,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
         </div>
         <p><b>Reward:</b> 💣 2x2 Square<br><b>Earn:</b> pop a 2x2 same-color square<br><b>Effect:</b> creates a board bomb.</p>
       </div>
-      <div class="tutorialCard" data-special="line5">
+      <div class="tutorialCard" data-special="line5" onclick="window.WGLT_loadSpecialDemo && window.WGLT_loadSpecialDemo('line5')">
         <h4>⚡ 5 in a Line</h4>
         <div class="tutorialMiniBoard">
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
@@ -4318,7 +4321,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
         </div>
         <p><b>Reward:</b> ⚡ 5 in a Line<br><b>Earn:</b> pop 5 connected blocks in a straight line<br><b>Effect:</b> tap it, then tap a category to change a random 6+ cluster to that category after a quick glow.</p>
       </div>
-<div class="tutorialCard" data-special="shuffle">
+<div class="tutorialCard" data-special="shuffle" onclick="window.WGLT_loadSpecialDemo && window.WGLT_loadSpecialDemo('shuffle')">
         <h4>🔄 Shuffle Smart</h4>
         <div class="tutorialMiniBoard">
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell hot">★</div><div class="tutorialMiniCell"></div><div class="tutorialMiniCell"></div>
@@ -4330,7 +4333,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
         <p><b>Reward:</b> 🔄 Shuffle Smart<br><b>Earn:</b> exact 6-block pop.<br><b>Effect:</b> tap it to reshuffle the board.</p>
         <div class="patternBoard"><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div></div>
       </div>
-      <div class="tutorialCard" data-special="rainbow">
+      <div class="tutorialCard" data-special="rainbow" onclick="window.WGLT_loadSpecialDemo && window.WGLT_loadSpecialDemo('rainbow')">
         <h4>🌈 Rainbow</h4>
         <div class="tutorialMiniBoard">
           <div class="tutorialMiniCell"></div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell hot5">★</div><div class="tutorialMiniCell"></div>
@@ -4342,12 +4345,12 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
         <p><b>Reward:</b> 🌈 Rainbow<br><b>Earn:</b> exact 7-block pop.<br><b>Effect:</b> tap it, then tap any color to clear all matching items.</p>
         <div class="patternBoard"><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div></div>
         </div>
-      <div class="tutorialCard" data-special="heart">
+      <div class="tutorialCard" data-special="heart" onclick="window.WGLT_loadSpecialDemo && window.WGLT_loadSpecialDemo('heart')">
         <h4>❤️ Move Heart</h4>
         <p><b>Reward:</b> ❤️ Move Heart<br><b>Earn:</b> exact 8-block pop.<br><b>Effect:</b> tap the booster to gain +5 moves on move levels.</p>
         <div class="patternBoard"><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div><div class="tCell a"></div></div>
         </div>
-      <div class="tutorialCard" data-special="brain">
+      <div class="tutorialCard" data-special="brain" onclick="window.WGLT_loadSpecialDemo && window.WGLT_loadSpecialDemo('brain')">
         <h4>🧠 Knowledge Multiplier</h4>
         <p><b>Reward:</b> 🧠 Knowledge Multiplier<br><b>Earn:</b> exact 9-block pop.<br><b>Effect:</b> doubles your next pop score and meter.</p>
       </div>
