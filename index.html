@@ -1011,6 +1011,8 @@
     </div>
   </div>
 
+<script src="./js/questionEngine.js"></script>
+<script src="./js/popblocks-quizbank.js"></script>
 <script>
 (() => {
   const VIDEO_POOL = [
@@ -1477,9 +1479,9 @@
   }
 
   function comboTimeoutFor(comboCount){
-    if(comboCount >= 5) return 2.0;
-    if(comboCount >= 3) return 2.5;
-    return 3.0;
+    if(comboCount >= 5) return 3.0;
+    if(comboCount >= 3) return 4.0;
+    return 5.0;
   }
 
   function armComboTimeout(){
@@ -1930,9 +1932,6 @@
       awardBooster("target", 1);
     } else if(groupSize === 8){
       awardBooster("moves", 1);
-    } else if(groupSize === 9){
-      multiplierArmed = true;
-      showToast("🧠 Knowledge Multiplier armed!");
     }
   }
 
@@ -2288,11 +2287,16 @@
     return typeof cell === "object" && (cell.type === "shuffleboard" || cell.type === "rainbow");
   }
 
+  function isBrainSpecial(cell){
+    return typeof cell === "object" && cell.type === "brain";
+  }
+
   function specialBlockClass(cell){
     if(isBomb(cell)) return ' bomb';
     if(isLineBlaster(cell)) return ' line-blaster';
     if(typeof cell === "object" && cell.type === "shuffleboard") return ' shuffle-board';
     if(typeof cell === "object" && cell.type === "rainbow") return ' rainbow-special';
+    if(typeof cell === "object" && cell.type === "brain") return ' brain-special';
     if(typeof cell === "object" && cell.type === "swap") return ' swap-special';
     if(typeof cell === "object" && cell.type === "hammer") return ' hammer-special';
     if(typeof cell === "object" && cell.type === "arrow") return ' arrow-special';
@@ -2728,8 +2732,19 @@ function getCellCenter(r, c){
 
   function currentQuizPool(){
     const mode = currentMode();
-    const all = [...(mode.quizzes || []), ...((mode.extraQuizzes || []).slice(0, unlockedExtraCountForMode(mode)))];
-    return all;
+    const builtin = [...(mode.quizzes || []), ...((mode.extraQuizzes || []).slice(0, unlockedExtraCountForMode(mode)))];
+    const externalApi = window.WGLT_POPBLOCKS_QUIZBANK;
+    if(externalApi && externalApi.engine){
+      try{
+        const external = externalApi.getQuizPool(modeKey, unlockedExtraCountForMode(mode));
+        if(Array.isArray(external) && external.length){
+          return external;
+        }
+      } catch(err){
+        console.warn("WGLT external quiz bank failed, using built-in quizzes.", err);
+      }
+    }
+    return builtin;
   }
 
   function randomColorIndex() {
@@ -2839,6 +2854,10 @@ function getCellCenter(r, c){
       }
     }
     if(!affected.length) return 0;
+
+    const pointsPerBlock = Array.from({length: affected.length}, () => 10);
+    const totalGained = pointsPerBlock.reduce((a,b)=>a+b,0);
+
     flashAndExplodeGroup(affected.map(([rr,cc]) => [rr,cc]), () => {
       const counts = {};
       affected.forEach(([rr,cc,cat]) => {
@@ -2848,11 +2867,13 @@ function getCellCenter(r, c){
       Object.entries(counts).forEach(([cat, amt]) => consumeObjectivesForCategory(Number(cat), amt));
       applyGravity();
       refillBoard();
+      score += totalGained;
+      progress += Math.min(24, affected.length * 2);
       updateBest();
       saveProgress();
       renderBoard([]);
       if(!isResolvingEndLevelBombs) endRoundIfNeeded();
-    }, 0, 0);
+    }, pointsPerBlock, totalGained);
     return affected.length;
   }
 
@@ -2870,6 +2891,52 @@ function getCellCenter(r, c){
       }
     }
     return radius;
+  }
+
+  function placeBoardSpecialNear(anchor, specialObj){
+    if(!anchor) return false;
+    const [dr, dc] = anchor;
+
+    const tryPlace = (rr, cc) => {
+      if(rr >= 0 && rr < size && cc >= 0 && cc < size && board[rr][cc] !== null && typeof board[rr][cc] !== "object"){
+        board[rr][cc] = Object.assign({}, specialObj);
+        return true;
+      }
+      return false;
+    };
+
+    let placed = tryPlace(dr, dc)
+      || tryPlace(Math.min(size-1, dr+1), dc)
+      || tryPlace(dr, Math.min(size-1, dc+1))
+      || tryPlace(Math.max(0, dr-1), dc)
+      || tryPlace(dr, Math.max(0, dc-1));
+
+    if(!placed){
+      for(let rr=size-1; rr>=0 && !placed; rr--){
+        for(let cc=0; cc<size; cc++){
+          if(tryPlace(rr, cc)){
+            placed = true;
+            break;
+          }
+        }
+      }
+    }
+    return placed;
+  }
+
+  function activateBrainSpecial(r,c){
+    const cell = board[r]?.[c];
+    if(!cell || typeof cell !== "object" || cell.type !== "brain") return false;
+    multiplierArmed = true;
+    board[r][c] = cell.color;
+    selectedBooster = null;
+    renderBoosters();
+    updateHUD();
+    saveProgress();
+    renderBoard([]);
+    boardHintEl.textContent = "🧠 Double-score ready. Tap your next group to pop.";
+    showToast("🧠 Knowledge Multiplier armed! Next pop scores x2");
+    return true;
   }
 
   function renderLegend(){
@@ -2934,6 +3001,7 @@ function getCellCenter(r, c){
             }
             if(typeof board[r][c] === "object" && board[r][c].type === "shuffleboard"){ boardHintEl.textContent = "Shuffle Smart ready. Tap to reshuffle the board."; return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "rainbow"){ boardHintEl.textContent = "Rainbow ready. Tap it, then tap any color to clear all matching blocks."; return; }
+            if(isBrainSpecial(board[r][c])){ boardHintEl.textContent = "🧠 Brain ready. Tap it, then your next pop scores x2."; return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "swap"){
               boardHintEl.textContent = "Swap special ready. Tap it, then pick two neighboring blocks.";
               return;
@@ -2972,6 +3040,7 @@ function getCellCenter(r, c){
             if(arrowSpecialArmed){ resolveArrowSpecial(r,c); return; }
             if(isBomb(board[r][c])){ explodeBomb(r,c); return; }
             if(isLineBlaster(board[r][c])){ explodeLineBlaster(r,c); return; }
+            if(isBrainSpecial(board[r][c])){ activateBrainSpecial(r,c); return; }
             if(typeof board[r][c] === "object" && (board[r][c].type === "shuffleboard" || board[r][c].type === "rainbow")){ explodeTargetBlock(r,c); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "swap"){ swapSpecialArmed = { r, c }; renderBoard([]); boardHintEl.textContent = "🔁 Tap a neighboring block to swap."; showToast("Swap armed"); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "hammer"){ hammerSpecialArmed = { r, c }; boardHintEl.textContent = "🔨 Tap one block to break it."; showToast("Hammer armed"); return; }
@@ -3002,7 +3071,7 @@ function getCellCenter(r, c){
 
           cell.addEventListener("touchstart", (e) => {
             e.preventDefault();
-            if(isBomb(board[r][c]) || isLineBlaster(board[r][c]) || isTargetBlock(board[r][c]) || (typeof board[r][c] === "object" && (board[r][c].type === "arrow" || board[r][c].type === "swap" || board[r][c].type === "hammer"))){
+            if(isBomb(board[r][c]) || isLineBlaster(board[r][c]) || isTargetBlock(board[r][c]) || isBrainSpecial(board[r][c]) || (typeof board[r][c] === "object" && (board[r][c].type === "arrow" || board[r][c].type === "swap" || board[r][c].type === "hammer"))){
               return;
             }
             const group = getGroup(r,c);
@@ -3018,6 +3087,7 @@ function getCellCenter(r, c){
             if(arrowSpecialArmed){ resolveArrowSpecial(r,c); return; }
             if(isBomb(board[r][c])){ explodeBomb(r,c); return; }
             if(isLineBlaster(board[r][c])){ explodeLineBlaster(r,c); return; }
+            if(isBrainSpecial(board[r][c])){ activateBrainSpecial(r,c); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "shuffleboard"){ explodeTargetBlock(r,c); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "rainbow"){ explodeTargetBlock(r,c); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "swap"){ swapSpecialArmed = { r, c }; renderBoard([]); boardHintEl.textContent = "🔁 Tap a neighboring block to swap."; showToast("Swap armed"); return; }
@@ -3183,13 +3253,30 @@ function getCellCenter(r, c){
     scrollQuizIntoView();
 
     const quizzes = currentQuizPool();
-    let available = quizzes.filter((_, idx) => !recentQuizIds.includes(`${modeKey}:${idx}`));
-    if(!available.length){
-      recentQuizIds = [];
-      available = quizzes.slice();
+    if(!quizzes.length){
+      quizTextEl.textContent = "No quiz questions loaded yet.";
+      choicesEl.innerHTML = "";
+      isQuizActive = false;
+      setQuizGlow(false);
+      return;
     }
-    const quiz = available[Math.floor(Math.random() * available.length)];
+
+    const quizIds = quizzes.map((quiz, idx) => quiz.id || `${modeKey}:${idx}`);
+    let unseen = quizzes.filter((quiz, idx) => !recentQuizIds.includes(quizIds[idx]));
+    if(!unseen.length){
+      recentQuizIds = [];
+      unseen = quizzes.slice();
+    }
+
+    const useRepeat = quizzes.length > 1 && Math.random() < 0.25;
+    const pool = (!useRepeat && unseen.length) ? unseen : quizzes.slice();
+    const quiz = pool[Math.floor(Math.random() * pool.length)];
     const quizIndex = quizzes.indexOf(quiz);
+    const quizId = quiz.id || `${modeKey}:${quizIndex}`;
+
+    if(!recentQuizIds.includes(quizId)){
+      recentQuizIds = recentQuizIds.concat([quizId]);
+    }
 
     quizTextEl.textContent = quiz.q;
     choicesEl.innerHTML = "";
@@ -3217,7 +3304,7 @@ function getCellCenter(r, c){
           score += 120 + level * 20;
           benchmarkProgress["Quiz Mastery"] = (benchmarkProgress["Quiz Mastery"] || 0) + 1;
           quizMisses = 0;
-          recentQuizIds = recentQuizIds.concat([`${modeKey}:${quizIndex}`]).slice(-12);
+          recentQuizIds = recentQuizIds.slice(-890);
           showToast("Correct! Bonus clear activated");
           factTextEl.textContent = quiz.explanation || "Correct answer locked in.";
           progress = 0;
@@ -3492,6 +3579,8 @@ function popGroup(r,c){
       applyGravity();
       refillBoard();
 
+      const brainAnchor = (groupSize === 9) ? group[Math.floor(group.length / 2)] : null;
+
       if(bombAnchor || lineInfo || timeAnchor || crossAnchor || hammerAnchor || capitalTAnchor || upsideDownTAnchor){
         if(crossAnchor){
           awardBooster("shuffle", 1);
@@ -3542,6 +3631,13 @@ function popGroup(r,c){
               }
             }
           }
+        }
+      }
+
+      if(brainAnchor){
+        const placedBrain = placeBoardSpecialNear(brainAnchor, { type: "brain", color: categoryIndex });
+        if(placedBrain){
+          showToast("🧠 Brain created! Tap it to arm x2 score.");
         }
       }
 
