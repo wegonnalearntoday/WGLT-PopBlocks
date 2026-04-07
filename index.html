@@ -1011,6 +1011,20 @@
     </div>
   </div>
 
+
+  <div class="overlay" id="videoOverlay" aria-hidden="true">
+    <div class="modal">
+      <h2>🎬 Video Pop</h2>
+      <p>Nice work. You popped 10 or more blocks and unlocked a short video reward.</p>
+      <video id="popupVideo" controls playsinline style="width:100%;max-height:70vh;border-radius:16px;background:#000;">
+        <source src="" type="video/mp4">
+      </video>
+      <div class="footerRow" style="margin-top:12px;">
+        <button id="closeVideoBtn" type="button">Close Video</button>
+      </div>
+    </div>
+  </div>
+
 <script src="./js/questionEngine.js"></script>
 <script src="./js/popblocks-quizbank.js"></script>
 <script>
@@ -3177,6 +3191,11 @@ function getCellCenter(r, c){
 
     setTimeout(() => { vid.play().catch(()=>{}); }, 120);
     setTimeout(() => { vid.play().catch(()=>{}); }, 350);
+
+    const closeBtn = document.getElementById("closeVideoBtn");
+    if(closeBtn){
+      closeBtn.onclick = finish;
+    }
 
     vid.onended = finish;
     ov.onclick = (e) => { if(e.target === ov){ finish(); } };
