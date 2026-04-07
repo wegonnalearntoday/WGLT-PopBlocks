@@ -24,12 +24,23 @@ To test:
 2. Open index.html
 3. Fill the meter and trigger Quiz Boost
 4. The quiz card should now use the master WGLT bank
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
+>>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
 
 
 Combo timer updated:
 - x1-x2: 5.0s
 - x3-x4: 4.0s
 - x5+: 3.0s
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
 
 
 v3 fixes:
@@ -38,8 +49,15 @@ v3 fixes:
 - Brain icon arms x2 score for the next pop.
 - Quiz selection now favors unseen questions, with a 25% repeat chance.
 - Combo timer preserved at 5s, 4s, 3s tiers.
+<<<<<<< HEAD
 
 
 v4 fixes:
 - 9-block reward now spawns 🧠 by default, with a 5% chance to spawn a 💣 2x2 square reward instead.
 - Special clears now award score and meter more consistently, including rainbow clears.
+=======
+=======
+=======
+>>>>>>> eea9454b5e92533cb3df95b3f8ba277cab9eaa75
+>>>>>>> ce4e12379df895dcdea429a0bfaf5f47f461d9b9
+>>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868

@@ -3644,6 +3644,7 @@ function popGroup(r,c){
       }
 
       if(brainAnchor){
+<<<<<<< HEAD
         const rollBombSquare = Math.random() < 0.05;
         if(rollBombSquare){
           const [br, bc] = brainAnchor;
@@ -3679,6 +3680,11 @@ function popGroup(r,c){
           if(placedBrain){
             showToast("🧠 Brain created! Tap it to arm x2 score.");
           }
+=======
+        const placedBrain = placeBoardSpecialNear(brainAnchor, { type: "brain", color: categoryIndex });
+        if(placedBrain){
+          showToast("🧠 Brain created! Tap it to arm x2 score.");
+>>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
         }
       }
 
