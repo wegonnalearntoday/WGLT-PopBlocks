@@ -1019,10 +1019,7 @@
       <video id="popupVideo" controls playsinline style="width:100%;max-height:70vh;border-radius:16px;background:#000;">
         <source src="" type="video/mp4">
       </video>
-      <div class="footerRow" style="margin-top:12px;">
-        <button id="closeVideoBtn" type="button">Close Video</button>
-      </div>
-    </div>
+</div>
   </div>
 
 <script src="./js/questionEngine.js"></script>
@@ -2855,6 +2852,18 @@ function getCellCenter(r, c){
     }
   }
 
+
+  function awardSpecialClearRewardFromAffected(affected){
+    if(!Array.isArray(affected) || !affected.length){
+      return { pointsPerBlock: [], totalGained: 0 };
+    }
+    const pointsPerBlock = Array.from({length: affected.length}, () => 10);
+    const totalGained = pointsPerBlock.reduce((a,b)=>a+b,0);
+    score += totalGained;
+    progress += Math.min(24, affected.length * 2);
+    return { pointsPerBlock, totalGained };
+  }
+
   function clearAreaRadius(centerR, centerC, radius){
     const affected = [];
     for(let dr=-radius; dr<=radius; dr++){
@@ -2879,6 +2888,7 @@ function getCellCenter(r, c){
         board[rr][cc] = null;
       });
       Object.entries(counts).forEach(([cat, amt]) => consumeObjectivesForCategory(Number(cat), amt));
+      maybeAwardBoosterForPopSize(affected.length);
       applyGravity();
       refillBoard();
       score += totalGained;
@@ -3191,13 +3201,7 @@ function getCellCenter(r, c){
 
     setTimeout(() => { vid.play().catch(()=>{}); }, 120);
     setTimeout(() => { vid.play().catch(()=>{}); }, 350);
-
-    const closeBtn = document.getElementById("closeVideoBtn");
-    if(closeBtn){
-      closeBtn.onclick = finish;
-    }
-
-    vid.onended = finish;
+vid.onended = finish;
     ov.onclick = (e) => { if(e.target === ov){ finish(); } };
   }
 
