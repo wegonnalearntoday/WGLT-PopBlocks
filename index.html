@@ -2877,6 +2877,15 @@ function getCellCenter(r, c){
     return affected.length;
   }
 
+  function awardSpecialClearScore(affected){
+    if(!Array.isArray(affected) || !affected.length) return { pointsPerBlock: [], totalGained: 0 };
+    const pointsPerBlock = Array.from({length: affected.length}, () => 10);
+    const totalGained = pointsPerBlock.reduce((a,b)=>a+b,0);
+    score += totalGained;
+    progress += Math.min(24, affected.length * 2);
+    return { pointsPerBlock, totalGained };
+  }
+
   function boosterBombRadiusForTarget(r,c){
     let radius = 1;
     for(let dr=-1; dr<=1; dr++){
@@ -3581,6 +3590,7 @@ flashAndExplodeGroup(group, () => { score += (Array.isArray(affected)?affected.l
       refillBoard();
 
       const brainAnchor = (groupSize === 9) ? group[Math.floor(group.length / 2)] : null;
+<<<<<<< HEAD
       let placedBrain = false;
       if(brainAnchor){
         placedBrain = placeBoardSpecialNear(brainAnchor, { type: "brain", color: categoryIndex });
@@ -3588,6 +3598,8 @@ flashAndExplodeGroup(group, () => { score += (Array.isArray(affected)?affected.l
           showToast("🧠 Brain created!");
         }
       }
+=======
+>>>>>>> caef301421db99bc56884961a99cc2bd10161542
 
       if(bombAnchor || lineInfo || timeAnchor || crossAnchor || hammerAnchor || capitalTAnchor || upsideDownTAnchor){
         if(crossAnchor){
@@ -3643,9 +3655,53 @@ flashAndExplodeGroup(group, () => { score += (Array.isArray(affected)?affected.l
       }
 
       if(brainAnchor){
+<<<<<<< HEAD
         const placedBrain = placeBoardSpecialNear(brainAnchor, { type: "brain", color: categoryIndex });
         if(placedBrain){
           showToast("🧠 Brain created! Tap it to arm x2 score.");
+=======
+<<<<<<< HEAD
+        const rollBombSquare = Math.random() < 0.05;
+        if(rollBombSquare){
+          const [br, bc] = brainAnchor;
+          let placedSquareBomb = false;
+          for(let rr = br; rr <= Math.min(size - 2, br + 1) && !placedSquareBomb; rr++){
+            for(let cc = bc; cc <= Math.min(size - 2, bc + 1) && !placedSquareBomb; cc++){
+              if(
+                rr >= 0 && cc >= 0 &&
+                rr + 1 < size && cc + 1 < size &&
+                board[rr][cc] !== null && typeof board[rr][cc] !== "object" &&
+                board[rr+1][cc] !== null && typeof board[rr+1][cc] !== "object" &&
+                board[rr][cc+1] !== null && typeof board[rr][cc+1] !== "object" &&
+                board[rr+1][cc+1] !== null && typeof board[rr+1][cc+1] !== "object"
+              ){
+                board[rr][cc] = { type: "bomb", color: categoryIndex };
+                board[rr+1][cc] = { type: "bomb", color: categoryIndex };
+                board[rr][cc+1] = { type: "bomb", color: categoryIndex };
+                board[rr+1][cc+1] = { type: "bomb", color: categoryIndex };
+                placedSquareBomb = true;
+              }
+            }
+          }
+          if(placedSquareBomb){
+            showToast("💣 Lucky square bomb drop!");
+          } else {
+            const placedBrain = placeBoardSpecialNear(brainAnchor, { type: "brain", color: categoryIndex });
+            if(placedBrain){
+              showToast("🧠 Brain created! Tap it to arm x2 score.");
+            }
+          }
+        } else {
+          const placedBrain = placeBoardSpecialNear(brainAnchor, { type: "brain", color: categoryIndex });
+          if(placedBrain){
+            showToast("🧠 Brain created! Tap it to arm x2 score.");
+          }
+=======
+        const placedBrain = placeBoardSpecialNear(brainAnchor, { type: "brain", color: categoryIndex });
+        if(placedBrain){
+          showToast("🧠 Brain created! Tap it to arm x2 score.");
+>>>>>>> 0c7da38c82e216e3233a5d4805d9f73ec6c7b868
+>>>>>>> caef301421db99bc56884961a99cc2bd10161542
         }
       }
 
