@@ -1472,6 +1472,7 @@
   let isAdvancingLevel = false;
   let activeLevelColorIndices = null;
   let recentQuizIds = [];
+  let masteredQuizIds = [];
   let comboTimeoutRemaining = 0;
   let comboTimeoutMax = 0;
   let comboTimeoutIntervalId = null;
@@ -1833,12 +1834,26 @@
     for (const key of Object.keys(defaults)) {
       if (typeof benchmarkProgress[key] !== "number") benchmarkProgress[key] = 0;
     }
+    if (!Array.isArray(masteredQuizIds)) masteredQuizIds = [];
+  }
+
+  function quizMasteryStats(){
+    const quizzes = currentQuizPool();
+    const total = quizzes.length;
+    const ids = quizzes.map((quiz, idx) => quiz.id || `${modeKey}:${idx}`);
+    const masteredSet = new Set((masteredQuizIds || []).filter(id => ids.includes(id)));
+    return {
+      label: `${currentMode().name} Mastery`,
+      mastered: masteredSet.size,
+      total,
+      complete: total > 0 && masteredSet.size >= total
+    };
   }
 
   function saveProgress(){
     localStorage.setItem("wglt_popblocks_best_global", String(best));
     localStorage.setItem(modeSaveKey(), JSON.stringify({
-      score, level, combo, progress, size, best, benchmarkProgress, boosterInventory, levelObjectives, levelObjectivesStart, movesLeft, timerEnabled, timerSecondsLeft, timerMaxSeconds, activeLevelColorIndices, recentQuizIds, comboTimeoutRemaining, comboTimeoutMax
+      score, level, combo, progress, size, best, benchmarkProgress, boosterInventory, levelObjectives, levelObjectivesStart, movesLeft, timerEnabled, timerSecondsLeft, timerMaxSeconds, activeLevelColorIndices, recentQuizIds, masteredQuizIds, comboTimeoutRemaining, comboTimeoutMax
     }));
   }
 
@@ -1846,11 +1861,13 @@
     const raw = localStorage.getItem(modeSaveKey());
     if (!raw) {
       benchmarkProgress = defaultBenchmarks();
+      masteredQuizIds = [];
       boosterInventory = defaultBoosterInventory();
       selectedBooster = null;
       multiplierArmed = false;
       activeLevelColorIndices = null;
       recentQuizIds = [];
+      masteredQuizIds = [];
       resetComboTimeout();
       return false;
     }
@@ -1872,6 +1889,7 @@
       timerMaxSeconds = Number(parsed.timerMaxSeconds || timerSecondsLeft || 0);
       activeLevelColorIndices = Array.isArray(parsed.activeLevelColorIndices) ? parsed.activeLevelColorIndices : null;
       recentQuizIds = Array.isArray(parsed.recentQuizIds) ? parsed.recentQuizIds : [];
+      masteredQuizIds = Array.isArray(parsed.masteredQuizIds) ? parsed.masteredQuizIds : [];
       comboTimeoutRemaining = Number(parsed.comboTimeoutRemaining || 0);
       comboTimeoutMax = Number(parsed.comboTimeoutMax || 0);
       ensureBenchmarkShape();
@@ -1879,11 +1897,13 @@
       return true;
     } catch (e) {
       benchmarkProgress = defaultBenchmarks();
+      masteredQuizIds = [];
       boosterInventory = defaultBoosterInventory();
       selectedBooster = null;
       multiplierArmed = false;
       activeLevelColorIndices = null;
       recentQuizIds = [];
+      masteredQuizIds = [];
       resetComboTimeout();
       return false;
     }
@@ -1893,6 +1913,13 @@
     ensureBenchmarkShape();
     if (!benchmarkListEl) return;
     benchmarkListEl.innerHTML = "";
+
+    const mastery = quizMasteryStats();
+    const masteryRow = document.createElement("div");
+    masteryRow.className = "benchRow";
+    masteryRow.innerHTML = `<span>${mastery.label}</span><span class="benchTag">${mastery.mastered}/${mastery.total}</span>`;
+    benchmarkListEl.appendChild(masteryRow);
+
     Object.entries(benchmarkProgress).forEach(([name, val]) => {
       const row = document.createElement("div");
       row.className = "benchRow";
@@ -3485,14 +3512,34 @@ function getCellCenter(r, c){
 
         if(correct){
           score += 120 + level * 20;
-          benchmarkProgress["Quiz Mastery"] = (benchmarkProgress["Quiz Mastery"] || 0) + 1;
+          const masteryBefore = quizMasteryStats();
+          const isNewMasteredQuestion = !masteredQuizIds.includes(quizId);
+          if(isNewMasteredQuestion){
+            masteredQuizIds = masteredQuizIds.concat([quizId]);
+            benchmarkProgress["Quiz Mastery"] = (benchmarkProgress["Quiz Mastery"] || 0) + 1;
+          }
+          const masteryAfter = quizMasteryStats();
+          let masteryBonus = 0;
+          if(masteryAfter.complete && !isNewMasteredQuestion){
+            masteryBonus = 25 + Math.floor(Math.random() * 76);
+            score += masteryBonus;
+          }
           quizMisses = 0;
           recentQuizIds = recentQuizIds.slice(-890);
-          showToast("Correct! Bonus clear activated");
-          factTextEl.textContent = quiz.explanation || "Correct answer locked in.";
+          if(masteryBonus > 0){
+            showToast(`Correct! Mastery bonus +${masteryBonus} pts`);
+          } else if(isNewMasteredQuestion){
+            showToast(`Correct! ${masteryAfter.label} ${masteryAfter.mastered}/${masteryAfter.total}`);
+          } else {
+            showToast("Correct! Bonus clear activated");
+          }
+          factTextEl.textContent = masteryBonus > 0
+            ? `${quiz.explanation || "Correct answer locked in."} Full mastery bonus awarded: +${masteryBonus} pts.`
+            : (quiz.explanation || "Correct answer locked in.");
           progress = 0;
           isQuizActive = false;
           setQuizGlow(false);
+          renderBenchmarks();
           clearRandomBlocks(4 + Math.min(4, level), () => {
             saveProgress();
             updateBest();
@@ -3946,6 +3993,7 @@ function popGroup(r,c){
       resetComboTimeout();
       progress = 0;
       benchmarkProgress = defaultBenchmarks();
+      masteredQuizIds = [];
       boosterInventory = defaultBoosterInventory();
       selectedBooster = null;
       multiplierArmed = false;
@@ -4085,6 +4133,7 @@ document.getElementById("clearDataBtn").addEventListener("click", () => {
     progress = 0;
     movesLeft = 0;
     benchmarkProgress = defaultBenchmarks();
+    masteredQuizIds = [];
     boosterInventory = defaultBoosterInventory();
     levelObjectives = defaultObjectives();
     selectedBooster = null;
