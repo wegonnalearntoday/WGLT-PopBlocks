@@ -2733,7 +2733,8 @@
       }
     }
     arrowSpecialArmed = null;
-    explodeAffectedCells(affected, "↔️ Arrow Line Clear!");
+    const arrowMsg = arrowSpecialArmed && arrowSpecialArmed.orientation === "col" ? "↕️ Vertical Arrow Line Clear!" : "↔️ Horizontal Arrow Line Clear!";
+    explodeAffectedCells(affected, arrowMsg);
     boardHintEl.textContent = "Tap connected blocks to pop them.";
     return true;
   }
@@ -3222,7 +3223,7 @@ function getCellCenter(r, c){
             if(typeof board[r][c] === "object" && (board[r][c].type === "shuffleboard" || board[r][c].type === "rainbow")){ explodeTargetBlock(r,c); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "swap"){ swapSpecialArmed = { r, c }; renderBoard([]); boardHintEl.textContent = "🔁 Tap a neighboring block to swap."; showToast("Swap armed"); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "hammer"){ hammerSpecialArmed = { r, c }; boardHintEl.textContent = "🔨 Tap one block to break it."; showToast("Hammer armed"); return; }
-            if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; boardHintEl.textContent = "↔️ Tap a line target to clear that row or column."; showToast("Arrow armed"); return; }
+            if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; resolveArrowSpecial(r,c); return; }
             if(selectedBooster === "bomb"){ useBombBooster(r,c); return; }
             if(selectedBooster === "target"){ useTargetBooster(r,c); return; }
             if(selectedBooster === "moves"){ useMovesBooster(); return; }
@@ -3270,7 +3271,7 @@ function getCellCenter(r, c){
             if(typeof board[r][c] === "object" && board[r][c].type === "rainbow"){ explodeTargetBlock(r,c); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "swap"){ swapSpecialArmed = { r, c }; renderBoard([]); boardHintEl.textContent = "🔁 Tap a neighboring block to swap."; showToast("Swap armed"); return; }
             if(typeof board[r][c] === "object" && board[r][c].type === "hammer"){ hammerSpecialArmed = { r, c }; boardHintEl.textContent = "🔨 Tap one block to break it."; showToast("Hammer armed"); return; }
-            if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; boardHintEl.textContent = "↔️ Tap a line target to clear that row or column."; showToast("Arrow armed"); return; }
+            if(typeof board[r][c] === "object" && board[r][c].type === "arrow"){ arrowSpecialArmed = { r, c, orientation: board[r][c].orientation || "row" }; resolveArrowSpecial(r,c); return; }
             if(selectedBooster === "bomb"){ useBombBooster(r,c); return; }
             if(selectedBooster === "target"){ useTargetBooster(r,c); return; }
             if(selectedBooster === "moves"){ useMovesBooster(); return; }
@@ -3571,7 +3572,9 @@ function getCellCenter(r, c){
         selected.forEach(([r,c,cat]) => {
           if(cat !== null && cat !== undefined){
             const color = typeof cat === "object" ? cat.color : cat;
-            categoryCounts[color] = (categoryCounts[color] || 0) + 1;
+            if(color !== null && color !== undefined){
+              categoryCounts[color] = (categoryCounts[color] || 0) + 1;
+            }
           }
           board[r][c] = null;
         });
@@ -3591,8 +3594,11 @@ function getCellCenter(r, c){
         refillBoard();
         if(!hasAnyMoves(board)) reshuffleBoard();
 
+        renderObjectives();
+        renderBoard([]);
         updateBest();
         saveProgress();
+        endRoundIfNeeded();
 
         if(typeof onDone === "function") onDone();
       }, selected.length * perBlockDelay + endDelay);
